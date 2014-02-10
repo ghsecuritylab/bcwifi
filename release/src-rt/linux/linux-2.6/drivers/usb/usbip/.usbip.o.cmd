@@ -1,0 +1,1 @@
+cmd_drivers/usb/usbip/usbip.o := mipsel-linux-ld  -m elf32ltsmip  -r -o drivers/usb/usbip/usbip.o drivers/usb/usbip/stub_dev.o drivers/usb/usbip/stub_main.o drivers/usb/usbip/stub_rx.o drivers/usb/usbip/stub_tx.o

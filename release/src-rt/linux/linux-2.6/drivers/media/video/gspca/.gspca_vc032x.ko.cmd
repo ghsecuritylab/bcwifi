@@ -1,0 +1,1 @@
+cmd_drivers/media/video/gspca/gspca_vc032x.ko := mipsel-linux-ld  -m elf32ltsmip -r -o drivers/media/video/gspca/gspca_vc032x.ko drivers/media/video/gspca/gspca_vc032x.o drivers/media/video/gspca/gspca_vc032x.mod.o

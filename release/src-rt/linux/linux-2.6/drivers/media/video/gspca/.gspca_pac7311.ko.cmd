@@ -1,0 +1,1 @@
+cmd_drivers/media/video/gspca/gspca_pac7311.ko := mipsel-linux-ld  -m elf32ltsmip -r -o drivers/media/video/gspca/gspca_pac7311.ko drivers/media/video/gspca/gspca_pac7311.o drivers/media/video/gspca/gspca_pac7311.mod.o

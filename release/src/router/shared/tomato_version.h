@@ -1,0 +1,9 @@
+#ifndef __TOMATO_VERSION_H__
+#define __TOMATO_VERSION_H__
+#define TOMATO_MAJOR		"1"
+#define TOMATO_MINOR		"28"
+#define TOMATO_BUILD		"1060"
+#define	TOMATO_BUILDTIME	"Wed, 22 Jan 2014 13:56:51 +0800"
+#define TOMATO_VERSION		"1.28.1060 MIPSR2 K26 Mini"
+#define TOMATO_SHORTVER		"1.28"
+#endif

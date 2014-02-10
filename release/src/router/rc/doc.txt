@@ -1,0 +1,7 @@
+POST 文档
+
+upload_speed:XX\r\n
+download_speed:XX\r\n
+user_num:XX\r\n
+user_list:192.168.1.2,192.168.1.4\r\n
+\r\n\r\n

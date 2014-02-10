@@ -1,0 +1,1 @@
+cmd_drivers/net/igs/igs.o := mipsel-linux-ld  -m elf32ltsmip  -r -o drivers/net/igs/igs.o drivers/net/igs/../../../../../emf/igs/igsc.o drivers/net/igs/../../../../../emf/igs/igsc_sdb.o drivers/net/igs/../../../../../emf/igs/igs_linux.o drivers/net/igs/../../../../../emf/igs/osl_linux.o

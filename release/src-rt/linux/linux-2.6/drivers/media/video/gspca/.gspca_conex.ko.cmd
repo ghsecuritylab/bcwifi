@@ -1,0 +1,1 @@
+cmd_drivers/media/video/gspca/gspca_conex.ko := mipsel-linux-ld  -m elf32ltsmip -r -o drivers/media/video/gspca/gspca_conex.ko drivers/media/video/gspca/gspca_conex.o drivers/media/video/gspca/gspca_conex.mod.o

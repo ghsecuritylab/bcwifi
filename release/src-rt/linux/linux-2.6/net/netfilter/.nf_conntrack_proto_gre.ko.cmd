@@ -1,0 +1,1 @@
+cmd_net/netfilter/nf_conntrack_proto_gre.ko := mipsel-linux-ld  -m elf32ltsmip -r -o net/netfilter/nf_conntrack_proto_gre.ko net/netfilter/nf_conntrack_proto_gre.o net/netfilter/nf_conntrack_proto_gre.mod.o

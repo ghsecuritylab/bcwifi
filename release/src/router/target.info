@@ -1,0 +1,21 @@
+Creating little endian 3.0 filesystem on /home/rainkid/workspace/bcwifi/release/src-rt/router/mipsel-uclibc/target.image, block size 65536.
+
+Little endian filesystem, data block size 65536, compressed data, compressed metadata, compressed fragments
+Filesystem size 3248.02 Kbytes (3.17 Mbytes)
+	30.91% of uncompressed filesystem size (10508.77 Kbytes)
+Inode table size 5152 bytes (5.03 Kbytes)
+	23.40% of uncompressed inode table size (22014 bytes)
+Directory table size 6296 bytes (6.15 Kbytes)
+	57.22% of uncompressed directory table size (11003 bytes)
+Number of duplicate files found 10
+Number of inodes 694
+Number of files 503
+Number of fragments 49
+Number of symbolic links  151
+Number of device nodes 0
+Number of fifo nodes 0
+Number of socket nodes 0
+Number of directories 40
+Number of uids 1
+	root (0)
+Number of gids 0
