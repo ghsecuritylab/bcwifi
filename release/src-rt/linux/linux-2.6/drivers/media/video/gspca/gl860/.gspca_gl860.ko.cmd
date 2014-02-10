@@ -1,1 +1,0 @@
-cmd_drivers/media/video/gspca/gl860/gspca_gl860.ko := mipsel-linux-ld  -m elf32ltsmip -r -o drivers/media/video/gspca/gl860/gspca_gl860.ko drivers/media/video/gspca/gl860/gspca_gl860.o drivers/media/video/gspca/gl860/gspca_gl860.mod.o

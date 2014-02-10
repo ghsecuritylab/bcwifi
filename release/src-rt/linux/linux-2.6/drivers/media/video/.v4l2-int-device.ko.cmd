@@ -1,1 +1,0 @@
-cmd_drivers/media/video/v4l2-int-device.ko := mipsel-linux-ld  -m elf32ltsmip -r -o drivers/media/video/v4l2-int-device.ko drivers/media/video/v4l2-int-device.o drivers/media/video/v4l2-int-device.mod.o

@@ -1,1 +1,0 @@
-cmd_drivers/media/video/gspca/m5602/gspca_m5602.ko := mipsel-linux-ld  -m elf32ltsmip -r -o drivers/media/video/gspca/m5602/gspca_m5602.ko drivers/media/video/gspca/m5602/gspca_m5602.o drivers/media/video/gspca/m5602/gspca_m5602.mod.o

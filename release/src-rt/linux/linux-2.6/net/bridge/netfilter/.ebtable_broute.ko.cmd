@@ -1,1 +1,0 @@
-cmd_net/bridge/netfilter/ebtable_broute.ko := mipsel-linux-ld  -m elf32ltsmip -r -o net/bridge/netfilter/ebtable_broute.ko net/bridge/netfilter/ebtable_broute.o net/bridge/netfilter/ebtable_broute.mod.o

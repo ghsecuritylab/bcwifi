@@ -1,1 +1,0 @@
-cmd_drivers/media/video/videodev.o := mipsel-linux-ld  -m elf32ltsmip  -r -o drivers/media/video/videodev.o drivers/media/video/v4l2-dev.o drivers/media/video/v4l2-ioctl.o drivers/media/video/v4l2-device.o

@@ -1,1 +1,0 @@
-cmd_net/ipv4/netfilter/ip_set_ipportiphash.ko := mipsel-linux-ld  -m elf32ltsmip -r -o net/ipv4/netfilter/ip_set_ipportiphash.ko net/ipv4/netfilter/ip_set_ipportiphash.o net/ipv4/netfilter/ip_set_ipportiphash.mod.o

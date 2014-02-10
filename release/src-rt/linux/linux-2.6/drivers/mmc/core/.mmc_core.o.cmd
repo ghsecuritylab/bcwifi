@@ -1,1 +1,0 @@
-cmd_drivers/mmc/core/mmc_core.o := mipsel-linux-ld  -m elf32ltsmip  -r -o drivers/mmc/core/mmc_core.o drivers/mmc/core/core.o drivers/mmc/core/sysfs.o drivers/mmc/core/mmc.o drivers/mmc/core/mmc_ops.o drivers/mmc/core/sd.o drivers/mmc/core/sd_ops.o

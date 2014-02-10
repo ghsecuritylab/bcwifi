@@ -1,1 +1,0 @@
-cmd_net/ipv6/netfilter/nf_conntrack_ipv6.ko := mipsel-linux-ld  -m elf32ltsmip -r -o net/ipv6/netfilter/nf_conntrack_ipv6.ko net/ipv6/netfilter/nf_conntrack_ipv6.o net/ipv6/netfilter/nf_conntrack_ipv6.mod.o

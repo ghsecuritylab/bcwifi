@@ -1,1 +1,0 @@
-cmd_net/bridge/netfilter/ebtable_filter.ko := mipsel-linux-ld  -m elf32ltsmip -r -o net/bridge/netfilter/ebtable_filter.ko net/bridge/netfilter/ebtable_filter.o net/bridge/netfilter/ebtable_filter.mod.o

@@ -31,6 +31,17 @@ struct buffer
 	int len;
 };
 
+typedef struct {
+	unsigned long total;
+	unsigned long free;
+	unsigned long shared;
+	unsigned long buffers;
+	unsigned long cached;
+	unsigned long swaptotal;
+	unsigned long swapfree;
+	unsigned long maxfreeram;
+} meminfo_t;
+
 static void buffer_init(struct buffer *buf)
 {
 	memset(buf, 0x00, sizeof(struct buffer));
@@ -107,8 +118,9 @@ static int post_configure(struct post_config *conf)
 				conf->post_interval = atoi(time);	
 
 				ok++;
-			}else 
-				p++;
+			}else {
+				p++;	
+			}
 		}
 
 		if (ok == 2)
@@ -120,17 +132,6 @@ static int post_configure(struct post_config *conf)
 
 	return 0;
 }
-
-typedef struct {
-	unsigned long total;
-	unsigned long free;
-	unsigned long shared;
-	unsigned long buffers;
-	unsigned long cached;
-	unsigned long swaptotal;
-	unsigned long swapfree;
-	unsigned long maxfreeram;
-} meminfo_t;
 
 static int get_memory(meminfo_t *m)
 {
