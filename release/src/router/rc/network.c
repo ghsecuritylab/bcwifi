@@ -101,7 +101,7 @@ static void set_lan_hostname(const char *wan_hostname)
 		fprintf(f, "127.0.0.1  localhost\n");
 		if ((s = nvram_get("lan_ipaddr")) && (*s)) {
 			fprintf(f, "%s  %s %s-lan\n", s, nvram_safe_get("lan_hostname"), nvram_safe_get("lan_hostname"));
-			fprintf(f, "%s  test.gw\n", s);
+			fprintf(f, "%s  hotwifi.me\n", s);
 		}
 		if ((s = nvram_get("lan1_ipaddr")) && (*s) && (strcmp(s,"") != 0))
 			fprintf(f, "%s  %s-lan1\n", s, nvram_safe_get("lan_hostname"));

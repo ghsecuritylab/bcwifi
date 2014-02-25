@@ -62,7 +62,7 @@ enum {
 };
 
 static int
-wget(int method, const char *server, char *buf, size_t count, off_t offset)
+wget(int method, const char *server, char *data, size_t count, off_t offset)
 {
 
 	char url[PATH_MAX] = { 0 }, *s;
@@ -129,8 +129,8 @@ wget(int method, const char *server, char *buf, size_t count, off_t offset)
 		fprintf(fp, "Range: bytes=%ld-\r\n", offset);
 	if (method == METHOD_POST) {
 		fprintf(fp, "Content-Type: application/x-www-form-urlencoded\r\n");
-		fprintf(fp, "Content-Length: %d\r\n\r\n", (int) strlen(buf));
-		fputs(buf, fp);
+		fprintf(fp, "Content-Length: %d\r\n\r\n", (int) strlen(data));
+		fputs(data, fp);
 	} else
 		fprintf(fp, "Connection: close\r\n\r\n");
 
@@ -168,7 +168,7 @@ wget(int method, const char *server, char *buf, size_t count, off_t offset)
 		len = strtol(line, NULL, 16);
 
 	len = (len > count) ? count : len;
-	len = fread(buf, 1, len, fp);
+	len = fread(data, 1, len, fp);
 
 done:
 	/* Close socket */
@@ -178,15 +178,14 @@ done:
 }
 
 int
-http_get(const char *server, char *buf, size_t count, off_t offset)
+http_get(const char *url, char *data, size_t count, off_t offset)
 {
-	return wget(METHOD_GET, server, buf, count, offset);
+	return wget(METHOD_GET, url, data, count, offset);
 }
 
 int
-http_post(const char *server, char *buf, size_t count)
+http_post(const char *url, char *data, size_t count)
 {
 	/* No continuation generally possible with POST */
-	return wget(METHOD_POST, server, buf, count, 0);
+	return wget(METHOD_POST, url, data, count, 0);
 }
-

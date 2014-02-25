@@ -1,4 +1,4 @@
-﻿<!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 4.0//EN'>
+<!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 4.0//EN'>
 <!--
 	Tomato GUI
 	Copyright (C) 2006-2010 Jonathan Zarate
@@ -199,7 +199,7 @@ for (var uidx = 0; uidx < wl_ifaces.length; ++uidx) {
 </table>
 </form>
 <script type='text/javascript'>earlyInit()</script>
-<div id="bottom">Copyright © 2012-2013 By <a href="http://www.ethinking.cn/wweb/" target="_blank">苏州亿想中电子科技有限公司</a> All Rights Reserved. <br/>软件版本<% version(); %></div>
+<div id="bottom"> All Rights Reserved. <br/>软件版本<% version(); %></div>
 
 
 </body>

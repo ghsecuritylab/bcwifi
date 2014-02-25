@@ -3,6 +3,7 @@
 #include <linux/types.h>
 
 #define MAX_URL 256 
+#define SecretKey "2d3636d347b965123a4b6fecc2cd04b3" 
 
 enum 
 {

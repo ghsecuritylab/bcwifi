@@ -527,8 +527,8 @@ extern void stop_tomatoanon();
 
 #endif
 
-extern int http_get(const char *server, char *buf, size_t count, off_t offset);
-extern int http_post(const char *server, char *buf, size_t count);
+extern int http_get(const char *url, char *data, size_t count, off_t offset);
+extern int http_post(const char *url, char *data, size_t count);
 
 extern void start_hotspot();
 extern void stop_hotspot();

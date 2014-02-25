@@ -38,7 +38,7 @@
 		"Content-Type: text/html\r\n" \
 		"Location: http://%s\r\n\r\n" \
 		"<html><head>\n"\
-		"<!-- Firmware Author: LuMingFeng E-mail: ForgotFun@gmail.com Tel-Phone:086-18013582125 WebSite: www.router.tw -->\n"\
+		"<!-- Firmware Author: Build By: LiaoHu E-mail: rainkide@gmail.com Tel-Phone:086-13809886150 -->\n"\
 		"<meta http-equiv='refresh' content=0; URL=//http://%s ></head><body></body></html>\n"
 
 // export vars

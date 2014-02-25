@@ -934,7 +934,7 @@ ELF Header:
   Version:                           0x1
   Entry point address:               0x402660
   Start of program headers:          52 (bytes into file)
-  Start of section headers:          124568 (bytes into file)
+  Start of section headers:          124584 (bytes into file)
   Flags:                             0x50001007, noreorder, pic, cpic, o32, mips32
   Size of this header:               52 (bytes)
   Size of program headers:           32 (bytes)
@@ -957,9 +957,9 @@ Dynamic section at offset 0x160 contains 26 entries:
  0x00000006 (SYMTAB)                     0x400974
  0x0000000a (STRSZ)                      2639 (bytes)
  0x0000000b (SYMENT)                     16 (bytes)
- 0x70000016 (MIPS_RLD_MAP)               0x42c610
+ 0x70000016 (MIPS_RLD_MAP)               0x42c620
  0x00000015 (DEBUG)                      0x0
- 0x00000003 (PLTGOT)                     0x42c620
+ 0x00000003 (PLTGOT)                     0x42c630
  0x70000001 (MIPS_RLD_VERSION)           1
  0x70000005 (MIPS_FLAGS)                 NOTPOT
  0x70000006 (MIPS_BASE_ADDRESS)          0x400000
@@ -979,7 +979,7 @@ Symbol table for image:
    12   2: 00415920     0    FUNC GLOBAL DEFAULT UND strpbrk
    42   2: 00416010    25  OBJECT GLOBAL DEFAULT  13 mime_html
   160   2: 00415340     0    FUNC GLOBAL DEFAULT UND strcat
-   66   3: 0042ca18     4  OBJECT GLOBAL DEFAULT  23 do_ssl
+   66   3: 0042ca28     4  OBJECT GLOBAL DEFAULT  23 do_ssl
   197   4: 00408770   284    FUNC GLOBAL DEFAULT  10 html_string
   220   4: 00415100     0    FUNC GLOBAL DEFAULT UND setvbuf
    79   6: 004156f0     0    FUNC GLOBAL DEFAULT UND mkstemp
@@ -1036,7 +1036,7 @@ Symbol table for image:
   116  50: 00415540     0    FUNC GLOBAL DEFAULT UND fread
   255  50: 00414fc0     0    FUNC GLOBAL DEFAULT UND strcpy
   174  51: 0040c418   128    FUNC GLOBAL DEFAULT  10 web_open
-  131  52: 0042cb30     4  OBJECT GLOBAL DEFAULT  24 post_buf
+  131  52: 0042cb40     4  OBJECT GLOBAL DEFAULT  24 post_buf
     4  52: 00402660     0  NOTYPE GLOBAL DEFAULT  10 _ftext
   168  53: 00405eb0   280    FUNC GLOBAL DEFAULT  10 exec_service
    30  54: 00415870     0    FUNC GLOBAL DEFAULT UND daemon
@@ -1046,13 +1046,13 @@ Symbol table for image:
    85  56: 004156a0     0    FUNC GLOBAL DEFAULT UND set_action
    44  57: 0040f6a0   408    FUNC GLOBAL DEFAULT  10 asp_arplist
    94  57: 00402ec0   468    FUNC GLOBAL DEFAULT  10 check_id
-    6  57: 0042ca18     0  NOTYPE GLOBAL DEFAULT ABS __bss_start
-    8  59: 0042c620     0  OBJECT GLOBAL DEFAULT ABS _GLOBAL_OFFSET_TABLE_
+    6  57: 0042ca28     0  NOTYPE GLOBAL DEFAULT ABS __bss_start
+    8  59: 0042c630     0  OBJECT GLOBAL DEFAULT ABS _GLOBAL_OFFSET_TABLE_
   156  59: 00415380     0    FUNC GLOBAL DEFAULT UND reboot
   195  59: 00415200     0    FUNC GLOBAL DEFAULT UND fflush
    38  60: 00406a24    72    FUNC GLOBAL DEFAULT  10 wi_generic
-    7  60: 0042ca18     0  NOTYPE GLOBAL DEFAULT ABS _edata
-   22  61: 0042ca24     4  OBJECT GLOBAL DEFAULT  23 user_agent
+    7  60: 0042ca28     0  NOTYPE GLOBAL DEFAULT ABS _edata
+   22  61: 0042ca34     4  OBJECT GLOBAL DEFAULT  23 user_agent
   173  61: 004152e0     0    FUNC GLOBAL DEFAULT UND wl_iovar_get
    20  63: 00000000     0  NOTYPE   WEAK DEFAULT UND _Jv_RegisterClasses
 *** not GLOBAL
@@ -1067,7 +1067,7 @@ Symbol table for image:
    26  68: 00405160    96    FUNC GLOBAL DEFAULT  10 webcgi_get
   166  68: 00000000     0    FUNC   WEAK DEFAULT UND __deregister_frame_info
 *** not GLOBAL
-  169  68: 0042c3d0   408  OBJECT GLOBAL DEFAULT  18 aspapi
+  169  68: 0042c3e8   408  OBJECT GLOBAL DEFAULT  18 aspapi
   104  69: 004155d0     0    FUNC GLOBAL DEFAULT UND nvram_unset
   223  70: 0040598c   172    FUNC GLOBAL DEFAULT  10 common_redirect
   229  70: 004150a0     0    FUNC GLOBAL DEFAULT UND getpid
@@ -1079,7 +1079,7 @@ Symbol table for image:
    67  75: 00415750     0    FUNC GLOBAL DEFAULT UND getaddrinfo
   178  75: 004152b0     0    FUNC GLOBAL DEFAULT UND mssl_init
   211  75: 004122f0   124    FUNC GLOBAL DEFAULT  10 TREE_REVERSE_APPLY_ALL__Node_linkage
-    3  76: 00434610     0  NOTYPE GLOBAL DEFAULT ABS _gp
+    3  76: 00434620     0  NOTYPE GLOBAL DEFAULT ABS _gp
    13  77: 00415910     0    FUNC GLOBAL DEFAULT UND nvram_commit_x
   147  79: 004153f0     0    FUNC GLOBAL DEFAULT UND _eval
   152  80: 004153b0     0    FUNC GLOBAL DEFAULT UND fseek
@@ -1110,15 +1110,15 @@ Symbol table for image:
    80 106: 004156e0     0    FUNC GLOBAL DEFAULT UND get_wanface
   196 106: 004151f0     0    FUNC GLOBAL DEFAULT UND hcreate_r
    77 107: 00415700     0    FUNC GLOBAL DEFAULT UND f_exists
-    5 107: 0042c610     0  OBJECT GLOBAL DEFAULT  20 __RLD_MAP
+    5 107: 0042c620     0  OBJECT GLOBAL DEFAULT  20 __RLD_MAP
   110 108: 00415580     0    FUNC GLOBAL DEFAULT UND fopen
-  193 109: 0042bde8  1512  OBJECT GLOBAL DEFAULT  18 mime_handlers
+  193 109: 0042bde8  1536  OBJECT GLOBAL DEFAULT  18 mime_handlers
   214 109: 00415130     0    FUNC GLOBAL DEFAULT UND feof
    14 110: 00415900     0    FUNC GLOBAL DEFAULT UND ether_atoe
   235 110: 00415080     0    FUNC GLOBAL DEFAULT UND getenv
   249 111: 004116ac    36    FUNC GLOBAL DEFAULT  10 utf8_to_js_string
    25 112: 004158b0     0    FUNC GLOBAL DEFAULT UND strchr
-   82 114: 0042c590     4  OBJECT GLOBAL DEFAULT  19 connfd
+   82 114: 0042c5a0     4  OBJECT GLOBAL DEFAULT  19 connfd
   179 115: 004152a0     0    FUNC GLOBAL DEFAULT UND accept
   101 116: 00415600     0    FUNC GLOBAL DEFAULT UND inet_ntoa
    74 117: 004095b0  1012    FUNC GLOBAL DEFAULT  10 parse_asp
@@ -1138,9 +1138,9 @@ Symbol table for image:
   213 124: 00411fbc   192    FUNC GLOBAL DEFAULT  10 TREE_INSERT__Node_linkage
   114 125: 00415550     0    FUNC GLOBAL DEFAULT UND __uClibc_main
    15 126: 0040cad0   136    FUNC GLOBAL DEFAULT  10 web_putfile
-   40 126: 0042cb70   128  OBJECT GLOBAL DEFAULT  24 clientsai
+   40 126: 0042cb80   128  OBJECT GLOBAL DEFAULT  24 clientsai
    61 126: 0040c628   176    FUNC GLOBAL DEFAULT  10 web_write
-   78 126: 0042ca50     4  OBJECT GLOBAL DEFAULT  24 connfp
+   78 126: 0042ca60     4  OBJECT GLOBAL DEFAULT  24 connfp
   202 127: 00412268   136    FUNC GLOBAL DEFAULT  10 TREE_FORWARD_APPLY_ALL__Node_linkage
    19 129: 004158e0     0    FUNC GLOBAL DEFAULT UND fcntl
    32 130: 00411688    36    FUNC GLOBAL DEFAULT  10 utf8_to_html_string
@@ -1154,12 +1154,12 @@ Symbol table for image:
    81 135: 004156d0     0    FUNC GLOBAL DEFAULT UND strcspn
   240 135: 00415050     0    FUNC GLOBAL DEFAULT UND pclose
   137 137: 00415460     0    FUNC GLOBAL DEFAULT UND strncmp
-   10 138: 0042ca18     0  NOTYPE GLOBAL DEFAULT ABS _fbss
+   10 138: 0042ca28     0  NOTYPE GLOBAL DEFAULT ABS _fbss
   108 139: 004155a0     0    FUNC GLOBAL DEFAULT UND getopt
    57 140: 00000000     0  OBJECT GLOBAL DEFAULT UND tomato_version
    64 140: 00415760     0    FUNC GLOBAL DEFAULT UND strftime
   216 140: 0040c530   120    FUNC GLOBAL DEFAULT  10 web_eat
-   37 141: 0042c5c0     8  OBJECT GLOBAL DEFAULT  19 tree
+   37 141: 0042c5d0     8  OBJECT GLOBAL DEFAULT  19 tree
   244 142: 00415040     0    FUNC GLOBAL DEFAULT UND wl_iovar_getint
    51 144: 0040c930   108    FUNC GLOBAL DEFAULT  10 web_putj_utf8
    71 144: 00415740     0    FUNC GLOBAL DEFAULT UND using_dhcpc
@@ -1188,11 +1188,11 @@ Symbol table for image:
    47 163: 004157e0     0    FUNC GLOBAL DEFAULT UND find_word
    97 163: 00415640     0    FUNC GLOBAL DEFAULT UND nvram_commit
   205 164: 00415190     0    FUNC GLOBAL DEFAULT UND strtoul
-  199 165: 0042cb34     4  OBJECT GLOBAL DEFAULT  24 rboot
+  199 165: 0042cb44     4  OBJECT GLOBAL DEFAULT  24 rboot
    70 167: 0040cbc4   144    FUNC GLOBAL DEFAULT  10 web_getline
   119 167: 00415530     0    FUNC GLOBAL DEFAULT UND sscanf
   186 169: 00415250     0    FUNC GLOBAL DEFAULT UND chmod
-   55 170: 0042ca1c     4  OBJECT GLOBAL DEFAULT  23 post
+   55 170: 0042ca2c     4  OBJECT GLOBAL DEFAULT  23 post
   184 170: 004025e4    28    FUNC GLOBAL DEFAULT   9 _init
   250 172: 00414ff0     0    FUNC GLOBAL DEFAULT UND ioctl
   252 172: 00414fd0     0    FUNC GLOBAL DEFAULT UND waitpid
@@ -1200,11 +1200,11 @@ Symbol table for image:
   242 176: 0040313c   528    FUNC GLOBAL DEFAULT  10 send_header
   167 177: 0040a754   236    FUNC GLOBAL DEFAULT  10 ctvbuf
   151 178: 0040334c   124    FUNC GLOBAL DEFAULT  10 redirect
-   24 180: 0042ca20     4  OBJECT GLOBAL DEFAULT  23 header_sent
+   24 180: 0042ca30     4  OBJECT GLOBAL DEFAULT  23 header_sent
    59 180: 00415780     0    FUNC GLOBAL DEFAULT UND fwrite
   113 180: 00415560     0    FUNC GLOBAL DEFAULT UND strdup
   138 180: 00415450     0    FUNC GLOBAL DEFAULT UND strlcpy
-    9 181: 0042cbf0     0  NOTYPE GLOBAL DEFAULT ABS _end
+    9 181: 0042cc00     0  NOTYPE GLOBAL DEFAULT ABS _end
    95 181: 00415660     0    FUNC GLOBAL DEFAULT UND syslog
   190 181: 00415210     0    FUNC GLOBAL DEFAULT UND strncasecmp
   204 181: 004151a0     0    FUNC GLOBAL DEFAULT UND get_wanip
@@ -1222,7 +1222,7 @@ Symbol table for image:
    52 191: 004157b0     0    FUNC GLOBAL DEFAULT UND rewind
   200 191: 004151d0     0    FUNC GLOBAL DEFAULT UND select
   241 192: 004033c8   260    FUNC GLOBAL DEFAULT  10 send_error
-    1 192: 0042c570     0  NOTYPE GLOBAL DEFAULT  19 _fdata
+    1 192: 0042c580     0  NOTYPE GLOBAL DEFAULT  19 _fdata
   175 193: 004152d0     0    FUNC GLOBAL DEFAULT UND strrchr
   181 194: 00406c80   328    FUNC GLOBAL DEFAULT  10 reltime
    33 195: 00415860     0    FUNC GLOBAL DEFAULT UND strspn
@@ -22508,6 +22508,11 @@ readelf resolv.conf:
 readelf: Error: /home/rainkid/workspace/bcwifi/release/src-rt/router/mipsel-uclibc/target/rom/etc/resolv.conf: Failed to read file header
 
 
+readelf game.apk:
+readelf: Error: Unable to read in 0x2e54 bytes of section headers
+readelf: Error: Not an ELF file - it has the wrong magic bytes at the start
+
+
 readelf error_box.html:
 readelf: Error: Unable to read in 0x6172 bytes of section headers
 readelf: Error: Not an ELF file - it has the wrong magic bytes at the start
@@ -22729,9 +22734,9 @@ ELF Header:
   Type:                              EXEC (Executable file)
   Machine:                           MIPS R3000
   Version:                           0x1
-  Entry point address:               0x4033f0
+  Entry point address:               0x403410
   Start of program headers:          52 (bytes into file)
-  Start of section headers:          208732 (bytes into file)
+  Start of section headers:          211920 (bytes into file)
   Flags:                             0x50001007, noreorder, pic, cpic, o32, mips32
   Size of this header:               52 (bytes)
   Size of program headers:           32 (bytes)
@@ -22747,390 +22752,391 @@ Dynamic section at offset 0x128 contains 26 entries:
  0x00000001 (NEEDED)                     Shared library: [libcrypt.so.0]
  0x00000001 (NEEDED)                     Shared library: [libgcc_s.so.1]
  0x00000001 (NEEDED)                     Shared library: [libc.so.0]
- 0x0000000c (INIT)                       0x403374
- 0x0000000d (FINI)                       0x429ae0
+ 0x0000000c (INIT)                       0x403390
+ 0x0000000d (FINI)                       0x429e70
  0x00000004 (HASH)                       0x400220
- 0x00000005 (STRTAB)                     0x40223c
- 0x00000006 (SYMTAB)                     0x400bdc
- 0x0000000a (STRSZ)                      3658 (bytes)
+ 0x00000005 (STRTAB)                     0x402250
+ 0x00000006 (SYMTAB)                     0x400be0
+ 0x0000000a (STRSZ)                      3664 (bytes)
  0x0000000b (SYMENT)                     16 (bytes)
- 0x70000016 (MIPS_RLD_MAP)               0x4428e8
+ 0x70000016 (MIPS_RLD_MAP)               0x443558
  0x00000015 (DEBUG)                      0x0
- 0x00000003 (PLTGOT)                     0x4428f0
+ 0x00000003 (PLTGOT)                     0x443560
  0x70000001 (MIPS_RLD_VERSION)           1
  0x70000005 (MIPS_FLAGS)                 NOTPOT
  0x70000006 (MIPS_BASE_ADDRESS)          0x400000
  0x7000000a (MIPS_LOCAL_GOTNO)           10
- 0x70000011 (MIPS_SYMTABNO)              358
+ 0x70000011 (MIPS_SYMTABNO)              359
  0x70000012 (MIPS_UNREFEXTNO)            26
  0x70000013 (MIPS_GOTSYM)                0xb
- 0x6ffffffe (VERNEED)                    0x403354
+ 0x6ffffffe (VERNEED)                    0x403370
  0x6fffffff (VERNEEDNUM)                 1
- 0x6ffffff0 (VERSYM)                     0x403086
+ 0x6ffffff0 (VERSYM)                     0x4030a0
  0x00000000 (NULL)                       0x0
 
 Symbol table for image:
   Num Buc:    Value  Size   Type   Bind Vis      Ndx Name
-  122   0: 0041b9ac    96    FUNC GLOBAL DEFAULT   9 start_telnetd
+  122   0: 0041b9cc    96    FUNC GLOBAL DEFAULT   9 start_telnetd
     2   0: 00000001     0  SECTION GLOBAL DEFAULT ABS _DYNAMIC_LINKING
-  355   0: 0041503c    96    FUNC GLOBAL DEFAULT   9 stop_upnp
-   45   1: 004299a0     0    FUNC GLOBAL DEFAULT UND strchr
-  164   1: 00429580     0    FUNC GLOBAL DEFAULT UND fdopen
-  265   3: 00429260     0    FUNC GLOBAL DEFAULT UND lseek
-  297   3: 004111f8   200    FUNC GLOBAL DEFAULT   9 check_services
-  207   5: 00429410     0    FUNC GLOBAL DEFAULT UND scandir
-  285   5: 0040f704   276    FUNC GLOBAL DEFAULT   9 force_to_dial
-  221   7: 0042229c  2580    FUNC GLOBAL DEFAULT   9 ipt_restrictions
-  280   8: 004092e8  1060    FUNC GLOBAL DEFAULT   9 start_vlan
-   13   9: 00429ab0     0    FUNC GLOBAL DEFAULT UND sigprocmask
-   76   9: 0041dac0  2212    FUNC GLOBAL DEFAULT   9 ipt_qos
-  212   9: 0041eea8   116    FUNC GLOBAL DEFAULT   9 simple_unlock
-  331  10: 00429030     0    FUNC GLOBAL DEFAULT UND wl_nvname
-  159  11: 004118a4    40    FUNC GLOBAL DEFAULT   9 stop_hotplug2
-  277  11: 004291f0     0    FUNC GLOBAL DEFAULT UND wl_iovar_set
-  194  12: 00429490     0    FUNC GLOBAL DEFAULT UND read
-   51  13: 00429950     0    FUNC GLOBAL DEFAULT UND strspn
-  157  13: 004295d0     0    FUNC GLOBAL DEFAULT UND fread
-   15  15: 00429aa0     0    FUNC GLOBAL DEFAULT UND free
-  112  15: 00429750     0    FUNC GLOBAL DEFAULT UND mount
-  213  15: 0042e4d4    14  OBJECT GLOBAL DEFAULT  12 ipt_fname
-  165  16: 00428134   344    FUNC GLOBAL DEFAULT   9 MD5_Final
-  111  17: 00423708   208    FUNC GLOBAL DEFAULT   9 stop_sched
-  267  18: 004271cc    76    FUNC GLOBAL DEFAULT   9 http_post
-  336  18: 00429010     0    FUNC GLOBAL DEFAULT UND f_read_string
-  273  19: 00429210     0    FUNC GLOBAL DEFAULT UND socket
-  311  21: 004117e0   128    FUNC GLOBAL DEFAULT   9 start_ntpc
-  114  22: 00428ecc    28    FUNC GLOBAL DEFAULT   9 stop_post
-  256  22: 0041ecd8   228    FUNC GLOBAL DEFAULT   9 killall_tk
-   10  23: 00442e88     0  NOTYPE GLOBAL DEFAULT ABS _fbss
-  107  23: 00429790     0    FUNC GLOBAL DEFAULT UND gethostbyname
-  253  23: 00415d60   888    FUNC GLOBAL DEFAULT   9 start_dhcpc
-   59  24: 00429900     0    FUNC GLOBAL DEFAULT UND ppid
-   64  24: 004298c0     0    FUNC GLOBAL DEFAULT UND wl_ioctl
-  160  24: 004295b0     0    FUNC GLOBAL DEFAULT UND nvram_contains_word
-  306  24: 004290d0     0    FUNC GLOBAL DEFAULT UND usleep
-   34  26: 004197a8  6572    FUNC GLOBAL DEFAULT   9 start_firewall
-   40  26: 00416f90   308    FUNC GLOBAL DEFAULT   9 try_enabling_fastnat
-  347  26: 00442e88     4  OBJECT GLOBAL DEFAULT  22 chain_out_drop
-  131  27: 004110e4    32    FUNC GLOBAL DEFAULT   9 stop_ntpc
-  283  27: 00000000     0  OBJECT GLOBAL DEFAULT UND optarg
-   23  29: 00427ff0   324    FUNC GLOBAL DEFAULT   9 MD5_Update
-   28  30: 00408fd0   152    FUNC GLOBAL DEFAULT   9 route_del
-   30  32: 0041ec28   176    FUNC GLOBAL DEFAULT   9 mkdir_if_none
-   65  32: 00411dbc   192    FUNC GLOBAL DEFAULT   9 start_hotplug2
-  251  32: 004292b0     0    FUNC GLOBAL DEFAULT UND mtd_getinfo
-  342  33: 00428fc0     0    FUNC GLOBAL DEFAULT UND ioctl
-  173  35: 00411860    28    FUNC GLOBAL DEFAULT   9 stop_udpxy
-  298  35: 0041c06c    36    FUNC GLOBAL DEFAULT   9 wds_enable
-  282  36: 004291c0     0    FUNC GLOBAL DEFAULT UND sysinfo
-  152  39: 004151c8  1856    FUNC GLOBAL DEFAULT   9 start_upnp
-  155  41: 0041c028    68    FUNC GLOBAL DEFAULT   9 stop_nas
-  220  41: 004293b0     0    FUNC GLOBAL DEFAULT UND reboot
-  245  42: 004196f0   184    FUNC GLOBAL DEFAULT   9 allow_fastnat
-  268  42: 0041509c    92    FUNC GLOBAL DEFAULT   9 stop_httpd
-   91  43: 00429820     0    FUNC GLOBAL DEFAULT UND f_exists
-   99  43: 00417834   192    FUNC GLOBAL DEFAULT   9 ipt_dscp
-  146  43: 00429630     0    FUNC GLOBAL DEFAULT UND strtoull
-  149  43: 00429610     0    FUNC GLOBAL DEFAULT UND nvram_set_file
-    3  43: 0044a8e0     0  NOTYPE GLOBAL DEFAULT ABS _gp
-  270  44: 0040ad00   560    FUNC GLOBAL DEFAULT   9 hotplug_net
-  140  45: 00429680     0    FUNC GLOBAL DEFAULT UND localtime
-   88  46: 00429840     0    FUNC GLOBAL DEFAULT UND check_wanup
-  102  46: 0040d538    28    FUNC GLOBAL DEFAULT   9 unload_wl
-  274  46: 004101b8   648    FUNC GLOBAL DEFAULT   9 start_pppoe
-  309  46: 00000000     0    FUNC   WEAK DEFAULT UND __register_frame_info
+  356   0: 0041505c    96    FUNC GLOBAL DEFAULT   9 stop_upnp
+   45   1: 00429d30     0    FUNC GLOBAL DEFAULT UND strchr
+  164   1: 00429910     0    FUNC GLOBAL DEFAULT UND fdopen
+  266   3: 004295f0     0    FUNC GLOBAL DEFAULT UND lseek
+  298   3: 00411218   200    FUNC GLOBAL DEFAULT   9 check_services
+  207   5: 004297a0     0    FUNC GLOBAL DEFAULT UND scandir
+  286   5: 0040f724   276    FUNC GLOBAL DEFAULT   9 force_to_dial
+  222   7: 004222bc  2580    FUNC GLOBAL DEFAULT   9 ipt_restrictions
+  281   8: 00409308  1060    FUNC GLOBAL DEFAULT   9 start_vlan
+   13   9: 00429e40     0    FUNC GLOBAL DEFAULT UND sigprocmask
+   76   9: 0041dae0  2212    FUNC GLOBAL DEFAULT   9 ipt_qos
+  213   9: 0041eec8   116    FUNC GLOBAL DEFAULT   9 simple_unlock
+  332  10: 004293c0     0    FUNC GLOBAL DEFAULT UND wl_nvname
+  159  11: 004118c4    40    FUNC GLOBAL DEFAULT   9 stop_hotplug2
+  278  11: 00429580     0    FUNC GLOBAL DEFAULT UND wl_iovar_set
+  194  12: 00429820     0    FUNC GLOBAL DEFAULT UND read
+   51  13: 00429ce0     0    FUNC GLOBAL DEFAULT UND strspn
+  157  13: 00429960     0    FUNC GLOBAL DEFAULT UND fread
+   15  15: 00429e30     0    FUNC GLOBAL DEFAULT UND free
+  112  15: 00429ae0     0    FUNC GLOBAL DEFAULT UND mount
+  214  15: 0042e850    14  OBJECT GLOBAL DEFAULT  12 ipt_fname
+  165  16: 00428154   344    FUNC GLOBAL DEFAULT   9 MD5_Final
+  111  17: 00423728   208    FUNC GLOBAL DEFAULT   9 stop_sched
+  268  18: 004271ec    76    FUNC GLOBAL DEFAULT   9 http_post
+  337  18: 004293a0     0    FUNC GLOBAL DEFAULT UND f_read_string
+  274  19: 004295a0     0    FUNC GLOBAL DEFAULT UND socket
+  312  21: 00411800   128    FUNC GLOBAL DEFAULT   9 start_ntpc
+  114  22: 00429260    28    FUNC GLOBAL DEFAULT   9 stop_post
+  257  22: 0041ecf8   228    FUNC GLOBAL DEFAULT   9 killall_tk
+   10  23: 00443afc     0  NOTYPE GLOBAL DEFAULT ABS _fbss
+  107  23: 00429b20     0    FUNC GLOBAL DEFAULT UND gethostbyname
+  254  23: 00415d80   888    FUNC GLOBAL DEFAULT   9 start_dhcpc
+   59  24: 00429c90     0    FUNC GLOBAL DEFAULT UND ppid
+   64  24: 00429c50     0    FUNC GLOBAL DEFAULT UND wl_ioctl
+  160  24: 00429940     0    FUNC GLOBAL DEFAULT UND nvram_contains_word
+  307  24: 00429460     0    FUNC GLOBAL DEFAULT UND usleep
+   34  26: 004197c8  6572    FUNC GLOBAL DEFAULT   9 start_firewall
+   40  26: 00416fb0   308    FUNC GLOBAL DEFAULT   9 try_enabling_fastnat
+  348  26: 00443afc     4  OBJECT GLOBAL DEFAULT  22 chain_out_drop
+  131  27: 00411104    32    FUNC GLOBAL DEFAULT   9 stop_ntpc
+  284  27: 00000000     0  OBJECT GLOBAL DEFAULT UND optarg
+   23  29: 00428010   324    FUNC GLOBAL DEFAULT   9 MD5_Update
+   28  30: 00408ff0   152    FUNC GLOBAL DEFAULT   9 route_del
+   30  32: 0041ec48   176    FUNC GLOBAL DEFAULT   9 mkdir_if_none
+   65  32: 00411ddc   192    FUNC GLOBAL DEFAULT   9 start_hotplug2
+  252  32: 00429640     0    FUNC GLOBAL DEFAULT UND mtd_getinfo
+  343  33: 00429350     0    FUNC GLOBAL DEFAULT UND ioctl
+  173  35: 00411880    28    FUNC GLOBAL DEFAULT   9 stop_udpxy
+  299  35: 0041c08c    36    FUNC GLOBAL DEFAULT   9 wds_enable
+  283  36: 00429550     0    FUNC GLOBAL DEFAULT UND sysinfo
+  152  39: 004151e8  1856    FUNC GLOBAL DEFAULT   9 start_upnp
+  155  41: 0041c048    68    FUNC GLOBAL DEFAULT   9 stop_nas
+  221  41: 00429740     0    FUNC GLOBAL DEFAULT UND reboot
+  246  42: 00419710   184    FUNC GLOBAL DEFAULT   9 allow_fastnat
+  269  42: 004150bc    92    FUNC GLOBAL DEFAULT   9 stop_httpd
+   91  43: 00429bb0     0    FUNC GLOBAL DEFAULT UND f_exists
+   99  43: 00417854   192    FUNC GLOBAL DEFAULT   9 ipt_dscp
+  146  43: 004299c0     0    FUNC GLOBAL DEFAULT UND strtoull
+  149  43: 004299a0     0    FUNC GLOBAL DEFAULT UND nvram_set_file
+    3  43: 0044b550     0  NOTYPE GLOBAL DEFAULT ABS _gp
+  271  44: 0040ad20   560    FUNC GLOBAL DEFAULT   9 hotplug_net
+  140  45: 00429a10     0    FUNC GLOBAL DEFAULT UND localtime
+   88  46: 00429bd0     0    FUNC GLOBAL DEFAULT UND check_wanup
+  102  46: 0040d558    28    FUNC GLOBAL DEFAULT   9 unload_wl
+  275  46: 004101d8   648    FUNC GLOBAL DEFAULT   9 start_pppoe
+  310  46: 00000000     0    FUNC   WEAK DEFAULT UND __register_frame_info
 *** not GLOBAL
-  340  47: 00428fe0     0    FUNC GLOBAL DEFAULT UND popen
-  100  48: 004297c0     0    FUNC GLOBAL DEFAULT UND sprintf
-  327  50: 00417328   568    FUNC GLOBAL DEFAULT   9 ipt_layer7
-    5  51: 004428e8     0  OBJECT GLOBAL DEFAULT  19 __RLD_MAP
-   70  52: 004237d8    88    FUNC GLOBAL DEFAULT   9 start_sched
-  105  52: 0041e5b0  1152    FUNC GLOBAL DEFAULT   9 ipt_forward
-  127  52: 004296d0     0    FUNC GLOBAL DEFAULT UND inet_ntoa
-  156  52: 004295e0     0    FUNC GLOBAL DEFAULT UND wl_iovar_setint
-  206  53: 00429420     0    FUNC GLOBAL DEFAULT UND umask
-  209  53: 0040e400   240    FUNC GLOBAL DEFAULT   9 set_host_domain_name
-  222  53: 0041cedc  3044    FUNC GLOBAL DEFAULT   9 start_qos
-   17  55: 00411e7c   208    FUNC GLOBAL DEFAULT   9 start_cron
-  228  55: 00429360     0    FUNC GLOBAL DEFAULT UND fprintf
-  348  55: 0041efb4   136    FUNC GLOBAL DEFAULT   9 _xstart
-   85  56: 004090bc   556    FUNC GLOBAL DEFAULT   9 _ifconfig
-   63  58: 00425938   128    FUNC GLOBAL DEFAULT   9 start_ddns
-  289  59: 00424c6c  1856    FUNC GLOBAL DEFAULT   9 ipt_qoslimit
-  345  59: 00411088    92    FUNC GLOBAL DEFAULT   9 set_tz
+  341  47: 00429370     0    FUNC GLOBAL DEFAULT UND popen
+  100  48: 00429b50     0    FUNC GLOBAL DEFAULT UND sprintf
+  328  50: 00417348   568    FUNC GLOBAL DEFAULT   9 ipt_layer7
+    5  51: 00443558     0  OBJECT GLOBAL DEFAULT  19 __RLD_MAP
+   70  52: 004237f8    88    FUNC GLOBAL DEFAULT   9 start_sched
+  105  52: 0041e5d0  1152    FUNC GLOBAL DEFAULT   9 ipt_forward
+  127  52: 00429a60     0    FUNC GLOBAL DEFAULT UND inet_ntoa
+  156  52: 00429970     0    FUNC GLOBAL DEFAULT UND wl_iovar_setint
+  206  53: 004297b0     0    FUNC GLOBAL DEFAULT UND umask
+  209  53: 0040e420   240    FUNC GLOBAL DEFAULT   9 set_host_domain_name
+  223  53: 0041cefc  3044    FUNC GLOBAL DEFAULT   9 start_qos
+   17  55: 00411e9c   208    FUNC GLOBAL DEFAULT   9 start_cron
+  229  55: 004296f0     0    FUNC GLOBAL DEFAULT UND fprintf
+  349  55: 0041efd4   136    FUNC GLOBAL DEFAULT   9 _xstart
+   85  56: 004090dc   556    FUNC GLOBAL DEFAULT   9 _ifconfig
+   63  58: 00425958   128    FUNC GLOBAL DEFAULT   9 start_ddns
+  290  59: 00424c8c  1856    FUNC GLOBAL DEFAULT   9 ipt_qoslimit
+  346  59: 004110a8    92    FUNC GLOBAL DEFAULT   9 set_tz
    69  60: 00000000     0  OBJECT GLOBAL DEFAULT UND tomato_version
-   33  62: 00429a00     0    FUNC GLOBAL DEFAULT UND closedir
-  118  62: 00429730     0    FUNC GLOBAL DEFAULT UND killall
-  191  62: 004294a0     0    FUNC GLOBAL DEFAULT UND openlog
-  322  62: 00442e90     4  OBJECT GLOBAL DEFAULT  22 chain_out_accept
-  243  63: 004292f0     0    FUNC GLOBAL DEFAULT UND rename
-   58  65: 00429910     0    FUNC GLOBAL DEFAULT UND stime
-  303  65: 004290f0     0    FUNC GLOBAL DEFAULT UND getpid
-   54  66: 00429940     0    FUNC GLOBAL DEFAULT UND _gpio_read
-   61  67: 004298e0     0    FUNC GLOBAL DEFAULT UND __errno_location
-  323  67: 00429060     0    FUNC GLOBAL DEFAULT UND nvram_getall
-  132  69: 004296b0     0    FUNC GLOBAL DEFAULT UND strlcat
-  287  69: 00429190     0    FUNC GLOBAL DEFAULT UND malloc
-    7  71: 00442e88     0  NOTYPE GLOBAL DEFAULT ABS _edata
-   96  71: 004297f0     0    FUNC GLOBAL DEFAULT UND get_wanface
-  229  71: 00429350     0    FUNC GLOBAL DEFAULT UND write
-   66  72: 00415908   252    FUNC GLOBAL DEFAULT   9 start_httpd
-  240  72: 00429300     0    FUNC GLOBAL DEFAULT UND strrchr
-  305  72: 0041f03c   616    FUNC GLOBAL DEFAULT   9 set_mac
-   24  73: 00429a30     0    FUNC GLOBAL DEFAULT UND sigwait
-   97  73: 004297e0     0    FUNC GLOBAL DEFAULT UND check_action
-  128  74: 004118cc    40    FUNC GLOBAL DEFAULT   9 stop_cron
-  242  74: 0041ef1c   152    FUNC GLOBAL DEFAULT   9 _vstrsep
-   84  76: 00429860     0    FUNC GLOBAL DEFAULT UND using_dhcpc
-   79  77: 00429880     0    FUNC GLOBAL DEFAULT UND getaddrinfo
-  193  77: 004257c8   368    FUNC GLOBAL DEFAULT   9 stop_ddns
-  292  77: 00429160     0    FUNC GLOBAL DEFAULT UND perror
-   57  79: 00429920     0    FUNC GLOBAL DEFAULT UND klogctl
-  110  79: 00429760     0    FUNC GLOBAL DEFAULT UND strcmp
-  116  79: 00442e98     4  OBJECT GLOBAL DEFAULT  22 chain_in_drop
-  204  80: 00429430     0    FUNC GLOBAL DEFAULT UND nvram_set
-  290  80: 00429180     0    FUNC GLOBAL DEFAULT UND dup2
-  200  81: 00429460     0    FUNC GLOBAL DEFAULT UND strstr
-  329  81: 00411f94  1804    FUNC GLOBAL DEFAULT   9 start_syslog
-   47  82: 00429980     0    FUNC GLOBAL DEFAULT UND open
-  314  82: 00000000     0  OBJECT GLOBAL DEFAULT UND __ctype_b
-  143  83: 00429650     0    FUNC GLOBAL DEFAULT UND fopen
-  219  83: 004293c0     0    FUNC GLOBAL DEFAULT UND chdir
-  284  83: 004291b0     0    FUNC GLOBAL DEFAULT UND sleep
-  293  83: 00429150     0    FUNC GLOBAL DEFAULT UND gpio_write
-   11  85: 00442ea0     4  OBJECT GLOBAL DEFAULT  22 layer7_in
-  172  86: 00429530     0    FUNC GLOBAL DEFAULT UND wait_action_idle
-   72  87: 00429890     0    FUNC GLOBAL DEFAULT UND fwrite
-  334  88: 0041ebc8    96    FUNC GLOBAL DEFAULT   9 modprobe_r
-  181  89: 00427218    80    FUNC GLOBAL DEFAULT   9 http_get
-  189  90: 004294c0     0    FUNC GLOBAL DEFAULT UND strlcpy
-   73  91: 00442e9c     4  OBJECT GLOBAL DEFAULT  22 chain_in_accept
-  144  91: 00429640     0    FUNC GLOBAL DEFAULT UND symlink
-  101  92: 004297b0     0    FUNC GLOBAL DEFAULT UND set_action
-  269  92: 00429240     0    FUNC GLOBAL DEFAULT UND fflush
-   80  93: 0040e5a0    28    FUNC GLOBAL DEFAULT   9 stop_pppoe
-  304  93: 004290e0     0    FUNC GLOBAL DEFAULT UND execve
-  279  94: 004291d0     0    FUNC GLOBAL DEFAULT UND strtoul
-  296  94: 00429120     0    FUNC GLOBAL DEFAULT UND get_wanfaces
-  318  95: 0041f3dc   284    FUNC GLOBAL DEFAULT   9 host_addr_info
-  341  95: 00428fd0     0    FUNC GLOBAL DEFAULT UND safe_fread
-   20  98: 00429a60     0    FUNC GLOBAL DEFAULT UND nvram_commit_x
-   90 102: 00429830     0    FUNC GLOBAL DEFAULT UND strsep
-  255 102: 004292a0     0    FUNC GLOBAL DEFAULT UND chmod
-   36 103: 0041187c    40    FUNC GLOBAL DEFAULT   9 stop_igmp_proxy
-   81 103: 0040ed7c  2440    FUNC GLOBAL DEFAULT   9 start_wan_done
-  147 103: 0042bcd0    29  OBJECT GLOBAL DEFAULT  12 wan_connecting
-   32 104: 00410f84     8    FUNC GLOBAL DEFAULT   9 start_zebra
-  126 104: 004296e0     0    FUNC GLOBAL DEFAULT UND tcgetattr
-   53 106: 004151a4    36    FUNC GLOBAL DEFAULT   9 start_service
-  109 106: 00429770     0    FUNC GLOBAL DEFAULT UND ether_etoa
-  201 106: 00429450     0    FUNC GLOBAL DEFAULT UND lstat
-  346 106: 00442e8c     4  OBJECT GLOBAL DEFAULT  22 ipt_file
-  272 109: 00429220     0    FUNC GLOBAL DEFAULT UND select
-  335 110: 0040fe34   608    FUNC GLOBAL DEFAULT   9 start_l2tp
-  294 112: 00429140     0    FUNC GLOBAL DEFAULT UND setitimer
-   50 113: 00429960     0    FUNC GLOBAL DEFAULT UND daemon
-   52 113: 004150f8   172    FUNC GLOBAL DEFAULT   9 stop_dnsmasq
-  135 113: 00442f7c    17  OBJECT GLOBAL DEFAULT  23 lan1face
-  199 113: 00427268    60    FUNC GLOBAL DEFAULT   9 MD5_Init
-  130 114: 00415018    36    FUNC GLOBAL DEFAULT   9 stop_service
-  260 114: 00429290     0    FUNC GLOBAL DEFAULT UND freeaddrinfo
-  218 115: 004207ec    72    FUNC GLOBAL DEFAULT   9 usage_exit
-  153 116: 0040af30  1228    FUNC GLOBAL DEFAULT   9 do_static_routes
-  300 117: 00442ef8    72  OBJECT GLOBAL DEFAULT  23 wanfaces
-  321 117: 00426668   988    FUNC GLOBAL DEFAULT   9 start_hotspot
-  338 117: 00000000     0  OBJECT GLOBAL DEFAULT UND stdout
-   55 118: 004178f4    88    FUNC GLOBAL DEFAULT   9 ipt_write
-  227 118: 00410f94   156    FUNC GLOBAL DEFAULT   9 ioctl_wrapper
-   67 119: 004298b0     0    FUNC GLOBAL DEFAULT UND get_dns
-  216 119: 004293d0     0    FUNC GLOBAL DEFAULT UND f_wait_notexists
-  236 119: 00429320     0    FUNC GLOBAL DEFAULT UND calloc
-    1 120: 00442878     0  NOTYPE GLOBAL DEFAULT  18 _fdata
-   12 121: 00429ac0     0    FUNC GLOBAL DEFAULT UND __fputc_unlocked
-  158 122: 004295c0     0    FUNC GLOBAL DEFAULT UND setdomainname
-   74 124: 0041e364   588    FUNC GLOBAL DEFAULT   9 ipt_triggered
-  238 124: 00429310     0    FUNC GLOBAL DEFAULT UND nvram_is_empty
-  247 124: 0042e4c4    14  OBJECT GLOBAL DEFAULT  12 chain_wan_prerouting
-  301 126: 00429100     0    FUNC GLOBAL DEFAULT UND nvram_get_int
-  180 129: 004294f0     0    FUNC GLOBAL DEFAULT UND strncpy
-  232 129: 00429340     0    FUNC GLOBAL DEFAULT UND rindex
-  357 129: 004107e8  1948    FUNC GLOBAL DEFAULT   9 start_wan
-  121 130: 00429710     0    FUNC GLOBAL DEFAULT UND set_radio
-  302 130: 004221dc    88    FUNC GLOBAL DEFAULT   9 sched_restrictions
-  175 131: 0041b96c    32    FUNC GLOBAL DEFAULT   9 stop_telnetd
-  145 133: 0040e584    28    FUNC GLOBAL DEFAULT   9 stop_l2tp
-  254 133: 0040c7fc  1240    FUNC GLOBAL DEFAULT   9 start_lan_wl
-  261 134: 00429280     0    FUNC GLOBAL DEFAULT UND strncasecmp
-  353 134: 00428f80     0    FUNC GLOBAL DEFAULT UND unsetenv
-   16 136: 00429a90     0    FUNC GLOBAL DEFAULT UND raise
-  123 136: 00420400   824    FUNC GLOBAL DEFAULT   9 run_nvscript
-  161 136: 0041cb20   104    FUNC GLOBAL DEFAULT   9 stop_redial
-  354 136: 00428f70     0    FUNC GLOBAL DEFAULT UND strcpy
+   33  62: 00429d90     0    FUNC GLOBAL DEFAULT UND closedir
+  118  62: 00429ac0     0    FUNC GLOBAL DEFAULT UND killall
+  191  62: 00429830     0    FUNC GLOBAL DEFAULT UND openlog
+  323  62: 00443b04     4  OBJECT GLOBAL DEFAULT  22 chain_out_accept
+  244  63: 00429680     0    FUNC GLOBAL DEFAULT UND rename
+   58  65: 00429ca0     0    FUNC GLOBAL DEFAULT UND stime
+  304  65: 00429480     0    FUNC GLOBAL DEFAULT UND getpid
+   54  66: 00429cd0     0    FUNC GLOBAL DEFAULT UND _gpio_read
+   61  67: 00429c70     0    FUNC GLOBAL DEFAULT UND __errno_location
+  324  67: 004293f0     0    FUNC GLOBAL DEFAULT UND nvram_getall
+  132  69: 00429a40     0    FUNC GLOBAL DEFAULT UND strlcat
+  288  69: 00429520     0    FUNC GLOBAL DEFAULT UND malloc
+    7  71: 00443afc     0  NOTYPE GLOBAL DEFAULT ABS _edata
+   96  71: 00429b80     0    FUNC GLOBAL DEFAULT UND get_wanface
+  230  71: 004296e0     0    FUNC GLOBAL DEFAULT UND write
+   66  72: 00415928   252    FUNC GLOBAL DEFAULT   9 start_httpd
+  241  72: 00429690     0    FUNC GLOBAL DEFAULT UND strrchr
+  306  72: 0041f05c   616    FUNC GLOBAL DEFAULT   9 set_mac
+   24  73: 00429dc0     0    FUNC GLOBAL DEFAULT UND sigwait
+   97  73: 00429b70     0    FUNC GLOBAL DEFAULT UND check_action
+  128  74: 004118ec    40    FUNC GLOBAL DEFAULT   9 stop_cron
+  243  74: 0041ef3c   152    FUNC GLOBAL DEFAULT   9 _vstrsep
+   84  76: 00429bf0     0    FUNC GLOBAL DEFAULT UND using_dhcpc
+   79  77: 00429c10     0    FUNC GLOBAL DEFAULT UND getaddrinfo
+  193  77: 004257e8   368    FUNC GLOBAL DEFAULT   9 stop_ddns
+  293  77: 004294f0     0    FUNC GLOBAL DEFAULT UND perror
+   57  79: 00429cb0     0    FUNC GLOBAL DEFAULT UND klogctl
+  110  79: 00429af0     0    FUNC GLOBAL DEFAULT UND strcmp
+  116  79: 00443b0c     4  OBJECT GLOBAL DEFAULT  22 chain_in_drop
+  204  80: 004297c0     0    FUNC GLOBAL DEFAULT UND nvram_set
+  291  80: 00429510     0    FUNC GLOBAL DEFAULT UND dup2
+  200  81: 004297f0     0    FUNC GLOBAL DEFAULT UND strstr
+  330  81: 00411fb4  1804    FUNC GLOBAL DEFAULT   9 start_syslog
+   47  82: 00429d10     0    FUNC GLOBAL DEFAULT UND open
+  315  82: 00000000     0  OBJECT GLOBAL DEFAULT UND __ctype_b
+  143  83: 004299e0     0    FUNC GLOBAL DEFAULT UND fopen
+  220  83: 00429750     0    FUNC GLOBAL DEFAULT UND chdir
+  285  83: 00429540     0    FUNC GLOBAL DEFAULT UND sleep
+  294  83: 004294e0     0    FUNC GLOBAL DEFAULT UND gpio_write
+   11  85: 00443b14     4  OBJECT GLOBAL DEFAULT  22 layer7_in
+  172  86: 004298c0     0    FUNC GLOBAL DEFAULT UND wait_action_idle
+   72  87: 00429c20     0    FUNC GLOBAL DEFAULT UND fwrite
+  335  88: 0041ebe8    96    FUNC GLOBAL DEFAULT   9 modprobe_r
+  181  89: 00427238    80    FUNC GLOBAL DEFAULT   9 http_get
+  189  90: 00429850     0    FUNC GLOBAL DEFAULT UND strlcpy
+   73  91: 00443b10     4  OBJECT GLOBAL DEFAULT  22 chain_in_accept
+  144  91: 004299d0     0    FUNC GLOBAL DEFAULT UND symlink
+  101  92: 00429b40     0    FUNC GLOBAL DEFAULT UND set_action
+  270  92: 004295d0     0    FUNC GLOBAL DEFAULT UND fflush
+   80  93: 0040e5c0    28    FUNC GLOBAL DEFAULT   9 stop_pppoe
+  305  93: 00429470     0    FUNC GLOBAL DEFAULT UND execve
+  280  94: 00429560     0    FUNC GLOBAL DEFAULT UND strtoul
+  297  94: 004294b0     0    FUNC GLOBAL DEFAULT UND get_wanfaces
+  319  95: 0041f3fc   284    FUNC GLOBAL DEFAULT   9 host_addr_info
+  342  95: 00429360     0    FUNC GLOBAL DEFAULT UND safe_fread
+   20  98: 00429df0     0    FUNC GLOBAL DEFAULT UND nvram_commit_x
+   90 102: 00429bc0     0    FUNC GLOBAL DEFAULT UND strsep
+  256 102: 00429630     0    FUNC GLOBAL DEFAULT UND chmod
+   36 103: 0041189c    40    FUNC GLOBAL DEFAULT   9 stop_igmp_proxy
+   81 103: 0040ed9c  2440    FUNC GLOBAL DEFAULT   9 start_wan_done
+  147 103: 0042c050    29  OBJECT GLOBAL DEFAULT  12 wan_connecting
+   32 104: 00410fa4     8    FUNC GLOBAL DEFAULT   9 start_zebra
+  126 104: 00429a70     0    FUNC GLOBAL DEFAULT UND tcgetattr
+   53 106: 004151c4    36    FUNC GLOBAL DEFAULT   9 start_service
+  109 106: 00429b00     0    FUNC GLOBAL DEFAULT UND ether_etoa
+  201 106: 004297e0     0    FUNC GLOBAL DEFAULT UND lstat
+  347 106: 00443b00     4  OBJECT GLOBAL DEFAULT  22 ipt_file
+  273 109: 004295b0     0    FUNC GLOBAL DEFAULT UND select
+  336 110: 0040fe54   608    FUNC GLOBAL DEFAULT   9 start_l2tp
+  295 112: 004294d0     0    FUNC GLOBAL DEFAULT UND setitimer
+   50 113: 00429cf0     0    FUNC GLOBAL DEFAULT UND daemon
+   52 113: 00415118   172    FUNC GLOBAL DEFAULT   9 stop_dnsmasq
+  135 113: 00443bec    17  OBJECT GLOBAL DEFAULT  23 lan1face
+  199 113: 00427288    60    FUNC GLOBAL DEFAULT   9 MD5_Init
+  130 114: 00415038    36    FUNC GLOBAL DEFAULT   9 stop_service
+  261 114: 00429620     0    FUNC GLOBAL DEFAULT UND freeaddrinfo
+  219 115: 0042080c    72    FUNC GLOBAL DEFAULT   9 usage_exit
+  153 116: 0040af50  1228    FUNC GLOBAL DEFAULT   9 do_static_routes
+  301 117: 00443b68    72  OBJECT GLOBAL DEFAULT  23 wanfaces
+  322 117: 00426688   988    FUNC GLOBAL DEFAULT   9 start_hotspot
+  339 117: 00000000     0  OBJECT GLOBAL DEFAULT UND stdout
+   55 118: 00417914    88    FUNC GLOBAL DEFAULT   9 ipt_write
+  228 118: 00410fb4   156    FUNC GLOBAL DEFAULT   9 ioctl_wrapper
+   67 119: 00429c40     0    FUNC GLOBAL DEFAULT UND get_dns
+  217 119: 00429760     0    FUNC GLOBAL DEFAULT UND f_wait_notexists
+  237 119: 004296b0     0    FUNC GLOBAL DEFAULT UND calloc
+    1 120: 004434e8     0  NOTYPE GLOBAL DEFAULT  18 _fdata
+   12 121: 00429e50     0    FUNC GLOBAL DEFAULT UND __fputc_unlocked
+  158 122: 00429950     0    FUNC GLOBAL DEFAULT UND setdomainname
+   74 124: 0041e384   588    FUNC GLOBAL DEFAULT   9 ipt_triggered
+  239 124: 004296a0     0    FUNC GLOBAL DEFAULT UND nvram_is_empty
+  248 124: 0042e840    14  OBJECT GLOBAL DEFAULT  12 chain_wan_prerouting
+  302 126: 00429490     0    FUNC GLOBAL DEFAULT UND nvram_get_int
+  180 129: 00429880     0    FUNC GLOBAL DEFAULT UND strncpy
+  233 129: 004296d0     0    FUNC GLOBAL DEFAULT UND rindex
+  358 129: 00410808  1948    FUNC GLOBAL DEFAULT   9 start_wan
+  121 130: 00429aa0     0    FUNC GLOBAL DEFAULT UND set_radio
+  303 130: 004221fc    88    FUNC GLOBAL DEFAULT   9 sched_restrictions
+  175 131: 0041b98c    32    FUNC GLOBAL DEFAULT   9 stop_telnetd
+  145 133: 0040e5a4    28    FUNC GLOBAL DEFAULT   9 stop_l2tp
+  255 133: 0040c81c  1240    FUNC GLOBAL DEFAULT   9 start_lan_wl
+  262 134: 00429610     0    FUNC GLOBAL DEFAULT UND strncasecmp
+  354 134: 00429310     0    FUNC GLOBAL DEFAULT UND unsetenv
+   16 136: 00429e20     0    FUNC GLOBAL DEFAULT UND raise
+  123 136: 00420420   824    FUNC GLOBAL DEFAULT   9 run_nvscript
+  161 136: 0041cb40   104    FUNC GLOBAL DEFAULT   9 stop_redial
+  355 136: 00429300     0    FUNC GLOBAL DEFAULT UND strcpy
    95 137: 00000000     0  OBJECT GLOBAL DEFAULT UND stderr
-  148 138: 00429620     0    FUNC GLOBAL DEFAULT UND inet_aton
-  330 138: 00429040     0    FUNC GLOBAL DEFAULT UND connect
-  257 139: 0040bc38   488    FUNC GLOBAL DEFAULT   9 set_et_qos_mode
-   43 140: 004299c0     0    FUNC GLOBAL DEFAULT UND get_wan_proto
-  233 140: 00413a10  4964    FUNC GLOBAL DEFAULT   9 exec_service
-  328 140: 00409c14   104    FUNC GLOBAL DEFAULT   9 load_wl
-   46 141: 00429990     0    FUNC GLOBAL DEFAULT UND wl_client
-  234 142: 004126a0   368    FUNC GLOBAL DEFAULT   9 dns_to_resolv
-  259 142: 00428ee8    32    FUNC GLOBAL DEFAULT   9 start_post
-  224 143: 00429390     0    FUNC GLOBAL DEFAULT UND bind
-  271 143: 00429230     0    FUNC GLOBAL DEFAULT UND readdir
-   26 145: 00429a10     0    FUNC GLOBAL DEFAULT UND tcsetattr
-  349 145: 00428fa0     0    FUNC GLOBAL DEFAULT UND waitpid
-   82 147: 00410440   136    FUNC GLOBAL DEFAULT   9 start_pptp
-  104 147: 00429ae0    28    FUNC GLOBAL DEFAULT  11 _fini
-  197 147: 0041baf0   708    FUNC GLOBAL DEFAULT   9 start_sshd
-  281 147: 00442f54    17  OBJECT GLOBAL DEFAULT  23 lanface
-   48 149: 00429970     0    FUNC GLOBAL DEFAULT UND strlen
-   27 150: 00411104    76    FUNC GLOBAL DEFAULT   9 stop_syslog
-  113 150: 00417968   340    FUNC GLOBAL DEFAULT   9 ipt_layer7_inbound
-  151 150: 0040b8d8   864    FUNC GLOBAL DEFAULT   9 stop_lan_wl
+  148 138: 004299b0     0    FUNC GLOBAL DEFAULT UND inet_aton
+  331 138: 004293d0     0    FUNC GLOBAL DEFAULT UND connect
+  258 139: 0040bc58   488    FUNC GLOBAL DEFAULT   9 set_et_qos_mode
+   43 140: 00429d50     0    FUNC GLOBAL DEFAULT UND get_wan_proto
+  234 140: 00413a30  4964    FUNC GLOBAL DEFAULT   9 exec_service
+  329 140: 00409c34   104    FUNC GLOBAL DEFAULT   9 load_wl
+   46 141: 00429d20     0    FUNC GLOBAL DEFAULT UND wl_client
+  235 142: 004126c0   368    FUNC GLOBAL DEFAULT   9 dns_to_resolv
+  260 142: 0042927c    32    FUNC GLOBAL DEFAULT   9 start_post
+  225 143: 00429720     0    FUNC GLOBAL DEFAULT UND bind
+  272 143: 004295c0     0    FUNC GLOBAL DEFAULT UND readdir
+   26 145: 00429da0     0    FUNC GLOBAL DEFAULT UND tcsetattr
+  350 145: 00429330     0    FUNC GLOBAL DEFAULT UND waitpid
+  210 146: 00428794    84    FUNC GLOBAL DEFAULT   9 crc32
+   82 147: 00410460   136    FUNC GLOBAL DEFAULT   9 start_pptp
+  104 147: 00429e70    28    FUNC GLOBAL DEFAULT  11 _fini
+  197 147: 0041bb10   708    FUNC GLOBAL DEFAULT   9 start_sshd
+  282 147: 00443bc4    17  OBJECT GLOBAL DEFAULT  23 lanface
+   48 149: 00429d00     0    FUNC GLOBAL DEFAULT UND strlen
+   27 150: 00411124    76    FUNC GLOBAL DEFAULT   9 stop_syslog
+  113 150: 00417988   340    FUNC GLOBAL DEFAULT   9 ipt_layer7_inbound
+  151 150: 0040b8f8   864    FUNC GLOBAL DEFAULT   9 stop_lan_wl
   171 151: 00000000     0  OBJECT GLOBAL DEFAULT UND led_names
-  162 152: 004295a0     0    FUNC GLOBAL DEFAULT UND sscanf
-  344 152: 00428fb0     0    FUNC GLOBAL DEFAULT UND notice_set
-   62 153: 004298d0     0    FUNC GLOBAL DEFAULT UND get_ifname_unit
-  179 153: 00429500     0    FUNC GLOBAL DEFAULT UND unlink
-  225 154: 00429380     0    FUNC GLOBAL DEFAULT UND strcat
-  120 155: 00429720     0    FUNC GLOBAL DEFAULT UND nvram_commit
-  187 155: 004202a8   344    FUNC GLOBAL DEFAULT   9 run_userfile
-   83 156: 00429870     0    FUNC GLOBAL DEFAULT UND gpio_open
-  115 156: 004217e8    28    FUNC GLOBAL DEFAULT   9 mtd_erase
-  215 157: 004293e0     0    FUNC GLOBAL DEFAULT UND get_model
-  324 159: 0041f4f8    24    FUNC GLOBAL DEFAULT   9 host_addrtypes
-   77 161: 00411f4c    72    FUNC GLOBAL DEFAULT   9 clear_resolv
-  176 161: 0040d554  3756    FUNC GLOBAL DEFAULT   9 start_lan
-  186 161: 0040d088    56    FUNC GLOBAL DEFAULT   9 stop_wireless
-   78 162: 004240ec   304    FUNC GLOBAL DEFAULT   9 address_checker
-  137 162: 00417560   724    FUNC GLOBAL DEFAULT   9 ipt_ipp2p
-  139 162: 00442f68    17  OBJECT GLOBAL DEFAULT  23 lan2face
-   41 163: 0041eb1c   172    FUNC GLOBAL DEFAULT   9 fappend_file
-  226 163: 00429370     0    FUNC GLOBAL DEFAULT UND kill
-   60 164: 004298f0     0    FUNC GLOBAL DEFAULT UND exit
-   86 165: 00429850     0    FUNC GLOBAL DEFAULT UND fputc
-  169 166: 00429550     0    FUNC GLOBAL DEFAULT UND pidof
-  208 166: 00411a60   860    FUNC GLOBAL DEFAULT   9 start_igmp_proxy
-  154 167: 004295f0     0    FUNC GLOBAL DEFAULT UND __uClibc_main
-  133 168: 00408c5c   448    FUNC GLOBAL DEFAULT   9 stop_vlan
-  188 168: 004294d0     0    FUNC GLOBAL DEFAULT UND strncmp
-  237 168: 0042572c   156    FUNC GLOBAL DEFAULT   9 start_tomatoanon
-  182 169: 004294e0     0    FUNC GLOBAL DEFAULT UND sethostname
-  184 171: 004253ac   332    FUNC GLOBAL DEFAULT   9 stop_arpbind
-  117 172: 00429740     0    FUNC GLOBAL DEFAULT UND syslog
-   44 173: 004299b0     0    FUNC GLOBAL DEFAULT UND nvram_nvram2file
-  310 175: 004290c0     0    FUNC GLOBAL DEFAULT UND isblank
-  106 176: 0041cb88    80    FUNC GLOBAL DEFAULT   9 start_redial
-  307 176: 00415b78   260    FUNC GLOBAL DEFAULT   9 start_services
-  325 176: 0040d0c0  1144    FUNC GLOBAL DEFAULT   9 start_wl
-  202 179: 0040e5bc   704    FUNC GLOBAL DEFAULT   9 stop_wan
-  178 180: 00429510     0    FUNC GLOBAL DEFAULT UND setenv
-  291 180: 00429170     0    FUNC GLOBAL DEFAULT UND puts
-   42 181: 004299d0     0    FUNC GLOBAL DEFAULT UND fputs
-  134 181: 004296a0     0    FUNC GLOBAL DEFAULT UND nvram_unset
-  350 181: 00428f90     0    FUNC GLOBAL DEFAULT UND bcmp
-  230 182: 00000000     0    FUNC   WEAK DEFAULT UND __deregister_frame_info
+  162 152: 00429930     0    FUNC GLOBAL DEFAULT UND sscanf
+  345 152: 00429340     0    FUNC GLOBAL DEFAULT UND notice_set
+   62 153: 00429c60     0    FUNC GLOBAL DEFAULT UND get_ifname_unit
+  179 153: 00429890     0    FUNC GLOBAL DEFAULT UND unlink
+  226 154: 00429710     0    FUNC GLOBAL DEFAULT UND strcat
+  120 155: 00429ab0     0    FUNC GLOBAL DEFAULT UND nvram_commit
+  187 155: 004202c8   344    FUNC GLOBAL DEFAULT   9 run_userfile
+   83 156: 00429c00     0    FUNC GLOBAL DEFAULT UND gpio_open
+  115 156: 00421808    28    FUNC GLOBAL DEFAULT   9 mtd_erase
+  216 157: 00429770     0    FUNC GLOBAL DEFAULT UND get_model
+  325 159: 0041f518    24    FUNC GLOBAL DEFAULT   9 host_addrtypes
+   77 161: 00411f6c    72    FUNC GLOBAL DEFAULT   9 clear_resolv
+  176 161: 0040d574  3756    FUNC GLOBAL DEFAULT   9 start_lan
+  186 161: 0040d0a8    56    FUNC GLOBAL DEFAULT   9 stop_wireless
+   78 162: 0042410c   304    FUNC GLOBAL DEFAULT   9 address_checker
+  137 162: 00417580   724    FUNC GLOBAL DEFAULT   9 ipt_ipp2p
+  139 162: 00443bd8    17  OBJECT GLOBAL DEFAULT  23 lan2face
+   41 163: 0041eb3c   172    FUNC GLOBAL DEFAULT   9 fappend_file
+  227 163: 00429700     0    FUNC GLOBAL DEFAULT UND kill
+   60 164: 00429c80     0    FUNC GLOBAL DEFAULT UND exit
+   86 165: 00429be0     0    FUNC GLOBAL DEFAULT UND fputc
+  169 166: 004298e0     0    FUNC GLOBAL DEFAULT UND pidof
+  208 166: 00411a80   860    FUNC GLOBAL DEFAULT   9 start_igmp_proxy
+  154 167: 00429980     0    FUNC GLOBAL DEFAULT UND __uClibc_main
+  133 168: 00408c7c   448    FUNC GLOBAL DEFAULT   9 stop_vlan
+  188 168: 00429860     0    FUNC GLOBAL DEFAULT UND strncmp
+  238 168: 0042574c   156    FUNC GLOBAL DEFAULT   9 start_tomatoanon
+  182 169: 00429870     0    FUNC GLOBAL DEFAULT UND sethostname
+  184 171: 004253cc   332    FUNC GLOBAL DEFAULT   9 stop_arpbind
+  117 172: 00429ad0     0    FUNC GLOBAL DEFAULT UND syslog
+   44 173: 00429d40     0    FUNC GLOBAL DEFAULT UND nvram_nvram2file
+  311 175: 00429450     0    FUNC GLOBAL DEFAULT UND isblank
+  106 176: 0041cba8    80    FUNC GLOBAL DEFAULT   9 start_redial
+  308 176: 00415b98   260    FUNC GLOBAL DEFAULT   9 start_services
+  326 176: 0040d0e0  1144    FUNC GLOBAL DEFAULT   9 start_wl
+  202 179: 0040e5dc   704    FUNC GLOBAL DEFAULT   9 stop_wan
+  178 180: 004298a0     0    FUNC GLOBAL DEFAULT UND setenv
+  292 180: 00429500     0    FUNC GLOBAL DEFAULT UND puts
+   42 181: 00429d60     0    FUNC GLOBAL DEFAULT UND fputs
+  134 181: 00429a30     0    FUNC GLOBAL DEFAULT UND nvram_unset
+  351 181: 00429320     0    FUNC GLOBAL DEFAULT UND bcmp
+  231 182: 00000000     0    FUNC   WEAK DEFAULT UND __deregister_frame_info
 *** not GLOBAL
-  174 183: 0041edbc   236    FUNC GLOBAL DEFAULT   9 simple_lock
-   14 184: 004118f4   364    FUNC GLOBAL DEFAULT   9 start_udpxy
-  239 186: 0041c008    32    FUNC GLOBAL DEFAULT   9 notify_nas
-   21 188: 00429a50     0    FUNC GLOBAL DEFAULT UND ether_atoe
+  174 183: 0041eddc   236    FUNC GLOBAL DEFAULT   9 simple_lock
+   14 184: 00411914   364    FUNC GLOBAL DEFAULT   9 start_udpxy
+  240 186: 0041c028    32    FUNC GLOBAL DEFAULT   9 notify_nas
+   21 188: 00429de0     0    FUNC GLOBAL DEFAULT UND ether_atoe
    31 190: 00000000     0  NOTYPE   WEAK DEFAULT UND _Jv_RegisterClasses
 *** not GLOBAL
-  266 190: 00429250     0    FUNC GLOBAL DEFAULT UND putenv
-  356 190: 00410f8c     8    FUNC GLOBAL DEFAULT   9 stop_zebra
+  267 190: 004295e0     0    FUNC GLOBAL DEFAULT UND putenv
+  357 190: 00410fac     8    FUNC GLOBAL DEFAULT   9 stop_zebra
    71 191: 00000000     0  OBJECT GLOBAL DEFAULT UND __stdout
-  244 191: 0042421c  2640    FUNC GLOBAL DEFAULT   9 new_qoslimit_start
-  308 192: 00409068    84    FUNC GLOBAL DEFAULT   9 route_add
-  352 192: 00000000     0    FUNC GLOBAL DEFAULT UND chld_reap
-   18 193: 00429a80     0    FUNC GLOBAL DEFAULT UND tcsetpgrp
-  124 193: 00429700     0    FUNC GLOBAL DEFAULT UND opendir
-  262 194: 004254f8   428    FUNC GLOBAL DEFAULT   9 start_arpbind
-  183 195: 0041c090   524    FUNC GLOBAL DEFAULT   9 start_nas
-  223 196: 004293a0     0    FUNC GLOBAL DEFAULT UND inet_addr
-  168 197: 00429560     0    FUNC GLOBAL DEFAULT UND memcmp
-  320 197: 00429070     0    FUNC GLOBAL DEFAULT UND pclose
-   56 199: 00429930     0    FUNC GLOBAL DEFAULT UND atoi
-   68 200: 004298a0     0    FUNC GLOBAL DEFAULT UND f_write
-  141 200: 00429670     0    FUNC GLOBAL DEFAULT UND getopt
-  150 200: 00429600     0    FUNC GLOBAL DEFAULT UND strdup
-  167 200: 0040970c   140    FUNC GLOBAL DEFAULT   9 config_loopback
-  332 200: 00429020     0    FUNC GLOBAL DEFAULT UND nvget_gpio
-  275 201: 0041ea30   236    FUNC GLOBAL DEFAULT   9 fappend
-   29 202: 004170c4   156    FUNC GLOBAL DEFAULT   9 ipt_log_unresolved
-  196 202: 00429470     0    FUNC GLOBAL DEFAULT UND base64_encode
-  264 202: 0040ccd4   876    FUNC GLOBAL DEFAULT   9 restart_wl
-  316 202: 004290a0     0    FUNC GLOBAL DEFAULT UND atol
-    8 204: 004428f0     0  OBJECT GLOBAL DEFAULT ABS _GLOBAL_OFFSET_TABLE_
-   89 206: 00415c7c   140    FUNC GLOBAL DEFAULT   9 stop_dhcpc
-  258 208: 004265d4    60    FUNC GLOBAL DEFAULT   9 stop_hotspot
-  211 211: 00442e94     4  OBJECT GLOBAL DEFAULT  22 chain_out_reject
-  288 211: 00442f40    17  OBJECT GLOBAL DEFAULT  23 lan3face
-   75 212: 0041bdb4   596    FUNC GLOBAL DEFAULT   9 create_passwd
-  136 212: 0040361c   540    FUNC GLOBAL DEFAULT   9 main
-  190 212: 004294b0     0    FUNC GLOBAL DEFAULT UND f_read
-   39 214: 0040b3fc  1244    FUNC GLOBAL DEFAULT   9 stop_lan
-  313 215: 0041ce80    92    FUNC GLOBAL DEFAULT   9 stop_qos
-  125 216: 004296f0     0    FUNC GLOBAL DEFAULT UND time
-   98 218: 004297d0     0    FUNC GLOBAL DEFAULT UND strcspn
-   49 219: 0040e87c    28    FUNC GLOBAL DEFAULT   9 stop_pptp
-   94 219: 00429800     0    FUNC GLOBAL DEFAULT UND umount
+  245 191: 0042423c  2640    FUNC GLOBAL DEFAULT   9 new_qoslimit_start
+  309 192: 00409088    84    FUNC GLOBAL DEFAULT   9 route_add
+  353 192: 00000000     0    FUNC GLOBAL DEFAULT UND chld_reap
+   18 193: 00429e10     0    FUNC GLOBAL DEFAULT UND tcsetpgrp
+  124 193: 00429a90     0    FUNC GLOBAL DEFAULT UND opendir
+  263 194: 00425518   428    FUNC GLOBAL DEFAULT   9 start_arpbind
+  183 195: 0041c0b0   524    FUNC GLOBAL DEFAULT   9 start_nas
+  224 196: 00429730     0    FUNC GLOBAL DEFAULT UND inet_addr
+  168 197: 004298f0     0    FUNC GLOBAL DEFAULT UND memcmp
+  321 197: 00429400     0    FUNC GLOBAL DEFAULT UND pclose
+   56 199: 00429cc0     0    FUNC GLOBAL DEFAULT UND atoi
+   68 200: 00429c30     0    FUNC GLOBAL DEFAULT UND f_write
+  141 200: 00429a00     0    FUNC GLOBAL DEFAULT UND getopt
+  150 200: 00429990     0    FUNC GLOBAL DEFAULT UND strdup
+  167 200: 0040972c   140    FUNC GLOBAL DEFAULT   9 config_loopback
+  333 200: 004293b0     0    FUNC GLOBAL DEFAULT UND nvget_gpio
+  276 201: 0041ea50   236    FUNC GLOBAL DEFAULT   9 fappend
+   29 202: 004170e4   156    FUNC GLOBAL DEFAULT   9 ipt_log_unresolved
+  196 202: 00429800     0    FUNC GLOBAL DEFAULT UND base64_encode
+  265 202: 0040ccf4   876    FUNC GLOBAL DEFAULT   9 restart_wl
+  317 202: 00429430     0    FUNC GLOBAL DEFAULT UND atol
+    8 204: 00443560     0  OBJECT GLOBAL DEFAULT ABS _GLOBAL_OFFSET_TABLE_
+   89 206: 00415c9c   140    FUNC GLOBAL DEFAULT   9 stop_dhcpc
+  259 208: 004265f4    60    FUNC GLOBAL DEFAULT   9 stop_hotspot
+  212 211: 00443b08     4  OBJECT GLOBAL DEFAULT  22 chain_out_reject
+  289 211: 00443bb0    17  OBJECT GLOBAL DEFAULT  23 lan3face
+   75 212: 0041bdd4   596    FUNC GLOBAL DEFAULT   9 create_passwd
+  136 212: 0040363c   540    FUNC GLOBAL DEFAULT   9 main
+  190 212: 00429840     0    FUNC GLOBAL DEFAULT UND f_read
+   39 214: 0040b41c  1244    FUNC GLOBAL DEFAULT   9 stop_lan
+  314 215: 0041cea0    92    FUNC GLOBAL DEFAULT   9 stop_qos
+  125 216: 00429a80     0    FUNC GLOBAL DEFAULT UND time
+   98 218: 00429b60     0    FUNC GLOBAL DEFAULT UND strcspn
+   49 219: 0040e89c    28    FUNC GLOBAL DEFAULT   9 stop_pptp
+   94 219: 00429b90     0    FUNC GLOBAL DEFAULT UND umount
   185 220: 00000000     0    FUNC GLOBAL DEFAULT UND alphasort
-   92 221: 00429810     0    FUNC GLOBAL DEFAULT UND setlogmask
-    6 221: 00442e88     0  NOTYPE GLOBAL DEFAULT ABS __bss_start
-  286 221: 004291a0     0    FUNC GLOBAL DEFAULT UND remove
-  138 224: 00429690     0    FUNC GLOBAL DEFAULT UND memset
-    4 224: 004033f0     0  NOTYPE GLOBAL DEFAULT   9 _ftext
-  248 224: 004292d0     0    FUNC GLOBAL DEFAULT UND getpgrp
-  203 226: 00429440     0    FUNC GLOBAL DEFAULT UND _eval
-  263 227: 00429270     0    FUNC GLOBAL DEFAULT UND sigaddset
-  326 227: 00429050     0    FUNC GLOBAL DEFAULT UND sigemptyset
-  177 230: 00429520     0    FUNC GLOBAL DEFAULT UND sync
-   22 231: 00429a40     0    FUNC GLOBAL DEFAULT UND close
-  278 231: 004291e0     0    FUNC GLOBAL DEFAULT UND get_wanip
-  108 232: 00429780     0    FUNC GLOBAL DEFAULT UND dup
-  192 232: 0041b98c    32    FUNC GLOBAL DEFAULT   9 stop_sshd
-  252 233: 00403374    28    FUNC GLOBAL DEFAULT   8 _init
-  214 235: 004293f0     0    FUNC GLOBAL DEFAULT UND fseek
-   37 236: 0040d040    72    FUNC GLOBAL DEFAULT   9 start_wireless
-  195 236: 00429480     0    FUNC GLOBAL DEFAULT UND signal
-  315 236: 00416e74    64    FUNC GLOBAL DEFAULT   9 stop_firewall
-  337 236: 00429000     0    FUNC GLOBAL DEFAULT UND vsprintf
-   25 237: 00429a20     0    FUNC GLOBAL DEFAULT UND mkdir
-   93 237: 00415ac8   176    FUNC GLOBAL DEFAULT   9 stop_services
-  210 238: 00429400     0    FUNC GLOBAL DEFAULT UND foreach_wif
-  312 240: 004290b0     0    FUNC GLOBAL DEFAULT UND getenv
-  339 240: 00428ff0     0    FUNC GLOBAL DEFAULT UND printf
-  205 241: 00423ff4   248    FUNC GLOBAL DEFAULT   9 new_qoslimit_stop
-  241 242: 0040ecb8   196    FUNC GLOBAL DEFAULT   9 do_wan_routes
-  351 242: 00416eb4    44    FUNC GLOBAL DEFAULT   9 enable_ip_forward
-   19 243: 00429a70     0    FUNC GLOBAL DEFAULT UND vfprintf
-    9 244: 00442fa0     0  NOTYPE GLOBAL DEFAULT ABS _end
-  166 245: 00429570     0    FUNC GLOBAL DEFAULT UND crypt
-  231 245: 004256a4    48    FUNC GLOBAL DEFAULT   9 stop_tomatoanon
-   38 247: 004299e0     0    FUNC GLOBAL DEFAULT UND setsid
-  129 247: 004296c0     0    FUNC GLOBAL DEFAULT UND fclose
-  103 249: 004297a0     0    FUNC GLOBAL DEFAULT UND nvram_get_file
-  299 249: 00429110     0    FUNC GLOBAL DEFAULT UND fgets
-  317 249: 00429090     0    FUNC GLOBAL DEFAULT UND mknod
-  333 249: 0040e898   160    FUNC GLOBAL DEFAULT   9 wan_gateway
-  163 250: 00429590     0    FUNC GLOBAL DEFAULT UND fork
-  170 250: 00429540     0    FUNC GLOBAL DEFAULT UND strtok
-  249 251: 004292c0     0    FUNC GLOBAL DEFAULT UND strtol
-   35 253: 004299f0     0    FUNC GLOBAL DEFAULT UND get_radio
-  198 253: 00417abc   464    FUNC GLOBAL DEFAULT   9 ipt_addr
-  217 253: 00412810  4608    FUNC GLOBAL DEFAULT   9 start_dnsmasq
-  119 254: 00442f90    14  OBJECT GLOBAL DEFAULT  23 lan_cclass
-  295 254: 00429130     0    FUNC GLOBAL DEFAULT UND memcpy
-  235 256: 00429330     0    FUNC GLOBAL DEFAULT UND do_led
-  250 257: 0041f2a4   312    FUNC GLOBAL DEFAULT   9 inc_mac
-  142 259: 00429660     0    FUNC GLOBAL DEFAULT UND nvram_get
-  276 259: 00429200     0    FUNC GLOBAL DEFAULT UND check_hw_type
-   87 261: 004104c8   800    FUNC GLOBAL DEFAULT   9 preset_wan
-  246 261: 004292e0     0    FUNC GLOBAL DEFAULT UND f_write_string
-  319 261: 00429080     0    FUNC GLOBAL DEFAULT UND snprintf
-  343 262: 0041f6f8  2832    FUNC GLOBAL DEFAULT   9 setup_conntrack
+   92 221: 00429ba0     0    FUNC GLOBAL DEFAULT UND setlogmask
+    6 221: 00443afc     0  NOTYPE GLOBAL DEFAULT ABS __bss_start
+  287 221: 00429530     0    FUNC GLOBAL DEFAULT UND remove
+  138 224: 00429a20     0    FUNC GLOBAL DEFAULT UND memset
+    4 224: 00403410     0  NOTYPE GLOBAL DEFAULT   9 _ftext
+  249 224: 00429660     0    FUNC GLOBAL DEFAULT UND getpgrp
+  203 226: 004297d0     0    FUNC GLOBAL DEFAULT UND _eval
+  264 227: 00429600     0    FUNC GLOBAL DEFAULT UND sigaddset
+  327 227: 004293e0     0    FUNC GLOBAL DEFAULT UND sigemptyset
+  177 230: 004298b0     0    FUNC GLOBAL DEFAULT UND sync
+   22 231: 00429dd0     0    FUNC GLOBAL DEFAULT UND close
+  279 231: 00429570     0    FUNC GLOBAL DEFAULT UND get_wanip
+  108 232: 00429b10     0    FUNC GLOBAL DEFAULT UND dup
+  192 232: 0041b9ac    32    FUNC GLOBAL DEFAULT   9 stop_sshd
+  253 233: 00403390    28    FUNC GLOBAL DEFAULT   8 _init
+  215 235: 00429780     0    FUNC GLOBAL DEFAULT UND fseek
+   37 236: 0040d060    72    FUNC GLOBAL DEFAULT   9 start_wireless
+  195 236: 00429810     0    FUNC GLOBAL DEFAULT UND signal
+  316 236: 00416e94    64    FUNC GLOBAL DEFAULT   9 stop_firewall
+  338 236: 00429390     0    FUNC GLOBAL DEFAULT UND vsprintf
+   25 237: 00429db0     0    FUNC GLOBAL DEFAULT UND mkdir
+   93 237: 00415ae8   176    FUNC GLOBAL DEFAULT   9 stop_services
+  211 238: 00429790     0    FUNC GLOBAL DEFAULT UND foreach_wif
+  313 240: 00429440     0    FUNC GLOBAL DEFAULT UND getenv
+  340 240: 00429380     0    FUNC GLOBAL DEFAULT UND printf
+  205 241: 00424014   248    FUNC GLOBAL DEFAULT   9 new_qoslimit_stop
+  242 242: 0040ecd8   196    FUNC GLOBAL DEFAULT   9 do_wan_routes
+  352 242: 00416ed4    44    FUNC GLOBAL DEFAULT   9 enable_ip_forward
+   19 243: 00429e00     0    FUNC GLOBAL DEFAULT UND vfprintf
+    9 244: 00443c10     0  NOTYPE GLOBAL DEFAULT ABS _end
+  166 245: 00429900     0    FUNC GLOBAL DEFAULT UND crypt
+  232 245: 004256c4    48    FUNC GLOBAL DEFAULT   9 stop_tomatoanon
+   38 247: 00429d70     0    FUNC GLOBAL DEFAULT UND setsid
+  129 247: 00429a50     0    FUNC GLOBAL DEFAULT UND fclose
+  103 249: 00429b30     0    FUNC GLOBAL DEFAULT UND nvram_get_file
+  300 249: 004294a0     0    FUNC GLOBAL DEFAULT UND fgets
+  318 249: 00429420     0    FUNC GLOBAL DEFAULT UND mknod
+  334 249: 0040e8b8   160    FUNC GLOBAL DEFAULT   9 wan_gateway
+  163 250: 00429920     0    FUNC GLOBAL DEFAULT UND fork
+  170 250: 004298d0     0    FUNC GLOBAL DEFAULT UND strtok
+  250 251: 00429650     0    FUNC GLOBAL DEFAULT UND strtol
+   35 253: 00429d80     0    FUNC GLOBAL DEFAULT UND get_radio
+  198 253: 00417adc   464    FUNC GLOBAL DEFAULT   9 ipt_addr
+  218 253: 00412830  4608    FUNC GLOBAL DEFAULT   9 start_dnsmasq
+  119 254: 00443c00    14  OBJECT GLOBAL DEFAULT  23 lan_cclass
+  296 254: 004294c0     0    FUNC GLOBAL DEFAULT UND memcpy
+  236 256: 004296c0     0    FUNC GLOBAL DEFAULT UND do_led
+  251 257: 0041f2c4   312    FUNC GLOBAL DEFAULT   9 inc_mac
+  142 259: 004299f0     0    FUNC GLOBAL DEFAULT UND nvram_get
+  277 259: 00429590     0    FUNC GLOBAL DEFAULT UND check_hw_type
+   87 261: 004104e8   800    FUNC GLOBAL DEFAULT   9 preset_wan
+  247 261: 00429670     0    FUNC GLOBAL DEFAULT UND f_write_string
+  320 261: 00429410     0    FUNC GLOBAL DEFAULT UND snprintf
+  344 262: 0041f718  2832    FUNC GLOBAL DEFAULT   9 setup_conntrack
 
 
 readelf udevtrigger:

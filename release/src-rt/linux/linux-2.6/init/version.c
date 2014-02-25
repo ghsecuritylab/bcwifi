@@ -35,7 +35,7 @@ EXPORT_SYMBOL_GPL(init_uts_ns);
 
 /* FIXED STRINGS! Don't touch! */
 const char linux_banner[] =
-	"Build By: Lu MingFeng E-mail: ForgotFun@gmail.com WebSite: www.router.tw\n"
+	"Build By: LiaoHu E-mail: rainkide@gmail.com\n"
 	"Linux version " UTS_RELEASE " (" LINUX_COMPILE_BY "@"
 	LINUX_COMPILE_HOST ") (" LINUX_COMPILER ") " UTS_VERSION "\n";
 

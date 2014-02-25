@@ -303,8 +303,8 @@ const struct mime_handler mime_handlers[] = {
 	{ "j.s",                NULL,                   		             5,      NULL,                   do_js,                0 },
 	{ "**.asp",			NULL,						0,	wi_generic_noid,	wo_asp,			1 },
 	{ "**.css",			"text/css",					2,	wi_generic_noid,	do_file,		1 },
-	{ "overload.html",		mime_html,		  		  	0,	NULL,			do_file,		0 },
-	{ "**.htm|**.html",		mime_html,		  		  	2,	wi_generic_noid,	do_file,		1 },
+	{ "overload.html",		mime_html,		  		0,	NULL,			    do_file,		0 },
+	{ "**.htm|**.html",		mime_html,		  		2,	wi_generic_noid,	do_file,		1 },
 	{ "**.gif",			"image/gif",				5,	wi_generic_noid,	do_file,		1 },
 	{ "**.jpg",			"image/jpeg",				5,	wi_generic_noid,	do_file,		1 },
 	{ "**.png",			"image/png",				5,	wi_generic_noid,	do_file,		1 },
@@ -313,6 +313,7 @@ const struct mime_handler mime_handlers[] = {
 	{ "**.svg",			"image/svg+xml",			2,	wi_generic_noid,	do_file,		1 },
 	{ "**.txt",			mime_plain,					2,	wi_generic_noid,	do_file,		1 },
 	{ "**.bin",			mime_binary,				0,	wi_generic_noid,	do_file,		1 },
+	{ "**.apk",			mime_binary,				0,	wi_generic_noid,	do_file,		1 },
 	{ "**.bino",		mime_octetstream,			0,	wi_generic_noid,	do_file,		1 },
 	{ "favicon.ico",	NULL,						5,	wi_generic_noid,	wo_favicon,		0 },
 // !!TB - CGI Support, enable downloading archives

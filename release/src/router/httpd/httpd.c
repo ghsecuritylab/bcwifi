@@ -408,7 +408,7 @@ static void handle_request(void)
 	}
 	file = path + 1;
 
-#if 0
+	#if 0
 	const char *hid;
 	int n;
 
@@ -422,7 +422,7 @@ static void handle_request(void)
 
 		cprintf("OK path=%s file=%s\n", path, file);
 	}
-#endif
+	#endif
 
 	if ((cp = strchr(file, '?')) != NULL) {
 		*cp = 0;
@@ -583,7 +583,6 @@ static void handle_request(void)
 		}
 	}
 */
-
 	send_error(404, NULL, NULL);
 }
 

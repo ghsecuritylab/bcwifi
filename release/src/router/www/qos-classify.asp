@@ -468,7 +468,7 @@ else {
 </table>
 </form>
 <script type='text/javascript'>qosg.setup();</script>
-<div id="bottom">Copyright © 2012-2013 By <a href="http://www.ethinking.cn/wweb/" target="_blank">苏州亿想中电子科技有限公司</a> All Rights Reserved. <br/>软件版本<% version(); %></div>
+<div id="bottom"> All Rights Reserved. <br/>软件版本<% version(); %></div>
 
 
 </body>

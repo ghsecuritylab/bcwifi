@@ -88,7 +88,7 @@ function upgrade()
 	<div class='section'>
 		<form name='form_upgrade' method='post' action='upgrade.cgi' encType='multipart/form-data'>
 		<div id='box-input'>
-			选择固件:<br>
+			选择固件:&nbsp;&nbsp;&nbsp;
 			<input type='file' name='file' size='50' style='height:20px'> <input type='button' value='升级' id='afu-upgrade-button' onclick='upgrade()' style='height:20px'>
 		</div>
 		</form>
@@ -137,7 +137,7 @@ if (nvram.jffs2_on != '0') {
 }
 </script>
 /* JFFS2-END */
-<div id="bottom">Copyright © 2012-2013 By <a href="http://www.ethinking.cn/wweb/" target="_blank">苏州亿想中电子科技有限公司</a> All Rights Reserved. <br/>软件版本<% version(); %></div>
+<div id="bottom"> All Rights Reserved. <br/>软件版本<% version(); %></div>
 
 
 </body>

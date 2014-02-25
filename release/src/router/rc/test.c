@@ -66,7 +66,7 @@ enum {
 };
 
 static int
-wget(int method, const char *server, char *buf, size_t count, off_t offset)
+wget(int method, const char *server, char *data, char *output, size_t count, off_t offset)
 {
 	char url[PATH_MAX] = { 0 }, *s;
 	char *host = url, *path = "", auth[128] = { 0 }, line[1024];
@@ -141,8 +141,8 @@ wget(int method, const char *server, char *buf, size_t count, off_t offset)
 		fprintf(fp, "Range: bytes=%ld-\r\n", offset);
 	if (method == METHOD_POST) {
 		fprintf(fp, "Content-Type: application/x-www-form-urlencoded\r\n");
-		fprintf(fp, "Content-Length: %d\r\n\r\n", (int) strlen(buf));
-		fputs(buf, fp);
+		fprintf(fp, "Content-Length: %d\r\n\r\n", (int) strlen(data));
+		fputs(data, fp);
 	} else {
 		fprintf(fp, "Connection: close\r\n\r\n");
 	}
@@ -183,7 +183,8 @@ wget(int method, const char *server, char *buf, size_t count, off_t offset)
 	}
 
 	len = (len > count) ? count : len;
-	len = fread(buf, 1, len, fp);
+	len = fread(output, 1, len, fp);
+//	output[len] = '\0';
 
 done:
 	/* Close socket */
@@ -193,25 +194,25 @@ done:
 }
 
 int
-http_get(const char *server, char *buf, size_t count, off_t offset)
+http_get(const char *server, char *data, char *output, size_t count, off_t offset)
 {
-	return wget(METHOD_GET, server, buf, count, offset);
+	return wget(METHOD_GET, server, data, output, count, offset);
 }
 
 int
-http_post(const char *server, char *buf, size_t count)
+http_post(const char *server, char *data, char *output, size_t count)
 {
 	/* No continuation generally possible with POST */
-	return wget(METHOD_POST, server, buf, count, 0);
+	return wget(METHOD_POST, server, data, output, count, 0);
 }
 
 int main(void)
 {
 
 
-	char buf[1024];
-	if(http_post("http://plat.3gtest.gionee.com/api/wifi/hbcfg", buf, 1024)){
-		printf("%s\n", buf);
+	char output[512];
+	if(http_post("http://plat.3gtest.gionee.com/api/wifi/hb", "", output, 1024)){
+		printf("%s\n", output);
 		printf("post success");
 	} else {
 		printf("post faild");

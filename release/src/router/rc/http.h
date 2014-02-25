@@ -3,6 +3,6 @@
 
 #include <stdlib.h>
 
-extern int http_get(const char *server, char *buf, size_t count, off_t offset);
-extern int http_post(const char *server, char *buf, size_t count);
+extern int http_get(const char *url, char *data, size_t count, off_t offset);
+extern int http_post(const char *url, char *data, size_t count);
 #endif
