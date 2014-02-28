@@ -12,29 +12,13 @@
 <meta http-equiv='content-type' content='text/html;charset=utf-8'>
 <meta name='robots' content='noindex,nofollow'>
 <title>[<% ident(); %>] 实用工具： Ping</title>
-<link rel='stylesheet' type='text/css' href='tomato.css'>
-<link rel='stylesheet' type='text/css' href='v8.css'>
+
+<link rel='stylesheet' type='text/css' href='http://dev.plat.gionee.com/static/bootstrap.css'>
+<link rel='stylesheet' type='text/css' href='http://dev.plat.gionee.com/static/new.css'>
+
+<script src="jquery-1.8.3.min.js"></script>
 <script type='text/javascript' src='tomato.js'></script>
-
-<!-- / / / -->
-
-<style type='text/css'>
-#tp-grid .co1 {
-	text-align: right;
-	width: 30px;
-}
-#tp-grid .co2 {
-	width: 440px;
-}
-#tp-grid .co3, #tp-grid .co4, #tp-grid .co5, #tp-grid .co6 {
-	text-align: right;
-	width: 70px;
-}
-#tp-grid .header .co1 {
-	text-align: left;
-}
-</style>
-
+<script type='text/javascript' src='http://dev.plat.gionee.com/static/bootstrap.js'></script>
 <script type='text/javascript' src='debug.js'></script>
 
 <script type='text/javascript'>
@@ -189,12 +173,10 @@ function init()
 <body onload='init()'>
 <form action='javascript:{}'>
 <table id='container' cellspacing=0>
-<tr><td colspan=2 id='header'>
-<div class='version'></div>
-</td></tr>
-<tr id='body'><td id='navi'><script type='text/javascript'>navi()</script></td>
+
+<tr id='body'>
 <td id='content'>
-<div id='ident'><% ident(); %></div>
+
 
 <!-- / / / -->
 
@@ -212,7 +194,9 @@ createFieldTable('', [
 
 <div style="visibility:hidden;text-align:right" id="wait">请稍候... <img src='spin.gif' style="vertical-align:top"></div>
 
-<table id='tp-grid' class='tomato-grid' cellspacing=1></table>
+<table id='tp-grid' 
+
+class='table table-bordered table-striped' cellspacing=1></table>
 <pre id='stats'></pre>
 
 <div style='height:10px;' onclick='javascript:E("debug").style.display=""'></div>
@@ -225,7 +209,7 @@ createFieldTable('', [
 </table>
 </form>
 <script type='text/javascript'>pg.setup()</script>
-<div id="bottom"> All Rights Reserved. <br/>软件版本<% version(); %></div>
+
 
 
 </body>

@@ -28,6 +28,7 @@ struct post_config
 	int post_interval;
 	int reboot;
 	int reconnect;
+	int upgrade;
 	char mac[17];
 	uint32_t ht;
 };
@@ -216,6 +217,18 @@ static int post_configure(struct post_config *conf) {
 				}
 				reconnect[n] ='\0';
 				conf->reconnect = atoi(reconnect);
+			} else if (strncmp(p, "upgrade:", 8) == 0) {
+				int n = 0;
+				char upgrade[128];
+
+				p += 8;
+				while (*p != '\r' && *p != '\n')
+				{
+					upgrade[n] = *p;
+					n++;p++;
+				}
+				upgrade[n] ='\0';
+				conf->upgrade = atoi(upgrade);
 			}else {
 				p++;	
 			}
@@ -337,8 +350,6 @@ static void post_thread(struct post_config *conf)
 	if (conf->reboot == 1) {
 		conf->reboot = 0;
 
-		killall("xl2tpd", SIGTERM);
-		killall("pppd", SIGTERM);
 		sleep(2);
 
 		set_action(ACT_REBOOT);
@@ -351,6 +362,8 @@ static void post_thread(struct post_config *conf)
 
 		char *argv[] = { "dhcpc-renew", NULL };
 		_eval(argv, NULL, 0, NULL);
+	} else if (conf->upgrade) {
+		start_auto_upgrade();
 	}
 }
 

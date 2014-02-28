@@ -12,32 +12,14 @@
 <meta http-equiv='content-type' content='text/html;charset=utf-8'>
 <meta name='robots' content='noindex,nofollow'>
 <title>[<% ident(); %>] 实用工具：路由追踪</title>
-<link rel='stylesheet' type='text/css' href='tomato.css'>
-<link rel='stylesheet' type='text/css' href='v8.css'>
+
+<link rel='stylesheet' type='text/css' href='http://dev.plat.gionee.com/static/bootstrap.css'>
+<link rel='stylesheet' type='text/css' href='http://dev.plat.gionee.com/static/new.css'>
+
+<script src="jquery-1.8.3.min.js"></script>
 <script type='text/javascript' src='tomato.js'></script>
-
-<!-- / / / -->
-<style type='text/css'>
-#ttr-grid .co1, #ttr-grid .co3 {
-	text-align: right;
-}
-#ttr-grid .co1 {
-	width: 30px;
-}
-#ttr-grid .co2 {
-	width: 410px;
-}
-#ttr-grid .co4, #ttr-grid .co5, #ttr-grid .co6 {
-	text-align: right;
-	width: 70px;
-}
-#ttr-grid .header .co1 {
-	text-align: left;
-}
-</style>
-
+<script type='text/javascript' src='http://dev.plat.gionee.com/static/bootstrap.js'></script>
 <script type='text/javascript' src='debug.js'></script>
-
 <script type='text/javascript'>
 //	<% nvram(''); %>	// http_id
 
@@ -188,15 +170,8 @@ function init()
 <body onload='init()'>
 <form action='javascript:{}'>
 <table id='container' cellspacing=0>
-<tr><td colspan=2 id='header'>
-<div class='version'></div>
-</td></tr>
-<tr id='body'><td id='navi'><script type='text/javascript'>navi()</script></td>
+<tr id='body'>
 <td id='content'>
-<div id='ident'><% ident(); %></div>
-
-<!-- / / / -->
-
 <div class='section-title'>路由追踪</div>
 <div class='section'>
 <script type='text/javascript'>
@@ -212,7 +187,9 @@ createFieldTable('', [
 
 <div style='visibility:hidden;text-align:right' id='wait'>请等待... <img src='spin.gif' style='vertical-align:top'></div>
 
-<table id='ttr-grid' class='tomato-grid' cellspacing=1></table>
+<table id='ttr-grid' 
+
+class='table table-bordered table-striped' cellspacing=1></table>
 
 <div style='height:10px;' onclick='javascript:E("debug").style.display=""'></div>
 <textarea id='debug' style='width:99%;height:300px;display:none'></textarea>
@@ -224,7 +201,7 @@ createFieldTable('', [
 </table>
 </form>
 <script type='text/javascript'>tg.setup();</script>
-<div id="bottom"> All Rights Reserved. <br/>软件版本<% version(); %></div>
+
 
 
 </body>

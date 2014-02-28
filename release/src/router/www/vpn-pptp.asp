@@ -14,8 +14,11 @@
 <meta http-equiv='content-type' content='text/html;charset=utf-8'>
 <meta name='robots' content='noindex,nofollow'>
 <title>[<% ident(); %>] PPTP: 客户端</title>
-<link rel='stylesheet' type='text/css' href='tomato.css'>
-<link rel='stylesheet' type='text/css' href='v8.css'>
+
+<link rel='stylesheet' type='text/css' href='http://dev.plat.gionee.com/static/bootstrap.css'>
+<link rel='stylesheet' type='text/css' href='http://dev.plat.gionee.com/static/new.css'>
+
+
 <script type='text/javascript' src='/tomato.js'></script>
 
 <!-- / / / -->
@@ -98,12 +101,10 @@ textarea {
 <body>
 <form id='_fom' method='post' action='/tomato.cgi'>
 <table id='container' cellspacing=0>
-<tr><td colspan=2 id='header'>
-<div class='version'></div>
-</td></tr>
-<tr id='body'><td id='navi'><script type='text/javascript'>navi()</script></td>
+
+<tr id='body'>
 <td id='content'>
-<div id='ident'><% ident(); %></div>
+
 
 <!-- / / / -->
 

@@ -12,9 +12,20 @@
 <meta http-equiv='content-type' content='text/html;charset=utf-8'>
 <meta name='robots' content='noindex,nofollow'>
 <title>[<% ident(); %>] QoS设置: 基本设置</title>
-<link rel='stylesheet' type='text/css' href='tomato.css'>
-<link rel='stylesheet' type='text/css' href='v8.css'>
+
+<link rel='stylesheet' type='text/css' href='http://dev.plat.gionee.com/static/bootstrap.css'>
+<link rel='stylesheet' type='text/css' href='http://dev.plat.gionee.com/static/new.css'>
+
+
+
+
+
+
+
+
+ <script src="jquery-1.8.3.min.js"></script>
 <script type='text/javascript' src='tomato.js'></script>
+<script type='text/javascript' src='http://dev.plat.gionee.com/static/bootstrap.js'></script>
 
 <!-- / / / -->
 <script type='text/javascript' src='debug.js'></script>
@@ -176,12 +187,10 @@ function save()
 <body>
 <form id='_fom' method='post' action='tomato.cgi'>
 <table id='container' cellspacing=0>
-<tr><td colspan=2 id='header'>
-<div class='version'></div>
-</td></tr>
-<tr id='body'><td id='navi'><script type='text/javascript'>navi()</script></td>
+
+<tr id='body'>
 <td id='content'>
-<div id='ident'><% ident(); %></div>
+
 
 <!-- / / / -->
 
@@ -349,7 +358,7 @@ createFieldTable('', [
 </table>
 </form>
 <script type='text/javascript'>verifyFields(null, 1);</script>
-<div id="bottom"> All Rights Reserved. <br/>软件版本<% version(); %></div>
+
 
 
 </body>

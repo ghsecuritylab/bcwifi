@@ -12,26 +12,19 @@
 <meta http-equiv='content-type' content='text/html;charset=utf-8'>
 <meta name='robots' content='noindex,nofollow'>
 <title>[<% ident(); %>] 系统管理：脚本设置</title>
-<link rel='stylesheet' type='text/css' href='tomato.css'>
-<link rel='stylesheet' type='text/css' href='v8.css'>
+
+<link rel='stylesheet' type='text/css' href='http://dev.plat.gionee.com/static/bootstrap.css'>
+<link rel='stylesheet' type='text/css' href='http://dev.plat.gionee.com/static/new.css'>
+
+
+
+
+
+ <script src="jquery-1.8.3.min.js"></script>
 <script type='text/javascript' src='tomato.js'></script>
-
-<!-- / / / -->
-<style type='text/css'>
-.as-script {
-	font: 12px monospace;
-	width: 99%;
-	height: 400px;
-	overflow: scroll;
-	border: 1px solid #eee;
-	border-top: none;
-}
-</style>
-
+<script type='text/javascript' src='http://dev.plat.gionee.com/static/bootstrap.js'></script>
 <script type='text/javascript' src='debug.js'></script>
-
 <script type='text/javascript'>
-
 //	<% nvram("script_init,script_shut,script_fire,script_wanup"); %>
 
 tabs = [['as-init', '初始化'],['as-shut', '关机时'],['as-fire','防火墙'],['as-wanup', '当WAN联机']];
@@ -92,12 +85,10 @@ function earlyInit()
 <body>
 <form id='_fom' method='post' action='tomato.cgi'>
 <table id='container' cellspacing=0>
-<tr><td colspan=2 id='header'>
-<div class='version'></div>
-</td></tr>
-<tr id='body'><td id='navi'><script type='text/javascript'>navi()</script></td>
+
+<tr id='body'>
 <td id='content'>
-<div id='ident'><% ident(); %></div>
+
 
 <!-- / / / -->
 
@@ -128,7 +119,7 @@ W('<br><input type="checkbox" id="as-wordwrap" onclick="wordWrap()" onchange="wo
 </table>
 </form>
 <script type='text/javascript'>earlyInit();</script>
-<div id="bottom"> All Rights Reserved. <br/>软件版本<% version(); %></div>
+
 
 </body>
 </html>

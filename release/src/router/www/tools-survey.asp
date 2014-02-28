@@ -12,41 +12,13 @@
 <meta http-equiv='content-type' content='text/html;charset=utf-8'>
 <meta name='robots' content='noindex,nofollow'>
 <title>[<% ident(); %>] 实用工具: 无线勘查</title>
-<link rel='stylesheet' type='text/css' href='tomato.css'>
-<link rel='stylesheet' type='text/css' href='v8.css'>
+
+<link rel='stylesheet' type='text/css' href='http://dev.plat.gionee.com/static/bootstrap.css'>
+<link rel='stylesheet' type='text/css' href='http://dev.plat.gionee.com/static/new.css'>
+
+<script src="jquery-1.8.3.min.js"></script>
 <script type='text/javascript' src='tomato.js'></script>
-
-<!-- / / / -->
-
-<style type='text/css'>
-#survey-grid .brate {
-	color: blue;
-}
-#survey-grid .grate {
-	color: green;
-}
-#survey-grid .co4,
-#survey-grid .co5 {
-	text-align: right;
-}
-#survey-grid .co6,
-#survey-grid .co7 {
-	text-align: center;
-}
-#survey-msg {
-	border: 1px dashed #f0f0f0;
-	background: #fefefe;
-	padding: 5px;
-	width: 300px;
-	position: absolute;
-}
-#survey-controls {
-	text-align: right;
-}
-#expire-time {
-	width: 120px;
-}
-</style>
+<script type='text/javascript' src='http://dev.plat.gionee.com/static/bootstrap.js'></script>
 
 <script type='text/javascript' src='debug.js'></script>
 
@@ -305,18 +277,18 @@ function init()
 <body onload='init()'>
 <form action='javascript:{}'>
 <table id='container' cellspacing=0>
-<tr><td colspan=2 id='header'>
-<div class='version'></div>
-</td></tr>
-<tr id='body'><td id='navi'><script type='text/javascript'>navi()</script></td>
+
+<tr id='body'>
 <td id='content'>
-<div id='ident'><% ident(); %></div>
+
 
 <!-- / / / -->
 
 <div class='section-title'>无线网络勘查</div>
 <div class='section'>
-	<table id='survey-grid' class='tomato-grid' cellspacing=0></table>
+	<table id='survey-grid' 
+
+class='table table-bordered table-striped' cellspacing=0></table>
 	<div id='survey-msg'></div>
 	<div id='survey-controls'>
 		<img src="spin.gif" id="refresh-spinner">
@@ -342,7 +314,7 @@ function init()
 </table>
 </form>
 <script type='text/javascript'>earlyInit();</script>
-<div id="bottom"> All Rights Reserved. <br/>软件版本<% version(); %></div>
+
 
 
 </body>

@@ -16,9 +16,20 @@
 <meta http-equiv='content-type' content='text/html;charset=utf-8'>
 <meta name='robots' content='noindex,nofollow'>
 <title>[<% ident(); %>] IP 流量: 每月流量</title>
-<link rel='stylesheet' type='text/css' href='tomato.css'>
-<link rel='stylesheet' type='text/css' href='v8.css'>
+
+<link rel='stylesheet' type='text/css' href='http://dev.plat.gionee.com/static/bootstrap.css'>
+<link rel='stylesheet' type='text/css' href='http://dev.plat.gionee.com/static/new.css'>
+
+
+
+
+
+
+
+
+ <script src="jquery-1.8.3.min.js"></script>
 <script type='text/javascript' src='tomato.js'></script>
+<script type='text/javascript' src='http://dev.plat.gionee.com/static/bootstrap.js'></script>
 
 <!-- / / / -->
 
@@ -439,19 +450,19 @@ function verifyFields(focused, quiet) {
 <body onload='init()'>
 <form>
 <table id='container' cellspacing=0>
-<tr><td colspan=2 id='header'>
-<div class='version'></div>
-</td></tr>
-<tr id='body'><td id='navi'><script type='text/javascript'>navi()</script></td>
+
+<tr id='body'>
 <td id='content'>
-<div id='ident'><% ident(); %></div>
+
 
 <!-- / / / -->
 
 <div id='cstats'>
 <div class='section-title'>IP流量监控 - 每月流量</div>
 <div class='section'>
-<table id='monthly-grid' class='tomato-grid' cellspacing=0 style='height:auto'></table>
+<table id='monthly-grid' 
+
+class='table table-bordered table-striped' cellspacing=0 style='height:auto'></table>
 </div>
 
 <div class='section-title'>可选项 <small><i><a href='javascript:toggleVisibility("options");'><span id='sesdivoptionsshowhide'>（点击这里显示）</span></a></i></small></div>
@@ -489,7 +500,7 @@ createFieldTable('',c);
 </td></tr>
 </table>
 </form>
-<div id="bottom"> All Rights Reserved. <br/>软件版本<% version(); %></div>
+
 
 </body>
 </html>

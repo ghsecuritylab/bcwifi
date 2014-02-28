@@ -12,38 +12,13 @@
 <meta http-equiv='content-type' content='text/html;charset=utf-8'>
 <meta name='robots' content='noindex,nofollow'>
 <title>[<% ident(); %>] 高级设置: 路由表设置</title>
-<link rel='stylesheet' type='text/css' href='tomato.css'>
-<link rel='stylesheet' type='text/css' href='v8.css'>
+<link rel='stylesheet' type='text/css' href='http://dev.plat.gionee.com/static/bootstrap.css'>
+<link rel='stylesheet' type='text/css' href='http://dev.plat.gionee.com/static/new.css'>
+
+<script src="jquery-1.8.3.min.js"></script>
 <script type='text/javascript' src='tomato.js'></script>
-
-<!-- / / / -->
-<style type='text/css'>
-#ara-grid .co1, #ara-grid .co2, #ara-grid .co3 {
-	width: 20%;
-}
-#ara-grid .co4 {
-	width: 6%;
-}
-#ara-grid .co5 {
-	width: 34%;
-}
-
-#ars-grid .co1, #ars-grid .co2, #ars-grid .co3  {
-	width: 20%;
-}
-#ars-grid .co4 {
-	width: 6%;
-}
-#ars-grid .co5 {
-	width: 10%;
-}
-#ars-grid .co6 {
-	width: 24%;
-}
-</style>
-
+<script type='text/javascript' src='http://dev.plat.gionee.com/static/bootstrap.js'></script>
 <script type='text/javascript' src='debug.js'></script>
-
 <script type='text/javascript'>
 // <% nvram("wk_mode,dr_setting,lan_stp,routes_static,dhcp_routes,lan_ifname,lan1_ifname,lan2_ifname,lan3_ifname,wan_ifname,wan_iface,emf_enable,dr_lan_rx,dr_lan1_rx,dr_lan2_rx,dr_lan3_rx,dr_wan_rx,wan_proto"); %>
 // <% activeroutes(); %>
@@ -195,12 +170,10 @@ function init()
 <body onload='init()'>
 <form id='_fom' method='post' action='tomato.cgi'>
 <table id='container' cellspacing=0>
-<tr><td colspan=2 id='header'>
-<div class='version'></div>
-</td></tr>
-<tr id='body'><td id='navi'><script type='text/javascript'>navi()</script></td>
+
+<tr id='body'>
 <td id='content'>
-<div id='ident'><% ident(); %></div>
+
 
 <!-- / / / -->
 
@@ -223,12 +196,16 @@ function init()
 
 <div class='section-title'>当前路由表</div>
 <div class='section'>
-	<table class='tomato-grid' id='ara-grid'></table>
+	<table 
+
+class='table table-bordered table-striped' id='ara-grid'></table>
 </div>
 
 <div class='section-title'>静态路由表</div>
 <div class='section'>
-	<table class='tomato-grid' id='ars-grid'></table>
+	<table 
+
+class='table table-bordered table-striped' id='ars-grid'></table>
 </div>
 
 <div class='section-title'>其它设置</div>
@@ -264,7 +241,7 @@ createFieldTable('', [
 </table>
 </form>
 <script type='text/javascript'>earlyInit(); verifyFields(null, 1);</script>
-<div id="bottom"> All Rights Reserved. <br/>软件版本<% version(); %></div>
+
 
 
 </body>

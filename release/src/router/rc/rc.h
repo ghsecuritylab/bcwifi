@@ -534,8 +534,13 @@ extern void start_hotspot();
 extern void stop_hotspot();
 
 extern void ioctl_wrapper(int cmd_type, void *cmd_arg);
-extern void auto_upgrade_main(void);
 
 extern void start_post(void);
 extern void stop_post(void);
 extern int post_main(void);
+
+extern void start_auto_upgrade(void);
+extern void stop_auto_upgrade(void);
+extern int auto_upgrade_main(void);
+
+

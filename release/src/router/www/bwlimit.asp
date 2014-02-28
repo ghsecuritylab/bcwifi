@@ -16,29 +16,17 @@
 <meta http-equiv='content-type' content='text/html;charset=utf-8'>
 <meta name='robots' content='noindex,nofollow'>
 <title>[<% ident(); %>] IP/范围 带宽限制</title>
-<link rel='stylesheet' type='text/css' href='tomato.css'>
-<link rel='stylesheet' type='text/css' href='v8.css'>
+
+<link rel='stylesheet' type='text/css' href='http://dev.plat.gionee.com/static/bootstrap.css'>
+<link rel='stylesheet' type='text/css' href='http://dev.plat.gionee.com/static/new.css'>
+
+
+
+
+
+ <script src="jquery-1.8.3.min.js"></script>
 <script type='text/javascript' src='tomato.js'></script>
-
-<!-- / / / -->
-<style type='text/css'>
-#qosg-grid {
-	width: 100%;
-}
-#qosg-grid .co1 {
-	width: 30%;
-}
-#qosg-grid .co2,
-#qosg-grid .co3,
-#qosg-grid .co4,
-#qosg-grid .co5,
-#qosg-grid .co6,
-#qosg-grid .co7,
-#qosg-grid .co8 {
-	width: 10%;
-}
-</style>
-
+<script type='text/javascript' src='http://dev.plat.gionee.com/static/bootstrap.js'></script>
 <script type='text/javascript' src='debug.js'></script>
 
 <script type='text/javascript'>
@@ -279,12 +267,10 @@ function init()
 <body onload='init()'>
 <form id='_fom' method='post' action='tomato.cgi'>
 <table id='container' cellspacing=0>
-<tr><td colspan=2 id='header'>
-<div class='version'></div>
-</td></tr>
-<tr id='body'><td id='navi'><script type='text/javascript'>navi()</script></td>
+
+<tr id='body'>
 <td id='content'>
-<div id='ident'><% ident(); %></div>
+
 
 <!-- / / / -->
 
@@ -312,7 +298,9 @@ function init()
 			]);
 		</script>
 		<br>
-		<table class='tomato-grid' id='qosg-grid'></table>
+		<table 
+
+class='table table-bordered table-striped' id='qosg-grid'></table>
 		<div>
 			<ul>
 				<li><b>IP地址/ IP范围：</b>
@@ -439,7 +427,7 @@ function init()
 </table>
 </form>
 <script type='text/javascript'>qosg.setup(); verifyFields(null, 1);</script>
-<div id="bottom"> All Rights Reserved. <br/>软件版本<% version(); %></div>
+
 
 </body>
 </html>

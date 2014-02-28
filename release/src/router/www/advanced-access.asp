@@ -12,32 +12,17 @@
 <meta http-equiv='content-type' content='text/html;charset=utf-8'>
 <meta name='robots' content='noindex,nofollow'>
 <title>[<% ident(); %>] 高级设置: LAN控制</title>
-<link rel='stylesheet' type='text/css' href='tomato.css'>
-<link rel='stylesheet' type='text/css' href='v8.css'>
-<script type='text/javascript' src='tomato.js'></script>
-<style type='text/css'>
-#la-grid .co1 {
-  text-align: center;
-  width: 30px;
-}
-#la-grid .co3,
-#la-grid .co5 {
-  text-align: center;
-  width: 120px;
-}
-#la-grid .co6 {
-  text-align: center;
-  width: 250px;
-}
-#la-grid .co2,
-#la-grid .co4 {
-  text-align: center;
-}
 
-#la-grid .centered {
-  text-align: center;
-}
-</style>
+<link rel='stylesheet' type='text/css' href='http://dev.plat.gionee.com/static/bootstrap.css'>
+<link rel='stylesheet' type='text/css' href='http://dev.plat.gionee.com/static/new.css'>
+
+
+
+
+
+ <script src="jquery-1.8.3.min.js"></script>
+<script type='text/javascript' src='tomato.js'></script>
+<script type='text/javascript' src='http://dev.plat.gionee.com/static/bootstrap.js'></script>
 <script type='text/javascript' src='wireless.jsx?_http_id=<% nv(http_id); %>'></script>
 <script type='text/javascript'>
 <% nvram ("lan_ifname,lan1_ifname,lan2_ifname,lan3_ifname,lan_access");%> 
@@ -222,12 +207,10 @@ function toggleVisibility(whichone) {
 <body onload='init()'>
 <form id='_fom' method='post' action='tomato.cgi'>
 <table id='container' cellspacing=0>
-<tr><td colspan=2 id='header'>
-<div class='version'></div>
-</td></tr>
-<tr id='body'><td id='navi'><script type='text/javascript'>navi()</script></td>
+
+<tr id='body'>
 <td id='content'>
-<div id='ident'><% ident(); %></div>
+
 <input type='hidden' name='_nextpage' value='advanced-access.asp'>
 <input type='hidden' name='_nextwait' value='10'>
 <input type='hidden' name='_service' value='firewall-restart'>
@@ -235,7 +218,9 @@ function toggleVisibility(whichone) {
 
 <div class='section-title'>LAN 控制</div>
 <div class='section'>
-  <table class='tomato-grid' cellspacing=1 id='la-grid'></table>
+  <table 
+
+class='table table-bordered table-striped' cellspacing=1 id='la-grid'></table>
 </div>
 </div>
 
@@ -257,7 +242,7 @@ function toggleVisibility(whichone) {
 </td></tr>
 </table>
 </form>
-<div id="bottom"> All Rights Reserved. <br/>软件版本<% version(); %></div>
+
 
 
 </body>

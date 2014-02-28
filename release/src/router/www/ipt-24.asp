@@ -16,40 +16,18 @@
 <meta http-equiv='content-type' content='text/html;charset=utf-8'>
 <meta name='robots' content='noindex,nofollow'>
 <title>[<% ident(); %>] IP 流量: 最近24小时</title>
-<link rel='stylesheet' type='text/css' href='tomato.css'>
-<link rel='stylesheet' type='text/css' href='v8.css'>
+
+<link rel='stylesheet' type='text/css' href='http://dev.plat.gionee.com/static/bootstrap.css'>
+<link rel='stylesheet' type='text/css' href='http://dev.plat.gionee.com/static/new.css'>
+
+<script src="jquery-1.8.3.min.js"></script>
 <script type='text/javascript' src='tomato.js'></script>
-
-<!-- / / / -->
-
-<style type='text/css'>
-#txt {
-	width: 550px;
-	white-space: nowrap;
-}
-#bwm-controls {
-	text-align: right;
-	margin-right: 5px;
-	margin-top: 5px;
-	float: right;
-	visibility: hidden;
-}
-ul.tabs a,
-#tabs a {
-	width: 140px;
-	height: 12px;
-	font-size: 9px;
-	font-weight:bold;
-}
-</style>
-
+<script type='text/javascript' src='http://dev.plat.gionee.com/static/bootstrap.js'></script>
 <script type='text/javascript' src='debug.js'></script>
-
 <script type='text/javascript' src='wireless.jsx?_http_id=<% nv(http_id); %>'></script>
 <script type='text/javascript' src='bwm-common.js'></script>
 <script type='text/javascript' src='bwm-hist.js'></script>
 <script type='text/javascript' src='interfaces.js'></script>
-
 <script type='text/javascript'>
 
 //	<% nvram("wan_ifname,lan_ifname,wl_ifname,wan_proto,wan_iface,web_svg,cstats_enable,cstats_colors,dhcpd_static,lan_ipaddr,lan_netmask,lan1_ipaddr,lan1_netmask,lan2_ipaddr,lan2_netmask,lan3_ipaddr,lan3_netmask,cstats_labels"); %>
@@ -309,12 +287,10 @@ function verifyFields(focused, quiet) {
 <body onload='init()'>
 <form>
 <table id='container' cellspacing=0>
-<tr><td colspan=2 id='header'>
-<div class='version'></div>
-</td></tr>
-<tr id='body'><td id='navi'><script type='text/javascript'>navi()</script></td>
+
+<tr id='body'>
 <td id='content'>
-<div id='ident'><% ident(); %></div>
+
 
 <!-- / / / -->
 
@@ -324,41 +300,45 @@ function verifyFields(focused, quiet) {
 	<script type='text/javascript'>
 	if ((nvram.web_svg != '0') && (nvram.cstats_enable == '1')) {
 		// without a div, Opera 9 moves svgdoc several pixels outside of <embed> (?)
-		W("<div style='border-top:1px solid #f0f0f0;border-bottom:1px solid #f0f0f0;visibility:hidden;padding:0;margin:0' id='graph'><embed src='bwm-graph.svg?<% version(); %>' style='width:760px;height:300px;margin:0;padding:0' type='image/svg+xml' pluginspage='http://www.adobe.com/svg/viewer/install/'></embed></div>");
+		W("<div style='border-top:1px solid #f0f0f0;border-bottom:1px solid #f0f0f0;visibility:hidden;padding:0;margin:0' id='graph'><embed src='bwm-graph.svg?<% version(); %>' style='width:100%;height:300px;margin:0;padding:0' type='image/svg+xml' pluginspage='http://www.adobe.com/svg/viewer/install/'></embed></div>");
 	}
 	</script>
 
 	<div id='bwm-controls'>
-		<small>(2分钟间隔)</small><br>
-		<br>
-		单位（小时）:&nbsp;
-			<a href='javascript:switchHours(1);' id='hr1'>1</a>,
-			<a href='javascript:switchHours(2);' id='hr2'>2</a>,
-			<a href='javascript:switchHours(4);' id='hr4'>4</a>,
-			<a href='javascript:switchHours(6);' id='hr6'>6</a>,
-			<a href='javascript:switchHours(12);' id='hr12'>12</a>,
-			<a href='javascript:switchHours(18);' id='hr18'>18</a>,
-			<a href='javascript:switchHours(24);' id='hr24'>24</a><br>
-		平均:&nbsp;
-			<a href='javascript:switchAvg(1)' id='avg1'>关闭</a>,
-			<a href='javascript:switchAvg(2)' id='avg2'>2x</a>,
-			<a href='javascript:switchAvg(4)' id='avg4'>4x</a>,
-			<a href='javascript:switchAvg(6)' id='avg6'>6x</a>,
-			<a href='javascript:switchAvg(8)' id='avg8'>8x</a><br>
-		最大:&nbsp;
-			<a href='javascript:switchScale(0)' id='scale0'>一致</a>,
-			<a href='javascript:switchScale(1)' id='scale1'>每个</a><br>
-		显示:&nbsp;
-			<a href='javascript:switchDraw(0)' id='draw0'>填充</a>,
-			<a href='javascript:switchDraw(1)' id='draw1'>实线</a><br>
-		颜色:&nbsp; <a href='javascript:switchColor()' id='drawcolor'>-</a><br>
-		<small><a href='javascript:switchColor(1)' id='drawrev'>[颜色反转]</a></small><br>
-		<br><br>
-		&nbsp; &raquo; <a href="admin-iptraffic.asp">设置</a>
+		<div class="btn-group" title="单位（小时）">
+		  <button type="button" onclick="javascript:switchHours(1)" id="hr1" class="btn btn-default">1</button>
+		  <button type="button" onclick="javascript:switchHours(2)" id='hr2' class="btn btn-default">2</button>
+		  <button type="button" onclick="javascript:switchHours(4)" id='hr4' class="btn btn-default">4</button>
+		  <button type="button" onclick="javascript:switchHours(6)" id='hr6' class="btn btn-default">6</button>
+		  <button type="button" onclick="javascript:switchHours(12)" id='hr12' class="btn btn-default">12</button>
+		   <button type="button" onclick="javascript:switchHours(18)" id='hr18' class="btn btn-default">18</button>
+		    <button type="button" onclick="javascript:switchHours(24)" id='hr24' class="btn btn-default">24</button>
+		</div>
+		<div class="btn-group" title="平均">
+		  <button type="button" onclick="javascript:switchAvg(1)" id="avg1" class="btn btn-default">关闭</button>
+		  <button type="button" onclick="javascript:switchAvg(2)" id='avg2' class="btn btn-default">2x</button>
+		  <button type="button" onclick="javascript:switchAvg(4)" id='avg4' class="btn btn-default">4x</button>
+		  <button type="button" onclick="javascript:switchAvg(6)" id='avg6' class="btn btn-default">6x</button>
+		  <button type="button" onclick="javascript:switchAvg(8)" id='avg8' class="btn btn-default">8x</button>
+		</div>
+		<div class="btn-group" title="最大">
+		  <button type="button" onclick="javascript:switchScale(0)" id="scale0" class="btn btn-default">一致</button>
+		  <button type="button" onclick="javascript:switchScale(1)" id='scale1' class="btn btn-default">每个</button>
+		</div>
+		<div class="btn-group" title="显示">
+		  <button type="button" onclick="javascript:switchDraw(0)" id="draw0" class="btn btn-default">填充</button>
+		  <button type="button" onclick="javascript:switchDraw(1)" id='draw1' class="btn btn-default">实线</button>
+		</div>
+		<div class="btn-group" title="颜色">
+		  <button type="button" onclick="javascript:switchColor()" id="drawcolor" class="btn btn-default">-</button>
+		  <button type="button" onclick="javascript:switchColor(1)" id='drawrev' class="btn btn-default">[颜色反转]</button>
+		</div>
+		<a class="btn btn-link" href="admin-iptraffic.asp">设置</a>
 	</div>
+	
 
 	<br><br>
-	<table border=0 cellspacing=2 id='txt'>
+	<table border=0 cellspacing=2 id='txt' class="table table-bordered table-striped">
 	<tr>
 		<td width='8%' align='right' valign='top'><b style='border-bottom:blue 1px solid' id='rx-name'>接收</b></td>
 			<td width='15%' align='right' valign='top'><span id='rx-current'></span></td>
@@ -422,7 +402,7 @@ if (nvram.cstats_enable != '1') {
 </td></tr>
 </table>
 </form>
-<div id="bottom"> All Rights Reserved. <br/>软件版本<% version(); %></div>
+
 
 </body>
 </html>

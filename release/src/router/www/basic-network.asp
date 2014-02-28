@@ -12,35 +12,18 @@
 <meta http-equiv='content-type' content='text/html;charset=utf-8'>
 <meta name='robots' content='noindex,nofollow'>
 <title>[<% ident(); %>] 基本设置：网络设置</title>
-<link rel='stylesheet' type='text/css' href='tomato.css'>
-<link rel='stylesheet' type='text/css' href='v8.css'>
+
+<link rel='stylesheet' type='text/css' href='http://dev.plat.gionee.com/static/bootstrap.css'>
+<link rel='stylesheet' type='text/css' href='http://dev.plat.gionee.com/static/new.css'>
+
+
+
+
+
+ <script src="jquery-1.8.3.min.js"></script>
 <script type='text/javascript' src='tomato.js'></script>
-
-<!-- / / / -->
-
-<style type='text/css'>
-#lan-grid .co1,
-#lan-grid .co2,
-#lan-grid .co3,
-#lan-grid .co4,
-#lan-grid .co5,
-#lan-grid .co6,
-#lan-grid .co7 {
-	text-align: center;
-}
-
-#lan-grid .centered {
-	text-align: center;
-}
-
-#spin {
-	visibility: hidden;
-	vertical-align: middle;
-}
-</style>
-
+<script type='text/javascript' src='http://dev.plat.gionee.com/static/bootstrap.js'></script>
 <script type='text/javascript' src='debug.js'></script>
-
 <script type='text/javascript' src='md5.js'></script>
 <script type='text/javascript' src='wireless.jsx?_http_id=<% nv(http_id); %>'></script>
 <script type='text/javascript' src='interfaces.js'></script>
@@ -1510,12 +1493,10 @@ function init()
 <body onload='init()'>
 <form id='_fom' method='post' action='tomato.cgi'>
 <table id='container' cellspacing=0>
-<tr><td colspan=2 id='header'>
-<div class='version'></div>
-</td></tr>
-<tr id='body'><td id='navi'><script type='text/javascript'>navi()</script></td>
+
+<tr id='body'>
 <td id='content'>
-<div id='ident'><% ident(); %></div>
+
 
 <!-- / / / -->
 
@@ -1604,7 +1585,9 @@ createFieldTable('', [
 
 <div class='section-title'>LAN设置</div>
 <div class='section'>
-	<table class='tomato-grid' cellspacing=1 id='lan-grid'></table>
+	<table 
+
+class='table table-bordered table-striped' cellspacing=1 id='lan-grid'></table>
 
 	<script type='text/javascript'>lg.setup();</script>
 
@@ -1753,7 +1736,7 @@ if (wl_sunit(uidx)<0) {
 </form>
 <script type='text/javascript'>earlyInit()</script>
 <div style='height:100px'></div>
-<div id="bottom"> All Rights Reserved. <br/>软件版本<% version(); %></div>
+
 
 
 </body>

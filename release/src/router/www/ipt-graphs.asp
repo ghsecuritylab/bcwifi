@@ -12,37 +12,16 @@
 <meta http-equiv='content-type' content='text/html;charset=utf-8'>
 <meta name='robots' content='noindex,nofollow'>
 <title>[<% ident(); %>] IP流量: 图形查看</title>
-<link rel='stylesheet' type='text/css' href='tomato.css'>
-<link rel='stylesheet' type='text/css' href='v8.css'>
+
+<link rel='stylesheet' type='text/css' href='http://dev.plat.gionee.com/static/bootstrap.css'>
+<link rel='stylesheet' type='text/css' href='http://dev.plat.gionee.com/static/new.css'>
+
+<script src="jquery-1.8.3.min.js"></script>
 <script type='text/javascript' src='tomato.js'></script>
+<script type='text/javascript' src='http://dev.plat.gionee.com/static/bootstrap.js'></script>
 
 <!-- / / / -->
 <script type='text/javascript' src='debug.js'></script>
-
-<style type='text/css'>
-.color {
-	width: 12px;
-	height: 25px;
-}
-.title {
-}
-.count {
-	text-align: right;
-}
-.pct {
-	width:55px;
-	text-align: right;
-}
-.thead {
-	font-size: 90%;
-	font-weight: bold;
-}
-.total {
-	border-top: 1px dashed #bbb;
-	font-weight: bold;
-}
-</style>
-
 <script type='text/javascript'>
 //	<% nvram('cstats_enable,lan_ipaddr,lan1_ipaddr,lan2_ipaddr,lan3_ipaddr,lan_netmask,lan1_netmask,lan2_netmask,lan3_netmask,dhcpd_static,web_svg'); %>
 
@@ -295,19 +274,17 @@ function init() {
 <body onload='init()'>
 <form id='_fom' action='javascript:{}'>
 <table id='container' cellspacing=0>
-<tr><td colspan=2 id='header'>
-<div class='version'></div>
-</td></tr>
-<tr id='body'><td id='navi'><script type='text/javascript'>navi()</script></td>
+
+<tr id='body'>
 <td id='content'>
-<div id='ident'><% ident(); %></div>
+
 
 <!-- / / / -->
 
 <div class="section-title">连接分布（TCP/ UDP）</div>
 <div class="section">
 <table border=0 width="100%"><tr><td>
-	<table style="width:250px">
+	<table style="width:250px" class="table table-bordered table-striped">
 <script type='text/javascript'>
 for (i = 0; i < 11; ++i) {
 	W('<tr style="cursor:pointer" onclick="mClick(' + i + ')">' +
@@ -334,7 +311,7 @@ if (nvram.web_svg != '0') {
 <div class="section-title">带宽分配（流入）</div>
 <div class="section">
 <table border=0 width="100%"><tr><td>
-	<table style="width:250px">
+	<table style="width:250px" class="table table-bordered table-striped">
 	<tr><td class='color' style="height:1em"></td><td class='title' style="width:45px">&nbsp;</td><td class='thead count'>kbit/s</td><td class='thead count'>KB/s</td><td class='pct'>&nbsp;</td></tr>
 <script type='text/javascript'>
 for (i = 0; i < 11; ++i) {
@@ -363,7 +340,7 @@ if (nvram.web_svg != '0') {
 <div class="section-title">带宽分配 (流出)</div>
 <div class="section">
 <table border=0 width="100%"><tr><td>
-	<table style="width:250px">
+	<table style="width:250px" class="table table-bordered table-striped">
 	<tr><td class='color' style="height:1em"></td><td class='title' style="width:45px">&nbsp;</td><td class='thead count'>kbit/s</td><td class='thead count'>KB/s</td><td class='pct'>&nbsp;</td></tr>
 <script type='text/javascript'>
 for (i = 0; i < 11; ++i) {
@@ -403,7 +380,7 @@ if (nvram.cstats_enable != '1') {
 </td></tr>
 </table>
 </form>
-<div id="bottom"> All Rights Reserved. <br/>软件版本<% version(); %></div>
+
 
 </body>
 </html>

@@ -50,7 +50,6 @@ Number.prototype.hex = function(min)
 	} while ((--min > 0) || (n > 0));
 	return s;
 }
-
 // -----------------------------------------------------------------------------
 
 // ---- Element.protoype. doesn't work with all browsers
@@ -1251,7 +1250,7 @@ TomatoGrid.prototype = {
 			c = cells[i];
 			if (typeof(c) == 'string') {
 				td = tr.insertCell(i);
-				td.className = 'co' + (i + 1);
+				//td.className = 'co' + (i + 1);
 				if (escCells) td.appendChild(document.createTextNode(c));
 					else td.innerHTML = c;
 			}
@@ -1275,7 +1274,7 @@ TomatoGrid.prototype = {
 
 		elem.remove(this.header);
 		this.header = e = this._insert(0, cells, escCells);
-		e.className = 'header';
+		e.className = '';
 
 		for (i = 0; i < e.cells.length; ++i) {
 			e.cells[i].cellN = i;	// cellIndex broken in Safari
@@ -2144,7 +2143,7 @@ function genStdRefresh(spin, min, exec)
 function _tabCreate(tabs)
 {
 	var buf = [];
-	buf.push('<ul id="tabs">');
+	buf.push('<ul id="tabs" class="nav nav-tabs">');
 	for (var i = 0; i < arguments.length; ++i)
 		buf.push('<li><a href="javascript:tabSelect(\'' + arguments[i][0] + '\')" id="' + arguments[i][0] + '">' + arguments[i][1] + '</a>');
 	buf.push('</ul><div id="tabs-bottom"></div>');
@@ -2342,22 +2341,20 @@ function myName()
 	if (name == '') name = 'status-overview.asp';
 	return name;
 }
-
-function navi()
-{
-	var menu = [
+var menu = [
 		['系统状态', 			'status', 0, [
 			['系统状态',			'overview.asp'],
 			['联机设备',			'devices.asp'],
 			['网站记录',			'webmon.asp'],
-			['日志信息',			'log.asp'] ] ],
+			['日志信息',			'log.asp'] 
+		] ],
 		['带宽监控', 			'bwm', 0, [
 			['实时流量',			'realtime.asp'],
 			['24小时流量',		'24.asp'],
 			['每日流量',			'daily.asp'],
 			['每周流量',			'weekly.asp'],
 			['每月流量',			'monthly.asp']
-			] ],
+		] ],
 		['IP流量监控',			'ipt', 0, [
 			['实时流量',			'realtime.asp'],
 			['24小时流量',		'24.asp'],
@@ -2365,13 +2362,14 @@ function navi()
 			['传输速率',		'details.asp'],
 			['每日流量',			'daily.asp'],
 			['每月流量',			'monthly.asp']
-			] ],
+		] ],
 		['诊断工具', 			'tools', 0, [
 			['Ping',			'ping.asp'],
 			['追踪路由',			'trace.asp'],
 			['系统命令',			'shell.asp'],
 			['无线搜寻',		'survey.asp'],
-			['网络唤醒',				'wol.asp'] ] ],
+			['网络唤醒',				'wol.asp'] 
+		] ],
 		['基本设置',			'basic', 0, [
 			['网络设置',			'network.asp'],
 /* IPV6-BEGIN */
@@ -2381,7 +2379,8 @@ function navi()
 			['时间设置',			'time.asp'],
 			['动态域名',			'ddns.asp'],
 			['静态DHCP',		'static.asp'],
-			['无线过滤',		'wfilter.asp'] ] ],
+			['无线过滤',		'wfilter.asp'] 
+		] ],
 		['高级设置', 			'advanced', 0, [
 			['连接数/超时设置',		'ctnf.asp'],
 			['DHCP/DNS',			'dhcpdns.asp'],
@@ -2395,7 +2394,8 @@ function navi()
 			['VLAN设置',			'vlan.asp'],
 			['LAN控制',			'access.asp'],
 			['VIF 设置',		'wlanvifs.asp'],
-			['无线设置',			'wireless.asp'] ] ],
+			['无线设置',			'wireless.asp'] 
+		] ],
 		['端口转发', 		'forward', 0, [
 			['IPv4转发',			'basic.asp'],
 /* IPV6-BEGIN */
@@ -2404,19 +2404,18 @@ function navi()
 			['DMZ设置',				'dmz.asp'],
 			['端口触发',			'triggered.asp'],
 			['UPnP/NAT-PMP',		'upnp.asp'] ] ],
-		['访问限制',		'restrict.asp'],
+		['访问限制',		'',  0,  [
+			['访问限制', 'restrict.asp'],
+			['IP带宽限速',		'bwlimit.asp'],
+			['第三方认证',		'hotspot.asp'],
+			['网络通告',		'splashd.asp'] ] ],
 		['QoS设置',				'qos', 0, [
 			['基本设置',		'settings.asp'],
 			['分类设置',		'classify.asp'],
 			['图形分析',			'graphs.asp'],
 			['链接查看',		'detailed.asp'],
 			['传输速率',		'ctrate.asp']
-			] ],
-		['IP带宽限速',		'bwlimit.asp'],
-		['第三方认证',		'hotspot.asp'],
-/* NOCAT-BEGIN */
-		['网络通告',		'splashd.asp'],
-/* NOCAT-END */
+		] ],
 /* REMOVE-BEGIN
 		['Scripts',				'sc', 0, [
 			['Startup',		'startup.asp'],
@@ -2484,11 +2483,13 @@ REMOVE-END */
 			['日志管理',			'log.asp'],
 			['定时重启/连接',			'sched.asp'],
 			['脚本设置',			'scripts.asp'],
-			['固件升级',			'upgrade.asp'] ] ],
-		['重启...',			'javascript:reboot()'],
-		['关机...',			'javascript:shutdown()'],
-		['注销',			'javascript:logout()']
+			['固件升级',			'upgrade.asp'] 
+		] ]	
 	];
+	
+function navi()
+{
+	
 	var name, base;
 	var i, j;
 	var buf = [];
@@ -2564,7 +2565,7 @@ function createFieldTable(flags, desc)
 	var id1;
 	var tr;
 
-	if ((flags.indexOf('noopen') == -1)) buf.push('<table class="fields">');
+	if ((flags.indexOf('noopen') == -1)) buf.push('<table class="table table-bordered table-striped">');
 	for (desci = 0; desci < desc.length; ++desci) {
 		var v = desc[desci];
 

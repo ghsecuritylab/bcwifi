@@ -12,9 +12,13 @@
 <meta http-equiv='content-type' content='text/html;charset=utf-8'>
 <meta name='robots' content='noindex,nofollow'>
 <title>[<% ident(); %>] 带宽监控：每日流量</title>
-<link rel='stylesheet' type='text/css' href='tomato.css'>
-<link rel='stylesheet' type='text/css' href='v8.css'>
+
+<link rel='stylesheet' type='text/css' href='http://dev.plat.gionee.com/static/bootstrap.css'>
+<link rel='stylesheet' type='text/css' href='http://dev.plat.gionee.com/static/new.css'>
+
+<script src="jquery-1.8.3.min.js"></script>
 <script type='text/javascript' src='tomato.js'></script>
+<script type='text/javascript' src='http://dev.plat.gionee.com/static/bootstrap.js'></script>
 
 <!-- / / / -->
 
@@ -86,8 +90,8 @@ function redraw()
 	block = '';
 	gn = 0;
 
-	grid = '<table class="bwmg" cellspacing="1">';
-	grid += makeRow('header', '日期', '下载', '上传', '合计');
+	grid = '<table class="table table-bordered table-striped" cellspacing="1">';
+	grid += makeRow('', '日期', '下载', '上传', '合计');
 
 	for (i = 0; i < daily_history.length; ++i) {
 		h = daily_history[i];
@@ -130,52 +134,43 @@ function init()
 <body onload='init()'>
 <form>
 <table id='container' cellspacing=0>
-<tr><td colspan=2 id='header'>
-<div class='version'></div>
-</td></tr>
-<tr id='body'><td id='navi'><script type='text/javascript'>navi()</script></td>
+
+<tr id='body'>
 <td id='content'>
-<div id='ident'><% ident(); %></div>
+	<div class='section-title'> WAN 每日流量 </div>
+	<div id='bwm-daily-grid'></div>
+	<div style="">
+		<table class='table table-bordered table-striped'>
+		<tr class=''><td colspan=2 style='text-align:center'>最近30天<br><span style='font-weight:normal' id='last-dates'></span></td></tr>
+		<tr class='even'><td>下载</td><td id='last-dn'>-</td></tr>
+		<tr class='odd'><td>上传</td><td id='last-up'>-</td></tr>
+		<tr class='footer'><td>合计</td><td id='last-total'>-</td></tr>
+		</table>
 
-<!-- / / / -->
-
-<div class='section-title'> WAN 每日流量 </div>
-<div id='bwm-daily-grid' style='float:left'></div>
-<div style="float:right;text-align:right">
-
-
-<table class='tomato-grid' style='width:150px'>
-<tr class='header'><td colspan=2 style='text-align:center'>最近30天<br><span style='font-weight:normal' id='last-dates'></span></td></tr>
-<tr class='even'><td>下载</td><td id='last-dn'>-</td></tr>
-<tr class='odd'><td>上传</td><td id='last-up'>-</td></tr>
-<tr class='footer'><td>合计</td><td id='last-total'>-</td></tr>
-</table>
-
-<br>
-<hr size=1>
-<br>
-
-<b>日期格式</b> <select onchange='changeDate(this, "ymd")' id='dafm'><option value=0>年-月-日</option><option value=1>月-日-年</option><option value=2>月 日, 年</option><option value=3>日.月.年</option></select><br>
-<b>单位切换</b> <select onchange='changeScale(this)' id='scale'><option value=0>KB</option><option value=1>MB</option><option value=2 selected>GB</option></select><br>
-<br>
-&raquo; <a href="javascript:genData()">数据</a>
-<br>
-&raquo; <a href="admin-bwm.asp">设置</a>
-<br><br><br>
-</div>
-<br>
-
-</script>
-
-<!-- / / / -->
-
-</td></tr>
+	<div class="btn-group">
+		<span>日期格式</span>
+		<select onchange='changeDate(this, "ymd")' id='dafm'>
+			<option value=0>年-月-日</option>
+			<option value=1>月-日-年</option>
+			<option value=2>月 日, 年</option>
+			<option value=3>日.月.年</option>
+		</select>
+		<span>单位切换</span>
+		<select onchange='changeScale(this)' id='scale'>
+			<option value=0>KB</option>
+			<option value=1>MB</option>
+			<option value=2 selected>GB</option>
+		</select>
+	</div>
+	<br/>
+	<a class="btn btn-link" href="javascript:genData()">数据</a><a class="btn btn-link" href="admin-bwm.asp">设置</a>
+	</div>
+	</td>
+</tr>
 <tr><td id='footer' colspan=2>
 <input type='button' value='刷新' onclick='reloadPage()'>
 </td></tr>
 </table>
 </form>
-<div id="bottom"> All Rights Reserved. <br/>软件版本<% version(); %></div>
-
 </body>
 </html>

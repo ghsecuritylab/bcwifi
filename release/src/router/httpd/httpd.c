@@ -152,7 +152,7 @@ void send_header(int status, const char* header, const char* mime, int cache)
 				 "Pragma: no-cache\r\n");
 	}
 	if (header) web_printf("%s\r\n", header);
-	web_puts("Server: www.router.tw\r\n");
+	web_puts("Server: hotwifi.me\r\n");
 	web_puts("Connection: close\r\n\r\n");
 
 	header_sent = 1;
@@ -436,11 +436,8 @@ static void handle_request(void)
 		return;
 	}
 
-	if ((file[0] == 0) || (strcmp(file, "index.asp") == 0)) {
-		file = "status-overview.asp";
-	}
-	else if ((strcmp(file, "ext/") == 0) || (strcmp(file, "ext") == 0)) {
-		file = "ext/index.asp";
+	if (file[0] == 0) {
+		file = "index.asp";
 	}
 
 	cp = protocol;
@@ -546,7 +543,6 @@ static void handle_request(void)
 				auth_fail(cl);
 				return;
 			}
-
 			if (handler->input) handler->input(file, cl, boundary);
 			eat_garbage();
 			if (handler->mime_type != NULL) send_header(200, NULL, handler->mime_type, handler->cache);

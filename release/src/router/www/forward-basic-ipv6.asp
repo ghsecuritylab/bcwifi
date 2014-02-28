@@ -12,36 +12,17 @@
 <meta http-equiv='content-type' content='text/html;charset=utf-8'>
 <meta name='robots' content='noindex,nofollow'>
 <title>[<% ident(); %>] 端口转发: IPv6转发</title>
-<link rel='stylesheet' type='text/css' href='tomato.css'>
-<link rel='stylesheet' type='text/css' href='v8.css'>
+<link rel='stylesheet' type='text/css' href='http://dev.plat.gionee.com/static/bootstrap.css'>
+<link rel='stylesheet' type='text/css' href='http://dev.plat.gionee.com/static/new.css'>
+
+
+
+
+
+ <script src="jquery-1.8.3.min.js"></script>
 <script type='text/javascript' src='tomato.js'></script>
-
-<!-- / / / -->
-<style type='text/css'>
-#fo-grid6 .co1 {
-	width: 25px;
-	text-align: center;
-}
-#fo-grid6 .co2 {
-	width: 70px;
-}
-#fo-grid6 .co3 {
-	width: 145px;
-}
-#fo-grid6 .co4 {
-	width: 140px;
-}
-#fo-grid6 .co5 {
-	width: 80px;
-}
-#fo-grid6 .co7 {
-	width: 300px;
-}
-
-</style>
-
+<script type='text/javascript' src='http://dev.plat.gionee.com/static/bootstrap.js'></script>
 <script type='text/javascript' src='debug.js'></script>
-
 <script type='text/javascript'>
 
 //	<% nvram("ipv6_portforward"); %>
@@ -162,12 +143,10 @@ function init()
 <body onload='init()'>
 <form id='_fom' method='post' action='javascript:{}'>
 <table id='container' cellspacing=0>
-<tr><td colspan=2 id='header'>
-<div class='version'></div>
-</td></tr>
-<tr id='body'><td id='navi'><script type='text/javascript'>navi()</script></td>
+
+<tr id='body'>
 <td id='content'>
-<div id='ident'><% ident(); %></div>
+
 
 <!-- / / / -->
 
@@ -178,7 +157,9 @@ function init()
 
 <div class='section-title'>IPv6的端口转发</div>
 <div class='section'>
-	<table class='tomato-grid' cellspacing=1 id='fo-grid6'></table>
+	<table 
+
+class='table table-bordered table-striped' cellspacing=1 id='fo-grid6'></table>
 	<script type='text/javascript'>fog.setup();</script>
 </div>
 
@@ -204,7 +185,7 @@ function init()
 </td></tr>
 </table>
 </form>
-<div id="bottom"> All Rights Reserved. <br/>软件版本<% version(); %></div>
+
 
 
 </body>

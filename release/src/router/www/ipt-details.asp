@@ -16,24 +16,13 @@
 <meta http-equiv='content-type' content='text/html;charset=utf-8'>
 <meta name='robots' content='noindex,nofollow'>
 <title>[<% ident(); %>] IP 流量: 传输速率</title>
-<link rel='stylesheet' type='text/css' href='tomato.css'>
-<link rel='stylesheet' type='text/css' href='v8.css'>
+
+<link rel='stylesheet' type='text/css' href='http://dev.plat.gionee.com/static/bootstrap.css'>
+<link rel='stylesheet' type='text/css' href='http://dev.plat.gionee.com/static/new.css'>
+
+<script src="jquery-1.8.3.min.js"></script>
 <script type='text/javascript' src='tomato.js'></script>
-
-<!-- / / / -->
-
-<style type='text/css'>
-#grid .co2,
-#grid .co3,
-#grid .co4,
-#grid .co5,
-#grid .co6,
-#grid .co7,
-#grid .co8 {
-	text-align: right;
-}
-</style>
-
+<script type='text/javascript' src='http://dev.plat.gionee.com/static/bootstrap.js'></script>
 <script type='text/javascript' src='debug.js'></script>
 <script type='text/javascript' src='protocols.js'></script>
 <script type='text/javascript' src='bwm-hist.js'></script>
@@ -444,19 +433,19 @@ function toggleVisibility(whichone) {
 <body onload='init()'>
 <form id='_fom' action='javascript:{}'>
 <table id='container' cellspacing=0>
-<tr><td colspan=2 id='header'>
-<div class='version'></div>
-</td></tr>
-<tr id='body'><td id='navi'><script type='text/javascript'>navi()</script></td>
+
+<tr id='body'>
 <td id='content'>
-<div id='ident'><% ident(); %></div>
+
 
 <div id='cstats'>
 <!-- / / / -->
 
 <div class='section-title'>IP流量详情</div>
 <div class='section'>
-<table id='grid' class='tomato-grid' style="float:left" cellspacing=1></table>
+<table id='grid' 
+
+class='table table-bordered table-striped' style="float:left" cellspacing=1></table>
 
 <div id='loading'><br><b>载入中...</b></div>
 </div>
@@ -476,13 +465,8 @@ c.push({ title: '显示主机名', name: 'f_hostnames', type: 'checkbox' });
 c.push({ title: '显示快捷键', name: 'f_shortcuts', type: 'checkbox' });
 createFieldTable('',c);
 </script>
-<div style="float:right;text-align:right">
-&raquo; <a href="admin-iptraffic.asp">设置</a>
+<a class="btn btn-link" href="admin-iptraffic.asp">设置</a>
 </div>
-</div>
-
-<!-- / / / -->
-
 </div>
 <br>
 
@@ -495,7 +479,7 @@ createFieldTable('',c);
 </td></tr>
 </table>
 </form>
-<div id="bottom"> All Rights Reserved. <br/>软件版本<% version(); %></div>
+
 
 </body>
 </html>

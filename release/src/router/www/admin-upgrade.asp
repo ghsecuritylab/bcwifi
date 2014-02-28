@@ -12,24 +12,17 @@
 <meta http-equiv='content-type' content='text/html;charset=utf-8'>
 <meta name='robots' content='noindex,nofollow'>
 <title>[<% ident(); %>] 系统管理: 固件更新</title>
-<link rel='stylesheet' type='text/css' href='tomato.css'>
-<link rel='stylesheet' type='text/css' href='v8.css'>
+<link rel='stylesheet' type='text/css' href='http://dev.plat.gionee.com/static/bootstrap.css'>
+<link rel='stylesheet' type='text/css' href='http://dev.plat.gionee.com/static/new.css'>
+
+
+
+
+
+ <script src="jquery-1.8.3.min.js"></script>
 <script type='text/javascript' src='tomato.js'></script>
-
-<!-- / / / -->
-<style type='text/css'>
-#afu-progress {
-	text-align: center;
-	padding: 200px 0;
-	width: 890px;
-}
-#afu-time {
-	font-size: 26px;
-}
-</style>
-
+<script type='text/javascript' src='http://dev.plat.gionee.com/static/bootstrap.js'></script>
 <script type='text/javascript' src='debug.js'></script>
-
 <script type='text/javascript'>
 
 // <% nvram("jffs2_on"); %>
@@ -59,8 +52,6 @@ function upgrade()
 	elem.display('afu-input', false);
 	E('content').style.verticalAlign = 'middle';
 	elem.display('afu-progress', true);
-	elem.display('navi', false)
-	elem.display('ident', false)
 
 	startTime = (new Date()).getTime();
 	setInterval('clock()', 800);
@@ -74,12 +65,10 @@ function upgrade()
 </head>
 <body>
 <table id='container' cellspacing=0>
-<tr><td colspan=2 id='header'>
-<div class='version'></div>
-</td></tr>
-<tr id='body'><td id='navi'><script type='text/javascript'>navi()</script></td>
+
+<tr id='body'>
 <td id='content'>
-<div id='ident'><% ident(); %></div>
+
 
 <!-- / / / -->
 
@@ -137,7 +126,7 @@ if (nvram.jffs2_on != '0') {
 }
 </script>
 /* JFFS2-END */
-<div id="bottom"> All Rights Reserved. <br/>软件版本<% version(); %></div>
+
 
 
 </body>

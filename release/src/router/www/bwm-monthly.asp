@@ -12,9 +12,13 @@
 <meta http-equiv='content-type' content='text/html;charset=utf-8'>
 <meta name='robots' content='noindex,nofollow'>
 <title>[<% ident(); %>] 带宽监控：每月流量</title>
-<link rel='stylesheet' type='text/css' href='tomato.css'>
-<link rel='stylesheet' type='text/css' href='v8.css'>
+
+<link rel='stylesheet' type='text/css' href='http://dev.plat.gionee.com/static/bootstrap.css'>
+<link rel='stylesheet' type='text/css' href='http://dev.plat.gionee.com/static/new.css'>
+
+<script src="jquery-1.8.3.min.js"></script>
 <script type='text/javascript' src='tomato.js'></script>
+<script type='text/javascript' src='http://dev.plat.gionee.com/static/bootstrap.js'></script>
 
 <!-- / / / -->
 
@@ -66,8 +70,8 @@ function redraw()
 	block = '';
 	gn = 0;
 
-	grid = '<table class="bwmg" cellspacing="1">';
-	grid += makeRow('header', '日期', '下载', '上传', '合计');
+	grid = '<table class="table table-bordered table-striped" cellspacing="1">';
+	grid += makeRow('', '日期', '下载', '上传', '合计');
 
 	for (i = 0; i < monthly_history.length; ++i) {
 		h = monthly_history[i];
@@ -103,27 +107,28 @@ function init()
 <body onload='init()'>
 <form>
 <table id='container' cellspacing=0>
-<tr><td colspan=2 id='header'>
-<div class='version'></div>
-</td></tr>
-<tr id='body'><td id='navi'><script type='text/javascript'>navi()</script></td>
-<td id='content'>
-<div id='ident'><% ident(); %></div>
 
-<!-- / / / -->
+<tr id='body'>
+<td id='content'>
 
 <div class='section-title'>WAN 每月流量</div>
-<div id='bwm-monthly-grid' style='float:left'></div>
-<div style="float:right;text-align:right">
-<b>日期格式</b> <select onchange='changeDate(this, "ym")' id='dafm'><option value=0>年-月</option><option value=1>月-年</option><option value=2>月 年</option><option value=3>月.年</option></select><br>
-<b>单位切换</b> <select onchange='changeScale(this)' id='scale'><option value=0>KB</option><option value=1>MB</option><option value=2 selected>GB</option></select><br>
-<br>
-&raquo; <a href="javascript:genData()">数据</a>
-<br>
-&raquo; <a href="admin-bwm.asp">设置</a>
-<br><br><br>
-</div>
-<br>
+<div id='bwm-monthly-grid' style=''></div>
+<div style="btn-group">
+<span>日期格式</span>
+<select onchange='changeDate(this, "ym")' id='dafm'>
+	<option value=0>年-月</option>
+	<option value=1>月-年</option>
+	<option value=2>月 年</option>
+	<option value=3>月.年</option>
+</select>
+<span>单位切换</span>
+<select onchange='changeScale(this)' id='scale'>
+	<option value=0>KB</option>
+	<option value=1>MB</option>
+	<option value=2 selected>GB</option>
+</select>
+
+<a class="btn btn-link" href="javascript:genData()">数据</a><a class="btn btn-link" href="admin-bwm.asp">设置</a>
 
 <script type='text/javascript'>checkRstats();</script>
 
@@ -135,7 +140,7 @@ function init()
 </td></tr>
 </table>
 </form>
-<div id="bottom"> All Rights Reserved. <br/>软件版本<% version(); %></div>
+
 
 </body>
 </html>

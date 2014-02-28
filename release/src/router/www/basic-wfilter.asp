@@ -16,29 +16,20 @@
 <meta http-equiv='content-type' content='text/html;charset=utf-8'>
 <meta name='robots' content='noindex,nofollow'>
 <title>[<% ident(); %>] 基本设置：无线过滤</title>
-<link rel='stylesheet' type='text/css' href='tomato.css'>
-<link rel='stylesheet' type='text/css' href='v8.css'>
+
+<link rel='stylesheet' type='text/css' href='http://dev.plat.gionee.com/static/bootstrap.css'>
+<link rel='stylesheet' type='text/css' href='http://dev.plat.gionee.com/static/new.css'>
+
+
+
+
+
+ <script src="jquery-1.8.3.min.js"></script>
 <script type='text/javascript' src='tomato.js'></script>
-
-<!-- / / / -->
-
-<style type='text/css'>
-#sm-grid {
-	width: 80%;
-}
-#sm-grid .co1 {
-	width: 30%;
-}
-#sm-grid .co2 {
-	width: 70%;
-}
-</style>
-
+<script type='text/javascript' src='http://dev.plat.gionee.com/static/bootstrap.js'></script>
 <script type='text/javascript' src='debug.js'></script>
-
 <script type='text/javascript' src='wireless.jsx?_http_id=<% nv(http_id); %>'></script>
 <script type='text/javascript'>
-
 //	<% nvram("wl_macmode,wl_maclist,macnames"); %>
 
 var smg = new TomatoGrid();
@@ -153,12 +144,10 @@ function init()
 <body onload='init()'>
 <form id='_fom' method='post' action='tomato.cgi'>
 <table id='container' cellspacing=0>
-<tr><td colspan=2 id='header'>
-<div class='version'></div>
-</td></tr>
-<tr id='body'><td id='navi'><script type='text/javascript'>navi()</script></td>
+
+<tr id='body'>
 <td id='content'>
-<div id='ident'><% ident(); %></div>
+
 
 <!-- / / / -->
 
@@ -184,7 +173,9 @@ for (var uidx = 0; uidx < wl_ifaces.length; ++uidx) {
 	<input type='radio' name='f_type' id='_f_allow' value='allow'> <label for='_f_allow'>仅允许如下客户端</label><br>
 	<input type='radio' name='f_type' id='_f_deny' value='deny'> <label for='_f_deny'>阻止如下客户端</label><br>
 	<br>
-	<table id='sm-grid' class='tomato-grid'></table>
+	<table id='sm-grid' 
+
+class='table table-bordered table-striped'></table>
 </div>
 
 
@@ -199,7 +190,7 @@ for (var uidx = 0; uidx < wl_ifaces.length; ++uidx) {
 </table>
 </form>
 <script type='text/javascript'>earlyInit()</script>
-<div id="bottom"> All Rights Reserved. <br/>软件版本<% version(); %></div>
+
 
 
 </body>

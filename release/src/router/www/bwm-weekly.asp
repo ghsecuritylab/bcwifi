@@ -12,12 +12,12 @@
 <meta http-equiv='content-type' content='text/html;charset=utf-8'>
 <meta name='robots' content='noindex,nofollow'>
 <title>[<% ident(); %>]带宽监控：每周流量</title>
-<link rel='stylesheet' type='text/css' href='tomato.css'>
-<link rel='stylesheet' type='text/css' href='v8.css'>
+<link rel='stylesheet' type='text/css' href='http://dev.plat.gionee.com/static/bootstrap.css'>
+<link rel='stylesheet' type='text/css' href='http://dev.plat.gionee.com/static/new.css'>
+
+<script src="jquery-1.8.3.min.js"></script>
 <script type='text/javascript' src='tomato.js'></script>
-
-<!-- / / / -->
-
+<script type='text/javascript' src='http://dev.plat.gionee.com/static/bootstrap.js'></script>
 <script type='text/javascript' src='debug.js'></script>
 <script type='text/javascript' src='bwm-hist.js'></script>
 
@@ -101,8 +101,8 @@ function redraw()
 	if (swk < 0) swk = 6;
 
 	if (summary) {
-		grid = '<table class="bwmg" cellspacing="1">';
-		grid += makeRow('header', '日期', '下载', '上传', '合计');
+		grid = '<table class="table table-bordered table-striped">';
+		grid += makeRow('', '日期', '下载', '上传', '合计');
 	}
 	else {
 		grid = '';
@@ -111,8 +111,8 @@ function redraw()
 	function flush_block()
 	{
 		grid += '<b>' + dbeg + ' to ' + dend + '</b>' +
-				'<table class="bwmg" cellspacing="1">' +
-				makeRow('header', '日期', '下载', '上传', '合计') +
+				'<table class="table table-bordered table-striped">' +
+				makeRow('', '日期', '下载', '上传', '合计') +
 				block.join('') +
 				makeRow('footer', '合计', rescale(dl), rescale(ul), rescale(dl + ul)) +
 				'</table><br>';
@@ -230,39 +230,53 @@ function init()
 <body onload='init()'>
 <form>
 <table id='container' cellspacing=0>
-<tr><td colspan=2 id='header'>
-<div class='version'></div>
-</td></tr>
-<tr id='body'><td id='navi'><script type='text/javascript'>navi()</script></td>
+
+<tr id='body'>
 <td id='content'>
-<div id='ident'><% ident(); %></div>
+
 
 <!-- / / / -->
 
 <div class='section-title'>WAN 每周流量</div>
-<div id='bwm-weekly-grid' style='float:left'></div>
-<div style="float:right;text-align:right">
-<b>显示方式</b> <select onchange='changeMode(this)' id='shmode'><option value=1 selected>总和<option value=0>列表</select><br>
-<b>日期格式</b> <select onchange='changeDate(this, "ymd")' id='dafm'><option value=0>年-月-日</option><option value=1>月-日-年</option><option value=2>月 日, 年</option><option value=3>日.月.年</option></select><br>
-<b>每周第一天</b> <select onchange='changeStart(this)' id='startwk'><option value=0 selected>日<option value=1>一<option value=2>二<option value=3>三<option value=4>四<option value=5>五<option value=6>六</select><br>
-<b>单位切换</b> <select onchange='changeScale(this)' id='scale'><option value=0>KB</option><option value=1>MB</option><option value=2 selected>GB</option></select><br>
-<br>
-&raquo; <a href="admin-bwm.asp">设置</a>
-<br><br><br>
+<div id='bwm-weekly-grid' style=''></div>
+<div style="btn-group">
+<span>显示方式</span> 
+<select onchange='changeMode(this)' id='shmode'>
+	<option value=1 selected>总和</option>
+	<option value=0>列表</option>
+</select>
+<span>日期格式</span>
+<select onchange='changeDate(this, "ymd")' id='dafm'>
+	<option value=0>年-月-日</option><option value=1>月-日-年</option>
+	<option value=2>月 日, 年</option><option value=3>日.月.年</option>
+</select>
+<span>每周第一天</span>
+<select onchange='changeStart(this)' id='startwk'>
+	<option value=0 selected>日</option>
+	<option value=1>一</option>
+	<option value=2>二</option>
+	<option value=3>三</option>
+	<option value=4>四</option>
+	<option value=5>五</option>
+	<option value=6>六</option>
+</select>
+<span>单位切换</span>
+<select onchange='changeScale(this)' id='scale'>
+	<option value=0>KB</option><option value=1>MB</option>
+	<option value=2 selected>GB</option>
+</select>
+
+<a class="btn btn-link" href="admin-bwm.asp">设置</a>
+
 </div>
-<br>
-
 <script type='text/javascript'>checkRstats();</script>
-
-<!-- / / / -->
-
 </td></tr>
 <tr><td id='footer' colspan=2>
 <input type='button' value='刷新' onclick='reloadPage()'>
 </td></tr>
 </table>
 </form>
-<div id="bottom"> All Rights Reserved. <br/>软件版本<% version(); %></div>
+
 
 </body>
 </html>

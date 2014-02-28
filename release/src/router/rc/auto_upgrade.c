@@ -13,6 +13,10 @@
 #include "http.h"
 #include "md5.h"
 
+#include "rc.h"
+
+#include <sys/ioctl.h>
+#include <wait.h>
 #include <stdio.h>
 #include <string.h>
 #include <unistd.h>
@@ -177,6 +181,16 @@ static int flash_firmware(void)
 	}
 
 	return 0;
+}
+
+void start_auto_upgrade(void)
+{
+	xstart("auto_upgrade");
+}
+
+void stop_auto_upgrade(void)
+{
+	killall_tk("auto_upgrade");
 }
 
 int auto_upgrade_main(void)

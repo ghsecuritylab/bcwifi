@@ -16,27 +16,21 @@
 <meta http-equiv='content-type' content='text/html;charset=utf-8'>
 <meta name='robots' content='noindex,nofollow'>
 <title>[<% ident(); %>] IP 流量: 每日流量</title>
-<link rel='stylesheet' type='text/css' href='tomato.css'>
-<link rel='stylesheet' type='text/css' href='v8.css'>
+
+<link rel='stylesheet' type='text/css' href='http://dev.plat.gionee.com/static/bootstrap.css'>
+<link rel='stylesheet' type='text/css' href='http://dev.plat.gionee.com/static/new.css'>
+
+
+
+
+
+ <script src="jquery-1.8.3.min.js"></script>
 <script type='text/javascript' src='tomato.js'></script>
-
-<!-- / / / -->
-
-<style type='text/css'>
-#daily-grid .co3,
-#daily-grid .co4,
-#daily-grid .co5 {
-	text-align: right;
-}
-</style>
-
-<!-- / / / -->
-
+<script type='text/javascript' src='http://dev.plat.gionee.com/static/bootstrap.js'></script>
 <script type='text/javascript' src='debug.js'></script>
 <script type='text/javascript' src='bwm-hist.js'></script>
 <script type='text/javascript' src='bwm-common.js'></script>
 <script type='text/javascript' src='interfaces.js'></script>
-
 <script type='text/javascript'>
 //	<% nvram("wan_ifname,lan_ifname,wl_ifname,wan_proto,wan_iface,web_svg,cstats_enable,cstats_colors,dhcpd_static,lan_ipaddr,lan_netmask,lan1_ipaddr,lan1_netmask,lan2_ipaddr,lan2_netmask,lan3_ipaddr,lan3_netmask"); %>
 
@@ -437,19 +431,19 @@ function verifyFields(focused, quiet) {
 <body onload='init()'>
 <form>
 <table id='container' cellspacing=0>
-<tr><td colspan=2 id='header'>
-<div class='version'></div>
-</td></tr>
-<tr id='body'><td id='navi'><script type='text/javascript'>navi()</script></td>
+
+<tr id='body'>
 <td id='content'>
-<div id='ident'><% ident(); %></div>
+
 
 <!-- / / / -->
 
 <div id='cstats'>
 <div class='section-title'>每日IP流量历史记录</div>
 <div class='section'>
-<table id='daily-grid' class='tomato-grid' cellspacing=0 style='height:auto'></table>
+<table id='daily-grid' 
+
+class='table table-bordered table-striped' cellspacing=0 style='height:auto'></table>
 </div>
 
 <div class='section-title'>选项 <small><i><a href='javascript:toggleVisibility("options");'><span id='sesdivoptionsshowhide'>​​（点击这里显示）</span></a></i></small></div>
@@ -487,7 +481,7 @@ createFieldTable('',c);
 </td></tr>
 </table>
 </form>
-<div id="bottom"> All Rights Reserved. <br/>软件版本<% version(); %></div>
+
 
 </body>
 </html>

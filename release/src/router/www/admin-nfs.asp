@@ -11,39 +11,18 @@
 <meta http-equiv='content-type' content='text/html;charset=utf-8'>
 <meta name='robots' content='noindex,nofollow'>
 <title>[<% ident(); %>] Admin: NFS Server</title>
-<link rel='stylesheet' type='text/css' href='tomato.css'>
-<link rel='stylesheet' type='text/css' href='v8.css'>
+
+<link rel='stylesheet' type='text/css' href='http://dev.plat.gionee.com/static/bootstrap.css'>
+<link rel='stylesheet' type='text/css' href='http://dev.plat.gionee.com/static/new.css'>
+
+
+
+
+
+ <script src="jquery-1.8.3.min.js"></script>
 <script type='text/javascript' src='tomato.js'></script>
-
-<!-- / / / -->
-<style type='text/css'>
-#nfsg-grid {
-	width: 100%;
-}
-#nfsg-grid .co1 {
-	width: 15%;
-}
-#nfsg-grid .co2 {
-	width: 20%;
-}
-#nfsg-grid .co3 {
-	width: 10%;
-}
-#nfsg-grid .co4 {
-	width: 7%;
-}
-#nfsg-grid .co5 {
-	width: 13%;
-}
-#nfsg-grid .co6 {
-	width: 35%;
-}
-
-
-</style>
-
+<script type='text/javascript' src='http://dev.plat.gionee.com/static/bootstrap.js'></script>
 <script type='text/javascript' src='debug.js'></script>
-
 <script type='text/javascript'>
 
 //	<% nvram("nfs_enable,nfs_exports"); %>
@@ -133,12 +112,10 @@ function init()
 <body onload='init()'>
 <form id='_fom' method='post' action='tomato.cgi'>
 <table id='container' cellspacing=0>
-<tr><td colspan=2 id='header'>
-<div class='version'></div>
-</td></tr>
-<tr id='body'><td id='navi'><script type='text/javascript'>navi()</script></td>
+
+<tr id='body'>
 <td id='content'>
-<div id='ident'><% ident(); %></div>
+
 
 <!-- / / / -->
 
@@ -159,7 +136,9 @@ function init()
 
 <div class='section-title'>输出</div>
 <div class='section'>
-	<table class='tomato-grid' cellspacing=1 id='nfsg-grid'></table>
+	<table 
+
+class='table table-bordered table-striped' cellspacing=1 id='nfsg-grid'></table>
 	<script type='text/javascript'>nfsg.setup();</script>
 <br>
 	<ul>
@@ -189,7 +168,7 @@ function init()
 </table>
 </form>
 <script type='text/javascript'>verifyFields(null, 1);</script>
-<div id="bottom"> All Rights Reserved. <br/>软件版本<% version(); %></div>
+
 
 </body>
 </html>

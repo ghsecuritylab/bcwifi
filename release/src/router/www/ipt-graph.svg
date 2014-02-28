@@ -104,7 +104,7 @@ function updateSVG(data, abc)
 		ny = cy + (r * Math.cos(t * Math.PI * 2));
 
 		if (data[i] == 0) {
-			e.setAttribute('d', '');
+			e.setAttribute('d', 'M0 0');
 		}
 		else if (p == 1) {
 			e.setAttribute('d', 'M5,' + cy + 'A' + r + ',' + r + ' 0 1,1 5,' + (cy + 1) + 'z');

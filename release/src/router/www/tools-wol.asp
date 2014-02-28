@@ -12,35 +12,14 @@
 <meta http-equiv='content-type' content='text/html;charset=utf-8'>
 <meta name='robots' content='noindex,nofollow'>
 <title>[<% ident(); %>] 实用工具：网络唤醒 WOL</title>
-<link rel='stylesheet' type='text/css' href='tomato.css'>
-<link rel='stylesheet' type='text/css' href='v8.css'>
+
+<link rel='stylesheet' type='text/css' href='http://dev.plat.gionee.com/static/bootstrap.css'>
+<link rel='stylesheet' type='text/css' href='http://dev.plat.gionee.com/static/new.css'>
+
+<script src="jquery-1.8.3.min.js"></script>
 <script type='text/javascript' src='tomato.js'></script>
-
-<!-- / / / -->
-
+<script type='text/javascript' src='http://dev.plat.gionee.com/static/bootstrap.js'></script>
 <script type='text/javascript' src='debug.js'></script>
-
-<style type='text/css'>
-#wol-grid .co1 {
-	width: 15%;
-}
-#wol-grid .co2 {
-	width: 15%;
-}
-#wol-grid .co3 {
-	width: 25%;
-}
-#wol-grid .co4 {
-	width: 45%;
-}
-textarea {
-	width: 99%;
-	height: 8em;
-}
-#refreshb, #save-button {
-	width: 90px;
-}
-</style>
 
 <script type='text/javascript'>
 
@@ -184,12 +163,10 @@ function init()
 <body onload='init()'>
 <form id='_fom' action='wakeup.cgi' method='post'>
 <table id='container' cellspacing=0>
-<tr><td colspan=2 id='header'>
-<div class='version'></div>
-</td></tr>
-<tr id='body'><td id='navi'><script type='text/javascript'>navi()</script></td>
+
+<tr id='body'>
 <td id='content'>
-<div id='ident'><% ident(); %></div>
+
 
 <!-- / / / -->
 
@@ -199,7 +176,9 @@ function init()
 
 <div class='section-title'>网络唤醒</div>
 <div class='section'>
-	<table id='wol-grid' class='tomato-grid' cellspacing=1></table>
+	<table id='wol-grid' 
+
+class='table table-bordered table-striped' cellspacing=1></table>
 	<div style='float:right'><img src='spin.gif' id='spin' style='vertical-align:middle;visibility:hidden'> &nbsp; <input type='button' value='刷新' onclick='refreshClick()' id='refreshb'></div>
 </div>
 <div id='msg' style='visibility:hidden;background:#ffffa0;margin:auto;width:50%;text-align:center;padding:2px;border:1px solid #fee'></div>
@@ -220,7 +199,7 @@ createFieldTable('', [
 </table>
 </form>
 <script type='text/javascript'>wg.setup();wg.populate();</script>
-<div id="bottom"> All Rights Reserved. <br/>软件版本<% version(); %></div>
+
 
 
 </body>

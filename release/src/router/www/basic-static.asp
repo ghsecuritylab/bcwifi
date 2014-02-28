@@ -16,34 +16,18 @@
 <meta http-equiv='content-type' content='text/html;charset=utf-8'>
 <meta name='robots' content='noindex,nofollow'>
 <title>[<% ident(); %>]基本设置: 静态DHCP/ARP/IPT</title>
-<link rel='stylesheet' type='text/css' href='tomato.css'>
-<link rel='stylesheet' type='text/css' href='v8.css'>
+
+<link rel='stylesheet' type='text/css' href='http://dev.plat.gionee.com/static/bootstrap.css'>
+<link rel='stylesheet' type='text/css' href='http://dev.plat.gionee.com/static/new.css'>
+
+
+
+
+
+ <script src="jquery-1.8.3.min.js"></script>
 <script type='text/javascript' src='tomato.js'></script>
-
-<!-- / / / -->
-<style type='text/css'>
-#bs-grid .co1 {
-	width: 120px;
-	text-align: center;
-}
-#bs-grid .co2 {
-	width: 80px;
-	text-align: center;
-}
-#bs-grid .co3 {
-	width: 120px;
-}
-#bs-grid .co4 {
-	width: 80px;
-	text-align: center;
-}
-#bs-grid .centered {
-	text-align: center;
-}
-</style>
-
+<script type='text/javascript' src='http://dev.plat.gionee.com/static/bootstrap.js'></script>
 <script type='text/javascript' src='debug.js'></script>
-
 <script type='text/javascript'>
 
 //	<% nvram("lan_ipaddr,lan_netmask,dhcpd_static,dhcpd_startip,dhcpd_static_only,cstats_include"); %>
@@ -340,12 +324,10 @@ function verifyFields(focused, quiet) {
 <body onload='init()'>
 <form id='_fom' method='post' action='tomato.cgi'>
 <table id='container' cellspacing=0>
-<tr><td colspan=2 id='header'>
-<div class='version'></div>
-</td></tr>
-<tr id='body'><td id='navi'><script type='text/javascript'>navi()</script></td>
+
+<tr id='body'>
 <td id='content'>
-<div id='ident'><% ident(); %></div>
+
 
 <!-- / / / -->
 
@@ -358,7 +340,9 @@ function verifyFields(focused, quiet) {
 
 <div class='section-title'>静态DHCP/ARP/IPT</div>
 <div class='section'>
-	<table class='tomato-grid' id='bs-grid'></table>
+	<table 
+
+class='table table-bordered table-striped' id='bs-grid'></table>
 </div>
 
 <!-- / / / -->
@@ -405,7 +389,7 @@ createFieldTable('', [
 </table>
 </form>
 <script type='text/javascript'>sg.setup();</script>
-<div id="bottom"> All Rights Reserved. <br/>软件版本<% version(); %></div>
+
 
 
 </body>

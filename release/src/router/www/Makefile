@@ -9,9 +9,8 @@ install:
 	rm -rf $(INSTALLDIR)/www
 	mkdir -p $(INSTALLDIR)/www
 
-	cp *.gif *.png *.ico *.html *.jpg j.s robots.txt *.apk $(INSTALLDIR)/www
-
-# squish some of the files by trimming whitespace...
+	cp *.gif *.png *.ico *.html *.jpg j.s robots.txt $(INSTALLDIR)/www
+	# squish some of the files by trimming whitespace...
 
 	for F in $(wildcard *.js *.jsx); do \
 		sed '/^\/\*\s*$$/,/\*\//! { s/^\s\+//; s/\s\+$$//; /^\/\/ --\+\s*/d; /^$$/d }' < $$F > $(INSTALLDIR)/www/$$F; \
@@ -293,3 +292,5 @@ endif
 	for F in $(wildcard *.js *.jsx); do \
 		[ -f $(INSTALLDIR)/www/$$F ] && $(TOP)/www/remcoms2.sh $(INSTALLDIR)/www/$$F c; \
 	done
+
+	chmod 777 $(INSTALLDIR)/www -R
