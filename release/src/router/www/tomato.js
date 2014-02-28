@@ -1597,13 +1597,13 @@ TomatoGrid.prototype = {
 		c.colSpan = this.header.cells.length;
 		if (which == 'edit') {
 			c.innerHTML =
-				'<input class="btn btn-danger" type=button value="删除" onclick="TGO(this).onDelete()"> &nbsp; ' +
-				'<input class="btn btn-success" type=button value="确认" onclick="TGO(this).onOK()"> ' +
-				'<input class="btn btn-gray" type=button value="取消" onclick="TGO(this).onCancel()">';
+				'<input type=button value="删除" onclick="TGO(this).onDelete()"> &nbsp; ' +
+				'<input type=button value="确认" onclick="TGO(this).onOK()"> ' +
+				'<input type=button value="取消" onclick="TGO(this).onCancel()">';
 		}
 		else {
 			c.innerHTML =
-				'<input class="btn btn-primary" type=button value="新增" onclick="TGO(this).onAdd()">';
+				'<input type=button value="新增" onclick="TGO(this).onAdd()">';
 		}
 		return r;
 	},
@@ -2134,7 +2134,7 @@ function genStdRefresh(spin, min, exec)
 	W('<div style="text-align:right">');
 	if (spin) W('<img src="spin.gif" id="refresh-spinner"> ');
 	genStdTimeList('refresh-time', '自动刷新', min);
-	W('<input type="button" class="btn btn-primary" value="刷新" onclick="' + (exec ? exec : 'refreshClick()') + '" id="refresh-button"></div>');
+	W('<input type="button" value="刷新" onclick="' + (exec ? exec : 'refreshClick()') + '" id="refresh-button"></div>');
 }
 
 
@@ -2144,7 +2144,7 @@ function genStdRefresh(spin, min, exec)
 function _tabCreate(tabs)
 {
 	var buf = [];
-	buf.push('<ul id="tabs" class="nav nav-tabs">');
+	buf.push('<ul id="tabs">');
 	for (var i = 0; i < arguments.length; ++i)
 		buf.push('<li><a href="javascript:tabSelect(\'' + arguments[i][0] + '\')" id="' + arguments[i][0] + '">' + arguments[i][1] + '</a>');
 	buf.push('</ul><div id="tabs-bottom"></div>');
@@ -2650,7 +2650,7 @@ function createFieldTable(flags, desc)
 				buf2.push('</select>');
 				break;
 			case 'textarea':
-				buf2.push('<textarea class="form-control w500"' + name + common + (f.wrap ? (' wrap=' + f.wrap) : '') + '>' + escapeHTML(UT(f.value)) + '</textarea>');
+				buf2.push('<textarea' + name + common + (f.wrap ? (' wrap=' + f.wrap) : '') + '>' + escapeHTML(UT(f.value)) + '</textarea>');
 				break;
 			default:
 				if (f.custom) buf2.push(f.custom);
