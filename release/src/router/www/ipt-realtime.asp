@@ -245,7 +245,7 @@ function verifyFields(focused, quiet) {
 </head>
 <body onload='init()'>
 <form>
-<table id='container' cellspacing=0>
+<table id='container' cellspacing=0 class="table">
 
 <tr id='body'>
 <td id='content'>

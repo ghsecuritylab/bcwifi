@@ -15,7 +15,15 @@
 
 <link rel='stylesheet' type='text/css' href='http://dev.plat.gionee.com/static/bootstrap.css'>
 <link rel='stylesheet' type='text/css' href='http://dev.plat.gionee.com/static/new.css'>
-<script src="jquery-1.8.3.min.js"></script>
+
+
+
+
+
+
+
+
+ <script src="jquery-1.8.3.min.js"></script>
 <script type='text/javascript' src='tomato.js'></script>
 <script type='text/javascript' src='http://dev.plat.gionee.com/static/bootstrap.js'></script>
 
@@ -45,7 +53,7 @@ function init()
 </head>
 <body onload='init()'>
 <form id='_fom' action='javascript:{}'>
-<table id='container' cellspacing=0>
+<table id='container' cellspacing=0 class="table">
 
 <tr id='body'>
 <td id='content'>
@@ -56,14 +64,14 @@ function init()
 <div id='logging'>
 	<div class='section-title'>日志记录文件</div>
 	<div class='section'>
-		<a href="logs/view.cgi?which=25&_http_id=<% nv(http_id) %>">查看最后  25 行</a><br>
-		<a href="logs/view.cgi?which=50&_http_id=<% nv(http_id) %>">查看最后  50 行</a><br>
-		<a href="logs/view.cgi?which=100&_http_id=<% nv(http_id) %>">查看最后 100 行</a><br>
-		<a href="logs/view.cgi?which=all&_http_id=<% nv(http_id) %>">全部显示</a><br><br>
-		<a href="logs/syslog.txt?_http_id=<% nv(http_id) %>">下载日志记录文件</a><br><br>
-		<input type="text" maxsize=32 size=33 id="find-text"> <input type="button" value="搜索" onClick="find()"><br>
+		<a class="btn btn-link" href="logs/view.cgi?which=25&_http_id=<% nv(http_id) %>">查看最后  25 行</a><br>
+		<a class="btn btn-link" href="logs/view.cgi?which=50&_http_id=<% nv(http_id) %>">查看最后  50 行</a><br>
+		<a class="btn btn-link" href="logs/view.cgi?which=100&_http_id=<% nv(http_id) %>">查看最后 100 行</a><br>
+		<a class="btn btn-link" href="logs/view.cgi?which=all&_http_id=<% nv(http_id) %>">全部显示</a><br><br>
+		<a class="btn btn-link" href="logs/syslog.txt?_http_id=<% nv(http_id) %>">下载日志记录文件</a><br><br>
+		<input type="text" maxsize=32 size=33 id="find-text" class="form-control w200"> <input type="button" value="搜索" onClick="find()" class="btn btn-info"><br>
 		<br><br>
-		&raquo; <a href="admin-log.asp">日志记录管理</a><br><br>
+		 <a class="btn btn-default" href="admin-log.asp">日志记录管理&raquo;</a><br><br>
 	</div>
 </div>
 

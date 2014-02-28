@@ -19,10 +19,20 @@
 
 <link rel='stylesheet' type='text/css' href='http://dev.plat.gionee.com/static/bootstrap.css'>
 <link rel='stylesheet' type='text/css' href='http://dev.plat.gionee.com/static/new.css'>
-<script src="jquery-1.8.3.min.js"></script>
+
+
+
+
+
+
+
+
+ <script src="jquery-1.8.3.min.js"></script>
 <script type='text/javascript' src='tomato.js'></script>
 <script type='text/javascript' src='http://dev.plat.gionee.com/static/bootstrap.js'></script>
+
 <script type='text/javascript' src='debug.js'></script>
+
 <script type='text/javascript' src='wireless.jsx?_http_id=<% nv(http_id); %>'></script>
 <script type='text/javascript'>
 
@@ -300,7 +310,7 @@ function init()
 </script>
 </head>
 <body onload='init()'>
-<table id='container' cellspacing=0>
+<table id='container' class="table" cellspacing=0>
 
 <tr id='body'>
 <td id='content'>
@@ -320,7 +330,7 @@ for (var uidx = 0; uidx < wl_ifaces.length; ++uidx) {
 		if (wl_sunit(uidx)<0) {
 			var a = '';
 			if ((nvram['wl'+u+'_mode'] == 'ap') || (nvram['wl'+u+'_mode'] == 'wds'))
-				a = '&nbsp;&nbsp;&nbsp; <input type="button" value="测量" onclick="javascript:window.location=\'wlmnoise.cgi?_http_id=' + nvram.http_id + '&_wl_unit=' + u +'\'">';
+				a = '&nbsp;&nbsp;&nbsp; <input class="btn btn-primary" type="button" value="测量" onclick="javascript:window.location=\'wlmnoise.cgi?_http_id=' + nvram.http_id + '&_wl_unit=' + u +'\'">';
 			f.push( { title: '<b>本底噪声 (' + wl_ifaces[uidx][0] + ')&nbsp;:</b>',
 				prefix: '<span id="noise'+uidx+'">',
 				custom: wlnoise[uidx],

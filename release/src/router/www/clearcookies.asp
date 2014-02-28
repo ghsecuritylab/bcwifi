@@ -28,7 +28,7 @@
 <script type='text/javascript' src='http://dev.plat.gionee.com/static/bootstrap.js'></script>
 </head>
 <body>
-<table id='container' cellspacing=0>
+<table id='container' class="table" cellspacing=0>
 
 <tr id='body'>
 <td id='content'>

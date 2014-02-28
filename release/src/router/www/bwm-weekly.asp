@@ -229,7 +229,7 @@ function init()
 </head>
 <body onload='init()'>
 <form>
-<table id='container' cellspacing=0>
+<table id='container' cellspacing=0 class="table">
 
 <tr id='body'>
 <td id='content'>
@@ -272,7 +272,7 @@ function init()
 <script type='text/javascript'>checkRstats();</script>
 </td></tr>
 <tr><td id='footer' colspan=2>
-<input type='button' value='刷新' onclick='reloadPage()'>
+<input type='button' value='刷新' class="btn btn-primary" onclick='reloadPage()'>
 </td></tr>
 </table>
 </form>

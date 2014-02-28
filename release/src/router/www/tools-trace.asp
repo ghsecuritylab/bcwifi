@@ -169,14 +169,14 @@ function init()
 </head>
 <body onload='init()'>
 <form action='javascript:{}'>
-<table id='container' cellspacing=0>
+<table id='container' cellspacing=0 class="table">
 <tr id='body'>
 <td id='content'>
 <div class='section-title'>路由追踪</div>
 <div class='section'>
 <script type='text/javascript'>
 createFieldTable('', [
-	{ title: '地址', name: 'f_addr', type: 'text', maxlen: 64, size: 32, value: '', suffix: ' <input type="button" value="追踪" onclick="trace()" id="traceb">' },
+	{ title: '地址', name: 'f_addr', type: 'text', maxlen: 64, size: 32, value: '', suffix: ' <input type="button" class="btn btn-primary" value="追踪" onclick="trace()" id="traceb">' },
 	{ title: '最大跃点数Hops', name: 'f_hops', type: 'text', maxlen: 2, size: 4, value: '20' },
 	{ title: '最大等待时间', name: 'f_wait', type: 'text', maxlen: 2, size: 4, value: '3', suffix: ' <small>(每跳秒数)</small>' }
 ]);

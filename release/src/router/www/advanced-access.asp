@@ -206,7 +206,7 @@ function toggleVisibility(whichone) {
 </head>
 <body onload='init()'>
 <form id='_fom' method='post' action='tomato.cgi'>
-<table id='container' cellspacing=0>
+<table id='container' cellspacing=0 class="table">
 
 <tr id='body'>
 <td id='content'>
@@ -237,8 +237,8 @@ class='table table-bordered table-striped' cellspacing=1 id='la-grid'></table>
 </td></tr>
 <tr><td id='footer' colspan=2>
  <span id='footer-msg'></span>
- <input type='button' value='保存设置' id='save-button' onclick='save()'>
- <input type='button' value='取消设置' id='cancel-button' onclick='javascript:reloadPage();'>
+ <input type='button' value='保存设置' class="btn btn-danger" id='save-button' onclick='save()'>
+ <input type='button' value='取消设置' class="btn btn-gray" id='cancel-button' onclick='javascript:reloadPage();'>
 </td></tr>
 </table>
 </form>

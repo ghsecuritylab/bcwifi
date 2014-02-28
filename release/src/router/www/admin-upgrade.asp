@@ -64,7 +64,7 @@ function upgrade()
 
 </head>
 <body>
-<table id='container' cellspacing=0>
+<table id='container' cellspacing=0 class="table">
 
 <tr id='body'>
 <td id='content'>
@@ -78,7 +78,7 @@ function upgrade()
 		<form name='form_upgrade' method='post' action='upgrade.cgi' encType='multipart/form-data'>
 		<div id='box-input'>
 			选择固件:&nbsp;&nbsp;&nbsp;
-			<input type='file' name='file' size='50' style='height:20px'> <input type='button' value='升级' id='afu-upgrade-button' onclick='upgrade()' style='height:20px'>
+			<input class="in-block" type='file' name='file' size='50' > <input type='button' value='升级' id='afu-upgrade-button' class="btn btn-danger" onclick='upgrade()' >
 		</div>
 		</form>
 		<br><form name='form_reset' action='javascript:{}'>

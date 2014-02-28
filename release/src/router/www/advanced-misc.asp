@@ -69,7 +69,7 @@ function save()
 </head>
 <body>
 <form id='_fom' method='post' action='tomato.cgi'>
-<table id='container' cellspacing=0>
+<table id='container' cellspacing=0 class="table">
 
 <tr id='body'>
 <td id='content'>
@@ -104,7 +104,7 @@ createFieldTable('', [
 ]);
 </script>
 <br>
-<small>* 不是所有的路由都支持这些选项.<br>** 请确认您设定的主频被 CPU 所支持, 266Mhz及以下为MIPSR1旧cpu的路由使用,使用两个参数;300Mhz及以上为MIPSR2新型路由使用,有三个参数!<br>** 您必须重启路由器才能让新的 CPU 主频生效!<br><br><b>保存设置之前请再次确认您的路由器支持所选的选项!</b></small> </div>
+<small ><span class="red">*</span> 不是所有的路由都支持这些选项.<br><span class="red">**</span> 请确认您设定的主频被 CPU 所支持, 266Mhz及以下为MIPSR1旧cpu的路由使用,使用两个参数;300Mhz及以上为MIPSR2新型路由使用,有三个参数!<br><span class="red">**</span> 您必须重启路由器才能让新的 CPU 主频生效!<br><br><b><span class="red">保存设置之前请再次确认您的路由器支持所选的选项!</span></b></small> </div>
 
 
 
@@ -113,8 +113,8 @@ createFieldTable('', [
 </td></tr>
 <tr><td id='footer' colspan=2>
 	<span id='footer-msg'></span>
-	<input type='button' value='保存设置' id='save-button' onclick='save()'>
-	<input type='button' value='取消设置' id='cancel-button' onclick='reloadPage();'>
+	<input type='button' value='保存设置' class="btn btn-danger" id='save-button' onclick='save()'>
+	<input type='button' value='取消设置' class="btn btn-gray" id='cancel-button' onclick='reloadPage();'>
 </td></tr>
 </table>
 </form>

@@ -366,7 +366,7 @@ function earlyInit()
 </head>
 <body onload='init()'>
 <form id='_fom' action='javascript:{}'>
-<table id='container' cellspacing=0>
+<table id='container' class="table" cellspacing=0>
 
 <tr id='body'>
 <td id='content'>
@@ -424,7 +424,7 @@ class='table table-bordered table-striped' style="float:left" cellspacing=1></ta
 <div id='wm-disabled'>
 	<b>网站记录已禁用. </b>
 	<br><br>
-	<a href="admin-log.asp">启用 &raquo;</a>
+	<a class="btn btn-default" href="admin-log.asp">启用 &raquo;</a>
 	<br><br>
 </div>
 

@@ -172,7 +172,7 @@ function init()
 </head>
 <body onload='init()'>
 <form action='javascript:{}'>
-<table id='container' cellspacing=0>
+<table id='container' cellspacing=0 class="table">
 
 <tr id='body'>
 <td id='content'>
@@ -185,7 +185,7 @@ function init()
 <script type='text/javascript'>
 createFieldTable('', [
 	{ title: '地址', name: 'f_addr', type: 'text', maxlen: 64, size: 32, value: '',
-		suffix: ' <input type="button" value="Ping" onclick="ping()" id="pingb">' },
+		suffix: ' <input type="button" class="btn btn-primary" value="Ping" onclick="ping()" id="pingb">' },
 	{ title: 'Ping次数', name: 'f_count', type: 'text', maxlen: 2, size: 7, value: '5' },
 	{ title: '包大小', name: 'f_size', type: 'text', maxlen: 5, size: 7, value: '56', suffix: ' <small>(字节)</small>' }
 ]);

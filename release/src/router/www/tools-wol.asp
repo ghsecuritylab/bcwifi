@@ -162,7 +162,7 @@ function init()
 </head>
 <body onload='init()'>
 <form id='_fom' action='wakeup.cgi' method='post'>
-<table id='container' cellspacing=0>
+<table id='container' class="table" cellspacing=0>
 
 <tr id='body'>
 <td id='content'>
@@ -179,7 +179,7 @@ function init()
 	<table id='wol-grid' 
 
 class='table table-bordered table-striped' cellspacing=1></table>
-	<div style='float:right'><img src='spin.gif' id='spin' style='vertical-align:middle;visibility:hidden'> &nbsp; <input type='button' value='刷新' onclick='refreshClick()' id='refreshb'></div>
+	<div style='float:right'><img src='spin.gif' id='spin' style='vertical-align:middle;visibility:hidden'> &nbsp; <input type='button' class="btn btn-primary" value='刷新' onclick='refreshClick()' id='refreshb'></div>
 </div>
 <div id='msg' style='visibility:hidden;background:#ffffa0;margin:auto;width:50%;text-align:center;padding:2px;border:1px solid #fee'></div>
 <div class='section-title'></div>
@@ -189,7 +189,7 @@ createFieldTable('', [
 	{ title: 'MAC地址列表', name: 'f_mac', type: 'textarea', value: cookie.get('wakemac') || '' },
 ]);
 </script>
-<div style='float:right'><input type='button' value='立即唤醒' onclick='wake(null)' id='save-button'></div>
+<div style='float:right'><input class="btn btn-primary" type='button' value='立即唤醒' onclick='wake(null)' id='save-button'></div>
 </div>
 
 <!-- / / / -->

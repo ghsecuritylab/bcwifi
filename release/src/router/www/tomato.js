@@ -50,6 +50,7 @@ Number.prototype.hex = function(min)
 	} while ((--min > 0) || (n > 0));
 	return s;
 }
+
 // -----------------------------------------------------------------------------
 
 // ---- Element.protoype. doesn't work with all browsers
@@ -1250,7 +1251,7 @@ TomatoGrid.prototype = {
 			c = cells[i];
 			if (typeof(c) == 'string') {
 				td = tr.insertCell(i);
-				//td.className = 'co' + (i + 1);
+				td.className = 'co' + (i + 1);
 				if (escCells) td.appendChild(document.createTextNode(c));
 					else td.innerHTML = c;
 			}
@@ -1274,7 +1275,7 @@ TomatoGrid.prototype = {
 
 		elem.remove(this.header);
 		this.header = e = this._insert(0, cells, escCells);
-		e.className = '';
+		//e.className = 'header';
 
 		for (i = 0; i < e.cells.length; ++i) {
 			e.cells[i].cellN = i;	// cellIndex broken in Safari
@@ -1546,7 +1547,7 @@ TomatoGrid.prototype = {
 					if (f.peekaboo && id) attrib += ' onfocus=\'peekaboo("' + id + '",1)\'';
 					// drop
 				case 'text':
-					s += '<input type="' + f.type + '" maxlength=' + f.maxlen + common + attrib;
+					s += '<input class="form-control" type="' + f.type + '" maxlength=' + f.maxlen + common + attrib;
 					if (which == 'edit') s += ' value="' + escapeHTML('' + values[vi]) + '">';
 						else s += '>';
 					break;
@@ -1596,13 +1597,13 @@ TomatoGrid.prototype = {
 		c.colSpan = this.header.cells.length;
 		if (which == 'edit') {
 			c.innerHTML =
-				'<input type=button value="删除" onclick="TGO(this).onDelete()"> &nbsp; ' +
-				'<input type=button value="确认" onclick="TGO(this).onOK()"> ' +
-				'<input type=button value="取消" onclick="TGO(this).onCancel()">';
+				'<input class="btn btn-danger" type=button value="删除" onclick="TGO(this).onDelete()"> &nbsp; ' +
+				'<input class="btn btn-success" type=button value="确认" onclick="TGO(this).onOK()"> ' +
+				'<input class="btn btn-gray" type=button value="取消" onclick="TGO(this).onCancel()">';
 		}
 		else {
 			c.innerHTML =
-				'<input type=button value="新增" onclick="TGO(this).onAdd()">';
+				'<input class="btn btn-primary" type=button value="新增" onclick="TGO(this).onAdd()">';
 		}
 		return r;
 	},
@@ -2133,7 +2134,7 @@ function genStdRefresh(spin, min, exec)
 	W('<div style="text-align:right">');
 	if (spin) W('<img src="spin.gif" id="refresh-spinner"> ');
 	genStdTimeList('refresh-time', '自动刷新', min);
-	W('<input type="button" value="刷新" onclick="' + (exec ? exec : 'refreshClick()') + '" id="refresh-button"></div>');
+	W('<input type="button" class="btn btn-primary" value="刷新" onclick="' + (exec ? exec : 'refreshClick()') + '" id="refresh-button"></div>');
 }
 
 
@@ -2634,7 +2635,7 @@ function createFieldTable(flags, desc)
 				}
 				// drop
 			case 'text':
-				buf2.push('<input type="' + f.type + '"' + name + ' value="' + escapeHTML(UT(f.value)) + '" maxlength=' + f.maxlen + (f.size ? (' size=' + f.size) : '') + common + '>');
+				buf2.push('<input class="form-control" type="' + f.type + '"' + name + ' value="' + escapeHTML(UT(f.value)) + '" maxlength=' + f.maxlen + (f.size ? (' size=' + f.size) : '') + common + '>');
 				break;
 			case 'clear':
 				s += '';
@@ -2649,7 +2650,7 @@ function createFieldTable(flags, desc)
 				buf2.push('</select>');
 				break;
 			case 'textarea':
-				buf2.push('<textarea' + name + common + (f.wrap ? (' wrap=' + f.wrap) : '') + '>' + escapeHTML(UT(f.value)) + '</textarea>');
+				buf2.push('<textarea class="form-control w500"' + name + common + (f.wrap ? (' wrap=' + f.wrap) : '') + '>' + escapeHTML(UT(f.value)) + '</textarea>');
 				break;
 			default:
 				if (f.custom) buf2.push(f.custom);

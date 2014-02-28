@@ -91,7 +91,7 @@ function resetButton()
 </script>
 </head>
 <body onload='backupNameChanged()'>
-<table id='container' cellspacing=0>
+<table id='container' cellspacing=0 class="table">
 
 <tr id='body'>
 <td id='content'>

@@ -118,7 +118,7 @@ function init() {
 </head>
 <body onload='init()'>
 <form id='_fom' method='post' action='tomato.cgi'>
-<table id='container' cellspacing=0>
+<table id='container' cellspacing=0 class="table">
 
 <tr id='body'>
 <td id='content'>
@@ -160,7 +160,7 @@ createFieldTable('', [
 	{ title: '禁止dhcpv4日志', name: 'f_dnsmasq_q4', type: 'checkbox', value: (nvram.dnsmasq_q & 1) },
 	{ title: '禁止dhcpv6日志', name: 'f_dnsmasq_q6', type: 'checkbox', value: (nvram.dnsmasq_q & 2) },
 	{ title: '禁止RA 日志', name: 'f_dnsmasq_qr', type: 'checkbox', value: (nvram.dnsmasq_q & 4) },
-	{ title: '<a href="http://www.thekelleys.org.uk/" target="_new">Dnsmasq</a><br>自定义设置', name: 'dnsmasq_custom', type: 'textarea', value: nvram.dnsmasq_custom }
+	{ title: '<a  href="http://www.thekelleys.org.uk/" target="_new">Dnsmasq</a><br>自定义设置', name: 'dnsmasq_custom', type: 'textarea', value: nvram.dnsmasq_custom }
 ]);
 </script>
 
@@ -210,8 +210,8 @@ createFieldTable('', [
 </td></tr>
 <tr><td id='footer' colspan=2>
 	<span id='footer-msg'></span>
-	<input type='button' value='保存设置' id='save-button' onclick='save()'>
-	<input type='button' value='取消设置' id='cancel-button' onclick='javascript:reloadPage();'>
+	<input type='button' class="btn btn-danger" value='保存设置' id='save-button' onclick='save()'>
+	<input type='button' class="btn btn-gray" value='取消设置' id='cancel-button' onclick='javascript:reloadPage();'>
 </td></tr>
 </table>
 </form>

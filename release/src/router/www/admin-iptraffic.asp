@@ -223,7 +223,7 @@ function init()
 
 </head>
 <body onLoad="init()">
-<table id='container' cellspacing=0>
+<table id='container' cellspacing=0 class="table">
 
 <tr id='body'>
 <td id='content'>
@@ -286,22 +286,22 @@ REMOVE-END */
 
 <div class='section-title'>备份日志</div>
 <div class='section' id='backup-section'>
-	<form>
+	<form class="in-block">
 	<script type='text/javascript'>
-	W("<input type='text' size='40' maxlength='64' id='backup-name' name='backup_name' onchange='backupNameChanged()' value='tomato_cstats_" + nvram.et0macaddr.replace(/:/g, '').toLowerCase() + "'>");
+	W("<input type='text' size='40' maxlength='64' class='form-control w300' id='backup-name' name='backup_name' onchange='backupNameChanged()' value='tomato_cstats_" + nvram.et0macaddr.replace(/:/g, '').toLowerCase() + "'>");
 	</script>
 	.gz &nbsp;
-	<input type='button' name='f_backup_button' id='backup-button' onclick='backupButton()' value='备份'>
+	<input type='button' class="btn btn-danger" name='f_backup_button' id='backup-button' onclick='backupButton()' value='备份'>
 	</form>
-	<a href='' id='backup-link'>点此下载</a>
+	<a href='' id='backup-link' class="btn btn-link">点此下载</a>
 </div>
 <br>
 
 <div class='section-title'>恢复日志</div>
 <div class='section' id='restore-section'>
 	<form id='restore-form' method='post' action='ipt/restore.cgi?_http_id=<% nv(http_id); %>' encType='multipart/form-data'>
-		<input type='file' size='40' id='restore-name' name='restore_name'>
-		<input type='button' name='f_restore_button' id='restore-button' value='恢复' onclick='restoreButton()'>
+		<input type='file' size='40' class="in-block" id='restore-name' name='restore_name'>
+		<input type='button' class="btn btn-danger" name='f_restore_button' id='restore-button' value='恢复' onclick='restoreButton()'>
 		<br>
 	</form>
 </div>
@@ -312,8 +312,8 @@ REMOVE-END */
 <tr><td id='footer' colspan=2>
 	<form>
 	<span id='footer-msg'></span>
-	<input type='button' value='保存设置' id='save-button' onclick='save()'>
-	<input type='button' value='取消设置' id='cancel-button' onclick='javascript:reloadPage();'>
+	<input type='button' class="btn btn-danger" value='保存设置' id='save-button' onclick='save()'>
+	<input type='button' class="btn btn-gray" value='取消设置' id='cancel-button' onclick='javascript:reloadPage();'>
 	</form>
 </div>
 </td></tr>

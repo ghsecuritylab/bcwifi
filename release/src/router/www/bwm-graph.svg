@@ -53,7 +53,7 @@ text {
 
 var week = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
 var pointLoc = 0;
-var vWidth = 800;
+var vWidth = 760;
 var vHeight = 300;
 var crossH = 0;
 var crossV = 0;

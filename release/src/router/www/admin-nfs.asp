@@ -111,7 +111,7 @@ function init()
 </head>
 <body onload='init()'>
 <form id='_fom' method='post' action='tomato.cgi'>
-<table id='container' cellspacing=0>
+<table id='container' cellspacing=0 class="table">
 
 <tr id='body'>
 <td id='content'>

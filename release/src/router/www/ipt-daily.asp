@@ -430,7 +430,7 @@ function verifyFields(focused, quiet) {
 </head>
 <body onload='init()'>
 <form>
-<table id='container' cellspacing=0>
+<table id='container' class="table" cellspacing=0>
 
 <tr id='body'>
 <td id='content'>
@@ -463,9 +463,9 @@ c.push({ title: '显示快捷键', name: 'f_shortcuts', type: 'checkbox' });
 createFieldTable('',c);
 </script>
 <div style="float:right;text-align:right">
-&raquo; <a href="javascript:genData()">数据</a>
+ <a href="javascript:genData()" class="btn btn-default">数据&raquo;</a>
 <br>
-&raquo; <a href="admin-iptraffic.asp">设置</a>
+ <a href="admin-iptraffic.asp" class="btn btn-default">设置&raquo;</a>
 </div>
 </div>
 </div>
@@ -477,7 +477,7 @@ createFieldTable('',c);
 
 </td></tr>
 <tr><td id='footer' colspan=2>
-<input type='button' value='刷新' onclick='reloadPage()'>
+<input type='button' class="btn btn-primary" value='刷新' onclick='reloadPage()'>
 </td></tr>
 </table>
 </form>

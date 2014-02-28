@@ -113,7 +113,7 @@ function init()
 
 <body onload='init()'>
 <form action='javascript:{}'>
-<table id='container' cellspacing=0>
+<table id='container' cellspacing=0 class="table">
 
 <tr id='body'>
 <td id='content'>
@@ -128,7 +128,7 @@ createFieldTable('', [
 	{ title: '执行命令', name: 'f_cmd', type: 'textarea', wrap: 'off', value: '' }
 ]);
 </script>
-<div style='float:left'><input type='button' value='执行' onclick='execute()' id='execb'></div>
+<div style='float:left'><input type='button' class="btn btn-default" value='执行' onclick='execute()' id='execb'></div>
 <script type='text/javascript'>genStdRefresh(1,5,'ref.toggle()');</script>
 </div>
 

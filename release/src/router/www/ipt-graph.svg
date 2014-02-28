@@ -58,10 +58,10 @@ function init(evt)
 		s = l.getElementsByTagName('stop');
 		s.item(0).setAttribute('offset', '0');
 		s.item(0).setAttribute('stop-opacity', '0.7');
-		s.item(0).setAttribute('stop-color', '#' + top.colors[i]);
+		s.item(0).setAttribute('stop-color', '#' + window.parent.colors[i]);
 		s.item(1).setAttribute('offset', '100%');
 		s.item(1).setAttribute('stop-opacity', '1');
-		s.item(1).setAttribute('stop-color', '#' + top.colors[i]);
+		s.item(1).setAttribute('stop-color', '#' + window.parent.colors[i]);
 
 		e.item(i).setAttribute('fill', 'url(#lg' + i + ')');
 	}
@@ -104,7 +104,7 @@ function updateSVG(data, abc)
 		ny = cy + (r * Math.cos(t * Math.PI * 2));
 
 		if (data[i] == 0) {
-			e.setAttribute('d', 'M0 0');
+			e.setAttribute('d', '');
 		}
 		else if (p == 1) {
 			e.setAttribute('d', 'M5,' + cy + 'A' + r + ',' + r + ' 0 1,1 5,' + (cy + 1) + 'z');
@@ -123,7 +123,7 @@ function updateSVG(data, abc)
 
 function mClick(n)
 {
-	top.mClick(n);
+	mClick(n);
 }
 
 function setText(e, text)

@@ -181,7 +181,7 @@ function save()
 </head>
 <body>
 <form id='_fom' method='post' action='tomato.cgi'>
-<table id='container' cellspacing=0>
+<table id='container' cellspacing=0 class="table">
 
 <tr id='body'>
 <td id='content'>
@@ -210,7 +210,7 @@ function save()
 <script type='text/javascript'>
 createFieldTable('', [
 	{ title: '最大连接数', name: 'ct_max', type: 'text', maxlen: 6, size: 8,
-		suffix: '&nbsp; <a href="javascript:clicked()" id="count0">[ 查看当前连接数... ]</a> <img src="spin.gif" style="vertical-align:bottom;padding-left:10px;visibility:hidden" id="spin" onclick="clicked()">',
+		suffix: '&nbsp; <a href="javascript:clicked()" class="btn btn-link" id="count0">[ 查看当前连接数... ]</a> <img src="spin.gif" style="vertical-align:bottom;padding-left:10px;visibility:hidden" id="spin" onclick="clicked()">',
 		value: fixInt(nvram.ct_max || 4096, 128, 300000, 4096) }
 /* LINUX26-BEGIN */
 	,{ title: '哈希表大小', name: 'ct_hashsize', type: 'text', maxlen: 6, size: 8, value: nvram.ct_hashsize || 1023 }
@@ -218,7 +218,7 @@ createFieldTable('', [
 ]);
 </script>
 <br>
-<input type='button' value='断开空闲连接' onclick='expireClicked()' id='expire'>
+<input type='button' class="btn btn-primary" value='断开空闲连接' onclick='expireClicked()' id='expire'>
 <br><br>
 </div>
 
@@ -308,8 +308,8 @@ createFieldTable('', [
 </td></tr>
 <tr><td id='footer' colspan=2>
 	<span id='footer-msg'></span>
-	<input type='button' value='保存设置' id='save-button' onclick='save()'>
-	<input type='button' value='取消设置' id='cancel-button' onclick='reloadPage();'>
+	<input type='button' value='保存设置' class="btn btn-danger" id='save-button' onclick='save()'>
+	<input type='button' value='取消设置' class="btn btn-gray" id='cancel-button' onclick='reloadPage();'>
 </td></tr>
 </table>
 </form>

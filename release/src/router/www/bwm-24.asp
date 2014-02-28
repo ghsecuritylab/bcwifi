@@ -134,7 +134,7 @@ function init()
 </head>
 <body onload='init()'>
 <form>
-<table id='container' cellspacing=0>
+<table id='container' cellspacing=0 class="table">
 
 <tr id='body'>
 <td id='content'>
@@ -227,7 +227,7 @@ else {
 <tr><td id='footer' colspan=2>
 	<span id='dtime'></span>
 	<img src='spin.gif' id='refresh-spinner' onclick='debugTime=1'>
-	<input type='button' value='刷新' id='refresh-button' onclick='ref.toggleX()'>
+	<input type='button' class="btn btn-primary" value='刷新' id='refresh-button' onclick='ref.toggleX()'>
 </td></tr>
 </table>
 </form>

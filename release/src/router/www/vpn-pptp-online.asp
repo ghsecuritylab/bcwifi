@@ -237,7 +237,7 @@ function init() {
 </script>
 </head>
 <body onload='init()'>
-<table id='container' cellspacing=0>
+<table id='container' class="table" cellspacing=0>
 
 <tr id='body'>
 <td id='content'>

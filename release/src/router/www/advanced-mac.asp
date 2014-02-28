@@ -147,7 +147,7 @@ function save()
 
 <body>
 <form id='_fom' method='post' action='tomato.cgi'>
-<table id='container' cellspacing=0>
+<table id='container' cellspacing=0 class="table">
 
 <tr id='body'>
 <td id='content'>
@@ -174,7 +174,7 @@ for (var uidx = 0; uidx < wl_ifaces.length; ++uidx) {
 
 f = [
 	{ title: 'WAN的MAC地址', indent: 1, name: 'f_wan_hwaddr', type: 'text', maxlen: 17, size: 20,
-		suffix: ' <input type="button" value="默认" onclick="bdefault(\'wan\')"> <input type="button" value="随机" onclick="brand(\'wan\')"> <input type="button" value="克隆PC的MAC" onclick="bclone(\'wan\')">',
+		suffix: ' <input class="btn btn-primary" type="button" value="默认" onclick="bdefault(\'wan\')"> <input type="button" class="btn btn-primary" value="随机" onclick="brand(\'wan\')"> <input type="button" class="btn btn-primary" value="克隆PC的MAC" onclick="bclone(\'wan\')">',
 		value: nvram.mac_wan || defmac('wan') }
 ];
 
@@ -182,7 +182,7 @@ for (var uidx = 0; uidx < wl_ifaces.length; ++uidx) {
 	var u = wl_fface(uidx);
 	f.push(
 		{ title: '无线接口MAC地址' + ((wl_ifaces.length > 1) ? wl_ifaces[uidx][0] : ''), indent: 1, name: 'f_wl'+u+'_hwaddr', type: 'text', maxlen: 17, size: 20,
-			suffix:' <input type="button" value="默认" onclick="bdefault(\'wl'+u+'\')"> <input type="button" value="随机" onclick="brand(\'wl'+u+'\')"> <input type="button" value="克隆PC的MAC" onclick="bclone(\'wl'+u+'\')">',
+			suffix:' <input type="button" class="btn btn-primary" value="默认" onclick="bdefault(\'wl'+u+'\')"> <input  class="btn btn-primary" type="button" value="随机" onclick="brand(\'wl'+u+'\')"> <input class="btn btn-primary" type="button" value="克隆PC的MAC" onclick="bclone(\'wl'+u+'\')">',
 			value: nvram['wl'+u+'_hwaddr'] || defmac('wl' + u) }
 		);
 }
@@ -204,8 +204,8 @@ createFieldTable('', f);
 </td></tr>
 <tr><td id='footer' colspan=2>
 	<span id='footer-msg'></span>
-	<input type='button' value='保存设置' id='save-button' onclick='save()'>
-	<input type='button' value='取消设置' id='cancel-button' onclick='reloadPage();'>
+	<input type='button' value='保存设置' class="btn btn-danger" id='save-button' onclick='save()'>
+	<input type='button' value='取消设置' class="btn btn-gray" id='cancel-button' onclick='reloadPage();'>
 </td></tr>
 </table>
 </form>

@@ -278,7 +278,7 @@ function init()
 </head>
 <body onload='init()'>
 <form id='_fom' action='javascript:{}'>
-<table id='container' cellspacing=0>
+<table id='container' class="table" cellspacing=0>
 <tr><td>
 	<div class='title'>Tomato</div>
 	<div class='version'>简体中文版 <% version(); %></div>
@@ -378,7 +378,7 @@ if (nvram.qos_enable != '1') {
 
 </td></tr>
 <tr><td id='footer'></td>
-	<td id='footer' width="528"><input name="mybtn" style="width:100px" value="放大图" type="button" onClick="showGraph()" ></td>
+	<td id='footer' width="528"><input name="mybtn" class="btn btn-warning" style="width:100px" value="放大图" type="button" onClick="showGraph()" ></td>
 	<td id='footer' width="237"><script type='text/javascript'>genStdRefresh(1,2,'ref.toggle()');</script></td>
 	</tr>
 </table>

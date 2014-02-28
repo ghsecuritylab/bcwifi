@@ -276,7 +276,7 @@ function init()
 </head>
 <body onload='init()'>
 <form action='javascript:{}'>
-<table id='container' cellspacing=0>
+<table id='container' cellspacing=0 class="table">
 
 <tr id='body'>
 <td id='content'>
@@ -296,13 +296,13 @@ class='table table-bordered table-striped' cellspacing=0></table>
 		genStdTimeList('expire-time', '自动停止', 0);
 		genStdTimeList('refresh-time', '自动刷新', 0);
 		</script>
-		<input type="button" value="刷新" onClick="ref.toggle()" id="refresh-button">
+		<input type="button" class="btn btn-primary" value="刷新" onClick="ref.toggle()" id="refresh-button">
 	</div>
 
 	<br><br><br><br>
 	<script type='text/javascript'>
 	if ('<% wlclient(); %>' == '0') {
-		document.write('<small>请注意：使用此工具,无线客户端连接到此路由器可能会中断.</small>');
+		document.write('<small class="alert alert-warning">请注意：使用此工具,无线客户端连接到此路由器可能会中断.</small>');
 	}
 	</script>
 </div>

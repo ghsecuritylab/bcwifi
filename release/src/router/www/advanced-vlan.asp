@@ -835,7 +835,7 @@ function earlyInit() {
 </head>
 <body onload='init()'>
 <form id='_fom' method='post' action='tomato.cgi'>
-<table id='container' cellspacing=0>
+<table id='container' cellspacing=0 class="table">
 
 <tr id='body'>
 <td id='content'>
@@ -987,7 +987,7 @@ if((trunk_vlan_supported) || (nvram.trunk_vlan_so == '1')) {
 </script>
 </ul>
 <br>
-<ul>
+<ul class="red">
 <li>这是一个非常 <b>实验性</b> 仅在一个Linksys WRT54GL v1.1(Teaman-ND K24 build)和 Cisco/Linksys E3000 (Teaman-RT K26 build)上通过测试并未在其它任何设备上进行测试。</li> 
 <li>可能会存在一些未知的错误, 请在保存设置前确认您清楚此项设置的意义!</li> 
 <li>您已被警告过!</li> 
@@ -1010,8 +1010,8 @@ else {
 </td></tr>
 <tr><td id='footer' colspan=2>
  <span id='footer-msg'></span>
- <input type='button' value='保存设置' id='save-button' onclick='save()'>
- <input type='button' value='取消设置' id='cancel-button' onclick='javascript:reloadPage();'>
+ <input type='button' value='保存设置' class="btn btn-danger" id='save-button' onclick='save()'>
+ <input type='button' value='取消设置' class="btn btn-gray" id='cancel-button' onclick='javascript:reloadPage();'>
 </td></tr>
 </table>
 </form>

@@ -152,7 +152,7 @@ function earlyInit()
 </head>
 <body>
 <form id='_fom' method='post' action='tomato.cgi'>
-<table id='container' cellspacing=0>
+<table id='container' cellspacing=0 class="table">
 
 <tr id='body'>
 <td id='content'>
@@ -297,8 +297,8 @@ createFieldTable('', [
 </td></tr>
 <tr><td id='footer' colspan=2>
 	<span id='footer-msg'></span>
-	<input type='button' value='保存设置' id='save-button' onclick='save(0)'>
-	<input type='button' value='取消设置' id='cancel-button' onclick='reloadPage();'>
+	<input type='button' class="btn btn-danger" value='保存设置' id='save-button' onclick='save(0)'>
+	<input type='button' class="btn btn-gray" value='取消设置' id='cancel-button' onclick='reloadPage();'>
 </td></tr>
 </table>
 </form>

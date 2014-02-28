@@ -432,7 +432,7 @@ function toggleVisibility(whichone) {
 </head>
 <body onload='init()'>
 <form id='_fom' action='javascript:{}'>
-<table id='container' cellspacing=0>
+<table id='container' class="table" cellspacing=0>
 
 <tr id='body'>
 <td id='content'>

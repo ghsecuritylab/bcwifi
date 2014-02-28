@@ -196,7 +196,7 @@ function ethstates()
 		state = '<img id="eth_off" src="eth_off.png"><br>';
 		state2 = port.replace("DOWN","断开");
 	} else if ((port == "1000FD") || (port == "1000HD")) {
-		state = '<img id="eth_1000" src="eth_1000.gif"><br>';
+		state = '<img class="img-thumbnail" id="eth_1000" src="eth_1000.gif"><br>';
 		state1 = port.replace("HD","M Half");
 		state2 = state1.replace("FD","M Full");
 	} else {
@@ -211,7 +211,7 @@ function ethstates()
 	}
 
 	code += '<td class="content"> </td></tr>';
-	code += '<tr><td class="title indent1" colspan="7" align="right">&raquo; <a href="basic-network.asp">设置</a></td></tr></table></div>';
+	code += '<tr><td class="title indent1" colspan="7" align="right"><a class="btn btn-default" href="basic-network.asp">设置&raquo; </a></td></tr></table></div>';
 	E("ports").innerHTML = code;
 }
 
@@ -317,7 +317,7 @@ function toggleVisibility(whichone) {
 </head>
 <body onload='init()'>
 <form>
-<table id='container' cellspacing=0>
+<table id='container' class="table" cellspacing=0>
 
 <tr id='body'>
 <td id='content'>
@@ -373,8 +373,8 @@ createFieldTable('', [
 ]);
 </script>
 <span id='b_dhcpc' style='display:none'>
-	<input type='button' class='controls' onclick='dhcpc("renew")' value='重新获取'>
-	<input type='button' class='controls' onclick='dhcpc("release")' value='释放'> &nbsp;
+	<input type='button' class='btn btn-primary' onclick='dhcpc("renew")' value='重新获取'>
+	<input type='button' class='btn btn-primary' onclick='dhcpc("release")' value='释放'> &nbsp;
 </span>
 <input type='button' class='controls' onclick='wan_connect()' value='连接' id='b_connect' style='display:none'>
 <input type='button' class='controls' onclick='wan_disconnect()' value='断线' id='b_disconnect' style='display:none'>
@@ -487,8 +487,8 @@ REMOVE-END */
 		{ title: 'Signal Quality', rid: 'qual'+uidx, text: stats.qual[uidx] || '', ignore: ((!wlstats[uidx].client) || (wl_sunit(uidx)>=0)) }
 	]);
 
-	W('<input type=\'button\' class=\'controls\' onclick=\'wlenable('+uidx+', 1)\' id=\'b_wl'+uidx+'_enable\' value=\'启用\' style=\'display:none\'>');
-	W('<input type=\'button\' class=\'controls\' onclick=\'wlenable('+uidx+', 0)\' id=\'b_wl'+uidx+'_disable\' value=\'禁用\' style=\'display:none\'>');
+	W('<input type=\'button\' class=\'btn btn-danger margin-r4\' onclick=\'wlenable('+uidx+', 1)\' id=\'b_wl'+uidx+'_enable\' value=\'启用\' style=\'display:none\'>');
+	W('<input type=\'button\' class=\'btn btn-danger\' onclick=\'wlenable('+uidx+', 0)\' id=\'b_wl'+uidx+'_disable\' value=\'禁用\' style=\'display:none\'>');
 	W('</div>');
 }
 </script>
