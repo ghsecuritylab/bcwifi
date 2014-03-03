@@ -15,7 +15,15 @@
 
 <link rel='stylesheet' type='text/css' href='http://dev.plat.gionee.com/static/bootstrap.css'>
 <link rel='stylesheet' type='text/css' href='http://dev.plat.gionee.com/static/new.css'>
-<script src="jquery-1.8.3.min.js"></script>
+
+
+
+
+
+
+
+
+ <script src="jquery-1.8.3.min.js"></script>
 <script type='text/javascript' src='tomato.js'></script>
 <script type='text/javascript' src='http://dev.plat.gionee.com/static/bootstrap.js'></script>
 <script type='text/javascript'>
@@ -91,6 +99,14 @@ function init()
 <div class='about'>
 <b>Tomato Firmware <% version(1); %></b><br>
 <br>
+
+<!-- 佐须之男 -->
+<b>“佐须之男”的特性：</b><br>
+- 海蜘蛛专用拨号实现<br>
+- 第三方认证路由端实现<br>
+<br>
+<a href='http://www.router.tw' target='_new'>http://www.router.tw</a><br>
+<!-- www.router.tw -->
 
 <!-- USB-BEGIN -->
 <br>USB支持集成和图形用户界面<br>

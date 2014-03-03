@@ -78,7 +78,7 @@ function upgrade()
 		<form name='form_upgrade' method='post' action='upgrade.cgi' encType='multipart/form-data'>
 		<div id='box-input'>
 			选择固件:&nbsp;&nbsp;&nbsp;
-			<input class="in-block" type='file' name='file' size='50' > <input type='button' value='升级' id='afu-upgrade-button' class="btn btn-danger" onclick='upgrade()' >
+			<input type='file' name='file' size='50' style='height:20px'> <input type='button' value='升级' id='afu-upgrade-button' onclick='upgrade()' style='height:20px'>
 		</div>
 		</form>
 		<br><form name='form_reset' action='javascript:{}'>

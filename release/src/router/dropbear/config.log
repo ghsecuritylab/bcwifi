@@ -246,7 +246,7 @@ configure:4896: Disabling PAM
 configure:4922: Using openpty if available
 configure:4924: checking for library containing openpty
 configure:4965: mipsel-uclibc-gcc -o conftest -Os -Wall -DLINUX26 -DCONFIG_BCMWL5 -pipe -DBCMWPA2 -funit-at-a-time -Wno-pointer-sign -mtune=mips32 -mips32   -DARGTYPE=3 -ffunction-sections -fdata-sections  -ffunction-sections -fdata-sections -Wl,--gc-sections conftest.c  >&5
-/tmp/ccL8rfyg.o: In function `main':
+/tmp/ccc2OqvA.o: In function `main':
 conftest.c:(.text.main+0x18): undefined reference to `openpty'
 collect2: ld returned 1 exit status
 configure:4971: $? = 1
@@ -3033,7 +3033,7 @@ configure:9194: $? = 0
 configure:9212: result: yes
 configure:9230: checking for endutxent
 configure:9286: mipsel-uclibc-gcc -o conftest -Os -Wall -DLINUX26 -DCONFIG_BCMWL5 -pipe -DBCMWPA2 -funit-at-a-time -Wno-pointer-sign -mtune=mips32 -mips32   -DARGTYPE=3 -ffunction-sections -fdata-sections  -ffunction-sections -fdata-sections -Wl,--gc-sections conftest.c -lutil  >&5
-/tmp/ccXDRRaa.o: In function `main':
+/tmp/ccPm90rX.o: In function `main':
 conftest.c:(.text.main+0x18): undefined reference to `endutxent'
 collect2: ld returned 1 exit status
 configure:9292: $? = 1
@@ -3150,7 +3150,7 @@ configure: failed program was:
 configure:9310: result: no
 configure:9230: checking for getutxent
 configure:9286: mipsel-uclibc-gcc -o conftest -Os -Wall -DLINUX26 -DCONFIG_BCMWL5 -pipe -DBCMWPA2 -funit-at-a-time -Wno-pointer-sign -mtune=mips32 -mips32   -DARGTYPE=3 -ffunction-sections -fdata-sections  -ffunction-sections -fdata-sections -Wl,--gc-sections conftest.c -lutil  >&5
-/tmp/ccgFB7se.o: In function `main':
+/tmp/ccYkfRD2.o: In function `main':
 conftest.c:(.text.main+0x18): undefined reference to `getutxent'
 collect2: ld returned 1 exit status
 configure:9292: $? = 1
@@ -3267,7 +3267,7 @@ configure: failed program was:
 configure:9310: result: no
 configure:9230: checking for getutxid
 configure:9286: mipsel-uclibc-gcc -o conftest -Os -Wall -DLINUX26 -DCONFIG_BCMWL5 -pipe -DBCMWPA2 -funit-at-a-time -Wno-pointer-sign -mtune=mips32 -mips32   -DARGTYPE=3 -ffunction-sections -fdata-sections  -ffunction-sections -fdata-sections -Wl,--gc-sections conftest.c -lutil  >&5
-/tmp/ccUAGxAa.o: In function `main':
+/tmp/ccPtqGU7.o: In function `main':
 conftest.c:(.text.main+0x18): undefined reference to `getutxid'
 collect2: ld returned 1 exit status
 configure:9292: $? = 1
@@ -3384,7 +3384,7 @@ configure: failed program was:
 configure:9310: result: no
 configure:9230: checking for getutxline
 configure:9286: mipsel-uclibc-gcc -o conftest -Os -Wall -DLINUX26 -DCONFIG_BCMWL5 -pipe -DBCMWPA2 -funit-at-a-time -Wno-pointer-sign -mtune=mips32 -mips32   -DARGTYPE=3 -ffunction-sections -fdata-sections  -ffunction-sections -fdata-sections -Wl,--gc-sections conftest.c -lutil  >&5
-/tmp/ccZ7BSQf.o: In function `main':
+/tmp/cc6Flsuc.o: In function `main':
 conftest.c:(.text.main+0x18): undefined reference to `getutxline'
 collect2: ld returned 1 exit status
 configure:9292: $? = 1
@@ -3501,7 +3501,7 @@ configure: failed program was:
 configure:9310: result: no
 configure:9230: checking for pututxline
 configure:9286: mipsel-uclibc-gcc -o conftest -Os -Wall -DLINUX26 -DCONFIG_BCMWL5 -pipe -DBCMWPA2 -funit-at-a-time -Wno-pointer-sign -mtune=mips32 -mips32   -DARGTYPE=3 -ffunction-sections -fdata-sections  -ffunction-sections -fdata-sections -Wl,--gc-sections conftest.c -lutil  >&5
-/tmp/ccOeAjbn.o: In function `main':
+/tmp/ccdtBb5j.o: In function `main':
 conftest.c:(.text.main+0x18): undefined reference to `pututxline'
 collect2: ld returned 1 exit status
 configure:9292: $? = 1
@@ -3618,7 +3618,7 @@ configure: failed program was:
 configure:9310: result: no
 configure:9325: checking for setutxent
 configure:9381: mipsel-uclibc-gcc -o conftest -Os -Wall -DLINUX26 -DCONFIG_BCMWL5 -pipe -DBCMWPA2 -funit-at-a-time -Wno-pointer-sign -mtune=mips32 -mips32   -DARGTYPE=3 -ffunction-sections -fdata-sections  -ffunction-sections -fdata-sections -Wl,--gc-sections conftest.c -lutil  >&5
-/tmp/cc1nL60q.o: In function `main':
+/tmp/ccHmPnSc.o: In function `main':
 conftest.c:(.text.main+0x18): undefined reference to `setutxent'
 collect2: ld returned 1 exit status
 configure:9387: $? = 1
@@ -3735,7 +3735,7 @@ configure: failed program was:
 configure:9405: result: no
 configure:9325: checking for utmpxname
 configure:9381: mipsel-uclibc-gcc -o conftest -Os -Wall -DLINUX26 -DCONFIG_BCMWL5 -pipe -DBCMWPA2 -funit-at-a-time -Wno-pointer-sign -mtune=mips32 -mips32   -DARGTYPE=3 -ffunction-sections -fdata-sections  -ffunction-sections -fdata-sections -Wl,--gc-sections conftest.c -lutil  >&5
-/tmp/ccA0v8mv.o: In function `main':
+/tmp/ccGMmtTh.o: In function `main':
 conftest.c:(.text.main+0x18): undefined reference to `utmpxname'
 collect2: ld returned 1 exit status
 configure:9387: $? = 1
@@ -4465,7 +4465,7 @@ conftest.c:80:1: warning: "DISABLE_UTMPX" redefined
 conftest.c:75:1: warning: this is the location of the previous definition
 conftest.c:81:1: warning: "DISABLE_WTMPX" redefined
 conftest.c:77:1: warning: this is the location of the previous definition
-/tmp/cckkbpAm.o: In function `main':
+/tmp/ccoy5G1b.o: In function `main':
 conftest.c:(.text.main+0x18): undefined reference to `_getpty'
 collect2: ld returned 1 exit status
 configure:10910: $? = 1

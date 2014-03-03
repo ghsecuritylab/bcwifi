@@ -1,31 +1,36 @@
-var Script = function () {
-    var tname = "";
-    jQuery('#sidebar').on('click','.sub-menu>a',function(){
-        $(this).parent().siblings('li').children('a').removeClass('active');
-        $(this).parent().siblings('li').children('ul.sub').slideUp('slow');
-        $(this).siblings('ul').children('li').removeClass('active');
-        tname = $(this).text();
-        $('.panel-heading').text(tname);
-        if($(this).siblings('ul').css('display')=='none'){
-            $(this).addClass('active');
-            $(this).siblings('ul').slideDown('slow');
-        } else{
-            $(this).removeClass('active');
-            $(this).siblings('ul').slideUp('slow');
-        }
-    })
-    jQuery('#sidebar').on('click','.sub>li>a',function(){
-        $('.panel-heading').text(tname+'>'+$(this).text());
-        $(this).parent('li').siblings('li').removeClass('active');
-        $(this).parent('li').addClass('active');
+/*---LEFT BAR ACCORDION----*/
+$(function() {
+    $('#nav-accordion').dcAccordion({
+        eventType: 'click',
+        autoClose: true,
+        saveState: true,
+        disableLink: true,
+        speed: 'slow',
+        showCount: false,
+        autoExpand: true,
+//        cookie: 'dcjq-accordion-1',
+        classExpand: 'dcjq-current-parent'
     });
-   
-    $(function() {
-        loadSidebar();
-        function responsiveView() {
-            var contentHeight=$(window).height()-$("header").outerHeight()-$('.footer').outerHeight();
-            $("#main-content").css('height',contentHeight);
+});
 
+var Script = function () {
+
+//    sidebar dropdown menu auto scrolling
+
+    jQuery('#sidebar .sub-menu > a').on('click', function () {
+        var o = ($(this).offset());
+        diff = 250 - o.top;
+        if(diff>0)
+            $("#sidebar").scrollTo("-="+Math.abs(diff),500);
+        else
+            $("#sidebar").scrollTo("+="+Math.abs(diff),500);
+    });
+
+//    sidebar toggle
+
+    $(function() {
+        function responsiveView() {
+            $("#main-content .wrapper").css('min-height',$(window).height()-$("header").height());
             var wSize = $(window).width();
             if (wSize <= 768) {
                 $('#container').addClass('sidebar-close');
@@ -42,6 +47,7 @@ var Script = function () {
         $("#ifrm").load(function(){
             iFrameHeight();
         })
+       
     });
 
     $('.J_slidebar').click(function () {
@@ -74,6 +80,7 @@ var Script = function () {
             $("#container").removeClass("sidebar-closed");
         }
     });
+// widget tools
 
     $('.panel .tools .icon-chevron-down').click(function () {
         var el = $(this).parents(".panel").children(".panel-body");
@@ -87,29 +94,10 @@ var Script = function () {
     });
 
     function iFrameHeight() { 
-        var contentHeight=$(window).height()-$("header").outerHeight()-$('.footer').outerHeight();
-        var header=parseInt($("#main-content .wrapper").css('margin-top'),10)+$("#main-content .wrapper .row").outerHeight();
-        $("#ifrm").height(contentHeight-header-$("#container .panel-heading").outerHeight()-30);
+        var ifm= document.getElementById("ifrm"); 
+        var subWeb = document.frames ? document.frames["ifrm"].document : ifm.contentDocument; 
+        if(ifm != null && subWeb != null) { 
+        ifm.height = subWeb.body.scrollHeight; 
+        } 
     } 
-    function loadSidebar(){
-        var len = menu.length;
-        var html = "";
-        for (var i = 0; i <len; i++) {
-            if (menu[i].length == 4) {
-                var subs = menu[i][3];
-                html += '<li class="sub-menu">\
-                      <a href="javascript:;">\
-                          <i class="icon-laptop"></i>\
-                          <span>'+menu[i][0]+'</span>\
-                          <span class="dcjq-icon"></span>\
-                      </a>\
-                      <ul class="sub">';
-                for (var j = 0; j < subs.length; j++) {
-                    html+='<li><a target="ifrm" href="'+menu[i][1]+'-'+subs[j][1]+'">'+subs[j][0]+'</a></li>';
-                };
-                html+='</ul></li>';
-            }
-        };
-        $("#nav-accordion").html(html);
-    }
 }();

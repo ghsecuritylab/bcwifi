@@ -3,7 +3,7 @@
   <head>
     <meta http-equiv='content-type' content='text/html;charset=utf-8'>
     <meta name='robots' content='noindex,nofollow'>
-    <title><%ident();%>管理平台</title>
+    <title>系统状态：日志记录文件</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <link href="http://dev.plat.gionee.com/static/bootstrap.css" rel="stylesheet">
@@ -13,7 +13,7 @@
   <div id="container" >
     <!-- 头部信息 -->
       <div class="header gray-bg">
-        <a href="index.asp" class="logo"><img  alt="" src="wifi.png"><%ident();%></span></a>
+        <a href="index.asp" class="logo"><img  alt="" src="wifi.png">Ami-WiFi</span></a>
         <div class="top-nav ">
           <ul class="nav pull-right top-menu">
             <li><a href="javascript:reboot();"><i class="icon-repeat"></i>重启</a></li>
@@ -37,7 +37,7 @@
             <!-- page start-->
               <div class="panel">
                   <div class="panel-heading">
-                      <%ident();%>
+                      <% ident(); %>
                       <span class="tools pull-right">
                         <a href="javascript:;" class="icon-chevron-down"></a>
                       </span>
