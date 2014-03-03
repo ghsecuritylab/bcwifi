@@ -16,19 +16,11 @@
 <meta name='robots' content='noindex,nofollow'>
 <title>[<% ident(); %>] VPN设置：PPTP在线用户</title>
 
-<link rel='stylesheet' type='text/css' href='http://dev.plat.gionee.com/static/bootstrap.css'>
-<link rel='stylesheet' type='text/css' href='http://dev.plat.gionee.com/static/new.css'>
-
-
-
-
-
-
-
-
- <script src="jquery-1.8.3.min.js"></script>
+<link rel='stylesheet' type='text/css' href='bootstrap.css'>
+<link rel='stylesheet' type='text/css' href='new.css'>
+<script src="jquery-1.8.3.min.js"></script>
 <script type='text/javascript' src='tomato.js'></script>
-<script type='text/javascript' src='http://dev.plat.gionee.com/static/bootstrap.js'></script>
+<script type='text/javascript' src='bootstrap.js'></script>
 <style type='text/css'>
 #dev-grid .co1 {
 width: 10%;

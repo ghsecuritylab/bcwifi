@@ -15,8 +15,8 @@
 <meta name='robots' content='noindex,nofollow'>
 <title>[<% ident(); %>] PPTP: 客户端</title>
 
-<link rel='stylesheet' type='text/css' href='http://dev.plat.gionee.com/static/bootstrap.css'>
-<link rel='stylesheet' type='text/css' href='http://dev.plat.gionee.com/static/new.css'>
+<link rel='stylesheet' type='text/css' href='bootstrap.css'>
+<link rel='stylesheet' type='text/css' href='new.css'>
 
 
 <script type='text/javascript' src='/tomato.js'></script>

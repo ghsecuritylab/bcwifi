@@ -6,8 +6,8 @@
     <title>系统状态：日志记录文件</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
-    <link href="http://dev.plat.gionee.com/static/bootstrap.css" rel="stylesheet">
-    <link href="http://dev.plat.gionee.com/static/new.css" rel="stylesheet">
+    <link href="bootstrap.css" rel="stylesheet">
+    <link href="new.css" rel="stylesheet">
   </head>
   <body>
   <div id="container" >
@@ -64,6 +64,6 @@
   </div>
     <script src="jquery-1.8.3.min.js"></script>
     <script src="tomato.js"></script>
-    <script src="http://dev.plat.gionee.com/static/common-scripts.source.js"></script>
+    <script src="common-scripts.source.js"></script>
   </body>
 </html>

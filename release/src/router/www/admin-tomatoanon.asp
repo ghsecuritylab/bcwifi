@@ -12,19 +12,11 @@
 <meta name='robots' content='noindex,nofollow'>
 <title>[<% ident(); %>] 系统管理: TomatoAnon项目</title>
 
-<link rel='stylesheet' type='text/css' href='http://dev.plat.gionee.com/static/bootstrap.css'>
-<link rel='stylesheet' type='text/css' href='http://dev.plat.gionee.com/static/new.css'>
-
-
-
-
-
-
-
-
- <script src="jquery-1.8.3.min.js"></script>
+<link rel='stylesheet' type='text/css' href='bootstrap.css'>
+<link rel='stylesheet' type='text/css' href='new.css'>
+<script src="jquery-1.8.3.min.js"></script>
 <script type='text/javascript' src='tomato.js'></script>
-<script type='text/javascript' src='http://dev.plat.gionee.com/static/bootstrap.js'></script>
+<script type='text/javascript' src='bootstrap.js'></script>
 <script type='text/javascript'>
 //	<% nvram("tomatoanon_enable,tomatoanon_answer,tomatoanon_cru,tomatoanon_id,tomatoanon_notify"); %>
 
