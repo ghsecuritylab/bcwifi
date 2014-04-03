@@ -13,16 +13,10 @@
 <meta name='robots' content='noindex,nofollow'>
 <title>[<% ident(); %>] 系统管理: 定时任务</title>
 
-<link rel='stylesheet' type='text/css' href='bootstrap.css'>
+<link rel='stylesheet' type='text/css' href='bootstrap.min.css'>
 <link rel='stylesheet' type='text/css' href='new.css'>
-
-
-
-
-
- <script src="jquery-1.8.3.min.js"></script>
+<script src="jquery-1.8.3.min.js"></script>
 <script type='text/javascript' src='tomato.js'></script>
-<script type='text/javascript' src='bootstrap.js'></script>
 <script type='text/javascript' src='debug.js'></script>
 <script type='text/javascript'>
 
@@ -304,8 +298,8 @@ makeSched('c5', 1);
 </td></tr>
 <tr><td id='footer' colspan=2>
 	<span id='footer-msg'></span>
-	<input type='button' value='保存设置' id='save-button' onclick='save()'>
-	<input type='button' value='取消设置' id='cancel-button' onclick='javascript:reloadPage();'>
+	<input type='button' class="btn btn-danger" value='保存设置' id='save-button' onclick='save()'>
+	<input type='button' class="btn btn-gray" value='取消设置' id='cancel-button' onclick='javascript:reloadPage();'>
 </td></tr>
 </table>
 <br><br>

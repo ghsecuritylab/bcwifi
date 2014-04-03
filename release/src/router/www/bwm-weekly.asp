@@ -12,12 +12,11 @@
 <meta http-equiv='content-type' content='text/html;charset=utf-8'>
 <meta name='robots' content='noindex,nofollow'>
 <title>[<% ident(); %>]带宽监控：每周流量</title>
-<link rel='stylesheet' type='text/css' href='bootstrap.css'>
+<link rel='stylesheet' type='text/css' href='bootstrap.min.css'>
 <link rel='stylesheet' type='text/css' href='new.css'>
 
 <script src="jquery-1.8.3.min.js"></script>
 <script type='text/javascript' src='tomato.js'></script>
-<script type='text/javascript' src='bootstrap.js'></script>
 <script type='text/javascript' src='debug.js'></script>
 <script type='text/javascript' src='bwm-hist.js'></script>
 

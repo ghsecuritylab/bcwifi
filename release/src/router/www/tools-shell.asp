@@ -11,23 +11,10 @@
 <meta name='robots' content='noindex,nofollow'>
 <title>[<% ident(); %>] 实用工具: 系统命令</title>
 
-<link rel='stylesheet' type='text/css' href='bootstrap.css'>
+<link rel='stylesheet' type='text/css' href='bootstrap.min.css'>
 <link rel='stylesheet' type='text/css' href='new.css'>
 <script src="jquery-1.8.3.min.js"></script>
 <script type='text/javascript' src='tomato.js'></script>
-<script type='text/javascript' src='bootstrap.js'></script>
-
-<!-- / / / -->
-
-
-<style type='text/css'>
-textarea {
-	font: 12px monospace;
-	width: 99%;
-	height: 12em;
-}
-</style>
-
 <script type='text/javascript' src='debug.js'></script>
 <script type='text/javascript'>
 

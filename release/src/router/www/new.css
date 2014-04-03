@@ -12,7 +12,7 @@ body {
     font-family: Microsoft YaHei;
     padding: 0px !important;
     margin: 0px !important;
-    font-size:13px;overflow: hidden;
+    font-size:13px;
 }
 ::-webkit-scrollbar
 {
@@ -107,6 +107,7 @@ ul.sidebar-menu , ul.sidebar-menu li ul.sub{
 
 ul.sidebar-menu {
     margin-top: 55px;
+    overflow-y:auto;
 }
 
 #sidebar > ul > li > ul.sub {
@@ -315,7 +316,6 @@ ul.top-menu > li > a:hover, ul.top-menu > li > a:focus {
 
 
 .top-nav ul.top-menu > li > a {
-    padding: 6px;
     background: none;font-size: 14px;
     margin-right: 0;color:#A4ABBB;
 }
@@ -341,9 +341,7 @@ ul.top-menu > li > a:hover, ul.top-menu > li > a:focus {
     right: 20px;
     top: -10px;
 }
-.top-menu{
-    margin-top: 10px;
-}
+
 
 /*--sidebar toggle---*/
 
@@ -584,7 +582,25 @@ ul.top-menu > li > a:hover, ul.top-menu > li > a:focus {
         right: 10px;
         top: 0px;
     }
-    
+    .icon-repeat{
+        background: url('restart.png');
+        width: 25px;
+        height: 25px;
+        background-size: 100% 100%;
+    }
+    .icon-off{
+        background: url('logout.png');
+        width: 25px;
+        height: 25px;
+        background-size: 100% 100%;
+    }
+    .icon-signout{
+        background: url('quit.png');
+        width: 25px;
+        height: 25px;
+        background-size: 100% 100%;
+    }
+
     /*menu icon plus minus*/
     .dcjq-icon {
         top: 10px;
@@ -1100,7 +1116,7 @@ table.fields{
     width:100%;
 }
 .form-control{
-    width:160px;display: inline-block;
+    width:360px;display: inline-block;
 }
 
 .btn-gray{
@@ -1114,15 +1130,22 @@ table.fields{
 .w200{
     width:200px!important;
 }
+.w260{width:260px!important;}
 .w300{
     width:300px!important;
 }
 .w500{
     width:500px!important;
 }
+.w600{
+    width:600px!important;
+}
+.h160{height:160px!important;}
 .in-block{
     display: inline-block!important;
 }
+.m10{margin-top:10px!important;}
+.mb10{margin-bottom: 10px!important;}
 .red{
     color:red;
 }

@@ -11,31 +11,11 @@
 <meta name='robots' content='noindex,nofollow'>
 <title>[<% ident(); %>] 系统状态: 网站记录</title>
 
-<link rel='stylesheet' type='text/css' href='bootstrap.css'>
+<link rel='stylesheet' type='text/css' href='bootstrap.min.css'>
 <link rel='stylesheet' type='text/css' href='new.css'>
 <script src="jquery-1.8.3.min.js"></script>
 <script type='text/javascript' src='tomato.js'></script>
-<script type='text/javascript' src='bootstrap.js'></script>
-
-<!-- / / / -->
-
-<style type='text/css'>
-
-#webmon-controls {
-	text-align: right;
-	float: right;
-	margin-right: 5px;
-}
-#webmon-controls .selected {
-	padding: 0 0px 0 4px;
-	font-weight: bold;
-	text-decoration: underline;
-}
-
-</style>
-
 <script type='text/javascript' src='debug.js'></script>
-
 <script type='text/javascript'>
 
 //	<% nvram("log_wm,log_wmdmax,log_wmsmax"); %>

@@ -15,7 +15,7 @@
 <meta name='robots' content='noindex,nofollow'>
 <title>[<% ident(); %>] PPTP: 客户端</title>
 
-<link rel='stylesheet' type='text/css' href='bootstrap.css'>
+<link rel='stylesheet' type='text/css' href='bootstrap.min.css'>
 <link rel='stylesheet' type='text/css' href='new.css'>
 
 
@@ -89,14 +89,6 @@ function save()
 	changed = 0;
 }
 </script>
-
-<style type='text/css'>
-textarea {
-	width: 98%;
-	height: 10em;
-}
-</style>
-
 </head>
 <body>
 <form id='_fom' method='post' action='/tomato.cgi'>
@@ -104,10 +96,6 @@ textarea {
 
 <tr id='body'>
 <td id='content'>
-
-
-<!-- / / / -->
-
 <input type='hidden' name='_nextpage' value='vpn-pptp.asp'>
 <input type='hidden' name='_service' value=''>
 <input type='hidden' name='_nextwait' value='5'>

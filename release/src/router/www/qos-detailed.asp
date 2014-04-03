@@ -17,26 +17,10 @@
 <meta name='robots' content='noindex,nofollow'>
 <title>[<% ident(); %>] QoS设置: 详细内容</title>
 
-<link rel='stylesheet' type='text/css' href='bootstrap.css'>
+<link rel='stylesheet' type='text/css' href='bootstrap.min.css'>
 <link rel='stylesheet' type='text/css' href='new.css'>
 <script src="jquery-1.8.3.min.js"></script>
 <script type='text/javascript' src='tomato.js'></script>
-<script type='text/javascript' src='bootstrap.js'></script>
-
-<!-- / / / -->
-
-<style type='text/css'>
-#grid .co7 {
-	width: 20px;
-}
-#grid .co8 {
-	text-align: right;
-}
-#grid .co9 {
-	text-align: right;
-}
-</style>
-
 <script type='text/javascript' src='debug.js'></script>
 <script type='text/javascript' src='protocols.js'></script>
 <script type='text/javascript' src='interfaces.js'></script>

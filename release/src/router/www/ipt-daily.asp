@@ -17,16 +17,9 @@
 <meta name='robots' content='noindex,nofollow'>
 <title>[<% ident(); %>] IP 流量: 每日流量</title>
 
-<link rel='stylesheet' type='text/css' href='bootstrap.css'>
+<link rel='stylesheet' type='text/css' href='bootstrap.min.css'>
 <link rel='stylesheet' type='text/css' href='new.css'>
-
-
-
-
-
- <script src="jquery-1.8.3.min.js"></script>
 <script type='text/javascript' src='tomato.js'></script>
-<script type='text/javascript' src='bootstrap.js'></script>
 <script type='text/javascript' src='debug.js'></script>
 <script type='text/javascript' src='bwm-hist.js'></script>
 <script type='text/javascript' src='bwm-common.js'></script>
@@ -462,9 +455,8 @@ c.push({ title: '显示已知的主机名', name: 'f_hostnames', type: 'checkbox
 c.push({ title: '显示快捷键', name: 'f_shortcuts', type: 'checkbox' });
 createFieldTable('',c);
 </script>
-<div style="float:right;text-align:right">
+<div class="text-right">
  <a href="javascript:genData()" class="btn btn-default">数据&raquo;</a>
-<br>
  <a href="admin-iptraffic.asp" class="btn btn-default">设置&raquo;</a>
 </div>
 </div>

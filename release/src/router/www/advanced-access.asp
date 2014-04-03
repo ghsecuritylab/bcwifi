@@ -13,16 +13,9 @@
 <meta name='robots' content='noindex,nofollow'>
 <title>[<% ident(); %>] 高级设置: LAN控制</title>
 
-<link rel='stylesheet' type='text/css' href='bootstrap.css'>
+<link rel='stylesheet' type='text/css' href='bootstrap.min.css'>
 <link rel='stylesheet' type='text/css' href='new.css'>
-
-
-
-
-
- <script src="jquery-1.8.3.min.js"></script>
 <script type='text/javascript' src='tomato.js'></script>
-<script type='text/javascript' src='bootstrap.js'></script>
 <script type='text/javascript' src='wireless.jsx?_http_id=<% nv(http_id); %>'></script>
 <script type='text/javascript'>
 <% nvram ("lan_ifname,lan1_ifname,lan2_ifname,lan3_ifname,lan_access");%> 

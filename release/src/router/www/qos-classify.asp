@@ -13,99 +13,11 @@
 <meta name='robots' content='noindex,nofollow'>
 <title>[<% ident(); %>] QoS设置: 上行分类</title>
 
-<link rel='stylesheet' type='text/css' href='bootstrap.css'>
+<link rel='stylesheet' type='text/css' href='bootstrap.min.css'>
 <link rel='stylesheet' type='text/css' href='new.css'>
 <script src="jquery-1.8.3.min.js"></script>
 <script type='text/javascript' src='tomato.js'></script>
-<script type='text/javascript' src='bootstrap.js'></script>
 <script type='text/javascript' src='protocols.js'></script>
-
-<!-- / / / -->
-
-<style type='text/css'>
-#qg div {
-	padding: 0 0 1px 0;
-	margin: 0;
-}
-
-#qg .co1 {
-	width: 370px;
-}
-#qg .co2 {
-	width: 80px;
-}
-#qg .co3 {
-	width: 300px;
-}
-#qg .co4 {
-	width: 40px;
-}
-#qg .x1a {
-	width: 34%;
-	float: left;
-}
-#qg .x1b {
-	width: 66%;
-	float: left;
-}
-
-#qg .x2a {
-	width: 35%;
-	float: left;
-	clear: left;
-}
-#qg .x2b {
-	width: 23%;
-	float: left;
-}
-#qg .x2c {
-	width: 41%;
-	float: left;
-}
-
-#qg .x3a {
-	width: 40%;
-	float: left;
-	clear: left;
-}
-#qg .x3b {
-	width: 60%;
-	float: left;
-}
-
-#qg .x4a {
-	width: 58%;
-	float: left;
-	clear: left;
-}
-#qg .x4b {
-	width: 41%;
-	float: left;
-}
-#qg .x5a {
-	float: left;
-	clear: left;
-	width: 70px;
-}
-
-#qg .x5b {
-	float: left;
-	padding: 2px 8px 0 8px;
-	width: 10px;
-	text-align: center;
-}
-#qg .x5c {
-	float: left;
-	width: 70px;
-}
-#qg .x5d {
-	float: left;
-	padding: 2px 0 0 8px;
-	width: 100px;
-}
-
-</style>
-
 <script type='text/javascript' src='debug.js'></script>
 
 <script type='text/javascript'>
@@ -342,22 +254,22 @@ qosg.setup = function() {
 	this.init('qg', 'move', 80, [
 		{ multi: [
 			{ type: 'select', options: [[0,'任何地址'],[1,'目标IP地址'],[2,'源IP地址'],[3,'源MAC地址']],
-				prefix: '<div class="x1a">', suffix: '</div>' },
-			{ type: 'text', prefix: '<div class="x1b">', suffix: '</div>' },
+				prefix: '<div class="x1a mb10">', suffix: '' },
+			{ type: 'text', prefix: '', suffix: '</div>' },
 
-			{ type: 'select', prefix: '<div class="x2a">', suffix: '</div>', options: a },
-			{ type: 'select', prefix: '<div class="x2b">', suffix: '</div>',
+			{ type: 'select', prefix: '<div class="x2a mb10">', suffix: '', options: a },
+			{ type: 'select', prefix: '', suffix: '',
 				options: [['a','任何端口'],['d','目的端口'],['s','源端口'],['x','源或目的端口']] },
-			{ type: 'text', prefix: '<div class="x2c">', suffix: '</div>' },
+			{ type: 'text', prefix: '', suffix: '</div>' },
 
-			{ type: 'select', prefix: '<div class="x3a">', suffix: '</div>', options: ipp2p },
-			{ type: 'select', prefix: '<div class="x3b">', suffix: '</div>', options: layer7 },
+			{ type: 'select', prefix: '<div class="x3a mb10">', suffix: '', options: ipp2p },
+			{ type: 'select', prefix: '', suffix: '</div>', options: layer7 },
 
-			{ type: 'select', prefix: '<div class="x4a">', suffix: '</div>', options: dscp },
-			{ type: 'text', prefix: '<div class="x4b">', suffix: '</div>' },
+			{ type: 'select', prefix: '<div class="x4a mb10">', suffix: '', options: dscp },
+			{ type: 'text', prefix: '', suffix: '</div>' },
 
-			{ type: 'text', prefix: '<div class="x5a">', suffix: '</div>' },
-			{ type: 'text', prefix: '<div class="x5b"> - </div><div class="x5c">', suffix: '</div><div class="x5d">KB传输字节</div>' }
+			{ type: 'text', prefix: '<div class="x5a">', suffix: '' },
+			{ type: 'text', prefix: ' - ', suffix: 'KB传输字节</div>' }
 		] },
 		{ type: 'select', options: class1, vtop: 1 },
 		{ type: 'text', maxlen: 32, vtop: 1 },

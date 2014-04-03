@@ -12,42 +12,11 @@
 <meta name='robots' content='noindex,nofollow'>
 <title>[<% ident(); %>] NAS：支持USB</title>
 
-<link rel='stylesheet' type='text/css' href='bootstrap.css'>
+<link rel='stylesheet' type='text/css' href='bootstrap.min.css'>
 <link rel='stylesheet' type='text/css' href='new.css'>
 <script src="jquery-1.8.3.min.js"></script>
 <script type='text/javascript' src='tomato.js'></script>
-<script type='text/javascript' src='bootstrap.js'></script>
-
-<!-- / / / -->
-
-<style type='text/css'>
-textarea {
-	width: 98%;
-	height: 5em;
-}
-</style>
-
-<style type='text/css'>
-#dev-grid .co1 {
-	width: 10%;
-}
-#dev-grid .co2 {
-	width: 9%;
-}
-#dev-grid .co3 {
-	width: 65%;
-}
-#dev-grid .co4 {
-	width: 16%;
-	text-align: center;
-}
-#dev-grid .header {
-	text-align: left;
-}
-</style>
-
 <script type='text/javascript' src='debug.js'></script>
-
 <script type='text/javascript'>
 
 //	<% nvram("usb_enable,usb_uhci,usb_ohci,usb_usb2,usb_mmc,usb_storage,usb_printer,usb_printer_bidirect,usb_automount,usb_fs_ext3,usb_fs_fat,usb_fs_ntfs,usb_fs_hfs,script_usbmount,script_usbumount,script_usbhotplug,idle_enable,usb_3g"); %>

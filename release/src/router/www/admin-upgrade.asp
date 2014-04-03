@@ -12,16 +12,9 @@
 <meta http-equiv='content-type' content='text/html;charset=utf-8'>
 <meta name='robots' content='noindex,nofollow'>
 <title>[<% ident(); %>] 系统管理: 固件更新</title>
-<link rel='stylesheet' type='text/css' href='bootstrap.css'>
+<link rel='stylesheet' type='text/css' href='bootstrap.min.css'>
 <link rel='stylesheet' type='text/css' href='new.css'>
-
-
-
-
-
- <script src="jquery-1.8.3.min.js"></script>
 <script type='text/javascript' src='tomato.js'></script>
-<script type='text/javascript' src='bootstrap.js'></script>
 <script type='text/javascript' src='debug.js'></script>
 <script type='text/javascript'>
 
@@ -78,7 +71,7 @@ function upgrade()
 		<form name='form_upgrade' method='post' action='upgrade.cgi' encType='multipart/form-data'>
 		<div id='box-input'>
 			选择固件:&nbsp;&nbsp;&nbsp;
-			<input type='file' name='file' size='50' style='height:20px'> <input type='button' value='升级' id='afu-upgrade-button' onclick='upgrade()' style='height:20px'>
+			<input class="in-block" type='file' name='file' size='50' > <input type='button' value='升级' id='afu-upgrade-button' class="btn btn-danger" onclick='upgrade()' >
 		</div>
 		</form>
 		<br><form name='form_reset' action='javascript:{}'>

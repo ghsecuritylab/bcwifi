@@ -6,8 +6,13 @@
     <title>系统状态：日志记录文件</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
-    <link href="bootstrap.css" rel="stylesheet">
+    <link href="bootstrap.min.css" rel="stylesheet">
     <link href="new.css" rel="stylesheet">
+    <script src="tomato.js"></script>
+    
+    <script type='text/javascript'>
+    //<% nvram('lan_ifname,wl_ifname,wl_mode,wl_radio'); %>
+    </script>
   </head>
   <body>
   <div id="container" >
@@ -43,7 +48,7 @@
                       </span>
                   </div>
                   <div class="panel-body">
-                    <iframe id="ifrm" name="ifrm" src="info.html" scrolling=yes  frameborder="0" width="100%" height="100%">
+                    <iframe id="ifrm" name="ifrm" src="status-overview.asp" scrolling=yes  frameborder="0" width="100%" height="100%">
                     </iframe>
                   </div>
               </div>
@@ -63,7 +68,6 @@
       <!--footer end-->
   </div>
     <script src="jquery-1.8.3.min.js"></script>
-    <script src="tomato.js"></script>
     <script src="common-scripts.source.js"></script>
   </body>
 </html>

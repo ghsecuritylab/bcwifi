@@ -13,12 +13,11 @@
 <meta name='robots' content='noindex,nofollow'>
 <title>[<% ident(); %>] IP流量: 图形查看</title>
 
-<link rel='stylesheet' type='text/css' href='bootstrap.css'>
+<link rel='stylesheet' type='text/css' href='bootstrap.min.css'>
 <link rel='stylesheet' type='text/css' href='new.css'>
 
 <script src="jquery-1.8.3.min.js"></script>
 <script type='text/javascript' src='tomato.js'></script>
-<script type='text/javascript' src='bootstrap.js'></script>
 
 <!-- / / / -->
 <script type='text/javascript' src='debug.js'></script>

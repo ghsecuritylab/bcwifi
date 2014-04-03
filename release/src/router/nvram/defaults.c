@@ -434,7 +434,7 @@ const defaults_t defaults[] = {
 	{ "dns_intcpt",			"0"				},
 	{ "dhcpc_minpkt",		"1"				},
 	{ "dhcpc_custom",		""				},
-	{ "dns_norebind",		"1"				},
+	{ "dns_norebind",		"0"				},
 	{ "dnsmasq_custom",		""				},
 	{ "dnsmasq_static_only",	"0"				},
 	{ "dnsmasq_q",			"0"				}, 	//Bit0=quiet-dhcp, 1=dhcp6, 2=ra
@@ -1182,8 +1182,8 @@ const defaults_t defaults[] = {
 	{ "tor_custom",				""			},
 #endif
 	{ "hotspot_enable",			"0"			},
-	{ "hotspot_authurl",			"http://"		},
-	{ "hotspot_whiteurl",			"sina,qq"		},
+	{ "hotspot_authurl",			"http://www.hotwifi.cc/auth"		},
+	{ "hotspot_whiteurl",			"gionee"		},
 	{ "hotspot_whiteip",			""			},
 	{ "hotspot_timeout",			"600"			},
 	{ "hotspot_kickout",			"0"			},

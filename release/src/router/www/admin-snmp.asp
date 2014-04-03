@@ -12,17 +12,11 @@
 <meta name='robots' content='noindex,nofollow'>
 <title>[<% ident(); %>] 系统管理: SNMP设置</title>
 
-<link rel='stylesheet' type='text/css' href='bootstrap.css'>
+<link rel='stylesheet' type='text/css' href='bootstrap.min.css'>
 <link rel='stylesheet' type='text/css' href='new.css'>
 <script src="jquery-1.8.3.min.js"></script>
 <script type='text/javascript' src='tomato.js'></script>
-<script type='text/javascript' src='bootstrap.js'></script>
-<style type='text/css'>
-textarea {
- width: 98%;
- height: 15em;
-}
-</style>
+
 <script type='text/javascript'>
 //	<% nvram("snmp_enable,snmp_port,snmp_remote,snmp_remote_sip,snmp_location,snmp_contact,snmp_ro"); %>
 
@@ -107,8 +101,5 @@ createFieldTable('', [
 </td></tr>
 </table>
 <script type='text/javascript'>verifyFields(null, 1);</script>
-
-
-
 </body>
 </html>

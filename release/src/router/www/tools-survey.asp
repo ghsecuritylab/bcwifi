@@ -13,12 +13,11 @@
 <meta name='robots' content='noindex,nofollow'>
 <title>[<% ident(); %>] 实用工具: 无线勘查</title>
 
-<link rel='stylesheet' type='text/css' href='bootstrap.css'>
+<link rel='stylesheet' type='text/css' href='bootstrap.min.css'>
 <link rel='stylesheet' type='text/css' href='new.css'>
 
 <script src="jquery-1.8.3.min.js"></script>
 <script type='text/javascript' src='tomato.js'></script>
-<script type='text/javascript' src='bootstrap.js'></script>
 
 <script type='text/javascript' src='debug.js'></script>
 
@@ -305,6 +304,7 @@ class='table table-bordered table-striped' cellspacing=0></table>
 		document.write('<small class="alert alert-warning">请注意：使用此工具,无线客户端连接到此路由器可能会中断.</small>');
 	}
 	</script>
+	<br><br>
 </div>
 
 <!-- / / / -->

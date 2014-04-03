@@ -13,11 +13,10 @@
 <meta name='robots' content='noindex,nofollow'>
 <title>[<% ident(); %>] Admin: Access</title>
 
-<link rel='stylesheet' type='text/css' href='bootstrap.css'>
+<link rel='stylesheet' type='text/css' href='bootstrap.min.css'>
 <link rel='stylesheet' type='text/css' href='new.css'>
 <script src="jquery-1.8.3.min.js"></script>
 <script type='text/javascript' src='tomato.js'></script>
-<script type='text/javascript' src='bootstrap.js'></script>
 <script type='text/javascript' src='debug.js'></script>
 <script type='text/javascript'>
 
@@ -291,7 +290,7 @@ createFieldTable('', [
 	{ title: '使用密码登录', name: 'f_sshd_pass', type: 'checkbox', value: nvram.sshd_pass == 1 },
 	{ title: '使用认证密钥', name: 'sshd_authkeys', type: 'textarea', value: nvram.sshd_authkeys }
 ]);
-W('<input type="button" value="' + (sdup ? '立即停止' : '立即启动') + ' " onclick="toggle(\'sshd\', sdup)" id="_sshd_button">');
+W('<input class="btn btn-primary" type="button" value="' + (sdup ? '立即停止' : '立即启动') + ' " onclick="toggle(\'sshd\', sdup)" id="_sshd_button">');
 </script>
 </div>
 
@@ -302,7 +301,7 @@ createFieldTable('', [
 	{ title: '开机时启动', name: 'f_telnetd_eas', type: 'checkbox', value: nvram.telnetd_eas == 1 },
 	{ title: '远程访问端口', name: 'telnetd_port', type: 'text', maxlen: 5, size: 7, value: nvram.telnetd_port }
 ]);
-W('<input type="button" value="' + (tdup ? '立即停止' : '立即启动') + ' " onclick="toggle(\'telnetd\', tdup)" id="_telnetd_button">');
+W('<input type="button" class="btn btn-primary" value="' + (tdup ? '立即停止' : '立即启动') + ' " onclick="toggle(\'telnetd\', tdup)" id="_telnetd_button">');
 </script>
 </div>
 

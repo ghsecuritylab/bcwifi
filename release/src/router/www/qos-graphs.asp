@@ -13,39 +13,13 @@
 <meta name='robots' content='noindex,nofollow'>
 <title>[<% ident(); %>] QoS设置: 图形分析</title>
 
-<link rel='stylesheet' type='text/css' href='bootstrap.css'>
+<link rel='stylesheet' type='text/css' href='bootstrap.min.css'>
 <link rel='stylesheet' type='text/css' href='new.css'>
 <script src="jquery-1.8.3.min.js"></script>
 <script type='text/javascript' src='tomato.js'></script>
-<script type='text/javascript' src='bootstrap.js'></script>
 
 <!-- / / / -->
 <script type='text/javascript' src='debug.js'></script>
-
-<style type='text/css'>
-.color {
-	width: 12px;
-	height: 25px;
-}
-.title {
-}
-.count {
-	text-align: right;
-}
-.pct {
-	width:55px;
-	text-align: right;
-}
-.thead {
-	font-size: 90%;
-	font-weight: bold;
-}
-.total {
-	border-top: 1px dashed #bbb;
-	font-weight: bold;
-}
-</style>
-
 <script type='text/javascript'>
 // <% nvram("qos_classnames,web_svg,qos_enable,qos_obw,qos_ibw"); %>
 
@@ -284,7 +258,7 @@ function init()
 <div class="section-title">连接分布图表</div>
 <div class="section">
 <table border=0 width="100%"><tr><td>
-	<table style="width:250px">
+	<table style="width:250px" class="table table-bordered table-striped">
 <script type='text/javascript'>
 for (i = 0; i < 11; ++i) {
 	W('<tr style="cursor:pointer" onclick="mClick(' + i + ')">' +
@@ -309,7 +283,7 @@ if (nvram.web_svg != '0') {
 <div class="section-title">带宽分布 (出站)</div>
 <div class="section">
 <table border=0 width="100%"><tr><td>
-	<table style="width:250px">
+	<table style="width:250px" class="table table-bordered table-striped">
 	<tr><td class='color' style="height:1em"></td><td class='title' style="width:45px">&nbsp;</td><td class='thead count'>kbit/s</td><td class='thead count'>KB/s</td><td class='thead pct'>Rate</td></tr>
 <script type='text/javascript'>
 for (i = 1; i < 11; ++i) {
@@ -336,7 +310,7 @@ if (nvram.web_svg != '0') {
 <div class="section-title">带宽分布 (入站)</div>
 <div class="section">
 <table border=0 width="100%"><tr><td>
-	<table style="width:250px">
+	<table style="width:250px" class="table table-bordered table-striped">
 	<tr><td class='color' style="height:1em"></td><td class='title' style="width:45px">&nbsp;</td><td class='thead count'>kbit/s</td><td class='thead count'>KB/s</td><td class='thead pct'>Rate</td></tr>
 <script type='text/javascript'>
 for (i = 1; i < 11; ++i) {

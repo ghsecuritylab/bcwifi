@@ -17,24 +17,10 @@
 <meta name='robots' content='noindex,nofollow'>
 <title>[<% ident(); %>] IP 流量: 每月流量</title>
 
-<link rel='stylesheet' type='text/css' href='bootstrap.css'>
+<link rel='stylesheet' type='text/css' href='bootstrap.min.css'>
 <link rel='stylesheet' type='text/css' href='new.css'>
 <script src="jquery-1.8.3.min.js"></script>
 <script type='text/javascript' src='tomato.js'></script>
-<script type='text/javascript' src='bootstrap.js'></script>
-
-<!-- / / / -->
-
-<style type='text/css'>
-#monthly-grid .co3,
-#monthly-grid .co4,
-#monthly-grid .co5 {
-	text-align: right;
-}
-</style>
-
-<!-- / / / -->
-
 <script type='text/javascript' src='debug.js'></script>
 <script type='text/javascript' src='bwm-hist.js'></script>
 <script type='text/javascript' src='bwm-common.js'></script>

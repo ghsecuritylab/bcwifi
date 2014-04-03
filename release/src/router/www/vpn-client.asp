@@ -16,11 +16,10 @@
 <meta name='robots' content='noindex,nofollow'>
 <title>[<% ident(); %>] VPN设置: OpenVPN客户端</title>
 
-<link rel='stylesheet' type='text/css' href='bootstrap.css'>
+<link rel='stylesheet' type='text/css' href='bootstrap.min.css'>
 <link rel='stylesheet' type='text/css' href='new.css'>
 <script src="jquery-1.8.3.min.js"></script>
 <script type='text/javascript' src='tomato.js'></script>
-<script type='text/javascript' src='bootstrap.js'></script>
 <script type='text/javascript' src='vpn.js'></script>
 <script type='text/javascript'>
 
@@ -254,31 +253,6 @@ function init()
 	verifyFields(null, true);
 }
 </script>
-
-<style type='text/css'>
-textarea {
-	width: 98%;
-	height: 10em;
-}
-p.keyhelp
-{
-	font-size: smaller;
-	font-style: italic;
-}
-div.status-header p
-{
-	font-weight: bold;
-	padding-bottom: 4px;
-}
-table.status-table
-{
-	width: auto;
-	margin-left: auto;
-	margin-right: auto;
-	text-align: center;
-}
-</style>
-
 </head>
 <body>
 <form id='_fom' method='post' action='tomato.cgi'>

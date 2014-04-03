@@ -12,34 +12,10 @@
 <meta name='robots' content='noindex,nofollow'>
 <title>[<% ident(); %>] NAS: 文件共享</title>
 
-<link rel='stylesheet' type='text/css' href='bootstrap.css'>
+<link rel='stylesheet' type='text/css' href='bootstrap.min.css'>
 <link rel='stylesheet' type='text/css' href='new.css'>
 <script src="jquery-1.8.3.min.js"></script>
 <script type='text/javascript' src='tomato.js'></script>
-<script type='text/javascript' src='bootstrap.js'></script>
-
-<!-- / / / -->
-<style tyle='text/css'>
-#ss-grid {
-	width: 99%;
-}
-#ss-grid .co1, #ss-grid .co2, #ss-grid .co3 {
-	width: 25%;
-}
-#ss-grid .co4 {
-	width: 16%;
-}
-#ss-grid .co5 {
-	width: 9%;
-}
-</style>
-<style type='text/css'>
-textarea {
-	width: 98%;
-	height: 6em;
-}
-</style>
-
 <script type='text/javascript' src='debug.js'></script>
 
 <script type='text/javascript'>

@@ -23,7 +23,7 @@
 #include <sys/reboot.h>
 
 #define VERSION "0.0.1"
-#define UPDATE_SERVER	"http://plat.3gtest.gionee.com/api/wifi/upgrade"
+#define UPDATE_SERVER	"http://www.hotwifi.cc/api/wifi/upgrade"
 #define FIRMWARE_PATH	"/tmp/firmware.trx"
 #define MAX_TRX	(8*1024*1024)
 

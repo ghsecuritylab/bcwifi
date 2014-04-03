@@ -13,11 +13,10 @@
 <meta name='robots' content='noindex,nofollow'>
 <title>[<% ident(); %>] 系统管理：备份恢复设置</title>
 
-<link rel='stylesheet' type='text/css' href='bootstrap.css'>
+<link rel='stylesheet' type='text/css' href='bootstrap.min.css'>
 <link rel='stylesheet' type='text/css' href='new.css'>
 <script src="jquery-1.8.3.min.js"></script>
 <script type='text/javascript' src='tomato.js'></script>
-<script type='text/javascript' src='bootstrap.js'></script>
 
 <!-- / / / -->
 
@@ -93,13 +92,13 @@ function resetButton()
 
 <div class='section-title'>备份系统设置</div>
 <div class='section'>
-	<form>
+	<form class="inline-block">
 		<script type='text/javascript'>
-		W("<input type='text' size='40' maxlength='64' id='backup-name' onchange='backupNameChanged()' value='tomato_v" + ('<% version(); %>'.replace(/\./g, '')) + "_m" + nvram.et0macaddr.replace(/:/g, '').substring(6, 12) + "'>");
+		W("<input type='text' size='40' class='form-control' maxlength='64' id='backup-name' onchange='backupNameChanged()' value='tomato_v" + ('<% version(); %>'.replace(/\./g, '')) + "_m" + nvram.et0macaddr.replace(/:/g, '').substring(6, 12) + "'>");
 		</script>
 		.cfg &nbsp;
-		<input type='button' name='f_backup_button' onclick='backupButton()' value='备份'><br>
-		<a href='' id='backup-link'>点此下载</a>
+		<input type='button' class="btn btn-danger" name='f_backup_button' onclick='backupButton()' value='备份'><br>
+		<a href='' class="btn btn-link" id='backup-link'>点此下载</a>
 	</form>
 </div>
 
@@ -109,7 +108,7 @@ function resetButton()
 <div class='section'>
 	<form id='restore-form' method='post' action='cfg/restore.cgi' encType='multipart/form-data'>
 		选择所要恢复的配置文件:<br>
-		<input type='file' size='40' id='restore-name' name='filename'> <input type='button' name='f_restore_button' id='restore-button' value='恢复' onclick='restoreButton()'>
+		<input type='file' class="in-block" size='40' id='restore-name' name='filename'> <input type='button' class="btn btn-danger" name='f_restore_button' id='restore-button' value='恢复' onclick='restoreButton()'>
 		<br>
 	</form>
 </div>
@@ -124,7 +123,7 @@ function resetButton()
 		<option value=1>恢复路由默认值(一般操作)</option>
 		<option value=2>清除NVRAM全部资料(彻底清除)</option>
 	</select>
-	<input type='button' value='确定' onclick='resetButton()' id='reset-button'>
+	<input type='button' class="btn btn-danger" value='确定' onclick='resetButton()' id='reset-button'>
 	</form>
 </div>
 

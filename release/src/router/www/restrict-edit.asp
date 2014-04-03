@@ -13,55 +13,11 @@
 <meta name='robots' content='noindex,nofollow'>
 <title>[<% ident(); %>] 访问限制: 编辑策略</title>
 
-<link rel='stylesheet' type='text/css' href='bootstrap.css'>
+<link rel='stylesheet' type='text/css' href='bootstrap.min.css'>
 <link rel='stylesheet' type='text/css' href='new.css'>
 <script src="jquery-1.8.3.min.js"></script>
 <script type='text/javascript' src='tomato.js'></script>
-<script type='text/javascript' src='bootstrap.js'></script>
 <script type='text/javascript' src='protocols.js'></script>
-
-<!-- / / / -->
-
-<style type='text/css'>
-#res-comp-grid {
-	width: 60%;
-}
-#res-bp-grid .box1, #res-bp-grid .box2 {
-	width: 20%;
-	float: left;
-}
-#res-bp-grid .box3 {
-	width: 60%;
-	float: left;
-}
-#res-bp-grid .box4 {
-	width: 30%;
-	float: left;
-	clear: left;
-	padding-top: 2px;
-}
-#res-bp-grid .box5 {
-	width: 70%;
-	float: left;
-	padding-top: 2px;
-}
-#res-bp-grid .box6 {
-	width: 30%;
-	float: left;
-	padding-top: 2px;
-}
-#res-bp-grid .box7 {
-	width: 70%;
-	float: left;
-	padding-top: 2px;
-}
-
-textarea {
-	width: 99%;
-	height: 20em;
-}
-</style>
-
 <script type='text/javascript' src='debug.js'></script>
 
 <script type='text/javascript'>
@@ -318,7 +274,7 @@ function verifyFields(focused, quiet)
 
 function cancel()
 {
-	document.location = 'restrict.asp';
+	document.location = 'lim-restrict.asp';
 }
 
 function remove()
@@ -451,7 +407,7 @@ function earlyInit()
 
 <!-- / / / -->
 
-<input type='hidden' name='_nextpage' value='restrict.asp'>
+<input type='hidden' name='_nextpage' value='lim-restrict.asp'>
 <input type='hidden' name='_service' value='restrict-restart'>
 <input type='hidden' name='rruleNN' id='_rrule' value=''>
 

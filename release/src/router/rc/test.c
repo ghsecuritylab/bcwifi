@@ -211,7 +211,7 @@ int main(void)
 
 
 	char output[512];
-	if(http_post("http://plat.3gtest.gionee.com/api/wifi/hb", "", output, 1024)){
+	if(http_post("http://www.hotwifi.cc/api/wifi/hb", "", output, 1024)){
 		printf("%s\n", output);
 		printf("post success");
 	} else {

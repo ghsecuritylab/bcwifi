@@ -13,16 +13,9 @@
 <meta name='robots' content='noindex,nofollow'>
 <title>[<% ident(); %>] 系统管理：脚本设置</title>
 
-<link rel='stylesheet' type='text/css' href='bootstrap.css'>
+<link rel='stylesheet' type='text/css' href='bootstrap.min.css'>
 <link rel='stylesheet' type='text/css' href='new.css'>
-
-
-
-
-
- <script src="jquery-1.8.3.min.js"></script>
 <script type='text/javascript' src='tomato.js'></script>
-<script type='text/javascript' src='bootstrap.js'></script>
 <script type='text/javascript' src='debug.js'></script>
 <script type='text/javascript'>
 //	<% nvram("script_init,script_shut,script_fire,script_wanup"); %>
@@ -102,7 +95,7 @@ y = Math.floor(docu.getViewSize().height * 0.65);
 s = 'height:' + ((y > 300) ? y : 300) + 'px;display:none';
 for (i = 0; i < tabs.length; ++i) {
 	t = tabs[i][0];
-	W('<textarea class="as-script" name="script_' + t.replace('as-', '') + '" id="' + t + '-text" wrap=' + (wrap ? 'virtual' : 'off') + ' style="' + s + '"></textarea>');
+	W('<textarea class="form-control w600 m10" name="script_' + t.replace('as-', '') + '" id="' + t + '-text" wrap=' + (wrap ? 'virtual' : 'off') + ' style="' + s + '"></textarea>');
 }
 W('<br><input type="checkbox" id="as-wordwrap" onclick="wordWrap()" onchange="wordWrap()" ' +
   (wrap ? 'checked' : '') + '> 文本换行');
@@ -113,8 +106,8 @@ W('<br><input type="checkbox" id="as-wordwrap" onclick="wordWrap()" onchange="wo
 </td></tr>
 <tr><td id='footer' colspan=2>
 	<span id='footer-msg'></span>
-	<input type='button' value='保存设置' id='save-button' onclick='save()'>
-	<input type='button' value='取消设置' id='cancel-button' onclick='reloadPage();'>
+	<input type='button' class="btn btn-danger" value='保存设置' id='save-button' onclick='save()'>
+	<input type='button' class="btn btn-gray" value='取消设置' id='cancel-button' onclick='reloadPage();'>
 </td></tr>
 </table>
 </form>

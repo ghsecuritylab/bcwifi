@@ -16,21 +16,10 @@
 <meta name='robots' content='noindex,nofollow'>
 <title>[<% ident(); %>] VPN设置: PPTP服务器</title>
 
-<link rel='stylesheet' type='text/css' href='bootstrap.css'>
+<link rel='stylesheet' type='text/css' href='bootstrap.min.css'>
 <link rel='stylesheet' type='text/css' href='new.css'>
 <script src="jquery-1.8.3.min.js"></script>
 <script type='text/javascript' src='tomato.js'></script>
-<script type='text/javascript' src='bootstrap.js'></script>
-
-<style type='text/css'>
-#ul-grid .co2 {
-  text-align: center;
-}
-textarea {
-  width: 98%;
-  height: 10em;
-}
-</style>
 <script type='text/javascript' src='interfaces.js'></script>
 <script type='text/javascript'>
 //	<% nvram("lan_ipaddr,lan_netmask,pptpd_enable,pptpd_remoteip,pptpd_forcemppe,pptpd_broadcast,pptpd_users,pptpd_dns1,pptpd_dns2,pptpd_wins1,pptpd_wins2,pptpd_mtu,pptpd_mru,pptpd_custom");%>

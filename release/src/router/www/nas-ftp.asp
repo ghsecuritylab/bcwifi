@@ -12,38 +12,10 @@
 <meta name='robots' content='noindex,nofollow'>
 <title>[<% ident(); %>] NAS: FTP服务器</title>
 
-<link rel='stylesheet' type='text/css' href='bootstrap.css'>
+<link rel='stylesheet' type='text/css' href='bootstrap.min.css'>
 <link rel='stylesheet' type='text/css' href='new.css'>
 <script src="jquery-1.8.3.min.js"></script>
 <script type='text/javascript' src='tomato.js'></script>
-<script type='text/javascript' src='bootstrap.js'></script>
-
-<!-- / / / -->
-<style tyle='text/css'>
-#aft-grid {
-	width: 99%;
-}
-#aft-grid .co1 {
-	width: 20%;
-}
-#aft-grid .co2 {
-	width: 20%;
-}
-#aft-grid .co3 {
-	width: 15%;
-}
-#aft-grid .co4 {
-	width: 45%;
-}
-</style>
-
-<style type='text/css'>
-textarea {
-	width: 98%;
-	height: 5em;
-}
-</style>
-
 <script type='text/javascript' src='debug.js'></script>
 
 <script type='text/javascript'>

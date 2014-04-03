@@ -46,7 +46,7 @@ var menu = [
         ['其它设置',        'misc.asp'],
         ['路由表设置',           'routing.asp'],
 /* TOR-BEGIN */
-        ['TOR设置',           'tor.asp'],
+//        ['TOR设置',           'tor.asp'],
 /* TOR-END */
         ['VLAN设置',          'vlan.asp'],
         ['LAN控制',           'access.asp'],
@@ -61,11 +61,12 @@ var menu = [
         ['DMZ设置',               'dmz.asp'],
         ['端口触发',            'triggered.asp'],
         ['UPnP/NAT-PMP',        'upnp.asp'] ] ],
-    ['访问限制',        '',  0,  [
+    ['访问限制',        'lim',  0,  [
         ['访问限制', 'restrict.asp'],
         ['IP带宽限速',      'bwlimit.asp'],
         ['第三方认证',       'hotspot.asp'],
-        ['网络通告',        'splashd.asp'] ] ],
+//        ['网络通告',        'splashd.asp'] 
+    ] ],
     ['QoS设置',               'qos', 0, [
         ['基本设置',        'settings.asp'],
         ['分类设置',        'classify.asp'],
@@ -121,21 +122,21 @@ REMOVE-END */
         ['IP流量监控',  'iptraffic.asp'],
         ['按钮/指示灯',          'buttons.asp'],
 /* CIFS-BEGIN */
-        ['CIFS客户端',         'cifs.asp'],
+//        ['CIFS客户端',         'cifs.asp'],
 /* CIFS-END */
 /* SDHC-BEGIN */
-        ['SDHC/MMC',            'sdhc.asp'],
+//        ['SDHC/MMC',            'sdhc.asp'],
 /* SDHC-END */
         ['备份恢复',        'config.asp'],
         ['调试',          'debug.asp'],
 /* JFFS2-BEGIN */
-        ['JFFS',            'jffs2.asp'],
+//        ['JFFS',            'jffs2.asp'],
 /* JFFS2-END */
 /* NFS-BEGIN */
-        ['NFS Server',          'nfs.asp'],
+//        ['NFS Server',          'nfs.asp'],
 /* NFS-END */
 /* SNMP-BEGIN */
-        ['SNMP',            'snmp.asp'],
+//        ['SNMP',            'snmp.asp'],
 /* SNMP-END */
         ['日志管理',            'log.asp'],
         ['定时重启/连接',         'sched.asp'],
@@ -155,6 +156,8 @@ var Script = function () {
         if($(this).siblings('ul').css('display')=='none'){
             $(this).addClass('active');
             $(this).siblings('ul').slideDown('slow');
+            var pervCloseLi=$(this).parent('li.sub-menu').prevAll('li.sub-menu');
+            $('#nav-accordion').scrollTop(pervCloseLi.length*$(pervCloseLi[0]).height());
         } else{
             $(this).removeClass('active');
             $(this).siblings('ul').slideUp('slow');
@@ -169,9 +172,9 @@ var Script = function () {
     $(function() {
         loadSidebar();
         function responsiveView() {
-            var contentHeight=$(window).height()-$("header").outerHeight()-$('.footer').outerHeight();
+            var contentHeight=$(window).height()-$(".header").outerHeight()-$('.footer').outerHeight();
             $("#main-content").css('height',contentHeight);
-
+            $("#sidebar ul.sidebar-menu").height(contentHeight-50);
             var wSize = $(window).width();
             if (wSize <= 768) {
                 $('#container').addClass('sidebar-close');

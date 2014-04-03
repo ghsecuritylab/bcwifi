@@ -13,16 +13,10 @@
 <meta name='robots' content='noindex,nofollow'>
 <title>[<% ident(); %>] 端口转发: UPnP/NAT-PMP设置</title>
 
-<link rel='stylesheet' type='text/css' href='http://dev.plat.gionee.com/static/bootstrap.css'>
-<link rel='stylesheet' type='text/css' href='http://dev.plat.gionee.com/static/new.css'>
-
-
-
-
-
- <script src="jquery-1.8.3.min.js"></script>
+<link rel='stylesheet' type='text/css' href='bootstrap.min.css'>
+<link rel='stylesheet' type='text/css' href='new.css'>
+<script src="jquery-1.8.3.min.js"></script>
 <script type='text/javascript' src='tomato.js'></script>
-<script type='text/javascript' src='http://dev.plat.gionee.com/static/bootstrap.js'></script>
 <script type='text/javascript' src='debug.js'></script>
 <script type='text/javascript'>
 
@@ -228,7 +222,7 @@ REMOVE-END */
 	<table id='upnp-grid' 
 
 class='table table-bordered table-striped'></table>
-	<div style='width: 100%; text-align: right'><input type='button' value='全部删除' onclick='deleteAll()' id='upnp-delete-all'> <input type='button' value='重新整理' onclick='javascript:reloadPage();'></div>
+	<div style='width: 100%; text-align: right'><input type='button' class='btn btn-danger' value='全部删除' onclick='deleteAll()' id='upnp-delete-all'> <input type='button' class='btn btn-gray' value='重新整理' onclick='javascript:reloadPage();'></div>
 </div>
 
 <div class='section-title'>设置</div>

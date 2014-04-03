@@ -10,35 +10,10 @@
 <meta name='robots' content='noindex,nofollow'>
 <title>[<% ident(); %>] NAS: UPS 监控</title>
 
-<link rel='stylesheet' type='text/css' href='bootstrap.css'>
+<link rel='stylesheet' type='text/css' href='bootstrap.min.css'>
 <link rel='stylesheet' type='text/css' href='new.css'>
 <script src="jquery-1.8.3.min.js"></script>
 <script type='text/javascript' src='tomato.js'></script>
-<script type='text/javascript' src='bootstrap.js'></script>
-<style type='text/css'>
-textarea {
-width: 98%;
-height: 5em;
-}
-</style>
-<style type='text/css'>
-#dev-grid .co1 {
-width: 10%;
-}
-#dev-grid .co2 {
-width: 9%;
-}
-#dev-grid .co3 {
-width: 65%;
-}
-#dev-grid .co4 {
-width: 16%;
-text-align: center;
-}
-#dev-grid .header {
-text-align: left;
-}
-</style>
 <script type='text/javascript'>
 
 //      <% nvram(""); %>

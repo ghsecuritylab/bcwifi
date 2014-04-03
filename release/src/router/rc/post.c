@@ -21,16 +21,23 @@
 	((unsigned char *)&addr)[2], \
 	((unsigned char *)&addr)[3]
 
+
 struct post_config
 {
 	char post_url[512];
 	char cfg_url[512];
+	unsigned long version;
+	int changed;
 	int post_interval;
 	int reboot;
 	int reconnect;
 	int upgrade;
 	char mac[17];
 	uint32_t ht;
+	char hs_enable[2];
+	char hs_kickout[128];
+	char hs_authurl[512];
+	char hs_timeout[128];
 };
 
 struct buffer
@@ -51,9 +58,7 @@ typedef struct {
 } meminfo_t;
 
 /* Return a 32-bit CRC of the contents of the buffer. */
-uint32_t
-crc32(uint32_t crc, const void *buf, size_t size)
-{
+uint32_t crc32(uint32_t crc, const void *buf, size_t size) {
 	static uint32_t crc32_tab[] = {
 		0x00000000, 0x77073096, 0xee0e612c, 0x990951ba, 0x076dc419, 0x706af48f,
 		0xe963a535, 0x9e6495a3,	0x0edb8832, 0x79dcb8a4, 0xe0d5e91e, 0x97d2d988,
@@ -148,17 +153,23 @@ static void post_init(struct post_config *conf)
 	sprintf(htstr, "%s:%s", conf->mac, SecretKey);
 	conf->ht = crc32(0, htstr, sizeof(htstr));
 
-	sprintf(conf->cfg_url, "http://plat.3gtest.gionee.com/api/wifi/cfg?ht=%u",conf->ht);
-	strcpy(conf->post_url, "http://plat.3gtest.gionee.com/api/wifi/hb");	
+	sprintf(conf->cfg_url, "http://www.hotwifi.cc/api/wifi/cfg?ht=%u",conf->ht);
+	strcpy(conf->post_url, "http://www.hotwifi.cc/api/wifi/hb");	
 	conf->post_interval = 30;	
 	conf->reboot = 0;
 	conf->reconnect = 0;
+	conf->version = 0;
+	conf->changed = 0;
+	strcpy(conf->hs_enable, "1");
+	strcpy(conf->hs_kickout, "0");
+	strcpy(conf->hs_timeout, "600");
+	strcpy(conf->hs_authurl, "http://www.hotwifi.cc/auth");
 }
 
 static int post_configure(struct post_config *conf) {
 
 	int size = 0;
-	char buf[128];	
+	char buf[1024];	
 
 	if ((size = http_get(conf->cfg_url, buf, sizeof(buf), 0)) > 0)
 	{
@@ -166,7 +177,25 @@ static int post_configure(struct post_config *conf) {
 
 		char *p = buf;
 		while (*p) {
-			if (strncmp(p, "hb_url:", 7) == 0) {
+			if (strncmp(p, "version:", 8) == 0) {
+				int n = 0;
+				char version[128];	
+			
+				p += 8;
+				while (*p != '\r' && *p != '\n')
+				{
+					version[n] = *p;
+					n++;p++;
+				}
+				version[n] ='\0';
+
+				if (atoi(version) == conf->version) {
+					break;
+				}
+				conf->version = atol(version);
+				conf->changed = 1;
+				
+			} else if (strncmp(p, "hb_url:", 7) == 0) {
 				int n = 0;
 
 				p += 7;
@@ -229,6 +258,46 @@ static int post_configure(struct post_config *conf) {
 				}
 				upgrade[n] ='\0';
 				conf->upgrade = atoi(upgrade);
+			} else if (strncmp(p, "hs_enable:", 10) == 0) {
+				int n = 0;
+
+				p += 10;
+				while (*p != '\r' && *p != '\n')
+				{
+					conf->hs_enable[n] = *p;
+					n++;p++;
+				}
+				conf->hs_enable[n] ='\0';
+			}else if (strncmp(p, "hs_authurl:", 11) == 0) {
+				int n = 0;
+
+				p += 11;
+				while (*p != '\r' && *p != '\n')
+				{
+					conf->hs_authurl[n] = *p;
+					n++;p++;
+				}
+				conf->hs_authurl[n] ='\0';
+			}else if (strncmp(p, "hs_kickout:", 11) == 0) {
+				int n = 0;
+
+				p += 11;
+				while (*p != '\r' && *p != '\n')
+				{
+					conf->hs_kickout[n] = *p;
+					n++;p++;
+				}
+				conf->hs_kickout[n] ='\0';
+			}else if(strncmp(p, "hs_timeout:", 11) == 0){
+				int n = 0;
+
+				p += 11;
+				while (*p != '\r' && *p != '\n')
+				{
+					conf->hs_timeout[n] = *p;
+					n++;p++;
+				}
+				conf->hs_timeout[n] ='\0';
 			}else {
 				p++;	
 			}
@@ -309,6 +378,15 @@ static int wanstatus() {
 
 static void post_thread(struct post_config *conf)
 {
+	//get config;
+	post_configure(conf);
+	//heartboard
+	post_heartboard(conf);
+	//post check config and do something
+	post_runtime(conf);
+}
+
+void post_heartboard(struct post_config *conf) {
 	unsigned long speed[2]; 
 	unsigned char mac[256][6];
 	struct buffer buf;
@@ -321,11 +399,6 @@ static void post_thread(struct post_config *conf)
 	buffer_init(&buf);
 	ioctl_wrapper(CMD_GETBWSPEED, &speed);
 	ioctl_wrapper(CMD_GETHOSTDATA, &mac);
-
-	//get config;
-	post_configure(conf);
-
-	
 
 	buffer_add(&buf, "&device_mac=%s", conf->mac);
 	buffer_add(&buf, "&ht=%u", conf->ht);
@@ -346,6 +419,20 @@ static void post_thread(struct post_config *conf)
 
 	//printf("post_msg:\r\n{\r\n%s\r\n}\r\n", buffer_data(&buf));	
 	http_post(conf->post_url, buffer_data(&buf), 512);
+}
+
+void post_runtime(struct post_config *conf) {
+	if (conf->changed == 0) {
+		return;
+	}
+	conf->changed = 0;
+	
+	int hotspot_enable = 0;
+	unsigned long hotspot_timeout = 0;
+	unsigned long hotspot_kickout = 0;
+	hotspot_enable = nvram_match("hotspot_enable", "1");
+	hotspot_timeout = atol(nvram_safe_get("hotspot_timeout"));
+	hotspot_kickout = atol(nvram_safe_get("hotspot_kickout"));
 
 	if (conf->reboot == 1) {
 		conf->reboot = 0;
@@ -364,6 +451,19 @@ static void post_thread(struct post_config *conf)
 		_eval(argv, NULL, 0, NULL);
 	} else if (conf->upgrade) {
 		start_auto_upgrade();
+	} else if (hotspot_enable != conf->hs_enable || 
+		hotspot_timeout != conf->hs_timeout ||
+		hotspot_kickout != conf->hs_kickout) {
+		
+		nvram_set("hotspot_enable", conf->hs_enable);		
+		nvram_set("hotspot_timeout", conf->hs_timeout);
+		nvram_set("hotspot_kickout", conf->hs_kickout);
+		nvram_set("hotspot_authurl", conf->hs_authurl);
+		nvram_commit_x();
+
+		stop_hotspot();
+		sleep(1);
+		start_hotspot();
 	}
 }
 
