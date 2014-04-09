@@ -29,7 +29,7 @@ localstatedir=/var
 
 # Paths to programs
 IFCONFIG=/sbin/ifconfig
-PPPD=pppd
+PPPD=/usr/sbin/pppd
 SETSID=/usr/bin/setsid
 PPPOE=${exec_prefix}/sbin/pppoe
 LOGGER="/usr/bin/logger -t `basename $0`"

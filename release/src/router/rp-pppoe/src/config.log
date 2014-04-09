@@ -33,10 +33,6 @@ PATH: /home/rainkid/workspace/bcwifi/release/tools
 PATH: /home/rainkid/workspace/bcwifi/release/tools
 PATH: /opt/brcm/hndtools-mipsel-uclibc/bin
 PATH: /opt/brcm/hndtools-mipsel-linux/bin
-PATH: .
-PATH: /opt/SenchaSDKTools-2.0.0-beta3
-PATH: /opt/SenchaSDKTools-2.0.0-beta3
-PATH: /home/rainkid/bin
 PATH: /usr/lib/lightdm/lightdm
 PATH: /usr/local/sbin
 PATH: /usr/local/bin
@@ -45,8 +41,6 @@ PATH: /usr/bin
 PATH: /sbin
 PATH: /bin
 PATH: /usr/games
-PATH: /home/rainkid/bin
-PATH: /home/rainkid/go/pkg/tool/linux_amd63/
 
 
 ## ----------- ##
@@ -2011,7 +2005,8 @@ configure:4309: mipsel-uclibc-gcc -c -g -O2 -DLINUX26 -DCONFIG_BCMWL5 -pipe -DBC
 configure:4309: $? = 0
 configure:4323: result: 4
 configure:4336: checking for pppd
-configure:4368: result: NOTFOUND
+configure:4355: found /usr/sbin/pppd
+configure:4368: result: /usr/sbin/pppd
 configure:4378: checking for echo
 configure:4396: found /bin/echo
 configure:4409: result: /bin/echo
@@ -2023,12 +2018,6 @@ configure:4482: found /usr/bin/id
 configure:4495: result: /usr/bin/id
 configure:4504: checking for Linux 2.4.X kernel-mode PPPoE support
 configure:4551: result: yes
-configure:4566: WARNING: *** Oops!  I couldn't find pppd, the PPP daemon anywhere.
-configure:4568: WARNING: *** You must install pppd, version 2.3.10 or later.
-configure:4570: WARNING: *** I will keep going, but it may not work.
-configure:4601: WARNING: *** Oops.  I cannot figure out what version of pppd you have.
-configure:4603: WARNING: *** All I got back was ''
-configure:4605: WARNING: *** I will keep going, but it may not work.
 configure:4610: checking packing order of bit fields
 configure:4661: result: reversed
 configure:4839: creating ./config.status
@@ -2143,7 +2132,7 @@ ac_cv_path_ECHO=/bin/echo
 ac_cv_path_EGREP='/bin/grep -E'
 ac_cv_path_GREP=/bin/grep
 ac_cv_path_ID=/usr/bin/id
-ac_cv_path_PPPD=NOTFOUND
+ac_cv_path_PPPD=/usr/sbin/pppd
 ac_cv_path_SETSID=/usr/bin/setsid
 ac_cv_path_install='/usr/bin/install -c'
 ac_cv_pluginpath=/home/rainkid/workspace/bcwifi/release/src-rt/router/pppd
@@ -2200,7 +2189,7 @@ PACKAGE_TARNAME=''
 PACKAGE_URL=''
 PACKAGE_VERSION=''
 PATH_SEPARATOR=':'
-PPPD='pppd'
+PPPD='/usr/sbin/pppd'
 PPPD_H=''
 PPPD_INCDIR='/home/rainkid/workspace/bcwifi/release/src-rt/router/pppd'
 PPPOE_RELAY='pppoe-relay'

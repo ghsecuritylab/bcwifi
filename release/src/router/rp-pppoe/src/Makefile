@@ -42,7 +42,7 @@ PPPOE_RELAY=pppoe-relay
 
 # Program paths
 PPPOE_PATH=$(sbindir)/pppoe
-PPPD_PATH=pppd
+PPPD_PATH=/usr/sbin/pppd
 
 # Include ServPoET version if we're building for ServPoET
 

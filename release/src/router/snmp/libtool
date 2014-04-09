@@ -38,7 +38,7 @@ if test "X${CDPATH+set}" = Xset; then CDPATH=:; export CDPATH; fi
 
 # ### BEGIN LIBTOOL CONFIG
 
-# Libtool was configured on host ThinkPad-X230:
+# Libtool was configured on host rainkid:
 
 # Shell to use when invoking shell scripts.
 SHELL="/bin/sh"
@@ -60,7 +60,7 @@ host_alias=mipsel-linux
 host=mipsel-unknown-linux-gnu
 
 # An echo program that does not interpret backslashes.
-echo="echo"
+echo="/bin/echo"
 
 # The archiver.
 AR="mipsel-uclibc-ar"
@@ -116,7 +116,7 @@ libext="a"
 exeext=""
 
 # Additional compiler flags for building library objects.
-pic_flag="        -fPIC"
+pic_flag="         -fPIC"
 pic_mode=default
 
 # Does compiler simultaneously support -c and -o options?

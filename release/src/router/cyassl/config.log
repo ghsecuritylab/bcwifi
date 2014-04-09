@@ -33,10 +33,6 @@ PATH: /home/rainkid/workspace/bcwifi/release/tools
 PATH: /home/rainkid/workspace/bcwifi/release/tools
 PATH: /opt/brcm/hndtools-mipsel-uclibc/bin
 PATH: /opt/brcm/hndtools-mipsel-linux/bin
-PATH: .
-PATH: /opt/SenchaSDKTools-2.0.0-beta3
-PATH: /opt/SenchaSDKTools-2.0.0-beta3
-PATH: /home/rainkid/bin
 PATH: /usr/lib/lightdm/lightdm
 PATH: /usr/local/sbin
 PATH: /usr/local/bin
@@ -45,8 +41,6 @@ PATH: /usr/bin
 PATH: /sbin
 PATH: /bin
 PATH: /usr/games
-PATH: /home/rainkid/bin
-PATH: /home/rainkid/go/pkg/tool/linux_amd63/
 
 
 ## ----------- ##

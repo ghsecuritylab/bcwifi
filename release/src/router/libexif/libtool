@@ -2,7 +2,7 @@
 
 # libtool - Provide generalized library-building support services.
 # Generated automatically by config.status (libexif) 0.6.19
-# Libtool was configured on host ThinkPad-X230:
+# Libtool was configured on host rainkid:
 # NOTE: Changes made to this file will be lost: look at ltmain.sh.
 #
 #   Copyright (C) 1996, 1997, 1998, 1999, 2000, 2001, 2003, 2004, 2005,
@@ -153,7 +153,7 @@ objdir=.libs
 SHELL="/bin/sh"
 
 # An echo program that does not interpret backslashes.
-ECHO="echo"
+ECHO="/bin/echo"
 
 # Used to examine libraries when file_magic_cmd begins with "file".
 MAGIC_CMD=file
@@ -237,7 +237,7 @@ hardcode_into_libs=yes
 sys_lib_search_path_spec="/opt/brcm/K26/hndtools-mipsel-uclibc-4.2.4/lib/gcc/mipsel-linux-uclibc/4.2.4 /opt/brcm/K26/hndtools-mipsel-uclibc-4.2.4/lib/gcc /opt/brcm/K26/hndtools-mipsel-uclibc-4.2.4/mipsel-linux-uclibc/lib"
 
 # Run-time system search path for libraries.
-sys_lib_dlsearch_path_spec="/lib /usr/lib /usr/lib/i386-linux-gnu/mesa /lib/i386-linux-gnu /usr/lib/i386-linux-gnu /lib/i686-linux-gnu /usr/lib/i686-linux-gnu /usr/local/lib /lib/x86_64-linux-gnu /usr/lib/x86_64-linux-gnu /usr/lib/x86_64-linux-gnu/mesa-egl /usr/lib/x86_64-linux-gnu/mesa /lib32 /usr/lib32 /libx32 /usr/libx32 "
+sys_lib_dlsearch_path_spec="/lib /usr/lib /usr/lib/i386-linux-gnu/mesa /lib/i386-linux-gnu /usr/lib/i386-linux-gnu /lib/i686-linux-gnu /usr/lib/i686-linux-gnu /usr/local/lib /lib/x86_64-linux-gnu /usr/lib/x86_64-linux-gnu /usr/lib/x86_64-linux-gnu/mesa "
 
 # Whether dlopen is supported.
 dlopen_support=unknown
@@ -656,8 +656,9 @@ func_len ()
 # Append VALUE to the end of shell variable VAR.
 func_append ()
 {
-  eval "$1+=\$2"
+  eval "$1=\$$1\$2"
 }
+
 # Generated shell functions inserted here.
 
 # Work around backward compatibility issue on IRIX 6.5. On IRIX 6.4+, sh

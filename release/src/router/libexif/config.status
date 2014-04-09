@@ -144,7 +144,7 @@ as_fn_error ()
   as_status=$?; test $as_status -eq 0 && as_status=1
   if test "$3"; then
     as_lineno=${as_lineno-"$2"} as_lineno_stack=as_lineno_stack=$as_lineno_stack
-    $as_echo "$as_me:${as_lineno-$LINENO}: error: $1" >&$3
+    $as_echo "$as_me:${as_lineno-13204}: error: $1" >&$3
   fi
   $as_echo "$as_me: error: $1" >&2
   as_fn_exit $as_status
@@ -446,7 +446,7 @@ Copyright (C) 2009 Free Software Foundation, Inc.
 This config.status script is free software; the Free Software Foundation
 gives unlimited permission to copy, distribute and modify it."
 
-ac_pwd='/home/forgotfun/project/Rainbow/shibby_110/release/src/router/libexif'
+ac_pwd='/home/rainkid/workspace/bcwifi/release/src/router/libexif'
 srcdir='.'
 INSTALL='/usr/bin/install -c'
 MKDIR_P='/bin/mkdir -p'
@@ -598,7 +598,7 @@ lt_cv_sys_global_symbol_to_c_name_address='sed -n -e '\''s/^: \([^ ]*\) $/  {\"\
 lt_cv_sys_global_symbol_to_c_name_address_lib_prefix='sed -n -e '\''s/^: \([^ ]*\) $/  {\"\1\", (void *) 0},/p'\'' -e '\''s/^[ABCDGIRSTW]* \([^ ]*\) \(lib[^ ]*\)$/  {"\2", (void *) \&\2},/p'\'' -e '\''s/^[ABCDGIRSTW]* \([^ ]*\) \([^ ]*\)$/  {"lib\2", (void *) \&\2},/p'\'''
 objdir='.libs'
 SHELL='/bin/sh'
-ECHO='echo'
+ECHO='/bin/echo'
 MAGIC_CMD='file'
 lt_prog_compiler_no_builtin_flag=' -fno-builtin'
 lt_prog_compiler_wl='-Wl,'
@@ -664,7 +664,7 @@ finish_cmds='PATH="\$PATH:/sbin" ldconfig -n $libdir'
 finish_eval=''
 hardcode_into_libs='yes'
 sys_lib_search_path_spec='/opt/brcm/K26/hndtools-mipsel-uclibc-4.2.4/lib/gcc/mipsel-linux-uclibc/4.2.4 /opt/brcm/K26/hndtools-mipsel-uclibc-4.2.4/lib/gcc /opt/brcm/K26/hndtools-mipsel-uclibc-4.2.4/mipsel-linux-uclibc/lib'
-sys_lib_dlsearch_path_spec='/lib /usr/lib /usr/lib/i386-linux-gnu/mesa /lib/i386-linux-gnu /usr/lib/i386-linux-gnu /lib/i686-linux-gnu /usr/lib/i686-linux-gnu /usr/local/lib /lib/x86_64-linux-gnu /usr/lib/x86_64-linux-gnu /usr/lib/x86_64-linux-gnu/mesa-egl /usr/lib/x86_64-linux-gnu/mesa /lib32 /usr/lib32 /libx32 /usr/libx32 '
+sys_lib_dlsearch_path_spec='/lib /usr/lib /usr/lib/i386-linux-gnu/mesa /lib/i386-linux-gnu /usr/lib/i386-linux-gnu /lib/i686-linux-gnu /usr/lib/i686-linux-gnu /usr/local/lib /lib/x86_64-linux-gnu /usr/lib/x86_64-linux-gnu /usr/lib/x86_64-linux-gnu/mesa '
 hardcode_action='immediate'
 enable_dlopen='unknown'
 enable_dlopen_self='unknown'
@@ -708,7 +708,7 @@ esac
 
 ac_aux_dir='.'
 xsi_shell='yes'
-lt_shell_append='yes'
+lt_shell_append='no'
 
 # See if we are running on zsh, and set the options which allow our
 # commands through without removal of \ escapes INIT.
@@ -758,7 +758,7 @@ do
     "contrib/Makefile") CONFIG_FILES="$CONFIG_FILES contrib/Makefile" ;;
     "contrib/examples/Makefile") CONFIG_FILES="$CONFIG_FILES contrib/examples/Makefile" ;;
 
-  *) as_fn_error "invalid argument: \`$ac_config_target'" "$LINENO" 5;;
+  *) as_fn_error "invalid argument: \`$ac_config_target'" "13922" 5;;
   esac
 done
 
@@ -796,7 +796,7 @@ $debug ||
 {
   tmp=./conf$$-$RANDOM
   (umask 077 && mkdir "$tmp")
-} || as_fn_error "cannot create a temporary directory in ." "$LINENO" 5
+} || as_fn_error "cannot create a temporary directory in ." "13960" 5
 
 # Set up the scripts for CONFIG_FILES section.
 # No need to generate them if there are no CONFIG_FILES.
@@ -862,7 +862,7 @@ S["OTOOL"]=""
 S["LIPO"]=""
 S["NMEDIT"]=""
 S["DSYMUTIL"]=""
-S["lt_ECHO"]="echo"
+S["lt_ECHO"]="/bin/echo"
 S["RANLIB"]="mipsel-uclibc-ranlib"
 S["AR"]="mipsel-uclibc-ar"
 S["OBJDUMP"]="mipsel-linux-objdump"
@@ -911,7 +911,7 @@ S["MAINTAINER_MODE_FALSE"]=""
 S["MAINTAINER_MODE_TRUE"]="#"
 S["am__untar"]="${AMTAR} xf -"
 S["am__tar"]="${AMTAR} chof - \"$$tardir\""
-S["AMTAR"]="${SHELL} /home/forgotfun/project/Rainbow/shibby_110/release/src/router/libexif/missing --run tar"
+S["AMTAR"]="${SHELL} /home/rainkid/workspace/bcwifi/release/src/router/libexif/missing --run tar"
 S["am__leading_dot"]="."
 S["SET_MAKE"]=""
 S["AWK"]="gawk"
@@ -919,12 +919,12 @@ S["mkdir_p"]="/bin/mkdir -p"
 S["MKDIR_P"]="/bin/mkdir -p"
 S["INSTALL_STRIP_PROGRAM"]="$(install_sh) -c -s"
 S["STRIP"]="mipsel-uclibc-strip -R .note -R .comment"
-S["install_sh"]="${SHELL} /home/forgotfun/project/Rainbow/shibby_110/release/src/router/libexif/install-sh"
-S["MAKEINFO"]="${SHELL} /home/forgotfun/project/Rainbow/shibby_110/release/src/router/libexif/missing --run makeinfo"
-S["AUTOHEADER"]="${SHELL} /home/forgotfun/project/Rainbow/shibby_110/release/src/router/libexif/missing --run autoheader"
-S["AUTOMAKE"]="${SHELL} /home/forgotfun/project/Rainbow/shibby_110/release/src/router/libexif/missing --run automake-1.11"
-S["AUTOCONF"]="${SHELL} /home/forgotfun/project/Rainbow/shibby_110/release/src/router/libexif/missing --run autoconf"
-S["ACLOCAL"]="${SHELL} /home/forgotfun/project/Rainbow/shibby_110/release/src/router/libexif/missing --run aclocal-1.11"
+S["install_sh"]="${SHELL} /home/rainkid/workspace/bcwifi/release/src/router/libexif/install-sh"
+S["MAKEINFO"]="${SHELL} /home/rainkid/workspace/bcwifi/release/src/router/libexif/missing --run makeinfo"
+S["AUTOHEADER"]="${SHELL} /home/rainkid/workspace/bcwifi/release/src/router/libexif/missing --run autoheader"
+S["AUTOMAKE"]="${SHELL} /home/rainkid/workspace/bcwifi/release/src/router/libexif/missing --run automake-1.11"
+S["AUTOCONF"]="${SHELL} /home/rainkid/workspace/bcwifi/release/src/router/libexif/missing --run autoconf"
+S["ACLOCAL"]="${SHELL} /home/rainkid/workspace/bcwifi/release/src/router/libexif/missing --run aclocal-1.11"
 S["VERSION"]="0.6.19"
 S["PACKAGE"]="libexif"
 S["CYGPATH_W"]="echo"
@@ -1002,7 +1002,7 @@ if sed "s/$ac_cr//" < /dev/null > /dev/null 2>&1; then
 else
   cat
 fi < "$tmp/subs1.awk" > "$tmp/subs.awk" \
-  || as_fn_error "could not setup config files machinery" "$LINENO" 5
+  || as_fn_error "could not setup config files machinery" "14091" 5
 fi # test -n "$CONFIG_FILES"
 
 # Set up the scripts for CONFIG_HEADERS section.
@@ -1064,7 +1064,7 @@ D["HAVE_LOCALTIME_R"]=" 1"
 }
 { print }
 _ACAWK
-  as_fn_error "could not setup config headers machinery" "$LINENO" 5
+  as_fn_error "could not setup config headers machinery" "14217" 5
 fi # test -n "$CONFIG_HEADERS"
 
 
@@ -1077,7 +1077,7 @@ do
   esac
   case $ac_mode$ac_tag in
   :[FHL]*:*);;
-  :L* | :C*:*) as_fn_error "invalid tag \`$ac_tag'" "$LINENO" 5;;
+  :L* | :C*:*) as_fn_error "invalid tag \`$ac_tag'" "14230" 5;;
   :[FH]-) ac_tag=-:-;;
   :[FH]*) ac_tag=$ac_tag:$ac_tag.in;;
   esac
@@ -1105,7 +1105,7 @@ do
 	   [\\/$]*) false;;
 	   *) test -f "$srcdir/$ac_f" && ac_f="$srcdir/$ac_f";;
 	   esac ||
-	   as_fn_error "cannot find input file: \`$ac_f'" "$LINENO" 5;;
+	   as_fn_error "cannot find input file: \`$ac_f'" "14258" 5;;
       esac
       case $ac_f in *\'*) ac_f=`$as_echo "$ac_f" | sed "s/'/'\\\\\\\\''/g"`;; esac
       as_fn_append ac_file_inputs " '$ac_f'"
@@ -1119,7 +1119,7 @@ do
 	`' by configure.'
     if test x"$ac_file" != x-; then
       configure_input="$ac_file.  $configure_input"
-      { $as_echo "$as_me:${as_lineno-$LINENO}: creating $ac_file" >&5
+      { $as_echo "$as_me:${as_lineno-14272}: creating $ac_file" >&5
 $as_echo "$as_me: creating $ac_file" >&6;}
     fi
     # Neutralize special characters interpreted by sed in replacement strings.
@@ -1132,7 +1132,7 @@ $as_echo "$as_me: creating $ac_file" >&6;}
 
     case $ac_tag in
     *:-:* | *:-) cat >"$tmp/stdin" \
-      || as_fn_error "could not create $ac_file" "$LINENO" 5 ;;
+      || as_fn_error "could not create $ac_file" "14285" 5 ;;
     esac
     ;;
   esac
@@ -1227,7 +1227,7 @@ ac_sed_dataroot='
 case `eval "sed -n \"\$ac_sed_dataroot\" $ac_file_inputs"` in
 *datarootdir*) ac_datarootdir_seen=yes;;
 *@datadir@*|*@docdir@*|*@infodir@*|*@localedir@*|*@mandir@*)
-  { $as_echo "$as_me:${as_lineno-$LINENO}: WARNING: $ac_file_inputs seems to ignore the --datarootdir setting" >&5
+  { $as_echo "$as_me:${as_lineno-14383}: WARNING: $ac_file_inputs seems to ignore the --datarootdir setting" >&5
 $as_echo "$as_me: WARNING: $ac_file_inputs seems to ignore the --datarootdir setting" >&2;}
   ac_datarootdir_hack='
   s&@datadir@&${datarootdir}&g
@@ -1263,12 +1263,12 @@ s&@MKDIR_P@&$ac_MKDIR_P&;t t
 $ac_datarootdir_hack
 "
 eval sed \"\$ac_sed_extra\" "$ac_file_inputs" | $AWK -f "$tmp/subs.awk" >$tmp/out \
-  || as_fn_error "could not create $ac_file" "$LINENO" 5
+  || as_fn_error "could not create $ac_file" "14422" 5
 
 test -z "$ac_datarootdir_hack$ac_datarootdir_seen" &&
   { ac_out=`sed -n '/\${datarootdir}/p' "$tmp/out"`; test -n "$ac_out"; } &&
   { ac_out=`sed -n '/^[	 ]*datarootdir[	 ]*:*=/p' "$tmp/out"`; test -z "$ac_out"; } &&
-  { $as_echo "$as_me:${as_lineno-$LINENO}: WARNING: $ac_file contains a reference to the variable \`datarootdir'
+  { $as_echo "$as_me:${as_lineno-14427}: WARNING: $ac_file contains a reference to the variable \`datarootdir'
 which seems to be undefined.  Please make sure it is defined." >&5
 $as_echo "$as_me: WARNING: $ac_file contains a reference to the variable \`datarootdir'
 which seems to be undefined.  Please make sure it is defined." >&2;}
@@ -1278,7 +1278,7 @@ which seems to be undefined.  Please make sure it is defined." >&2;}
   -) cat "$tmp/out" && rm -f "$tmp/out";;
   *) rm -f "$ac_file" && mv "$tmp/out" "$ac_file";;
   esac \
-  || as_fn_error "could not create $ac_file" "$LINENO" 5
+  || as_fn_error "could not create $ac_file" "14437" 5
  ;;
   :H)
   #
@@ -1289,19 +1289,19 @@ which seems to be undefined.  Please make sure it is defined." >&2;}
       $as_echo "/* $configure_input  */" \
       && eval '$AWK -f "$tmp/defines.awk"' "$ac_file_inputs"
     } >"$tmp/config.h" \
-      || as_fn_error "could not create $ac_file" "$LINENO" 5
+      || as_fn_error "could not create $ac_file" "14448" 5
     if diff "$ac_file" "$tmp/config.h" >/dev/null 2>&1; then
-      { $as_echo "$as_me:${as_lineno-$LINENO}: $ac_file is unchanged" >&5
+      { $as_echo "$as_me:${as_lineno-14450}: $ac_file is unchanged" >&5
 $as_echo "$as_me: $ac_file is unchanged" >&6;}
     else
       rm -f "$ac_file"
       mv "$tmp/config.h" "$ac_file" \
-	|| as_fn_error "could not create $ac_file" "$LINENO" 5
+	|| as_fn_error "could not create $ac_file" "14455" 5
     fi
   else
     $as_echo "/* $configure_input  */" \
       && eval '$AWK -f "$tmp/defines.awk"' "$ac_file_inputs" \
-      || as_fn_error "could not create -" "$LINENO" 5
+      || as_fn_error "could not create -" "14460" 5
   fi
 # Compute "$ac_file"'s index in $config_headers.
 _am_arg="$ac_file"
@@ -1339,7 +1339,7 @@ $as_echo X"$_am_arg" |
 	  s/.*/./; q'`/stamp-h$_am_stamp_count
  ;;
 
-  :C)  { $as_echo "$as_me:${as_lineno-$LINENO}: executing $ac_file commands" >&5
+  :C)  { $as_echo "$as_me:${as_lineno-14498}: executing $ac_file commands" >&5
 $as_echo "$as_me: executing $ac_file commands" >&6;}
  ;;
   esac

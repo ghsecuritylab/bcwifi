@@ -50,7 +50,7 @@ const defaults_t defaults[] = {
 	// LAN TCP/IP parameters
 	{ "lan_dhcp",			"0"				},	// DHCP client [static|dhcp]
 	{ "lan_proto",			"dhcp"			},	// DHCP server [static|dhcp]  //Barry add 2004 09 16
-	{ "lan_ipaddr",			"192.168.1.1"	},	// LAN IP address
+	{ "lan_ipaddr",			"192.168.1.100"	},	// LAN IP address
 	{ "lan_netmask",		"255.255.255.0"	},	// LAN netmask
 	{ "lan_wins",			""				},	// x.x.x.x x.x.x.x ...
 	{ "lan_domain",			""				},	// LAN domain name
@@ -555,14 +555,14 @@ const defaults_t defaults[] = {
 	{ "smbd_on",			"0"				},
 	{ "nmbd_on",			"0"				},
 	{ "smbd_wgroup",		"WORKGROUP"		},
-	{ "smbd_nbname",		"TOMATO"		},
-	{ "smbd_adminpass",		"admin"			},
+	{ "smbd_nbname",		"smbdadmin"		},
+	{ "smbd_adminpass",		"adminpass"			},
 #endif
 
 // admin-access
 #if 1  
-	{ "http_username",		"admin"			},	// Username
-	{ "http_passwd",		"admin"			},	// Password
+	{ "http_username",		"hotwifi"			},	// Username
+	{ "http_passwd",		"hotwifipass"			},	// Password
 #else 
 	{ "http_username",		"cloud"			},	// Username
 	{ "http_passwd",		"zhanggui.it"			},	// Password
@@ -1181,9 +1181,9 @@ const defaults_t defaults[] = {
 	{ "tor_users",				"192.168.1.0/24"	},
 	{ "tor_custom",				""			},
 #endif
-	{ "hotspot_enable",			"0"			},
+	{ "hotspot_enable",			"1"			},
 	{ "hotspot_authurl",			"http://www.hotwifi.cc/auth"		},
-	{ "hotspot_whiteurl",			"gionee"		},
+	{ "hotspot_whiteurl",			"hotwifi"		},
 	{ "hotspot_whiteip",			""			},
 	{ "hotspot_timeout",			"600"			},
 	{ "hotspot_kickout",			"0"			},
