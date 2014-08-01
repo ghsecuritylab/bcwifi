@@ -100,7 +100,7 @@ AMTAR = ${SHELL} /home/rainkid/workspace/bcwifi/release/src/router/nocat/missing
 AUTOCONF = ${SHELL} /home/rainkid/workspace/bcwifi/release/src/router/nocat/missing --run autoconf
 AUTOHEADER = ${SHELL} /home/rainkid/workspace/bcwifi/release/src/router/nocat/missing --run autoheader
 AUTOMAKE = ${SHELL} /home/rainkid/workspace/bcwifi/release/src/router/nocat/missing --run automake-1.8
-AWK = gawk
+AWK = mawk
 CC = mipsel-uclibc-gcc
 CCDEPMODE = depmode=gcc3
 CFLAGS = -g -O2
@@ -177,7 +177,7 @@ infodir = ${prefix}/info
 install_sh = /home/rainkid/workspace/bcwifi/release/src/router/nocat/install-sh
 libdir = ${exec_prefix}/lib
 libexecdir = ${exec_prefix}/libexec
-libexecscripts = libexec/iptables/uninitialize.fw libexec/iptables/throttle.fw libexec/iptables/clear.fw libexec/iptables/check_splashd.sh libexec/iptables/call_splashd_check.sh libexec/iptables/dump.fw libexec/iptables/initialize.fw libexec/iptables/reset.fw libexec/iptables/access.fw 
+libexecscripts = libexec/iptables/reset.fw libexec/iptables/throttle.fw libexec/iptables/uninitialize.fw libexec/iptables/dump.fw libexec/iptables/clear.fw libexec/iptables/initialize.fw libexec/iptables/check_splashd.sh libexec/iptables/call_splashd_check.sh libexec/iptables/access.fw 
 localstatedir = /var
 mandir = ${prefix}/man
 mkdir_p = mkdir -p -- .

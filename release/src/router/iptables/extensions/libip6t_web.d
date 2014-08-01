@@ -45,7 +45,7 @@ extensions/libip6t_web.d extensions/libip6t_web_sh.o: extensions/libip6t_web.c \
   /opt/brcm/K26/hndtools-mipsel-uclibc-4.2.4/bin/../lib/gcc/mipsel-linux-uclibc/4.2.4/../../../../mipsel-linux-uclibc/sys-include/limits.h \
   /opt/brcm/K26/hndtools-mipsel-uclibc-4.2.4/bin/../lib/gcc/mipsel-linux-uclibc/4.2.4/../../../../mipsel-linux-uclibc/sys-include/bits/posix1_lim.h \
   /opt/brcm/K26/hndtools-mipsel-uclibc-4.2.4/bin/../lib/gcc/mipsel-linux-uclibc/4.2.4/../../../../mipsel-linux-uclibc/sys-include/bits/local_lim.h \
-  /home/forgotfun/project/Myth/shibby_110/release/src-rt/linux/linux-2.6/include/linux/limits.h \
+  /home/rainkid/workspace/bcwifi/release/src-rt/linux/linux-2.6/include/linux/limits.h \
   /opt/brcm/K26/hndtools-mipsel-uclibc-4.2.4/bin/../lib/gcc/mipsel-linux-uclibc/4.2.4/../../../../mipsel-linux-uclibc/sys-include/bits/uClibc_local_lim.h \
   /opt/brcm/K26/hndtools-mipsel-uclibc-4.2.4/bin/../lib/gcc/mipsel-linux-uclibc/4.2.4/../../../../mipsel-linux-uclibc/sys-include/bits/posix2_lim.h \
   /opt/brcm/K26/hndtools-mipsel-uclibc-4.2.4/bin/../lib/gcc/mipsel-linux-uclibc/4.2.4/../../../../mipsel-linux-uclibc/sys-include/netinet/ip.h \
@@ -56,26 +56,26 @@ extensions/libip6t_web.d extensions/libip6t_web_sh.o: extensions/libip6t_web.c \
   /opt/brcm/K26/hndtools-mipsel-uclibc-4.2.4/bin/../lib/gcc/mipsel-linux-uclibc/4.2.4/../../../../mipsel-linux-uclibc/sys-include/bits/uio.h \
   /opt/brcm/K26/hndtools-mipsel-uclibc-4.2.4/bin/../lib/gcc/mipsel-linux-uclibc/4.2.4/../../../../mipsel-linux-uclibc/sys-include/bits/socket.h \
   /opt/brcm/K26/hndtools-mipsel-uclibc-4.2.4/bin/../lib/gcc/mipsel-linux-uclibc/4.2.4/../../../../mipsel-linux-uclibc/sys-include/bits/sockaddr.h \
-  /home/forgotfun/project/Myth/shibby_110/release/src-rt/linux/linux-2.6/include/asm/socket.h \
-  /home/forgotfun/project/Myth/shibby_110/release/src-rt/linux/linux-2.6/include/asm/sockios.h \
-  /home/forgotfun/project/Myth/shibby_110/release/src-rt/linux/linux-2.6/include/asm/ioctl.h \
+  /home/rainkid/workspace/bcwifi/release/src-rt/linux/linux-2.6/include/asm/socket.h \
+  /home/rainkid/workspace/bcwifi/release/src-rt/linux/linux-2.6/include/asm/sockios.h \
+  /home/rainkid/workspace/bcwifi/release/src-rt/linux/linux-2.6/include/asm/ioctl.h \
   /opt/brcm/K26/hndtools-mipsel-uclibc-4.2.4/bin/../lib/gcc/mipsel-linux-uclibc/4.2.4/../../../../mipsel-linux-uclibc/sys-include/bits/in.h \
-  /home/forgotfun/project/Myth/shibby_110/release/src-rt/linux/linux-2.6/include/linux/version.h \
+  /home/rainkid/workspace/bcwifi/release/src-rt/linux/linux-2.6/include/linux/version.h \
   /opt/brcm/K26/hndtools-mipsel-uclibc-4.2.4/bin/../lib/gcc/mipsel-linux-uclibc/4.2.4/../../../../mipsel-linux-uclibc/sys-include/bits/byteswap.h \
   /opt/brcm/K26/hndtools-mipsel-uclibc-4.2.4/bin/../lib/gcc/mipsel-linux-uclibc/4.2.4/../../../../mipsel-linux-uclibc/sys-include/netinet/ip_icmp.h \
   /opt/brcm/K26/hndtools-mipsel-uclibc-4.2.4/bin/../lib/gcc/mipsel-linux-uclibc/4.2.4/../../../../mipsel-linux-uclibc/sys-include/netinet/tcp.h \
   /opt/brcm/K26/hndtools-mipsel-uclibc-4.2.4/bin/../lib/gcc/mipsel-linux-uclibc/4.2.4/../../../../mipsel-linux-uclibc/sys-include/netinet/udp.h \
   /opt/brcm/K26/hndtools-mipsel-uclibc-4.2.4/bin/../lib/gcc/mipsel-linux-uclibc/4.2.4/../../../../mipsel-linux-uclibc/sys-include/net/if.h \
-  /home/forgotfun/project/Myth/shibby_110/release/src-rt/linux/linux-2.6/include/linux/netfilter_ipv6/ip6_tables.h \
-  /home/forgotfun/project/Myth/shibby_110/release/src-rt/linux/linux-2.6/include/linux/compiler.h \
-  /home/forgotfun/project/Myth/shibby_110/release/src-rt/linux/linux-2.6/include/linux/netfilter_ipv6.h \
-  /home/forgotfun/project/Myth/shibby_110/release/src-rt/linux/linux-2.6/include/linux/netfilter.h \
-  /home/forgotfun/project/Myth/shibby_110/release/src-rt/linux/linux-2.6/include/linux/types.h \
-  /home/forgotfun/project/Myth/shibby_110/release/src-rt/linux/linux-2.6/include/linux/posix_types.h \
-  /home/forgotfun/project/Myth/shibby_110/release/src-rt/linux/linux-2.6/include/linux/stddef.h \
-  /home/forgotfun/project/Myth/shibby_110/release/src-rt/linux/linux-2.6/include/asm/posix_types.h \
-  /home/forgotfun/project/Myth/shibby_110/release/src-rt/linux/linux-2.6/include/asm/types.h \
-  /home/forgotfun/project/Myth/shibby_110/release/src-rt/linux/linux-2.6/include/linux/netfilter/x_tables.h \
-  /home/forgotfun/project/Myth/shibby_110/release/src-rt/linux/linux-2.6/include/linux/netfilter/xt_tcpudp.h \
-  /home/forgotfun/project/Myth/shibby_110/release/src-rt/linux/linux-2.6/include/linux/netfilter_ipv4/ipt_web.h \
-  /home/forgotfun/project/Myth/shibby_110/release/src-rt/linux/linux-2.6/include/linux/netfilter/xt_web.h
+  /home/rainkid/workspace/bcwifi/release/src-rt/linux/linux-2.6/include/linux/netfilter_ipv6/ip6_tables.h \
+  /home/rainkid/workspace/bcwifi/release/src-rt/linux/linux-2.6/include/linux/compiler.h \
+  /home/rainkid/workspace/bcwifi/release/src-rt/linux/linux-2.6/include/linux/netfilter_ipv6.h \
+  /home/rainkid/workspace/bcwifi/release/src-rt/linux/linux-2.6/include/linux/netfilter.h \
+  /home/rainkid/workspace/bcwifi/release/src-rt/linux/linux-2.6/include/linux/types.h \
+  /home/rainkid/workspace/bcwifi/release/src-rt/linux/linux-2.6/include/linux/posix_types.h \
+  /home/rainkid/workspace/bcwifi/release/src-rt/linux/linux-2.6/include/linux/stddef.h \
+  /home/rainkid/workspace/bcwifi/release/src-rt/linux/linux-2.6/include/asm/posix_types.h \
+  /home/rainkid/workspace/bcwifi/release/src-rt/linux/linux-2.6/include/asm/types.h \
+  /home/rainkid/workspace/bcwifi/release/src-rt/linux/linux-2.6/include/linux/netfilter/x_tables.h \
+  /home/rainkid/workspace/bcwifi/release/src-rt/linux/linux-2.6/include/linux/netfilter/xt_tcpudp.h \
+  /home/rainkid/workspace/bcwifi/release/src-rt/linux/linux-2.6/include/linux/netfilter_ipv4/ipt_web.h \
+  /home/rainkid/workspace/bcwifi/release/src-rt/linux/linux-2.6/include/linux/netfilter/xt_web.h

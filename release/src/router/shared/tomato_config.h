@@ -10,18 +10,18 @@
 #define TCONFIG_PPTP 1
   #define IF_TCONFIG_PPTP(...) __VA_ARGS__
   #define IF_NOT_TCONFIG_PPTP(...)
-#undef TCONFIG_PPTPD
-  #define IF_TCONFIG_PPTPD(...)
-  #define IF_NOT_TCONFIG_PPTPD(...) __VA_ARGS__
+#define TCONFIG_PPTPD 1
+  #define IF_TCONFIG_PPTPD(...) __VA_ARGS__
+  #define IF_NOT_TCONFIG_PPTPD(...)
 #define TCONFIG_HTTPS 1
   #define IF_TCONFIG_HTTPS(...) __VA_ARGS__
   #define IF_NOT_TCONFIG_HTTPS(...)
 #define TCONFIG_SSH 1
   #define IF_TCONFIG_SSH(...) __VA_ARGS__
   #define IF_NOT_TCONFIG_SSH(...)
-#undef TCONFIG_CIFS
-  #define IF_TCONFIG_CIFS(...)
-  #define IF_NOT_TCONFIG_CIFS(...) __VA_ARGS__
+#define TCONFIG_CIFS 1
+  #define IF_TCONFIG_CIFS(...) __VA_ARGS__
+  #define IF_NOT_TCONFIG_CIFS(...)
 #undef TCONFIG_JFFS2
   #define IF_TCONFIG_JFFS2(...)
   #define IF_NOT_TCONFIG_JFFS2(...) __VA_ARGS__
@@ -37,30 +37,57 @@
 #define TCONFIG_L7PAT 1
   #define IF_TCONFIG_L7PAT(...) __VA_ARGS__
   #define IF_NOT_TCONFIG_L7PAT(...)
-#undef TCONFIG_LZO
-  #define IF_TCONFIG_LZO(...)
-  #define IF_NOT_TCONFIG_LZO(...) __VA_ARGS__
-#undef TCONFIG_IPV6
-  #define IF_TCONFIG_IPV6(...)
-  #define IF_NOT_TCONFIG_IPV6(...) __VA_ARGS__
+#define TCONFIG_LZO 1
+  #define IF_TCONFIG_LZO(...) __VA_ARGS__
+  #define IF_NOT_TCONFIG_LZO(...)
+#define TCONFIG_OPENVPN 1
+  #define IF_TCONFIG_OPENVPN(...) __VA_ARGS__
+  #define IF_NOT_TCONFIG_OPENVPN(...)
+#define TCONFIG_IPV6 1
+  #define IF_TCONFIG_IPV6(...) __VA_ARGS__
+  #define IF_NOT_TCONFIG_IPV6(...)
 #define TCONFIG_EBTABLES 1
   #define IF_TCONFIG_EBTABLES(...) __VA_ARGS__
   #define IF_NOT_TCONFIG_EBTABLES(...)
 #define TCONFIG_EMF 1
   #define IF_TCONFIG_EMF(...) __VA_ARGS__
   #define IF_NOT_TCONFIG_EMF(...)
-#undef TCONFIG_USB
-  #define IF_TCONFIG_USB(...)
-  #define IF_NOT_TCONFIG_USB(...) __VA_ARGS__
+#define TCONFIG_USB 1
+  #define IF_TCONFIG_USB(...) __VA_ARGS__
+  #define IF_NOT_TCONFIG_USB(...)
 #undef TCONFIG_NOCAT
   #define IF_TCONFIG_NOCAT(...)
   #define IF_NOT_TCONFIG_NOCAT(...) __VA_ARGS__
-#undef TCONFIG_BT
-  #define IF_TCONFIG_BT(...)
-  #define IF_NOT_TCONFIG_BT(...) __VA_ARGS__
-#undef TCONFIG_BBT
-  #define IF_TCONFIG_BBT(...)
-  #define IF_NOT_TCONFIG_BBT(...) __VA_ARGS__
+#undef TCONFIG_MEDIA_SERVER
+  #define IF_TCONFIG_MEDIA_SERVER(...)
+  #define IF_NOT_TCONFIG_MEDIA_SERVER(...) __VA_ARGS__
+#define TCONFIG_FTP 1
+  #define IF_TCONFIG_FTP(...) __VA_ARGS__
+  #define IF_NOT_TCONFIG_FTP(...)
+#define TCONFIG_FTP_SSL 1
+  #define IF_TCONFIG_FTP_SSL(...) __VA_ARGS__
+  #define IF_NOT_TCONFIG_FTP_SSL(...)
+#define TCONFIG_SAMBASRV 1
+  #define IF_TCONFIG_SAMBASRV(...) __VA_ARGS__
+  #define IF_NOT_TCONFIG_SAMBASRV(...)
+#define TCONFIG_SAMBA3 1
+  #define IF_TCONFIG_SAMBA3(...) __VA_ARGS__
+  #define IF_NOT_TCONFIG_SAMBA3(...)
+#define TCONFIG_USB_EXTRAS 1
+  #define IF_TCONFIG_USB_EXTRAS(...) __VA_ARGS__
+  #define IF_NOT_TCONFIG_USB_EXTRAS(...)
+#define TCONFIG_NTFS 1
+  #define IF_TCONFIG_NTFS(...) __VA_ARGS__
+  #define IF_NOT_TCONFIG_NTFS(...)
+#define TCONFIG_BT 1
+  #define IF_TCONFIG_BT(...) __VA_ARGS__
+  #define IF_NOT_TCONFIG_BT(...)
+#define TCONFIG_BBT 1
+  #define IF_TCONFIG_BBT(...) __VA_ARGS__
+  #define IF_NOT_TCONFIG_BBT(...)
+#undef TCONFIG_TR_EXTRAS
+  #define IF_TCONFIG_TR_EXTRAS(...)
+  #define IF_NOT_TCONFIG_TR_EXTRAS(...) __VA_ARGS__
 #undef TCONFIG_NFS
   #define IF_TCONFIG_NFS(...)
   #define IF_NOT_TCONFIG_NFS(...) __VA_ARGS__
@@ -73,6 +100,9 @@
 #undef TCONFIG_HFS
   #define IF_TCONFIG_HFS(...)
   #define IF_NOT_TCONFIG_HFS(...) __VA_ARGS__
+#undef TCONFIG_UPS
+  #define IF_TCONFIG_UPS(...)
+  #define IF_NOT_TCONFIG_UPS(...) __VA_ARGS__
 #undef TCONFIG_DNSCRYPT
   #define IF_TCONFIG_DNSCRYPT(...)
   #define IF_NOT_TCONFIG_DNSCRYPT(...) __VA_ARGS__
@@ -88,3 +118,9 @@
 #undef TCONFIG_RAID
   #define IF_TCONFIG_RAID(...)
   #define IF_NOT_TCONFIG_RAID(...) __VA_ARGS__
+#undef TCONFIG_MICROSD
+  #define IF_TCONFIG_MICROSD(...)
+  #define IF_NOT_TCONFIG_MICROSD(...) __VA_ARGS__
+#undef TCONFIG_USBAP
+  #define IF_TCONFIG_USBAP(...)
+  #define IF_NOT_TCONFIG_USBAP(...) __VA_ARGS__

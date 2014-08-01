@@ -11,8 +11,8 @@ peer-io.o peer-io.o: peer-io.c \
   /opt/brcm/K26/hndtools-mipsel-uclibc-4.2.4/bin/../lib/gcc/mipsel-linux-uclibc/4.2.4/../../../../mipsel-linux-uclibc/sys-include/asm-generic/errno-base.h \
   /opt/brcm/K26/hndtools-mipsel-uclibc-4.2.4/bin/../lib/gcc/mipsel-linux-uclibc/4.2.4/../../../../mipsel-linux-uclibc/sys-include/string.h \
   /opt/brcm/K26/hndtools-mipsel-uclibc-4.2.4/bin/../lib/gcc/mipsel-linux-uclibc/4.2.4/include/stddef.h \
-  /home/forgotfun/project/Myth/shibby_110/release/src-rt/router/libevent/include/event2/event.h \
-  /home/forgotfun/project/Myth/shibby_110/release/src-rt/router/libevent/include/event2/event-config.h \
+  /home/rainkid/workspace/bcwifi/release/src-rt/router/libevent/include/event2/event.h \
+  /home/rainkid/workspace/bcwifi/release/src-rt/router/libevent/include/event2/event-config.h \
   /opt/brcm/K26/hndtools-mipsel-uclibc-4.2.4/bin/../lib/gcc/mipsel-linux-uclibc/4.2.4/../../../../mipsel-linux-uclibc/sys-include/sys/types.h \
   /opt/brcm/K26/hndtools-mipsel-uclibc-4.2.4/bin/../lib/gcc/mipsel-linux-uclibc/4.2.4/../../../../mipsel-linux-uclibc/sys-include/bits/types.h \
   /opt/brcm/K26/hndtools-mipsel-uclibc-4.2.4/bin/../lib/gcc/mipsel-linux-uclibc/4.2.4/../../../../mipsel-linux-uclibc/sys-include/bits/wordsize.h \
@@ -43,7 +43,7 @@ peer-io.o peer-io.o: peer-io.c \
   /opt/brcm/K26/hndtools-mipsel-uclibc-4.2.4/bin/../lib/gcc/mipsel-linux-uclibc/4.2.4/../../../../mipsel-linux-uclibc/sys-include/bits/uClibc_pthread.h \
   /opt/brcm/K26/hndtools-mipsel-uclibc-4.2.4/bin/../lib/gcc/mipsel-linux-uclibc/4.2.4/include/stdarg.h \
   /opt/brcm/K26/hndtools-mipsel-uclibc-4.2.4/bin/../lib/gcc/mipsel-linux-uclibc/4.2.4/../../../../mipsel-linux-uclibc/sys-include/bits/stdio_lim.h \
-  /home/forgotfun/project/Myth/shibby_110/release/src-rt/router/libevent/include/event2/util.h \
+  /home/rainkid/workspace/bcwifi/release/src-rt/router/libevent/include/event2/util.h \
   /opt/brcm/K26/hndtools-mipsel-uclibc-4.2.4/bin/../lib/gcc/mipsel-linux-uclibc/4.2.4/../../../../mipsel-linux-uclibc/sys-include/stdint.h \
   /opt/brcm/K26/hndtools-mipsel-uclibc-4.2.4/bin/../lib/gcc/mipsel-linux-uclibc/4.2.4/../../../../mipsel-linux-uclibc/sys-include/netdb.h \
   /opt/brcm/K26/hndtools-mipsel-uclibc-4.2.4/bin/../lib/gcc/mipsel-linux-uclibc/4.2.4/../../../../mipsel-linux-uclibc/sys-include/netinet/in.h \
@@ -68,8 +68,8 @@ peer-io.o peer-io.o: peer-io.c \
   /opt/brcm/K26/hndtools-mipsel-uclibc-4.2.4/bin/../lib/gcc/mipsel-linux-uclibc/4.2.4/../../../../mipsel-linux-uclibc/sys-include/bits/byteswap.h \
   /opt/brcm/K26/hndtools-mipsel-uclibc-4.2.4/bin/../lib/gcc/mipsel-linux-uclibc/4.2.4/../../../../mipsel-linux-uclibc/sys-include/rpc/netdb.h \
   /opt/brcm/K26/hndtools-mipsel-uclibc-4.2.4/bin/../lib/gcc/mipsel-linux-uclibc/4.2.4/../../../../mipsel-linux-uclibc/sys-include/bits/netdb.h \
-  /home/forgotfun/project/Myth/shibby_110/release/src-rt/router/libevent/include/event2/buffer.h \
-  /home/forgotfun/project/Myth/shibby_110/release/src-rt/router/libevent/include/event2/bufferevent.h \
+  /home/rainkid/workspace/bcwifi/release/src-rt/router/libevent/include/event2/buffer.h \
+  /home/rainkid/workspace/bcwifi/release/src-rt/router/libevent/include/event2/bufferevent.h \
   ../third-party/libutp/utp.h ../third-party/libutp/utypes.h \
   /opt/brcm/K26/hndtools-mipsel-uclibc-4.2.4/bin/../lib/gcc/mipsel-linux-uclibc/4.2.4/../../../../mipsel-linux-uclibc/sys-include/stdlib.h \
   /opt/brcm/K26/hndtools-mipsel-uclibc-4.2.4/bin/../lib/gcc/mipsel-linux-uclibc/4.2.4/../../../../mipsel-linux-uclibc/sys-include/alloca.h \
@@ -78,18 +78,18 @@ peer-io.o peer-io.o: peer-io.c \
   /opt/brcm/K26/hndtools-mipsel-uclibc-4.2.4/bin/../lib/gcc/mipsel-linux-uclibc/4.2.4/../../../../mipsel-linux-uclibc/sys-include/inttypes.h \
   /opt/brcm/K26/hndtools-mipsel-uclibc-4.2.4/bin/../lib/gcc/mipsel-linux-uclibc/4.2.4/include/stdbool.h \
   session.h bandwidth.h ptrarray.h utils.h bencode.h bitfield.h crypto.h \
-  /home/forgotfun/project/Myth/shibby_110/release/src-rt/router/openssl/include/openssl/dh.h \
-  /home/forgotfun/project/Myth/shibby_110/release/src-rt/router/openssl/include/openssl/e_os2.h \
-  /home/forgotfun/project/Myth/shibby_110/release/src-rt/router/openssl/include/openssl/opensslconf.h \
-  /home/forgotfun/project/Myth/shibby_110/release/src-rt/router/openssl/include/openssl/bio.h \
-  /home/forgotfun/project/Myth/shibby_110/release/src-rt/router/openssl/include/openssl/crypto.h \
-  /home/forgotfun/project/Myth/shibby_110/release/src-rt/router/openssl/include/openssl/stack.h \
-  /home/forgotfun/project/Myth/shibby_110/release/src-rt/router/openssl/include/openssl/safestack.h \
-  /home/forgotfun/project/Myth/shibby_110/release/src-rt/router/openssl/include/openssl/opensslv.h \
-  /home/forgotfun/project/Myth/shibby_110/release/src-rt/router/openssl/include/openssl/ossl_typ.h \
-  /home/forgotfun/project/Myth/shibby_110/release/src-rt/router/openssl/include/openssl/symhacks.h \
-  /home/forgotfun/project/Myth/shibby_110/release/src-rt/router/openssl/include/openssl/bn.h \
-  /home/forgotfun/project/Myth/shibby_110/release/src-rt/router/openssl/include/openssl/rc4.h \
+  /home/rainkid/workspace/bcwifi/release/src-rt/router/openssl/include/openssl/dh.h \
+  /home/rainkid/workspace/bcwifi/release/src-rt/router/openssl/include/openssl/e_os2.h \
+  /home/rainkid/workspace/bcwifi/release/src-rt/router/openssl/include/openssl/opensslconf.h \
+  /home/rainkid/workspace/bcwifi/release/src-rt/router/openssl/include/openssl/bio.h \
+  /home/rainkid/workspace/bcwifi/release/src-rt/router/openssl/include/openssl/crypto.h \
+  /home/rainkid/workspace/bcwifi/release/src-rt/router/openssl/include/openssl/stack.h \
+  /home/rainkid/workspace/bcwifi/release/src-rt/router/openssl/include/openssl/safestack.h \
+  /home/rainkid/workspace/bcwifi/release/src-rt/router/openssl/include/openssl/opensslv.h \
+  /home/rainkid/workspace/bcwifi/release/src-rt/router/openssl/include/openssl/ossl_typ.h \
+  /home/rainkid/workspace/bcwifi/release/src-rt/router/openssl/include/openssl/symhacks.h \
+  /home/rainkid/workspace/bcwifi/release/src-rt/router/openssl/include/openssl/bn.h \
+  /home/rainkid/workspace/bcwifi/release/src-rt/router/openssl/include/openssl/rc4.h \
   net.h peer-common.h peer-io.h trevent.h tr-utp.h
 
 /opt/brcm/K26/hndtools-mipsel-uclibc-4.2.4/bin/../lib/gcc/mipsel-linux-uclibc/4.2.4/../../../../mipsel-linux-uclibc/sys-include/assert.h:
@@ -116,9 +116,9 @@ peer-io.o peer-io.o: peer-io.c \
 
 /opt/brcm/K26/hndtools-mipsel-uclibc-4.2.4/bin/../lib/gcc/mipsel-linux-uclibc/4.2.4/include/stddef.h:
 
-/home/forgotfun/project/Myth/shibby_110/release/src-rt/router/libevent/include/event2/event.h:
+/home/rainkid/workspace/bcwifi/release/src-rt/router/libevent/include/event2/event.h:
 
-/home/forgotfun/project/Myth/shibby_110/release/src-rt/router/libevent/include/event2/event-config.h:
+/home/rainkid/workspace/bcwifi/release/src-rt/router/libevent/include/event2/event-config.h:
 
 /opt/brcm/K26/hndtools-mipsel-uclibc-4.2.4/bin/../lib/gcc/mipsel-linux-uclibc/4.2.4/../../../../mipsel-linux-uclibc/sys-include/sys/types.h:
 
@@ -180,7 +180,7 @@ peer-io.o peer-io.o: peer-io.c \
 
 /opt/brcm/K26/hndtools-mipsel-uclibc-4.2.4/bin/../lib/gcc/mipsel-linux-uclibc/4.2.4/../../../../mipsel-linux-uclibc/sys-include/bits/stdio_lim.h:
 
-/home/forgotfun/project/Myth/shibby_110/release/src-rt/router/libevent/include/event2/util.h:
+/home/rainkid/workspace/bcwifi/release/src-rt/router/libevent/include/event2/util.h:
 
 /opt/brcm/K26/hndtools-mipsel-uclibc-4.2.4/bin/../lib/gcc/mipsel-linux-uclibc/4.2.4/../../../../mipsel-linux-uclibc/sys-include/stdint.h:
 
@@ -230,9 +230,9 @@ peer-io.o peer-io.o: peer-io.c \
 
 /opt/brcm/K26/hndtools-mipsel-uclibc-4.2.4/bin/../lib/gcc/mipsel-linux-uclibc/4.2.4/../../../../mipsel-linux-uclibc/sys-include/bits/netdb.h:
 
-/home/forgotfun/project/Myth/shibby_110/release/src-rt/router/libevent/include/event2/buffer.h:
+/home/rainkid/workspace/bcwifi/release/src-rt/router/libevent/include/event2/buffer.h:
 
-/home/forgotfun/project/Myth/shibby_110/release/src-rt/router/libevent/include/event2/bufferevent.h:
+/home/rainkid/workspace/bcwifi/release/src-rt/router/libevent/include/event2/bufferevent.h:
 
 ../third-party/libutp/utp.h:
 
@@ -264,29 +264,29 @@ bitfield.h:
 
 crypto.h:
 
-/home/forgotfun/project/Myth/shibby_110/release/src-rt/router/openssl/include/openssl/dh.h:
+/home/rainkid/workspace/bcwifi/release/src-rt/router/openssl/include/openssl/dh.h:
 
-/home/forgotfun/project/Myth/shibby_110/release/src-rt/router/openssl/include/openssl/e_os2.h:
+/home/rainkid/workspace/bcwifi/release/src-rt/router/openssl/include/openssl/e_os2.h:
 
-/home/forgotfun/project/Myth/shibby_110/release/src-rt/router/openssl/include/openssl/opensslconf.h:
+/home/rainkid/workspace/bcwifi/release/src-rt/router/openssl/include/openssl/opensslconf.h:
 
-/home/forgotfun/project/Myth/shibby_110/release/src-rt/router/openssl/include/openssl/bio.h:
+/home/rainkid/workspace/bcwifi/release/src-rt/router/openssl/include/openssl/bio.h:
 
-/home/forgotfun/project/Myth/shibby_110/release/src-rt/router/openssl/include/openssl/crypto.h:
+/home/rainkid/workspace/bcwifi/release/src-rt/router/openssl/include/openssl/crypto.h:
 
-/home/forgotfun/project/Myth/shibby_110/release/src-rt/router/openssl/include/openssl/stack.h:
+/home/rainkid/workspace/bcwifi/release/src-rt/router/openssl/include/openssl/stack.h:
 
-/home/forgotfun/project/Myth/shibby_110/release/src-rt/router/openssl/include/openssl/safestack.h:
+/home/rainkid/workspace/bcwifi/release/src-rt/router/openssl/include/openssl/safestack.h:
 
-/home/forgotfun/project/Myth/shibby_110/release/src-rt/router/openssl/include/openssl/opensslv.h:
+/home/rainkid/workspace/bcwifi/release/src-rt/router/openssl/include/openssl/opensslv.h:
 
-/home/forgotfun/project/Myth/shibby_110/release/src-rt/router/openssl/include/openssl/ossl_typ.h:
+/home/rainkid/workspace/bcwifi/release/src-rt/router/openssl/include/openssl/ossl_typ.h:
 
-/home/forgotfun/project/Myth/shibby_110/release/src-rt/router/openssl/include/openssl/symhacks.h:
+/home/rainkid/workspace/bcwifi/release/src-rt/router/openssl/include/openssl/symhacks.h:
 
-/home/forgotfun/project/Myth/shibby_110/release/src-rt/router/openssl/include/openssl/bn.h:
+/home/rainkid/workspace/bcwifi/release/src-rt/router/openssl/include/openssl/bn.h:
 
-/home/forgotfun/project/Myth/shibby_110/release/src-rt/router/openssl/include/openssl/rc4.h:
+/home/rainkid/workspace/bcwifi/release/src-rt/router/openssl/include/openssl/rc4.h:
 
 net.h:
 

@@ -8,7 +8,7 @@
 #ifndef __MINIUPNPCSTRINGS_H__
 #define __MINIUPNPCSTRINGS_H__
 
-#define OS_STRING "Ubuntu/13.04"
+#define OS_STRING "Ubuntu/14.04"
 #define MINIUPNPC_VERSION_STRING ""
 
 #endif

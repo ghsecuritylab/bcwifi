@@ -500,7 +500,7 @@ s,@STRIP@,mipsel-uclibc-strip -R .note -R .comment,;t t
 s,@ac_ct_STRIP@,,;t t
 s,@INSTALL_STRIP_PROGRAM@,${SHELL} $(install_sh) -c -s,;t t
 s,@mkdir_p@,mkdir -p -- .,;t t
-s,@AWK@,gawk,;t t
+s,@AWK@,mawk,;t t
 s,@SET_MAKE@,,;t t
 s,@am__leading_dot@,.,;t t
 s,@MAINTAINER_MODE_TRUE@,#,;t t
@@ -534,7 +534,7 @@ s,@LIBOBJS@, strtod$U.o,;t t
 s,@SPLASHD_MODE@,open.c,;t t
 s,@GHTTPD_PROGRAM@,,;t t
 s,@firewall@,iptables,;t t
-s,@libexecscripts@,libexec/iptables/uninitialize.fw libexec/iptables/throttle.fw libexec/iptables/clear.fw libexec/iptables/check_splashd.sh libexec/iptables/call_splashd_check.sh libexec/iptables/dump.fw libexec/iptables/initialize.fw libexec/iptables/reset.fw libexec/iptables/access.fw ,;t t
+s,@libexecscripts@,libexec/iptables/reset.fw libexec/iptables/throttle.fw libexec/iptables/uninitialize.fw libexec/iptables/dump.fw libexec/iptables/clear.fw libexec/iptables/initialize.fw libexec/iptables/check_splashd.sh libexec/iptables/call_splashd_check.sh libexec/iptables/access.fw ,;t t
 s,@pkglibexecdir@,${exec_prefix}/libexec/nocat,;t t
 s,@htdocsdir@,${prefix}/share/nocat/htdocs,;t t
 s,@imagesdir@,${prefix}/share/nocat/htdocs/images,;t t

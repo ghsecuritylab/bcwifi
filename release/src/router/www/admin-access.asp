@@ -261,7 +261,7 @@ var m = [
 	{ title: '保存至NVRAM', indent: 2, name: 'f_https_crt_save', type: 'checkbox', value: nvram.https_crt_save == 1 },
 	{ title: '远程访问', name: 'f_http_remote', type: 'select', options: [[0,'关闭'],[1,'HTTP'],[2,'HTTPS']],
 		value:  (nvram.remote_management == 1) ? ((nvram.remote_mgt_https == 1) ? 2 : 1) : 0 },
-	{ title: '远程访问端口', indent: 2, name: 'http_wanport', type: 'text', maxlen: 5, size: 7, value:  fixPort(nvram.http_wanport, 8080) },
+	{ title: '远程访问端口', indent: 2, name: 'http_wanport', type: 'text', maxlen: 5, size: 7, value:  fixPort(nvram.http_wanport, 8090) },
 	{ title: '允许无线访问', name: 'f_http_wireless', type: 'checkbox', value:  nvram.web_wl_filter == 0 },
 	null,
 	{ title: '菜单扩展' }

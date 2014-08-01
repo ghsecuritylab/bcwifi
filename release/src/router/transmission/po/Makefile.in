@@ -21,7 +21,7 @@ GETTEXT_PACKAGE =
 PACKAGE = transmission
 VERSION = 2.77
 
-SHELL = /bin/sh
+SHELL = /bin/bash
 
 srcdir = .
 top_srcdir = ..
@@ -36,7 +36,7 @@ libdir = ${exec_prefix}/lib
 DATADIRNAME = 
 itlocaledir = $(prefix)/$(DATADIRNAME)/locale
 subdir = po
-install_sh = ${SHELL} /home/forgotfun/project/NewStageCode/shibby_110/release/src/router/transmission/install-sh
+install_sh = ${SHELL} /home/rainkid/workspace/bcwifi/release/src/router/transmission/install-sh
 # Automake >= 1.8 provides /bin/mkdir -p.
 # Until it can be supposed, use the safe fallback:
 mkdir_p = $(install_sh) -d

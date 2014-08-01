@@ -67,7 +67,7 @@ AS = mipsel-uclibc-as
 AUTOCONF = ${SHELL} /home/rainkid/workspace/bcwifi/release/src/router/cyassl/missing --run autoconf
 AUTOHEADER = ${SHELL} /home/rainkid/workspace/bcwifi/release/src/router/cyassl/missing --run autoheader
 AUTOMAKE = ${SHELL} /home/rainkid/workspace/bcwifi/release/src/router/cyassl/missing --run automake-1.10
-AWK = gawk
+AWK = mawk
 CC = mipsel-uclibc-gcc
 CCAS = mipsel-uclibc-gcc
 CCASDEPMODE = depmode=gcc3

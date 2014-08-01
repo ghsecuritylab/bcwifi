@@ -114,21 +114,21 @@ MANS = $(dist_man_MANS)
 ETAGS = etags
 CTAGS = ctags
 DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
-ACLOCAL = ${SHELL} /home/forgotfun/project/NewStageCode/shibby_110/release/src/router/transmission/missing --run aclocal-1.11
-AMTAR = ${SHELL} /home/forgotfun/project/NewStageCode/shibby_110/release/src/router/transmission/missing --run tar
+ACLOCAL = ${SHELL} /home/rainkid/workspace/bcwifi/release/src/router/transmission/missing --run aclocal-1.11
+AMTAR = ${SHELL} /home/rainkid/workspace/bcwifi/release/src/router/transmission/missing --run tar
 AM_DEFAULT_VERBOSITY = 0
 AR = mipsel-uclibc-ar
-AUTOCONF = ${SHELL} /home/forgotfun/project/NewStageCode/shibby_110/release/src/router/transmission/missing --run autoconf
-AUTOHEADER = ${SHELL} /home/forgotfun/project/NewStageCode/shibby_110/release/src/router/transmission/missing --run autoheader
-AUTOMAKE = ${SHELL} /home/forgotfun/project/NewStageCode/shibby_110/release/src/router/transmission/missing --run automake-1.11
-AWK = gawk
+AUTOCONF = ${SHELL} /home/rainkid/workspace/bcwifi/release/src/router/transmission/missing --run autoconf
+AUTOHEADER = ${SHELL} /home/rainkid/workspace/bcwifi/release/src/router/transmission/missing --run autoheader
+AUTOMAKE = ${SHELL} /home/rainkid/workspace/bcwifi/release/src/router/transmission/missing --run automake-1.11
+AWK = mawk
 CATALOGS = 
 CATOBJEXT = 
 CC = mipsel-uclibc-gcc
 CCDEPMODE = depmode=gcc3
 CFLAGS = -Os -Wall -fno-delete-null-pointer-checks -funit-at-a-time 		--param large-function-growth=800 --param max-inline-insns-single=3000 		-ffunction-sections -fdata-sections -std=gnu99 -ggdb3 -Wall -W -Wpointer-arith -Wformat-security -Wcast-align -Wundef -Wcast-align -Wstrict-prototypes -Wmissing-declarations -Wmissing-format-attribute -Wredundant-decls -Wnested-externs -Wunused-parameter -Wwrite-strings -Winline -Wfloat-equal -Wextra -Wdeclaration-after-statement -Winit-self
 CPP = mipsel-uclibc-gcc -E
-CPPFLAGS = -I/home/forgotfun/project/Myth/shibby_110/release/src-rt/router/zlib -DNDEBUG
+CPPFLAGS = -I/home/rainkid/workspace/bcwifi/release/src-rt/router/zlib -DNDEBUG
 CURL_MINIMUM = 7.15.4
 CXX = mipsel-linux-g++
 CXXCPP = mipsel-linux-g++ -E
@@ -167,14 +167,14 @@ INSTALL_STRIP_PROGRAM = $(install_sh) -c -s
 INSTOBJEXT = 
 INTLLIBS = 
 LD = mipsel-uclibc-ld
-LDFLAGS = -L/home/forgotfun/project/Myth/shibby_110/release/src-rt/router/zlib -ffunction-sections -fdata-sections -Wl,--gc-sections -fPIC
+LDFLAGS = -L/home/rainkid/workspace/bcwifi/release/src-rt/router/zlib -ffunction-sections -fdata-sections -Wl,--gc-sections -fPIC
 LIBAPPINDICATOR_CFLAGS = 
 LIBAPPINDICATOR_LIBS = 
 LIBAPPINDICATOR_MINIMUM = 0.4.90
-LIBCURL_CFLAGS = -I/home/forgotfun/project/Myth/shibby_110/release/src-rt/router/libcurl/include
-LIBCURL_LIBS = -L/home/forgotfun/project/Myth/shibby_110/release/src-rt/router/libcurl/lib/.libs/ -lcurl
-LIBEVENT_CFLAGS = -I/home/forgotfun/project/Myth/shibby_110/release/src-rt/router/libevent/include
-LIBEVENT_LIBS = -L/home/forgotfun/project/Myth/shibby_110/release/src-rt/router/libevent/.libs -levent
+LIBCURL_CFLAGS = -I/home/rainkid/workspace/bcwifi/release/src-rt/router/libcurl/include
+LIBCURL_LIBS = -L/home/rainkid/workspace/bcwifi/release/src-rt/router/libcurl/lib/.libs/ -lcurl
+LIBEVENT_CFLAGS = -I/home/rainkid/workspace/bcwifi/release/src-rt/router/libevent/include
+LIBEVENT_LIBS = -L/home/rainkid/workspace/bcwifi/release/src-rt/router/libevent/.libs -levent
 LIBEVENT_MINIMUM = 2.0.10
 LIBNATPMP_CFLAGS = -I$(top_srcdir)/third-party/libnatpmp/
 LIBNATPMP_LIBS = $(top_builddir)/third-party/libnatpmp/libnatpmp.a
@@ -191,7 +191,7 @@ LIBUTP_LIBS_QT = $${TRANSMISSION_TOP}/third-party/libutp/libutp.a -lrt
 LIPO = 
 LN_S = ln -s
 LTLIBOBJS = 
-MAKEINFO = ${SHELL} /home/forgotfun/project/NewStageCode/shibby_110/release/src/router/transmission/missing --run makeinfo
+MAKEINFO = ${SHELL} /home/rainkid/workspace/bcwifi/release/src/router/transmission/missing --run makeinfo
 MANIFEST_TOOL = :
 MKDIR_P = /bin/mkdir -p
 MKINSTALLDIRS = 
@@ -200,8 +200,8 @@ NM = mipsel-uclibc-nm
 NMEDIT = 
 OBJDUMP = mipsel-linux-objdump
 OBJEXT = o
-OPENSSL_CFLAGS = -I/home/forgotfun/project/Myth/shibby_110/release/src-rt/router/openssl/include
-OPENSSL_LIBS = -L/home/forgotfun/project/Myth/shibby_110/release/src-rt/router/openssl -lcrypto -lssl
+OPENSSL_CFLAGS = -I/home/rainkid/workspace/bcwifi/release/src-rt/router/openssl/include
+OPENSSL_LIBS = -L/home/rainkid/workspace/bcwifi/release/src-rt/router/openssl -lcrypto -lssl
 OPENSSL_MINIMUM = 0.9.4
 OTOOL = 
 OTOOL64 = 
@@ -225,7 +225,7 @@ PTHREAD_LIBS =
 RANLIB = mipsel-uclibc-ranlib
 SED = /bin/sed
 SET_MAKE = 
-SHELL = /bin/sh
+SHELL = /bin/bash
 STRIP = mipsel-uclibc-strip
 USERAGENT_PREFIX = 2.77
 USE_NLS = 
@@ -235,10 +235,10 @@ XGETTEXT =
 ZLIB_CFLAGS = 
 ZLIB_LDFLAGS = 
 ZLIB_LIBS = -lz -lm 
-abs_builddir = /home/forgotfun/project/NewStageCode/shibby_110/release/src/router/transmission/cli
-abs_srcdir = /home/forgotfun/project/NewStageCode/shibby_110/release/src/router/transmission/cli
-abs_top_builddir = /home/forgotfun/project/NewStageCode/shibby_110/release/src/router/transmission
-abs_top_srcdir = /home/forgotfun/project/NewStageCode/shibby_110/release/src/router/transmission
+abs_builddir = /home/rainkid/workspace/bcwifi/release/src/router/transmission/cli
+abs_srcdir = /home/rainkid/workspace/bcwifi/release/src/router/transmission/cli
+abs_top_builddir = /home/rainkid/workspace/bcwifi/release/src/router/transmission
+abs_top_srcdir = /home/rainkid/workspace/bcwifi/release/src/router/transmission
 ac_ct_AR = 
 ac_ct_CC = 
 ac_ct_CXX = 
@@ -269,7 +269,7 @@ host_vendor = unknown
 htmldir = ${docdir}
 includedir = ${prefix}/include
 infodir = ${datarootdir}/info
-install_sh = ${SHELL} /home/forgotfun/project/NewStageCode/shibby_110/release/src/router/transmission/install-sh
+install_sh = ${SHELL} /home/rainkid/workspace/bcwifi/release/src/router/transmission/install-sh
 libdir = ${exec_prefix}/lib
 libexecdir = ${exec_prefix}/libexec
 localedir = ${datarootdir}/locale
@@ -292,9 +292,9 @@ top_srcdir = ..
 transmissionlocaledir = 
 AM_CPPFLAGS = -I..
 AM_CFLAGS = \
-    -I/home/forgotfun/project/Myth/shibby_110/release/src-rt/router/libevent/include \
-    -I/home/forgotfun/project/Myth/shibby_110/release/src-rt/router/openssl/include \
-    -I/home/forgotfun/project/Myth/shibby_110/release/src-rt/router/libcurl/include \
+    -I/home/rainkid/workspace/bcwifi/release/src-rt/router/libevent/include \
+    -I/home/rainkid/workspace/bcwifi/release/src-rt/router/openssl/include \
+    -I/home/rainkid/workspace/bcwifi/release/src-rt/router/libcurl/include \
      \
     -pthread
 
@@ -309,9 +309,9 @@ transmission_cli_LDADD = \
     $(top_builddir)/third-party/miniupnp/libminiupnp.a \
     $(top_builddir)/third-party/dht/libdht.a \
     $(top_builddir)/third-party/libutp/libutp.a -lrt \
-    -L/home/forgotfun/project/Myth/shibby_110/release/src-rt/router/libevent/.libs -levent \
-    -L/home/forgotfun/project/Myth/shibby_110/release/src-rt/router/libcurl/lib/.libs/ -lcurl \
-    -L/home/forgotfun/project/Myth/shibby_110/release/src-rt/router/openssl -lcrypto -lssl \
+    -L/home/rainkid/workspace/bcwifi/release/src-rt/router/libevent/.libs -levent \
+    -L/home/rainkid/workspace/bcwifi/release/src-rt/router/libcurl/lib/.libs/ -lcurl \
+    -L/home/rainkid/workspace/bcwifi/release/src-rt/router/openssl -lcrypto -lssl \
      \
     -lz -lm  \
     

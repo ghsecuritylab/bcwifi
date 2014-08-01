@@ -44,11 +44,11 @@ announcer-http.o announcer-http.o: announcer-http.c \
   /opt/brcm/K26/hndtools-mipsel-uclibc-4.2.4/bin/../lib/gcc/mipsel-linux-uclibc/4.2.4/../../../../mipsel-linux-uclibc/sys-include/sys/sysmacros.h \
   /opt/brcm/K26/hndtools-mipsel-uclibc-4.2.4/bin/../lib/gcc/mipsel-linux-uclibc/4.2.4/../../../../mipsel-linux-uclibc/sys-include/alloca.h \
   /opt/brcm/K26/hndtools-mipsel-uclibc-4.2.4/bin/../lib/gcc/mipsel-linux-uclibc/4.2.4/../../../../mipsel-linux-uclibc/sys-include/string.h \
-  /home/forgotfun/project/Myth/shibby_110/release/src-rt/router/libevent/include/event2/buffer.h \
-  /home/forgotfun/project/Myth/shibby_110/release/src-rt/router/libevent/include/event2/event-config.h \
+  /home/rainkid/workspace/bcwifi/release/src-rt/router/libevent/include/event2/buffer.h \
+  /home/rainkid/workspace/bcwifi/release/src-rt/router/libevent/include/event2/event-config.h \
   /opt/brcm/K26/hndtools-mipsel-uclibc-4.2.4/bin/../lib/gcc/mipsel-linux-uclibc/4.2.4/../../../../mipsel-linux-uclibc/sys-include/sys/uio.h \
   /opt/brcm/K26/hndtools-mipsel-uclibc-4.2.4/bin/../lib/gcc/mipsel-linux-uclibc/4.2.4/../../../../mipsel-linux-uclibc/sys-include/bits/uio.h \
-  /home/forgotfun/project/Myth/shibby_110/release/src-rt/router/libevent/include/event2/util.h \
+  /home/rainkid/workspace/bcwifi/release/src-rt/router/libevent/include/event2/util.h \
   /opt/brcm/K26/hndtools-mipsel-uclibc-4.2.4/bin/../lib/gcc/mipsel-linux-uclibc/4.2.4/../../../../mipsel-linux-uclibc/sys-include/sys/time.h \
   /opt/brcm/K26/hndtools-mipsel-uclibc-4.2.4/bin/../lib/gcc/mipsel-linux-uclibc/4.2.4/../../../../mipsel-linux-uclibc/sys-include/stdint.h \
   /opt/brcm/K26/hndtools-mipsel-uclibc-4.2.4/bin/../lib/gcc/mipsel-linux-uclibc/4.2.4/../../../../mipsel-linux-uclibc/sys-include/netdb.h \
@@ -64,7 +64,7 @@ announcer-http.o announcer-http.o: announcer-http.c \
   /opt/brcm/K26/hndtools-mipsel-uclibc-4.2.4/bin/../lib/gcc/mipsel-linux-uclibc/4.2.4/../../../../mipsel-linux-uclibc/sys-include/bits/byteswap.h \
   /opt/brcm/K26/hndtools-mipsel-uclibc-4.2.4/bin/../lib/gcc/mipsel-linux-uclibc/4.2.4/../../../../mipsel-linux-uclibc/sys-include/rpc/netdb.h \
   /opt/brcm/K26/hndtools-mipsel-uclibc-4.2.4/bin/../lib/gcc/mipsel-linux-uclibc/4.2.4/../../../../mipsel-linux-uclibc/sys-include/bits/netdb.h \
-  /home/forgotfun/project/Myth/shibby_110/release/src-rt/router/libevent/include/event2/http.h \
+  /home/rainkid/workspace/bcwifi/release/src-rt/router/libevent/include/event2/http.h \
   transmission.h \
   /opt/brcm/K26/hndtools-mipsel-uclibc-4.2.4/bin/../lib/gcc/mipsel-linux-uclibc/4.2.4/../../../../mipsel-linux-uclibc/sys-include/inttypes.h \
   /opt/brcm/K26/hndtools-mipsel-uclibc-4.2.4/bin/../lib/gcc/mipsel-linux-uclibc/4.2.4/include/stdbool.h \
@@ -78,13 +78,13 @@ announcer-http.o announcer-http.o: announcer-http.c \
   /opt/brcm/K26/hndtools-mipsel-uclibc-4.2.4/bin/../lib/gcc/mipsel-linux-uclibc/4.2.4/../../../../mipsel-linux-uclibc/sys-include/asm-generic/errno-base.h \
   peer-mgr.h history.h peer-common.h torrent.h completion.h trevent.h \
   web.h \
-  /home/forgotfun/project/Myth/shibby_110/release/src-rt/router/libcurl/include/curl/curl.h \
-  /home/forgotfun/project/Myth/shibby_110/release/src-rt/router/libcurl/include/curl/curlver.h \
-  /home/forgotfun/project/Myth/shibby_110/release/src-rt/router/libcurl/include/curl/curlbuild.h \
-  /home/forgotfun/project/Myth/shibby_110/release/src-rt/router/libcurl/include/curl/curlrules.h \
-  /home/forgotfun/project/Myth/shibby_110/release/src-rt/router/libcurl/include/curl/easy.h \
-  /home/forgotfun/project/Myth/shibby_110/release/src-rt/router/libcurl/include/curl/multi.h \
-  /home/forgotfun/project/Myth/shibby_110/release/src-rt/router/libcurl/include/curl/curl.h
+  /home/rainkid/workspace/bcwifi/release/src-rt/router/libcurl/include/curl/curl.h \
+  /home/rainkid/workspace/bcwifi/release/src-rt/router/libcurl/include/curl/curlver.h \
+  /home/rainkid/workspace/bcwifi/release/src-rt/router/libcurl/include/curl/curlbuild.h \
+  /home/rainkid/workspace/bcwifi/release/src-rt/router/libcurl/include/curl/curlrules.h \
+  /home/rainkid/workspace/bcwifi/release/src-rt/router/libcurl/include/curl/easy.h \
+  /home/rainkid/workspace/bcwifi/release/src-rt/router/libcurl/include/curl/multi.h \
+  /home/rainkid/workspace/bcwifi/release/src-rt/router/libcurl/include/curl/curl.h
 
 /opt/brcm/K26/hndtools-mipsel-uclibc-4.2.4/bin/../lib/gcc/mipsel-linux-uclibc/4.2.4/include/limits.h:
 
@@ -176,15 +176,15 @@ announcer-http.o announcer-http.o: announcer-http.c \
 
 /opt/brcm/K26/hndtools-mipsel-uclibc-4.2.4/bin/../lib/gcc/mipsel-linux-uclibc/4.2.4/../../../../mipsel-linux-uclibc/sys-include/string.h:
 
-/home/forgotfun/project/Myth/shibby_110/release/src-rt/router/libevent/include/event2/buffer.h:
+/home/rainkid/workspace/bcwifi/release/src-rt/router/libevent/include/event2/buffer.h:
 
-/home/forgotfun/project/Myth/shibby_110/release/src-rt/router/libevent/include/event2/event-config.h:
+/home/rainkid/workspace/bcwifi/release/src-rt/router/libevent/include/event2/event-config.h:
 
 /opt/brcm/K26/hndtools-mipsel-uclibc-4.2.4/bin/../lib/gcc/mipsel-linux-uclibc/4.2.4/../../../../mipsel-linux-uclibc/sys-include/sys/uio.h:
 
 /opt/brcm/K26/hndtools-mipsel-uclibc-4.2.4/bin/../lib/gcc/mipsel-linux-uclibc/4.2.4/../../../../mipsel-linux-uclibc/sys-include/bits/uio.h:
 
-/home/forgotfun/project/Myth/shibby_110/release/src-rt/router/libevent/include/event2/util.h:
+/home/rainkid/workspace/bcwifi/release/src-rt/router/libevent/include/event2/util.h:
 
 /opt/brcm/K26/hndtools-mipsel-uclibc-4.2.4/bin/../lib/gcc/mipsel-linux-uclibc/4.2.4/../../../../mipsel-linux-uclibc/sys-include/sys/time.h:
 
@@ -216,7 +216,7 @@ announcer-http.o announcer-http.o: announcer-http.c \
 
 /opt/brcm/K26/hndtools-mipsel-uclibc-4.2.4/bin/../lib/gcc/mipsel-linux-uclibc/4.2.4/../../../../mipsel-linux-uclibc/sys-include/bits/netdb.h:
 
-/home/forgotfun/project/Myth/shibby_110/release/src-rt/router/libevent/include/event2/http.h:
+/home/rainkid/workspace/bcwifi/release/src-rt/router/libevent/include/event2/http.h:
 
 transmission.h:
 
@@ -266,16 +266,16 @@ trevent.h:
 
 web.h:
 
-/home/forgotfun/project/Myth/shibby_110/release/src-rt/router/libcurl/include/curl/curl.h:
+/home/rainkid/workspace/bcwifi/release/src-rt/router/libcurl/include/curl/curl.h:
 
-/home/forgotfun/project/Myth/shibby_110/release/src-rt/router/libcurl/include/curl/curlver.h:
+/home/rainkid/workspace/bcwifi/release/src-rt/router/libcurl/include/curl/curlver.h:
 
-/home/forgotfun/project/Myth/shibby_110/release/src-rt/router/libcurl/include/curl/curlbuild.h:
+/home/rainkid/workspace/bcwifi/release/src-rt/router/libcurl/include/curl/curlbuild.h:
 
-/home/forgotfun/project/Myth/shibby_110/release/src-rt/router/libcurl/include/curl/curlrules.h:
+/home/rainkid/workspace/bcwifi/release/src-rt/router/libcurl/include/curl/curlrules.h:
 
-/home/forgotfun/project/Myth/shibby_110/release/src-rt/router/libcurl/include/curl/easy.h:
+/home/rainkid/workspace/bcwifi/release/src-rt/router/libcurl/include/curl/easy.h:
 
-/home/forgotfun/project/Myth/shibby_110/release/src-rt/router/libcurl/include/curl/multi.h:
+/home/rainkid/workspace/bcwifi/release/src-rt/router/libcurl/include/curl/multi.h:
 
-/home/forgotfun/project/Myth/shibby_110/release/src-rt/router/libcurl/include/curl/curl.h:
+/home/rainkid/workspace/bcwifi/release/src-rt/router/libcurl/include/curl/curl.h:

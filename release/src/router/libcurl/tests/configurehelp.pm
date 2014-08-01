@@ -18,6 +18,6 @@ use vars qw(
     $Cpreprocessor
     );
 
-$Cpreprocessor = 'mipsel-uclibc-gcc -E -isystem /home/forgotfun/project/Myth/shibby_110/release/src-rt/router/zlib';
+$Cpreprocessor = 'mipsel-uclibc-gcc -E -isystem /home/rainkid/workspace/bcwifi/release/src-rt/router/zlib';
 
 1;

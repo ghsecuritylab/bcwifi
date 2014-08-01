@@ -101,8 +101,8 @@ transfer.lo transfer.o: transfer.c setup.h curl_config.h \
   /opt/brcm/K26/hndtools-mipsel-uclibc-4.2.4/bin/../lib/gcc/mipsel-linux-uclibc/4.2.4/../../../../mipsel-linux-uclibc/sys-include/linux/param.h \
   /opt/brcm/K26/hndtools-mipsel-uclibc-4.2.4/bin/../lib/gcc/mipsel-linux-uclibc/4.2.4/../../../../mipsel-linux-uclibc/sys-include/asm/param.h \
   urldata.h cookie.h formdata.h timeval.h \
-  /home/forgotfun/project/Myth/shibby_110/release/src-rt/router/zlib/zlib.h \
-  /home/forgotfun/project/Myth/shibby_110/release/src-rt/router/zlib/zconf.h \
+  /home/rainkid/workspace/bcwifi/release/src-rt/router/zlib/zlib.h \
+  /home/rainkid/workspace/bcwifi/release/src-rt/router/zlib/zconf.h \
   http_chunks.h hostip.h hash.h llist.h curl_addrinfo.h asyn.h \
   /opt/brcm/K26/hndtools-mipsel-uclibc-4.2.4/bin/../lib/gcc/mipsel-linux-uclibc/4.2.4/../../../../mipsel-linux-uclibc/sys-include/setjmp.h \
   /opt/brcm/K26/hndtools-mipsel-uclibc-4.2.4/bin/../lib/gcc/mipsel-linux-uclibc/4.2.4/../../../../mipsel-linux-uclibc/sys-include/bits/setjmp.h \
@@ -341,9 +341,9 @@ formdata.h:
 
 timeval.h:
 
-/home/forgotfun/project/Myth/shibby_110/release/src-rt/router/zlib/zlib.h:
+/home/rainkid/workspace/bcwifi/release/src-rt/router/zlib/zlib.h:
 
-/home/forgotfun/project/Myth/shibby_110/release/src-rt/router/zlib/zconf.h:
+/home/rainkid/workspace/bcwifi/release/src-rt/router/zlib/zconf.h:
 
 http_chunks.h:
 

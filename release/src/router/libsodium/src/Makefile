@@ -126,7 +126,7 @@ AS = mipsel-uclibc-as
 AUTOCONF = ${SHELL} /home/rainkid/workspace/bcwifi/release/src/router/libsodium/missing --run autoconf
 AUTOHEADER = ${SHELL} /home/rainkid/workspace/bcwifi/release/src/router/libsodium/missing --run autoheader
 AUTOMAKE = ${SHELL} /home/rainkid/workspace/bcwifi/release/src/router/libsodium/missing --run automake-1.11
-AWK = gawk
+AWK = mawk
 CC = mipsel-uclibc-gcc -std=gnu99
 CCAS = mipsel-uclibc-gcc -std=gnu99
 CCASDEPMODE = depmode=none
@@ -158,7 +158,7 @@ INSTALL_DATA = ${INSTALL} -m 644
 INSTALL_PROGRAM = ${INSTALL}
 INSTALL_SCRIPT = ${INSTALL}
 INSTALL_STRIP_PROGRAM = $(install_sh) -c -s
-ISODATE = 2014-04-08
+ISODATE = 2014-07-30
 LD = mipsel-uclibc-ld
 LDFLAGS =  -pie -Wl,-z,relro -Wl,-z,now -Wl,-z,noexecstack -L/usr/local/lib -pie -Wl,-z,relro -Wl,-z,now -Wl,-z,noexecstack -L/usr/local/lib
 LIBOBJS = 

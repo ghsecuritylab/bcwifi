@@ -402,7 +402,8 @@ void post_heartboard(struct post_config *conf) {
 
 	buffer_add(&buf, "&device_mac=%s", conf->mac);
 	buffer_add(&buf, "&ht=%u", conf->ht);
-	buffer_add(&buf, "&ip=%s", nvram_safe_get("lan_ipaddr"));
+	//buffer_add(&buf, "&ip=%s", nvram_safe_get("lan_ipaddr"));
+	buffer_add(&buf, "&ip=%s", get_wanip());
 	buffer_add(&buf, "&wl_ssid=%s", nvram_safe_get("wl0_ssid"));
 	buffer_add(&buf, "&wanstatus=%d", status);
 	//buffer_add(&buf, "&interval=%d&reboot=%d&reconnect=%d", conf->post_interval, conf->reboot, conf->reconnect);

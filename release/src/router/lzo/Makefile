@@ -254,13 +254,13 @@ AR = mipsel-uclibc-ar
 AUTOCONF = ${SHELL} /home/rainkid/workspace/bcwifi/release/src/router/lzo/autoconf/missing --run autoconf
 AUTOHEADER = ${SHELL} /home/rainkid/workspace/bcwifi/release/src/router/lzo/autoconf/missing --run autoheader
 AUTOMAKE = ${SHELL} /home/rainkid/workspace/bcwifi/release/src/router/lzo/autoconf/missing --run automake-1.11
-AWK = gawk
+AWK = mawk
 CC = mipsel-uclibc-gcc
 CCAS = mipsel-uclibc-gcc
 CCASDEPMODE = depmode=gcc3
-CCASFLAGS = -O3 -Wall -fPIC -DLINUX26 -DCONFIG_BCMWL5 -pipe -DBCMWPA2 -funit-at-a-time -Wno-pointer-sign -mtune=mips32 -mips32 -DCONFIG_NVRAM_SIZE=60 
+CCASFLAGS = -O3 -Wall -fPIC -DLINUX26 -DCONFIG_BCMWL5 -pipe -DBCMWPA2 -funit-at-a-time -Wno-pointer-sign -mtune=mips32 -mips32  
 CCDEPMODE = depmode=gcc3
-CFLAGS = -O3 -Wall -fPIC -DLINUX26 -DCONFIG_BCMWL5 -pipe -DBCMWPA2 -funit-at-a-time -Wno-pointer-sign -mtune=mips32 -mips32 -DCONFIG_NVRAM_SIZE=60 
+CFLAGS = -O3 -Wall -fPIC -DLINUX26 -DCONFIG_BCMWL5 -pipe -DBCMWPA2 -funit-at-a-time -Wno-pointer-sign -mtune=mips32 -mips32  
 CPP = mipsel-uclibc-gcc -E
 CPPFLAGS = 
 CYGPATH_W = echo
@@ -308,7 +308,7 @@ PATH_SEPARATOR = :
 RANLIB = mipsel-uclibc-ranlib
 SED = /bin/sed
 SET_MAKE = 
-SHELL = /bin/sh
+SHELL = /bin/bash
 STRIP = mipsel-uclibc-strip -R .note -R .comment
 VERSION = 2.06
 abs_builddir = /home/rainkid/workspace/bcwifi/release/src/router/lzo

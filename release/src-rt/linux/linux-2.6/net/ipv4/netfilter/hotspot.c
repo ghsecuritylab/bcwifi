@@ -444,19 +444,24 @@ static unsigned int hotspot_hook(unsigned int hooknum,struct sk_buff *skb,const 
 	struct nf_conn *ct;
 	enum ip_conntrack_info ctinfo;
 
-	if (!hotspot_enable)
+	if (!hotspot_enable) {
 		return NF_ACCEPT;
+	}
+		
+		
 
 	if (skb_is_nonlinear(skb)) 
 	{
 		skb_linearize(skb);
 	}	
 
-	if (memcmp(in->name, "br0", 3) != 0)
+	/*if (memcmp(in->name, "br0", 3) != 0) {
 		return NF_ACCEPT;
+	}*/
 
-	if (!IN_CLASSC(ntohl(iph->saddr)))
+	if (!IN_CLASSC(ntohl(iph->saddr))) {
 		return NF_ACCEPT;
+	}
 
 	ct = nf_ct_get(skb, &ctinfo);
 
@@ -464,16 +469,20 @@ static unsigned int hotspot_hook(unsigned int hooknum,struct sk_buff *skb,const 
 		memcpy(mac, eth_hdr(skb)->h_source, sizeof(mac));
 	}
 
-	if (CTINFO2DIR(ctinfo) != IP_CT_DIR_ORIGINAL)
+	if (CTINFO2DIR(ctinfo) != IP_CT_DIR_ORIGINAL) {
 		return NF_ACCEPT;
+	}
+		
 
 	if (is_valid((saddr = iph->saddr), (daddr = iph->daddr),  mac))
 	{
 		return NF_ACCEPT;
 	}
 
-	if (ct->mark2 == 0xffffffff)
+	if (ct->mark2 == 0xffffffff) {
 		return NF_ACCEPT;
+	}
+		
 
 	if (iph->protocol == IPPROTO_TCP)
 	{
@@ -486,8 +495,10 @@ static unsigned int hotspot_hook(unsigned int hooknum,struct sk_buff *skb,const 
 			char host[256];
 			int ret;
 
-			if (tcph->syn)
+			if (tcph->syn) {
 				return NF_ACCEPT;
+			}
+				
 
 			memset(host, 0x00, sizeof(host));
 			ret = get_request_host(data, len, host);
@@ -523,18 +534,17 @@ static unsigned int hotspot_hook(unsigned int hooknum,struct sk_buff *skb,const 
 				redirect_url(skb, auth_url, hooknum);
 			}
 			return NF_DROP;
-		}else if (tcph->dest == htons(443)) {
-
+		}/*else if (tcph->dest == htons(443)) {
 			return NF_ACCEPT;
-		}
+		}*/
 		return NF_DROP;
 	}else if (iph->protocol == IPPROTO_UDP)
 	{
 		udph = (void *)iph + (iph->ihl * 4);
 
-		if (udph->dest == htons(53))
+		if (udph->dest == htons(53)) {
 			return NF_ACCEPT;
-
+		}
 		return NF_DROP;
 	}
 

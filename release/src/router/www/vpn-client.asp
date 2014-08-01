@@ -283,10 +283,10 @@ for (i = 0; i < tabs.length; ++i)
 	W('<input type=\'hidden\' id=\'vpn_'+t+'_useronly\' name=\'vpn_'+t+'_useronly\'>');
 	W('<input type=\'hidden\' id=\'vpn_'+t+'_tlsremote\' name=\'vpn_'+t+'_tlsremote\'>');
 
-	W('<ul class="tabs">');
+	W('<ul class="nav  nav-tabs">');
 	for (j = 0; j < sections.length; j++)
 	{
-		W('<li><a href="javascript:sectSelect('+i+', \''+sections[j][0]+'\')" id="'+t+'-'+sections[j][0]+'-tab">'+sections[j][1]+'</a></li>');
+		W('<li  id="'+t+'-'+sections[j][0]+'-tab"><a href="javascript:sectSelect('+i+', \''+sections[j][0]+'\')">'+sections[j][1]+'</a></li>');
 	}
 	W('</ul><div class=\'tabs-bottom\'></div>');
 

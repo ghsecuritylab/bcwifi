@@ -102,7 +102,7 @@ AR = mipsel-uclibc-ar
 AUTOCONF = ${SHELL} /home/rainkid/workspace/bcwifi/release/src/router/libusb10/missing --run autoconf
 AUTOHEADER = ${SHELL} /home/rainkid/workspace/bcwifi/release/src/router/libusb10/missing --run autoheader
 AUTOMAKE = ${SHELL} /home/rainkid/workspace/bcwifi/release/src/router/libusb10/missing --run automake-1.11
-AWK = gawk
+AWK = mawk
 CC = mipsel-uclibc-gcc
 CCDEPMODE = depmode=gcc3
 CFLAGS = -Os -Wall -DLINUX26 -DCONFIG_BCMWL5 -pipe -DBCMWPA2 -funit-at-a-time -Wno-pointer-sign -mtune=mips32 -mips32  

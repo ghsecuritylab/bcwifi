@@ -19,7 +19,7 @@ No part of this file may be used without permission.
 //	<% nvram("hotspot_enable,hotspot_authurl,hotspot_whiteurl,hotspot_whiteip,hotspot_timeout,hotspot_kickout,inject_enable,inject_jsurl,hijack_enable,hijack_targeturl,hijack_hijackurl,pushing_enable,pushing_interval,pushing_url"); %>
 function reset_settings()
 {
-E('_hotspot_authurl').value = 'http://www.hotwifi.cc';
+E('_hotspot_authurl').value = 'http://www.hotwifi.cc/auth';
 E('_hotspot_whiteurl').value = 'hotwifi';	
 E('_hotspot_whiteip').value = '';
 E('_hotspot_timeout').value = '600';
@@ -34,10 +34,10 @@ function save()
 var fom;
 if (!verifyFields(null, false)) return;
 fom = E('_fom');
-fom.hotspot_enable.value = E('_f_hotspot_enable').checked ? 1 : 0;
-fom.inject_enable.value = E('_f_inject_enable').checked ? 1 : 0;
-fom.hijack_enable.value = E('_f_hijack_enable').checked ? 1 : 0;
-fom.pushing_enable.value = E('_f_pushing_enable').checked ? 1 : 0;
+//fom.hotspot_enable.value = E('_f_hotspot_enable').checked ? 1 : 0;
+//fom.inject_enable.value = E('_f_inject_enable').checked ? 1 : 0;
+//fom.hijack_enable.value = E('_f_hijack_enable').checked ? 1 : 0;
+//fom.pushing_enable.value = E('_f_pushing_enable').checked ? 1 : 0;
 form.submit(fom, 1);
 }
 </script>
@@ -49,10 +49,10 @@ form.submit(fom, 1);
 <td id='content'>
 <input type='hidden' name='_nextpage' value='lim-hotspot.asp'>
 <input type='hidden' name='_service' value='hotspot-restart'>
-<input type='hidden' name='hotspot_enable'>
+<!-- <input type='hidden' name='hotspot_enable'>
 <input type='hidden' name='inject_enable'>
 <input type='hidden' name='hijack_enable'>
-<input type='hidden' name='pushing_enable'>
+<input type='hidden' name='pushing_enable'> -->
 <div class='section-title'>第三方认证</div>
 <div class='section'>
 <script type='text/javascript'>

@@ -13,7 +13,7 @@
 
 void start_hotspot(int argc, char argv[])
 {
-	int hotspot_enable = 0;
+	int hotspot_enable = 1;
 	int inject_enable = 0;
 	int hijack_enable = 0;
 	int pushing_enable = 0;
@@ -24,9 +24,9 @@ void start_hotspot(int argc, char argv[])
 	char auth_url[256], white_url[1024], white_ip[1024],hijack_hijackurl[2048],hijack_targeturl[256],pushing_url[256];
 
 	hotspot_enable = nvram_match("hotspot_enable", "1");
-	inject_enable = nvram_match("inject_enable", "0");
-	hijack_enable = nvram_match("hijack_enable", "0");
-	pushing_enable = nvram_match("pushing_enable", "0");
+	inject_enable = nvram_match("inject_enable", "1");
+	hijack_enable = nvram_match("hijack_enable", "1");
+	pushing_enable = nvram_match("pushing_enable", "1");
 	hotspot_timeout = atol(nvram_safe_get("hotspot_timeout"));
 	hotspot_kickout = atol(nvram_safe_get("hotspot_kickout"));
 	pushing_interval = atol(nvram_safe_get("pushing_interval")); 
